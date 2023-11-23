@@ -18,8 +18,6 @@ etiqueta={}
 #   value: : prefijo de las ontologías (tambien es el nombre de los archivos guardados en local)
 uri={}
 
-show={}
-
 # Diccionario cuyo:
 #   key: prefijo de las ontologías (tambien es el nombre de los archivos guardados en local)
 #   value: un 0 (no se modifica)
@@ -61,26 +59,6 @@ while(linea):
 # Cerrar Terms_selected.csv 
 datos.close()
 
-# Leer excel con la información de los términos de lov que han sido seleccionados por el experto
-datos = open("Terms_selectedTUTOR.csv" , "r", encoding='utf-8')
-# Saltar la primera linea (solo contiene el nombre de las columnas)
-linea = datos.readline()
-# Leer segunda linea (ya contiene datos)
-linea = datos.readline()
-
-while(linea):
-    # Dividir la linea en columnas
-    columna = linea.split(";")
-
-    # Crear entradas en los diccionarios para dicho término
-    show[f'{columna[0]}:{columna[1]}'] = 0
-
-    # Leer siguiente linea
-    linea = datos.readline()
-
-# Cerrar Terms_selectedTUTOR.csv 
-datos.close()
-
 # Leer excel con la información de las ontologías descargadas
 datos = open("vocabulariosV4.csv" , "r", encoding='utf-8')
 # Saltar la primera linea (solo contiene el nombre de las columnas)
@@ -100,6 +78,9 @@ while(linea):
     linea=datos.readline()
 
 datos.close()
+
+print(etiqueta)
+
 
 # Esta función te parsea los terminos identificados por rdflib a sus respectivos "prefijo:sufijo".
 # term_uri es la uri del termino, i representa si se ha encontrado en un triple como sujeto (1), predicado (2)
@@ -231,10 +212,12 @@ def showReal(term, text, c):
         # Iterar los predicados en las que el termino sea sujeto (ordenadas alfabeticamente)
         for p in sorted(sujetos[term].keys()):
 
-            if p in show.keys() and p!="rdfs:type":
+            # Esto es debido a que si es una clase anonima, rdflib guarda el tipo de la clase anonima
+            # (por ejemplo si es una restricción)
+            if p!="rdfs:type":
                  
-                 # Iterar los objetos para ese sujeto y predicado (ordenadas alfabeticamente)
-                 for o in sorted(sujetos[term][p]):
+                # Iterar los objetos para ese sujeto y predicado (ordenadas alfabeticamente)
+                for o in sorted(sujetos[term][p]):
 
                     resultados.write(text+"  |"+p+"\n")
                     resultados.write(text+"  |  |"+o+"\n")
@@ -272,7 +255,9 @@ def showTipo(term, text, c):
         # Iterar los predicados en las que el termino sea sujeto (ordenadas alfabeticamente)
         for p in sorted(sujetos[term].keys()):
 
-            if p in show.keys() and p!="rdfs:type":
+            # Esto es debido a que si es una clase anonima, rdflib guarda el tipo de la clase anonima
+            # (por ejemplo si es una restricción)
+            if p!="rdfs:type":
 
                 # Iterar los objetos para ese sujeto y predicado (ordenadas alfabeticamente)
                 for o in sorted(sujetos[term][p]):

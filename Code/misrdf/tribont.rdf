@@ -1,0 +1,1146 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/tribont"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/tribont">
+    <Prefix name="" IRI="https://w3id.org/tribont"/>
+    <Prefix name="ns" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="ns1" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://gbol.life/ontology/bibo#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>https://w3id.org/tribont/equipment</Import>
+    <Import>https://w3id.org/tribont/sample</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="ns:license"/>
+        <IRI>https://creativecommons.org/licenses/by-nc/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="bibo:status"/>
+        <Literal>published</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
+        <Literal>Work in progress</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal xml:lang="en">Izaskun Fernandez (Tekniker) 
+Domain expert:Iban Quintana (Tekniker) 
+Domain expert:Xana Fernandez (Tekniker)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+        <Literal>2023-06-02</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal xml:lang="en">Patricia Casla (Tekniker)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en">The goal  is to represent the tribological experiments by relaying on the representation included in the core,,  sample and equipment modules.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <Literal>2023-06-02</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+        <Literal>Tekniker</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+        <Literal>TribOnt ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>tribont</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal>https://w3id.org/tribont</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExperimentalTest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HardnessMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasuringTest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Operator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestOutputDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestOutputMeasurementFile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestOutputReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestStandard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestStep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TribologicalTest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WearScarMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/equipment#Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/equipment#EquipmentClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/equipment#ExperimentalEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/equipment#MeasuringEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/equipment#Scale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/equipment#Tribometer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#executes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAfterEndDependency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDependency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNofollowDependency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isExecutedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPerformedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPrevious"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTestedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tests"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/core#hasDocument"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="bibo:status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core#hasDocument"/>
+            <Class IRI="#TestOutputDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#hasDocument"/>
+            <Class IRI="#TestOutputDocument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isMadeOf"/>
+            <Class IRI="#Test"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="terms:identifier"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="terms:title"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExperimentalTest"/>
+        <Class IRI="#Test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExperimentalTest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#ExperimentalEquipment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExperimentalTest"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#ExperimentalEquipment"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardnessMeasurement"/>
+        <Class IRI="#MeasuringTest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardnessMeasurement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#HardnessTester"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardnessMeasurement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#HardnessProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasuringTest"/>
+        <Class IRI="#Test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasuringTest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#MeasuringEquipment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasuringTest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tests"/>
+            <Class IRI="/sample#Sample"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasuringTest"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#MeasuringEquipment"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Operator"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="terms:identifier"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Operator"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/core#name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core#hasDocument"/>
+            <Class IRI="#TestOutputDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDependency"/>
+            <Class IRI="#Test"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#Equipment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isPerformedBy"/>
+            <Class IRI="#Operator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tests"/>
+            <ObjectUnionOf>
+                <Class IRI="/sample#Sample"/>
+                <Class IRI="/sample#SampleSystem"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#hasDocument"/>
+            <Class IRI="#TestOutputDocument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOperationCondition"/>
+            <Class IRI="/core#OperationProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOperationMeasure"/>
+            <Class IRI="/core#OperationProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#TechnicalProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isMadeOf"/>
+            <Class IRI="#TestStep"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#Equipment"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="terms:identifier"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Test"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="terms:title"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestOutputDocument"/>
+        <Class IRI="/core#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestOutputMeasurementFile"/>
+        <Class IRI="#TestOutputDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestOutputReport"/>
+        <Class IRI="#TestOutputDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStandard"/>
+        <Class IRI="/core#Standard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStep"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDependency"/>
+            <Class IRI="#TestStep"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#hasDocument"/>
+            <Class IRI="#TestOutputDocument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOperationCondition"/>
+            <Class IRI="/core#OperationProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOperationMeasure"/>
+            <Class IRI="/core#OperationProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestStep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#TechnicalProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribologicalTest"/>
+        <Class IRI="#ExperimentalTest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribologicalTest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#Tribometer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribologicalTest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tests"/>
+            <Class IRI="/sample#SampleSystem"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribologicalTest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#TribologicalProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribologicalTest"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#Tribometer"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WearScarMeasurement"/>
+        <Class IRI="#MeasuringTest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WearScarMeasurement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#WearProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WearScarMeasurement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#WearProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightMeasurement"/>
+        <Class IRI="#MeasuringTest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightMeasurement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#Weight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightMeasurement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isExecutedBy"/>
+            <Class IRI="/equipment#Scale"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightMeasurement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="/core#Weight"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Property"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Unit"/>
+        <Class IRI="#Operator"/>
+        <Class IRI="/core#Company"/>
+        <Class IRI="/core#Document"/>
+        <Class IRI="/core#Role"/>
+        <Class IRI="/core#Standard"/>
+        <Class IRI="/equipment#Calibration"/>
+        <Class IRI="/material#MaterialApplication"/>
+        <Class IRI="/material#MaterialIdentification"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Experiment"/>
+        <Class IRI="#Test"/>
+        <Class IRI="#TestStep"/>
+        <Class IRI="/equipment#Equipment"/>
+        <Class IRI="/equipment#EquipmentClass"/>
+        <Class IRI="/material#Material"/>
+        <Class IRI="/sample#Sample"/>
+        <Class IRI="/sample#SampleBatch"/>
+        <Class IRI="/sample#SampleSystem"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#TestOutputDocument"/>
+        <Class IRI="/equipment#CalibrationDocument"/>
+        <Class IRI="/equipment#TechnicalDocument"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#TestStandard"/>
+        <Class IRI="/material#MaterialStandard"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/equipment#EquipmentStandard"/>
+        <Class IRI="/material#MaterialStandard"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#TestStandard"/>
+        <NamedIndividual IRI="/core#ASTMD5706"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestStandard"/>
+        <NamedIndividual IRI="/core#ASTMD5707"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestStandard"/>
+        <NamedIndividual IRI="/core#ASTMD6425"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TestStandard"/>
+        <NamedIndividual IRI="/core#ASTMD7421"/>
+    </ClassAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#hasAfterEndDependency"/>
+        <ObjectProperty IRI="#isNext"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAfterEndDependency"/>
+        <ObjectProperty IRI="#hasDependency"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNofollowDependency"/>
+        <ObjectProperty IRI="#hasDependency"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#executes"/>
+        <ObjectProperty IRI="#isExecutedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isNext"/>
+        <ObjectProperty IRI="#isPrevious"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isPerformedBy"/>
+        <ObjectProperty IRI="#performs"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isTestedBy"/>
+        <ObjectProperty IRI="#tests"/>
+    </InverseObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Experiment</IRI>
+        <Literal>A series of activities to carry out an experimentation procedure and measure its outputs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Experiment</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Experiment</IRI>
+        <Literal>Experiment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Experiment</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExperimentalTest</IRI>
+        <Literal>A testing activity that reproduces certain operation conditions to assess one or more technical attributes or characteristics of a given sample or sample system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ExperimentalTest</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExperimentalTest</IRI>
+        <Literal>ExperimentalTest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#ExperimentalTest</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HardnessMeasurement</IRI>
+        <Literal>A testing activity to measure  one or more  hardness attributes or characteristics of  a given sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#HardnessMeasurement</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HardnessMeasurement</IRI>
+        <Literal>HardnessMeasurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#HardnessMeasurement</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeasuringTest</IRI>
+        <Literal>A testing activity that measures one or more attributes or characteristics of a given sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MeasuringTest</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MeasuringTest</IRI>
+        <Literal>MeasuringTest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#MeasuringTest</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Operator</IRI>
+        <Literal>Person performing an specific activity or operation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Operator</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Operator</IRI>
+        <Literal>Operator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Operator</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Test</IRI>
+        <Literal>An activity intended to establish the techncial attributes or characteristics of something,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Test</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Test</IRI>
+        <Literal>Test</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Test</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestOutputDocument</IRI>
+        <Literal>A document compiling the outputs of a given test.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TestOutputDocument</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestOutputDocument</IRI>
+        <Literal>TestOutputDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TestOutputDocument</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestOutputMeasurementFile</IRI>
+        <Literal>Document including the output measures (i.e., technical properties) from a  test.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TestOutputMeasurementFile</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestOutputMeasurementFile</IRI>
+        <Literal>TestOutputMeasurementFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TestOutputMeasurementFile</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestOutputReport</IRI>
+        <Literal>Document report ing the results of a test.  technical properties) from a  test.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TestOutputReport</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestOutputReport</IRI>
+        <Literal>TestOutputReport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TestOutputReport</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestStandard</IRI>
+        <Literal>A document approved by a recognized bodythat provides common to by fullfiled by a test.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TestStandard</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestStandard</IRI>
+        <Literal>TestStandard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TestStandard</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TestStep</IRI>
+        <Literal>Each of the steps into which a given test can be subdivided</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TestStep</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TestStep</IRI>
+        <Literal>TestStep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TestStep</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribologicalTest</IRI>
+        <Literal>A testing activity that reproduces certain operation conditions to assess one or more tribological attributes or characteristics of a given sample system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TribologicalTest</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribologicalTest</IRI>
+        <Literal>TribologicalTest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TribologicalTest</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WearScarMeasurement</IRI>
+        <Literal>A testing activity to measure  one or more attributes or characteristics of the resulting scar in a given sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#WearScarMeasurement</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WearScarMeasurement</IRI>
+        <Literal>WearScarMeasurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#WearScarMeasurement</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeightMeasurement</IRI>
+        <Literal>A testing activity to measure the weight of a given sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#WeightMeasurement</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WeightMeasurement</IRI>
+        <Literal>WeightMeasurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#WeightMeasurement</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#executes</IRI>
+        <Literal>Relationship between an equipment and the activity it carries out.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#executes</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#executes</IRI>
+        <Literal>executes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#executes</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAfterEndDependency</IRI>
+        <Literal>Relation between an activity and the one preceeding it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasAfterEndDependency</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAfterEndDependency</IRI>
+        <Literal>hasAfterEndDependency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasAfterEndDependency</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDependency</IRI>
+        <Literal>Identifies the dependency between two activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasDependency</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDependency</IRI>
+        <Literal>hasDependency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasDependency</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNofollowDependency</IRI>
+        <Literal>Indicates that an activity has not a following dependency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasNofollowDependency</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNofollowDependency</IRI>
+        <Literal>hasNofollowDependency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasNofollowDependency</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isExecutedBy</IRI>
+        <Literal>Relationship between an activity and the equipment that executes it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isExecutedBy</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isExecutedBy</IRI>
+        <Literal>isExecutedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isExecutedBy</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isNext</IRI>
+        <Literal>Relationship between an activity and the one preceding it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isNext</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isNext</IRI>
+        <Literal>isNext</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isNext</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPerformedBy</IRI>
+        <Literal>Relationship between an activity and the person who performs it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isPerformedBy</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isPerformedBy</IRI>
+        <Literal>isPerformedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isPerformedBy</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPrevious</IRI>
+        <Literal>Relationship between an activity and the one following it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isPrevious</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isPrevious</IRI>
+        <Literal>isPrevious</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isPrevious</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTestedBy</IRI>
+        <Literal>Relationship between a sample body or sample system and the testing activity testing it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isTestedBy</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTestedBy</IRI>
+        <Literal>isTestedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isTestedBy</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#performs</IRI>
+        <Literal>Relationship between a person and the activity he/she performs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#performs</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#performs</IRI>
+        <Literal>performs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#performs</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tests</IRI>
+        <Literal>Relationship between a testing activity and what it tests (i.e., sample,  sample system).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#tests</IRI>
+        <Literal>https://w3id.org/tribont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tests</IRI>
+        <Literal>tests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#tests</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484412"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484413"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
