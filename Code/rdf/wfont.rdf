@@ -1,0 +1,918 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/wfont#"
+     xml:base="https://w3id.org/wfont"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/wfont">
+        <owl:imports rdf:resource="https://w3id.org/eep"/>
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
+        <terms:contributor>Egoitz Konde &lt;mailto:egoitz.konde@tekniker.es&gt;</terms:contributor>
+        <terms:contributor>Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:contributor>
+        <terms:contributor>Gonzalo Gil &lt;mailto:gonzalo.gil@tekniker.es&gt;</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-10-05</terms:created>
+        <terms:creator>Iker Esnaola-Gonzalez &lt;mailto:iker.esnaola@tekniker.es&gt;</terms:creator>
+        <terms:description xml:lang="en">The Wind Farm Ontology (wfont) describes wind farms and their components. It is inspired by the SANDIA Report SAND2009-1171 and DAEKIN project outcomes. It reuses the AffectedBy and EEP (Execution-Executor-Procedure) ontology design patterns to discover sensors or actuators that observe or act on a given quality or feature of interest.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-11-04</terms:modified>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wind Farm Ontology (wfont)</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wfont</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/wfont#"/>
+        <owl:versionInfo xml:lang="es">0.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/wfont#hasIndicator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/wfont#hasIndicator">
+        <rdfs:range rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment>Relation that links a Gearbox to the indicators that describe its situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">hasIndicator</rdfs:label>
+        <rdfs:label xml:lang="es">tieneIndicador</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/wfont#hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/wfont#hasPart">
+        <rdfs:comment>Relation that links an element and the parts is composed of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">hasPart</rdfs:label>
+        <rdfs:label xml:lang="es">tieneParte</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/affectedBy#Quality -->
+
+    <owl:Class rdf:about="https://w3id.org/affectedBy#Quality"/>
+    
+
+
+    <!-- https://w3id.org/eep#Executor -->
+
+    <owl:Class rdf:about="https://w3id.org/eep#Executor"/>
+    
+
+
+    <!-- https://w3id.org/wfont#AbrasiveWearLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#AbrasiveWearLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having abrasive particles in the oil, it is calculated using Cutting parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Abrasive Wear Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#AdhesiveWearLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#AdhesiveWearLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having sliding particles in the oil, it is calculated using Sliding parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Adhesive Wear Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#AirContentLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#AirContentLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having bubbles in the oil, it is calculated using Bubbles parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Air Content Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#BigBubbles -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#BigBubbles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Bubbles"/>
+        <rdfs:comment xml:lang="en">Number of bubbles per milimiter bigger than 21 μm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Big Bubbles</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#BigParticles -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#BigParticles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Particles"/>
+        <rdfs:comment xml:lang="en">Number of particles per milimiter bigger than 21 μm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Big Particles</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Bubbles -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Bubbles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of bubbles per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Bubbles</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Bushing -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Bushing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxTorqueArmSystem"/>
+        <rdfs:comment xml:lang="en">A mechanical device used to reduce vibrations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Buje</rdfs:label>
+        <rdfs:label xml:lang="en">Bushing</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#CarrierBearing -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#CarrierBearing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxBearing"/>
+        <rdfs:comment xml:lang="en">It is the bearing that support the carrier. The carrier holds the planet gears at different radio from the sun gear centerline.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Carrier Bearing</rdfs:label>
+        <rdfs:label xml:lang="es">Rodamiento Portador</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#CleanlinessLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#CleanlinessLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having particles in the oil, it is calculated using ISO4, ISO6 and ISO14 parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Cleanliness Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#CoolantPump -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#CoolantPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#CoolingSystem"/>
+        <rdfs:comment xml:lang="en">Circulates the liquid from the cooling system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Bomba de Refrigerante</rdfs:label>
+        <rdfs:label xml:lang="en">Coolant Pump</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#CoolingSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#CoolingSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">Reduces the temperature of the oil from the lubricating system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Cooling System</rdfs:label>
+        <rdfs:label xml:lang="es">Sistema de Refrigeración</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Cutting -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Cutting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles related to cutting wear per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Cutting</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Fatigue -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Fatigue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles related to fatigue wear per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Fatigue</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#FatigueWearLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#FatigueWearLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having fatigue particles in the oil, it is calculated using Fatigue parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Fatigue Wear Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Fiber -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Fiber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles related to fiber particles per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Fiber</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#FibreContaminationLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#FibreContaminationLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having fibre particles in the oil, it is calculated using Fibre parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Fibre Contamination Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Gearbox -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Gearbox">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasIndicator"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/wfont#Indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/wfont#GearboxBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/wfont#GearboxGears"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/wfont#GearboxHousing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/wfont#GearboxTorqueArmSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A set of gears with its casing, aimed at increasing or reducing speed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Gearbox</rdfs:label>
+        <rdfs:label xml:lang="es">Multiplicadora</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#GearboxBearing -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#GearboxBearing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxComponent"/>
+        <rdfs:comment xml:lang="en">Consists of rings with raceway (inner ring and outer ring), rolling elements (either balls or rollers) and cage. The cage separates the rolling elements at regular intervals, holds them in place within the inner and outer raceways, and allows them to rotate freely.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Bearing</rdfs:label>
+        <rdfs:label xml:lang="es">Rodamiento</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#GearboxComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#GearboxComponent">
+        <rdfs:comment xml:lang="en">Constituting part or element of a gearbox.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Componente de Multiplicadora</rdfs:label>
+        <rdfs:label xml:lang="en">Gearbox Component</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#GearboxGears -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#GearboxGears">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxComponent"/>
+        <rdfs:comment xml:lang="en">It is a rotating circular machine part having teeth which mesh with another (compatible) toothed part to transmit (convert) torque and speed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Engranaje</rdfs:label>
+        <rdfs:label xml:lang="en">Gears</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#GearboxHousing -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#GearboxHousing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxComponent"/>
+        <rdfs:comment xml:lang="en">A protective casing providing a reservoir of oil or grease for the gearing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Alojamiento</rdfs:label>
+        <rdfs:label xml:lang="en">Housing</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#GearboxLubeSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#GearboxLubeSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxComponent"/>
+        <rdfs:comment xml:lang="en">It controls the shifting process of the transmission, lubrication of the transmission parts to prevent frictional damage, and cooling of the transmission. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Lube System</rdfs:label>
+        <rdfs:label xml:lang="es">Sistema de Lubricación</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#GearboxTorqueArmSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#GearboxTorqueArmSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxComponent"/>
+        <rdfs:comment xml:lang="en">It is a long suspension arm that attaches between the housing and the Nacelle. Its primary job is to control axle housing rotation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Sistema de Brazo de Torque</rdfs:label>
+        <rdfs:label xml:lang="en">Torque Arm System</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#HollowShaft -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#HollowShaft">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxGears"/>
+        <rdfs:comment xml:lang="en">The ouput shaft of the gearbox witch has empty space inside.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Eje hueco</rdfs:label>
+        <rdfs:label xml:lang="en">Hollow Shaft</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Hose-Fitting -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Hose-Fitting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">Flexible tube and part attached to it where lube is carried.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Hose/Fitting</rdfs:label>
+        <rdfs:label xml:lang="es">Manguera</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#ISO14 -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#ISO14">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles per milimiter bigger than 14 μm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">ISO14</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#ISO4 -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#ISO4">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles per milimiter bigger than 4 μm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">ISO4</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#ISO6 -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#ISO6">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles per milimiter bigger than 6 μm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">ISO6</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Indicator -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Indicator">
+        <rdfs:comment xml:lang="en">Something that shows what a situation is like.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Indicador</rdfs:label>
+        <rdfs:label xml:lang="en">Indicator</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#LubePump -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#LubePump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">Circulates the lubricant from the lube system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Bomba de Lubricación</rdfs:label>
+        <rdfs:label xml:lang="en">Lube Pump</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#LubePumpMotor -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#LubePumpMotor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">It supplies motive power to the pump.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Lube Pump Motor</rdfs:label>
+        <rdfs:label xml:lang="es">Motor de Bomba de Lubricación</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Nacelle -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Nacelle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/wfont#Gearbox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A housing which contains the drive‑train and other elements on top of a horizontal axis wind turbine tower.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Góndola</rdfs:label>
+        <rdfs:label xml:lang="en">Nacelle</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#OilDegradation -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#OilDegradation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">State of the oil degradation level in the different stages of its useful life.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Oil Degradation</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#OilDegradationLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#OilDegradationLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for oil degradation in the oil, it is calculated using OD parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Oil Degradation Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Particles -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Particles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Particles</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#PlanetBearing -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#PlanetBearing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxBearing"/>
+        <rdfs:comment xml:lang="en">Consists of the bearing mounted in the planet gear.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Planet Bearing</rdfs:label>
+        <rdfs:label xml:lang="es">Rodamiento Planetario</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#PlanetGear -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#PlanetGear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxGears"/>
+        <rdfs:comment xml:lang="en">It is the gear that rotates around the sun gear.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Engranaje Planetario</rdfs:label>
+        <rdfs:label xml:lang="en">Planet Gear</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#PrimaryFiltration -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#PrimaryFiltration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">First step of lube filtration system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Filtración Primaria</rdfs:label>
+        <rdfs:label xml:lang="en">Primary Filtration</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Radiator -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Radiator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#CoolingSystem"/>
+        <rdfs:comment xml:lang="en">It is a heat exchanger use to transfer thermal energy from one medium to another.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Radiador</rdfs:label>
+        <rdfs:label xml:lang="en">Radiator</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Reservoir -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Reservoir">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">Lube compartment or tank that collect oil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Depósito</rdfs:label>
+        <rdfs:label xml:lang="en">Reservoir</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#RingGear -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#RingGear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxGears"/>
+        <rdfs:comment xml:lang="en">An outer ring with inward-facing teeth that mesh with the planet gear or gears.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Engranaje de Anillo</rdfs:label>
+        <rdfs:label xml:lang="en">Ring Gear</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#SecondaryFiltration -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#SecondaryFiltration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:comment xml:lang="en">Second step of lube filtration system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Filtración Secundaria</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary Filtration</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Sensor -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxLubeSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eep#forQuality"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/affectedBy#Quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device that converts a physical pehnomenon into a measurable data. In lube systems, collects information of the oil wear or operation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+        <rdfs:label xml:lang="es">Sensor</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#SevereWearLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#SevereWearLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having big particles in the oil, it is calculated using BigParticles parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Severe Wear Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#ShaftBearing -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#ShaftBearing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxBearing"/>
+        <rdfs:comment xml:lang="en">Bearing which supports the intermediate shafting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Rodamiento de Eje</rdfs:label>
+        <rdfs:label xml:lang="en">Shaft Bearing</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Sliding -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Sliding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles related to slidding wear per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Sliding</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#SpurGear -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#SpurGear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxGears"/>
+        <rdfs:comment xml:lang="en">It has straight teeth and are parallel to the axis of the wheel.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Engranaje Recto</rdfs:label>
+        <rdfs:label xml:lang="en">Spur Gear</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#SunGear -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#SunGear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#GearboxGears"/>
+        <rdfs:comment xml:lang="en">It is the central gear.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Engranaje Solar</rdfs:label>
+        <rdfs:label xml:lang="en">Sun Gear</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#UnclassifiedWearLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#UnclassifiedWearLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/wfont#Indicator"/>
+        <rdfs:comment xml:lang="en">Indicates the warning and alarm level for having unclassified particles in the oil, it is calculated using Unknown parameter of the sensor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Unclassified Wear Level</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#Unknown -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#Unknown">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment xml:lang="en">Number of particles related to unknown particles per milimiter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="en">Unknown</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#WindFarm -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#WindFarm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/wfont#WindTurbine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A group of wind turbine generator jointly operated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Parque Eólico</rdfs:label>
+        <rdfs:label xml:lang="en">Wind Farm</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAND2009-1171 Report - Appendix A: Taxonomy</rdfs:seeAlso>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/wfont#WindTurbine -->
+
+    <owl:Class rdf:about="https://w3id.org/wfont#WindTurbine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/wfont#hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/wfont#Nacelle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A rotating machinery in which the kinetic wind energy is transformed into another form of energy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/wfont#"/>
+        <rdfs:label xml:lang="es">Aerogenerador</rdfs:label>
+        <rdfs:label xml:lang="en">Wind Turbine</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/wfont# -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/wfont#"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
