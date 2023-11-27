@@ -3,13 +3,12 @@
 #   - key : es una estructura detectada en la ontología
 #   - value: Es un diccionario en el que se almacenan los siguientes elementos:
 #       - valor: Número de veces que se repite dicho patrón en todas las ontologías
+#       - est_name: Array con el nombre de las estructuras detectadas
 #       - ont_con: Numero de ontologias distintas en las que aparece dicho patron
 #       - ont_name: Es un diccionario cuyo:
 #           - key: prefijo de la ontología en el que se ha encontrado el patron
 #           - value: numero de veces que se ha encontrado el patron en la ontología
 patrones = {}
-
-repeticiones = {}
 
 # Contador para crear identificadores unicos para los patrones
 contador = 1
@@ -28,13 +27,25 @@ texto = ""
 # detectado una estructura
 ont_line = True
 
+# Variable que indica si se esta leyendo la linea que indica el nombre de la estructura que se esta leyendo
+est_line = True
+
 # Iterar el txt
 while(linea):
     
     # Se esta leyendo el prefijo de la ontología?
     if ont_line:
         ont_line = False
-        ont_prefix = linea
+        # El prefijo de la ontología se esta leyendo como "Ontología: prefijo\n" 
+        # y solo nos interesa el prefijo.
+        ont_prefix = linea.split(":",1)[1].strip()
+
+    # Se esta leyendo el nombre de la estructura?
+    elif est_line:
+        est_line = False
+        # El nombre de la estructura se esta leyendo como "Estructura: nombre\n"
+        # y solo nos interesa el nombre.
+        est_name = linea.split(":",1)[1].strip()
 
     # Se esta leyendo una linea con texto?
     elif len(linea) > 1: 
@@ -47,13 +58,17 @@ while(linea):
         if texto not in patrones: 
             # Crear un nuevo patron
             patrones[texto] = {"valor": 0,
+                               "est_name": [],
                                "ont_name": {},
                                "ont_con": 0}
 
         # Indicar que el patron ha sido detectado una vez mas
         patrones[texto]["valor"] += 1
 
-        # Es la primera vez que se ha detectado dicho patron en la ontología?
+        # Añadir el nombre de la estructura
+        patrones[texto]["est_name"].append(est_name)
+
+        # No es la primera vez que se ha detectado dicho patron en la ontología?
         if ont_prefix in patrones[texto]["ont_name"]:
             # Indicar el número de veces que se ha detectado dicho patron en la ontología
             patrones[texto]["ont_name"][ont_prefix] += 1
@@ -67,6 +82,7 @@ while(linea):
         # Reiniciar el texto para la siguiente estructura
         texto = ""
         ont_line = True
+        est_line = True
 
     # Leer siguiente linea del excel
     linea = datos.readline()
@@ -82,23 +98,18 @@ resultados.truncate()
 resultados_csv.truncate()
 
 # Dar nombre a las columnas
-resultados_csv.write("Patrón;Repeticiones;Aparición\n")
+resultados_csv.write("Patron;Repeticiones;Aparicion;Estructuras\n")
 
 def contar(ont_name):
     texto = ''
 
     for ont_prefix, num_apariciones in ont_name.items():
-        texto += f'{ont_prefix.split(":",1)[1].strip()} ({num_apariciones}); '
+        texto += f'{ont_prefix} ({num_apariciones}); '
     
     return texto
 
 # Iterar los patrones encontrados
 for patron in patrones.keys():
-
-    """if patrones[patron]['valor'] not in repeticiones: 
-        repeticiones.update({patrones[patron]['valor']:0})
-
-    repeticiones[patrones[patron]['valor']]+=1"""
 
     # Una estructura se considera un patron si se repite como mínimo 2 veces
     if patrones[patron]['valor'] > 1:
@@ -114,15 +125,12 @@ for patron in patrones.keys():
         # Escribir patron
         resultados.write(f"{patron}\n")
 
+        # Obtener el nombre de las estructuras en las que se ha detectado el patron
+        texto = ';'.join(patrones[patron]["est_name"])
         # Escribir fila en el csv
-        resultados_csv.write(f'Patron {contador};{patrones[patron]["valor"]};{patrones[patron]["ont_con"]}\n')
+        resultados_csv.write(f'Patron {contador};{patrones[patron]["valor"]};{patrones[patron]["ont_con"]};{texto}\n')
 
         contador += 1
 
 resultados.close()
 resultados_csv.close()
-
-
-"""for i in sorted(repeticiones.keys()):
-    print(f"{repeticiones[i]} estructura/s con {i} repeticion/es")"""
-

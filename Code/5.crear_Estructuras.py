@@ -1,21 +1,14 @@
-from os import startfile
-from rdflib import Graph
-
-filtro={}
+from rdflib import Graph, URIRef, Literal, BNode
+from rdflib.namespace import FOAF, NamespaceManager
 
 # Diccionario cuyo:
 #   key: URI de los terminos de lov
-#   value: 
-etiquetas={}
-
-# Diccionario cuyo:
-#   key: URI de los terminos de lov
-#   value: : "prefijo:sufijo" de los terminos de lov (no se modifica)
+#   value: : "prefijo:sufijo" de los terminos seleccionados (no se modifica)
 etiqueta={}
 
 # Diccionario cuyo:
-#   key: URI de las ontologías
-#   value: : prefijo de las ontologías (tambien es el nombre de los archivos guardados en local)
+#   key: "prefijo:sufijo" de los terminos seleccionados
+#   value: : 0 (no se modifica)
 uri={}
 
 # Diccionario cuyo:
@@ -26,10 +19,6 @@ vocabularios={}
 # Las clases anonimas en rdflib aparecen solo como "BNode". Para crear identificadores únicos 
 # para clases anónimas utilizamos esta variable
 anonimizador=1
-
-# Función que no se usa
-def ex(fichero): 
-    startfile(fichero+".txt")
 
 # Leer excel con la información de los términos de lov que han sido seleccionados
 datos = open("Terms_selected.csv" , "r", encoding='utf-8')
@@ -48,10 +37,8 @@ while(linea):
     term_name = f'{columna[0]}:{columna[1]}'
 
     # Crear entradas en los diccionarios para dicho término
-    filtro[term_uri] = 0
-    filtro[term_name] = 0
-    etiquetas[term_uri] = 0
     etiqueta[term_uri] = term_name
+    uri[term_name] = 0
 
     # Leer siguiente linea
     linea=datos.readline()
@@ -71,7 +58,6 @@ while(linea):
     columna = linea.split(";")
 
     # Crear entradas en los diccionarios para dicho término
-    uri[columna[1]] = columna[0]
     vocabularios[columna[0]] = 0
 
     # Leer siguiente linea
@@ -79,24 +65,22 @@ while(linea):
 
 datos.close()
 
-print(etiqueta)
-
-
 # Esta función te parsea los terminos identificados por rdflib a sus respectivos "prefijo:sufijo".
 # term_uri es la uri del termino, i representa si se ha encontrado en un triple como sujeto (1), predicado (2)
 # u objeto (3). Tipo es el tipo que utiliza rdflib para representar el tipo de los terminos (clase, clase anonima, etc)
-def tag(term_uri, i, tipo):
+def tag(term_uri, i, tipo, name):
     global anonimizador
     # Esta variable va a almacenar el "prefijo:sufijo" del termino
     tag=""
-    text=""
 
-    # Es un termino de lov con nombre? (es decir no es una clase anónima, un datatype etc)
+    # Es un termino seleccionado?
     if term_uri in etiqueta:
-        # almacenar el "prefijo:sufijo" del termino
+        # adquirir el "prefijo:sufijo" del termino
         tag = etiqueta[term_uri]
-        # Actualizar el número de apariciones de dicho termino
-        etiquetas[term_uri] += 1
+        if(tag != name):
+            prueba.write('Distintos\n')
+            prueba.write(f"{tag}\n")
+            prueba.write(f"{name}\n")
 
     else:
 
@@ -115,37 +99,9 @@ def tag(term_uri, i, tipo):
                 # Adquirir identificador de la clase anonima
                 tag = anonimos[term_uri]
 
-        # Es una referencia?
+        # Es una URI?
         elif "Ref" in tipo:
-
-            # Recorrer las uris de las ontologías
-            for ont_uri in uri.keys():
-
-                # Es la URI de una de las ontologías de lov?
-                if ont_uri in term_uri:
-                    tag= uri[ont_uri]
-
-                    # Con este bucle queremos coger el sufijo de la URI (es decir, la parte detras del # o del /)
-                    for e in term_uri:
-                        text += e
-                        
-                        if e == "#" or e== "/"  : 
-                            text = ""
-
-                    # En este caso tag es "prefijo:sufijo" de una ontología de lov
-                    tag += f':{text}'
-
-                else:
-
-                    # Con este bucle queremos coger el sufijo de la URI (es decir, la parte detras del # o del /)
-                    for e in term_uri:
-                        text += e
-
-                        if e== "/" or e == "#": 
-                            text = ""
-
-                    # En este caso tag es "#sufijo" de un elemento
-                    tag = f'#{text}'
+            tag = name
 
         # Es un literal?
         elif "Literal" in tipo:
@@ -153,8 +109,10 @@ def tag(term_uri, i, tipo):
 
     # Se ha podido identificar que representa el termino?
     if tag=="":
+        # Este caso no deberia pasar
         tag="None"
-        print(f"{i}-{term_uri}-{tipo}")
+        prueba.write('None')
+        prueba.write(f"{i}-{term_uri}-{tipo}")
 
     return (tag)
 
@@ -169,6 +127,16 @@ def parsear(ont_prefix):
     except:
         print(f'Error al cargar la ontología: {ont_prefix}')
         return
+    
+    # Cargar los import de la ontología en el grafo auxiliar
+    for s, p, o in g.triples((None, URIRef('http://www.w3.org/2002/07/owl#imports'), None)):
+
+        try:
+            print(o)
+            aux_g.parse(o)
+        
+        except:
+            prueba.write(f'Fallo en la ontología {ont_prefix} en el import {o}\n')
 
     # Iterar los triples de la ontología
     for triple in g:
@@ -176,12 +144,11 @@ def parsear(ont_prefix):
         # Esta la tripleta entera?
         if len(triple)==3:
             # Adquirir "prefijo:sufijo" del sujeto
-            tag1 = tag(str(triple[0]),1,str(type(triple[0])))
+            tag1 = tag(str(triple[0]), 1, str(type(triple[0])), triple[0].n3(g.namespace_manager))
             # Adquirir "prefijo:sufijo" del predicado
-            tag2 = tag(str(triple[1]),2,str(type(triple[1])))
+            tag2 = tag(str(triple[1]), 2, str(type(triple[1])), triple[1].n3(g.namespace_manager))
             # Adquirir "prefijo:sufijo" del objeto
-            tag3 = tag(str(triple[2]),3,str(type(triple[2])))
-            # print(f"{tag1} -> {tag2} -> {tag3}")
+            tag3 = tag(str(triple[2]), 3, str(type(triple[2])), triple[2].n3(g.namespace_manager))
 
         # Se ha podido identificar correctamente todos los elementos de la tripleta?
         if tag1 != "None" and tag2 != "None" and tag3 != "None":
@@ -194,10 +161,6 @@ def parsear(ont_prefix):
 
             if tag3 not in sujetos[tag1][tag2]: 
                 sujetos[tag1][tag2].append(tag3)
-
-            # Es el objeto de la tripleta una clase anonima?
-            if "Anonimo" in tag3: 
-                conAnonimo[tag1] = 0
 
 # term = "prefijo:sufijo" del termino que estamos visitando
 def showReal(term, text, c):
@@ -214,7 +177,7 @@ def showReal(term, text, c):
 
             # Esto es debido a que si es una clase anonima, rdflib guarda el tipo de la clase anonima
             # (por ejemplo si es una restricción)
-            if p!="rdfs:type":
+            if p!="rdf:type":
                  
                 # Iterar los objetos para ese sujeto y predicado (ordenadas alfabeticamente)
                 for o in sorted(sujetos[term][p]):
@@ -222,7 +185,7 @@ def showReal(term, text, c):
                     resultados.write(text+"  |"+p+"\n")
                     resultados.write(text+"  |  |"+o+"\n")
 
-                    if o in sujetos and o!=term and not("#" in o):
+                    if o in sujetos and o!=term and "Anonimo" in o:
                         showReal(o, text+"  |  |", 1)
 
 # term = "prefijo:sufijo" del termino que estamos visitando
@@ -235,7 +198,7 @@ def showTipo(term, text, c):
         if c == 0:
 
             try:
-                resultad.write(text+sujetos[term]["rdfs:type"][0]+"\n")
+                resultad.write(text+sujetos[term]["rdf:type"][0]+"\n")
 
             except:
                 print(sujetos[term])
@@ -257,39 +220,49 @@ def showTipo(term, text, c):
 
             # Esto es debido a que si es una clase anonima, rdflib guarda el tipo de la clase anonima
             # (por ejemplo si es una restricción)
-            if p!="rdfs:type":
+            if p!="rdf:type":
 
                 # Iterar los objetos para ese sujeto y predicado (ordenadas alfabeticamente)
                 for o in sorted(sujetos[term][p]):
-
-                    resultad.write(text+"  |"+p+"\n")
-
+                    
                     try:
 
-                        if "#" in sujetos[o]["rdfs:type"][0]:
-                            resultad.write(text+"  |  |#Desconocido\n")
+                        resultad.write(text+"  |"+p+"\n")
 
-                        elif "Anonimo" in sujetos[o]["rdfs:type"][0]:
-                            resultad.write(text+"  |  |Anonimo\n")
+                        if o in sujetos and 'rdf:type' in sujetos[o]:
+                            # Adquirir tipos para ese elemento
+                            types = sujetos[o]["rdf:type"]
 
-                        else: 
-                            resultad.write(text+"  |  |"+sujetos[o]["rdfs:type"][0]+"\n")
+                            if "#" in types[0]:
+                                resultad.write(text+"  |  |#Desconocido\n")
 
+                            elif "Anonimo" in types[0]:
+                                resultad.write(text+"  |  |Anonimo\n")
+
+                            else:
+                                # Ordenar alfabeticamente los tipos
+                                types.sort()
+                                resultad.write(text+"  |  |"+', '.join(types)+"\n")
+
+                        else:
+
+                            if "Anonimo" in o: 
+                                resultad.write(text+"  |  |"+"Anonimo"+"\n")
+
+                            elif 'xsd' in o:
+                                resultad.write(text+"  |  |"+"Datatype"+"\n")
+
+                            elif "Literal" in o: 
+                                resultad.write(text+"  |  |"+"Literal"+"\n")
+
+                            else: 
+                                #resultad.write(text+"  |  |"+o+"\n")
+                                resultad.write(text+"  |  |"+"#Desconocido"+"\n")
+                        
                     except:
+                        prueba.write(f'Error en {term}\n')
 
-                        if "Anonimo" in o: 
-                            resultad.write(text+"  |  |"+"Anonimo"+"\n")
-
-                        elif "#" in o: 
-                            resultad.write(text+"  |  |"+"#Desconocido"+"\n")
-
-                        elif "Literal" in o: 
-                            resultad.write(text+"  |  |"+"Literal"+"\n")
-
-                        else: 
-                            resultad.write(text+"  |  |"+o+"\n")
-
-                    if o in sujetos and o!=term and not("#" in o):
+                    if o in sujetos and o!=term and "Anonimo" in o:
                         showTipo(o, text+"  |  |", 1)
 
 # Crear un nuevo fichero en los que escribir los resultados de ejecutar este programa
@@ -309,7 +282,9 @@ resultad.truncate()
 resultados = open("Original.txt", 'w', encoding='utf-8')
 resultad.truncate()
 
-conAnonimo={}
+prueba = open('Prueba.txt', 'w',  encoding='utf-8')
+prueba.truncate()
+
 visitado=[]
 
 # Este diccionario guarda las tripletas encontradas en una ontología.
@@ -329,6 +304,9 @@ anonimos={}
 for ont_prefix in vocabularios:
 
     print(f'Cargando ontología {ont_prefix}')
+
+    # Grafo auxiliar en el que cargar los import de una ontología
+    aux_g = Graph()
     
     try:
         # Vaciar diccionarios
@@ -339,9 +317,12 @@ for ont_prefix in vocabularios:
         # Cargar ontología
         parsear(ont_prefix)
 
+        if ont_prefix == 'w3c-ssn':
+            print(sujetos)
+
         # Contador que indica el número de tripletas de una ontología que satisface nuestras condiciones
         # para posteriormente detectar patrones
-        contador=0
+        contador = 0
 
         # Iterar por oden alfabetico los terminos que se han encontrado como sujeto de una tripleta
         for s in sorted(sujetos.keys()):
@@ -354,12 +335,13 @@ for ont_prefix in vocabularios:
 
                     # El objeto representa una clase anonima?
                     if o in sujetos and "Anonimo" in o:
-                        contador+=1
+                        contador += 1
                         visitado=[]
 
                         resultados.write("\n")
                         # Pintar de donde sale esta tripleta
                         resultados.write(f'Ontología: {ont_prefix}\n')
+                        resultados.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultados.write(s+"\n")
                         resultados.write("  |rdfs:subClassOf\n")
                         showReal(o,"  |  |",0)
@@ -367,6 +349,7 @@ for ont_prefix in vocabularios:
                         resultad.write("\n")
                         # Pintar de donde sale esta tripleta
                         resultad.write(f'Ontología: {ont_prefix}\n')
+                        resultad.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultad.write("owl:Class\n")
                         resultad.write("  |rdfs:subClassOf\n")
                         visitado=[]
@@ -380,11 +363,12 @@ for ont_prefix in vocabularios:
 
                     # El objeto representa una clase anonima?
                     if o in sujetos and "Anonimo" in o:
-                        contador+=1
+                        contador += 1
                         visitado=[]
                         resultados.write("\n")
                         # Pintar de donde sale esta tripleta
                         resultados.write(f'Ontología: {ont_prefix}\n')
+                        resultados.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultados.write(s+"\n")
                         resultados.write("  |owl:equivalentClass\n")
                         showReal(o,"  |  |",0)
@@ -392,6 +376,7 @@ for ont_prefix in vocabularios:
                         resultad.write("\n")
                         # Pintar de donde sale esta tripleta
                         resultad.write(f'Ontología: {ont_prefix}\n')
+                        resultad.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultad.write("owl:Class\n")
                         resultad.write("  |owl:equivalentClass\n")
                         visitado=[]
@@ -407,8 +392,8 @@ for ont_prefix in vocabularios:
 
 resultados.close()
 resultad.close()
-#ex(name)
 result.close()
+prueba.close()
 
 
 

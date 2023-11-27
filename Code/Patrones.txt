@@ -1,0 +1,3704 @@
+Patron 1
+Repeticiones 13
+Ontologias distintas 2
+Ontologías en las que aparece a-loc (2); eac-cpf (11); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |#Desconocido
+
+Patron 2
+Repeticiones 1065
+Ontologias distintas 3
+Ontologías en las que aparece a-loc (21); eac-cpf (2); obo (1042); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+
+Patron 3
+Repeticiones 60
+Ontologias distintas 2
+Ontologías en las que aparece a-loc (10); obo (50); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 4
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece a-loc (4); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |#Desconocido
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Patron 5
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece a-loc (4); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Thing
+
+Patron 6
+Repeticiones 7
+Ontologias distintas 1
+Ontologías en las que aparece eac-cpf (7); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |#Desconocido
+  |  |  |owl:someValuesFrom
+  |  |  |  |#Desconocido
+
+Patron 7
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece eac-cpf (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |#Desconocido
+
+Patron 8
+Repeticiones 178
+Ontologias distintas 1
+Ontologías en las que aparece obo (178); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 9
+Repeticiones 230
+Ontologias distintas 1
+Ontologías en las que aparece obo (230); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+
+Patron 10
+Repeticiones 28
+Ontologias distintas 1
+Ontologías en las que aparece obo (28); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 11
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 12
+Repeticiones 56
+Ontologias distintas 1
+Ontologías en las que aparece obo (56); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 13
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 14
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onClass
+  |  |  |  |owl:Class
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:qualifiedCardinality
+  |  |  |  |Literal
+
+Patron 15
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+
+Patron 16
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:minCardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Patron 17
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:minCardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 18
+Repeticiones 42
+Ontologias distintas 1
+Ontologías en las que aparece obo (42); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 19
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:cardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:FunctionalProperty
+
+Patron 20
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 21
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:NamedIndividual
+
+Patron 22
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Class
+
+Patron 23
+Repeticiones 5
+Ontologias distintas 1
+Ontologías en las que aparece obo (5); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Class
+
+Patron 24
+Repeticiones 48
+Ontologias distintas 1
+Ontologías en las que aparece obo (48); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+
+Patron 25
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 26
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 27
+Repeticiones 30
+Ontologias distintas 1
+Ontologías en las que aparece obo (30); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 28
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 29
+Repeticiones 293
+Ontologias distintas 1
+Ontologías en las que aparece obo (293); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Class
+
+Patron 30
+Repeticiones 31
+Ontologias distintas 1
+Ontologías en las que aparece obo (31); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 31
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 32
+Repeticiones 444
+Ontologias distintas 1
+Ontologías en las que aparece obo (444); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 33
+Repeticiones 417
+Ontologias distintas 1
+Ontologías en las que aparece obo (417); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 34
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 35
+Repeticiones 21
+Ontologias distintas 1
+Ontologías en las que aparece obo (21); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 36
+Repeticiones 44
+Ontologias distintas 1
+Ontologías en las que aparece obo (44); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 37
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 38
+Repeticiones 9
+Ontologias distintas 1
+Ontologías en las que aparece obo (9); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 39
+Repeticiones 78
+Ontologias distintas 1
+Ontologías en las que aparece obo (78); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 40
+Repeticiones 24
+Ontologias distintas 1
+Ontologías en las que aparece obo (24); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:hasValue
+  |  |  |  |#Desconocido
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 41
+Repeticiones 42
+Ontologias distintas 1
+Ontologías en las que aparece obo (42); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:hasValue
+  |  |  |  |owl:NamedIndividual
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 42
+Repeticiones 7
+Ontologias distintas 1
+Ontologías en las que aparece obo (7); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 43
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 44
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 45
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 46
+Repeticiones 26
+Ontologias distintas 1
+Ontologías en las que aparece obo (26); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 47
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 48
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 49
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 50
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 51
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 52
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 53
+Repeticiones 46
+Ontologias distintas 1
+Ontologías en las que aparece obo (46); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 54
+Repeticiones 14
+Ontologias distintas 1
+Ontologías en las que aparece obo (14); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 55
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 56
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 57
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 58
+Repeticiones 11
+Ontologias distintas 1
+Ontologías en las que aparece obo (11); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 59
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 60
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 61
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 62
+Repeticiones 310
+Ontologias distintas 1
+Ontologías en las que aparece obo (310); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 63
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 64
+Repeticiones 9
+Ontologias distintas 1
+Ontologías en las que aparece obo (9); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 65
+Repeticiones 20
+Ontologias distintas 1
+Ontologías en las que aparece obo (20); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 66
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 67
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 68
+Repeticiones 16
+Ontologias distintas 1
+Ontologías en las que aparece obo (16); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 69
+Repeticiones 4
+Ontologias distintas 1
+Ontologías en las que aparece obo (4); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 70
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:complementOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 71
+Repeticiones 8
+Ontologias distintas 1
+Ontologías en las que aparece obo (8); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 72
+Repeticiones 9
+Ontologias distintas 1
+Ontologías en las que aparece obo (9); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 73
+Repeticiones 11
+Ontologias distintas 1
+Ontologías en las que aparece obo (11); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 74
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece obo (6); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 75
+Repeticiones 8
+Ontologias distintas 1
+Ontologías en las que aparece obo (8); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 76
+Repeticiones 5
+Ontologias distintas 1
+Ontologías en las que aparece obo (5); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 77
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 78
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+
+Patron 79
+Repeticiones 11
+Ontologias distintas 1
+Ontologías en las que aparece obo (11); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 80
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 81
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 82
+Repeticiones 11
+Ontologias distintas 1
+Ontologías en las que aparece obo (11); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 83
+Repeticiones 14
+Ontologias distintas 1
+Ontologías en las que aparece obo (14); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+
+Patron 84
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 85
+Repeticiones 14
+Ontologias distintas 1
+Ontologías en las que aparece obo (14); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 86
+Repeticiones 5
+Ontologias distintas 1
+Ontologías en las que aparece obo (5); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |rdfs:Datatype
+
+Patron 87
+Repeticiones 8
+Ontologias distintas 1
+Ontologías en las que aparece obo (8); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 88
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 89
+Repeticiones 7
+Ontologias distintas 1
+Ontologías en las que aparece obo (7); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 90
+Repeticiones 12
+Ontologias distintas 1
+Ontologías en las que aparece obo (12); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:SymmetricProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:SymmetricProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 91
+Repeticiones 26
+Ontologias distintas 1
+Ontologías en las que aparece obo (26); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 92
+Repeticiones 46
+Ontologias distintas 1
+Ontologías en las que aparece obo (46); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 93
+Repeticiones 16
+Ontologias distintas 1
+Ontologías en las que aparece obo (16); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 94
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 95
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:complementOf
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 96
+Repeticiones 8
+Ontologias distintas 1
+Ontologías en las que aparece obo (8); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 97
+Repeticiones 5
+Ontologias distintas 1
+Ontologías en las que aparece obo (5); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 98
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 99
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 100
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:TransitiveProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+
+Patron 101
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece obo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 102
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece obo (3); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:complementOf
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:TransitiveProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |#Desconocido
+

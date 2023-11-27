@@ -1,0 +1,4235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="direction: ltr;" xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+<head>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="oscaf.css" />
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>NEPOMUK Annotation Ontology (NAO)</title>
+  <meta content="Simon Scerri" name="author" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <meta content="Specifications for the NEPOMUK Annotation Ontology, including Graph Metadata Vocabulary" name="description" />
+</head>
+
+
+<body>
+
+
+
+
+
+
+<div class="head">
+<div class="nav"> <a href="http://nepomuk.semanticdesktop.org"><img style="border: 0px solid ; width: 180px; height: 88px;" alt="NEPOMUK Logo" src="nepomuk.png"/></a> <a href="http://userbase.kde.org/Nepomuk"> <img style="border: 0px solid; width: 80px; height: 88px;" alt="KDE Logo" src="kde.png"/></a>   <a href="http://www.dime-project.eu/"><img style="border: 0px solid; width: 80px; height: 88px;" alt="di.me Logo" src="dime_logo_1000x1000_transparent_Bg.png"/></a><br/>
+
+
+
+
+
+
+<h1>NEPOMUK Annotation Ontology Specification</h1>
+
+
+
+
+
+
+<big style="color: rgb(0, 90, 156);">OSCAF Recommendation 28.08.2013</big>
+<dl>
+
+
+
+
+
+
+  <dt>Latest Version:</dt>
+
+
+
+
+
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao">http://www.semanticdesktop.org/ontologies/nao</a></dd>
+
+
+
+
+
+
+  <dt></dt>
+
+
+
+
+
+
+  <dt>This Version:</dt>
+
+
+
+
+
+
+  <dd>This file refers to the Revision 1.2 of NAO. Minor changes may be implemented in future revisions. With each new revision, the documentation and all serializations of the ontology will be updated. The URI identifying this version (but not the namespace) is <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao/v1.2/">http://www.semanticdesktop.org/ontologies/2007/08/15/nao/v1.2/</a></dd>
+
+
+
+
+
+
+</dl>
+
+ <dt>Previous Version:</dt>
+
+
+
+
+
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao/v1.1/">http://www.semanticdesktop.org/ontologies/nao/v1.1/</a></dd>
+
+
+
+
+
+
+
+<dl>
+
+
+
+
+
+
+  <dt>Authors:</dt>
+
+
+
+
+
+
+  <dd>Simon Scerri, DERI/NUIG, <a href="mailto:scerrisimon@gmail.com">scerrisimon@gmail.com</a></dd>
+
+
+
+
+
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+
+
+
+
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+
+
+
+
+
+  <dd>Siegfried Handschuh, DERI/NUIG, <a href="siegfried.handschuh@deri.org">siegfried.handschuh@deri.org</a></dd>
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+<span style="font-weight: bold;">Editor:</span> <br />
+
+
+
+
+
+
+<div style="margin-left: 40px;">Simon Scerri, DERI/NUIG, <a href="mailto:scerrisimon@gmail.com">scerrisimon@gmail.com</a>
+</div>
+
+
+<div style="margin-left: 40px;">Judie Attard, DERI/NUIG, <a href="mailto:judie.attard@deri.org">judie.attard@deri.org</a>
+</div>
+
+
+
+
+<dl>
+
+
+
+
+
+
+  <dt>Contributors:</dt>
+
+
+
+
+
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+
+
+
+
+
+  <dd>Max V&ouml;lkel, FZI,&nbsp;<a href="mailto:voelkel@fzi.de">voelkel@fzi.de</a></dd>
+
+
+
+
+
+
+  <dd>Sebastian Tr&uuml;g, EDGE-IT,&nbsp;<span class="wikiexternallink"><a href="mailto:strueg@mandriva.com">strueg@mandriva.com</a></span></dd>
+
+
+
+
+
+
+  <dd>Knud M&ouml;ller, DERI/NUIG, <a href="mailto:knud.moeller@deri.org">knud.moeller@deri.org</a></dd>
+
+
+
+
+
+
+  <dd>Julien Gaugaz, L3S, <a href="mailto:gaugaz@l3s.de">gaugaz@l3s.de</a>&nbsp;</dd>
+
+
+
+
+
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a>&nbsp;<br />
+
+
+
+
+
+
+  </dd>
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+<dl>
+
+
+
+
+
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+
+
+
+
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao/nao_data.rdfs">NAO
+(Data Graph Only)</a></dd>
+
+
+
+
+
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao/nao_metadata.rdfs">NAO
+(Metadata Graph Only)</a></dd>
+
+
+
+
+
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao/nao.trig">NAO
+(Graph Set)</a><span class="wikiexternallink"></span></dd>
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+<dl>
+
+
+
+
+
+
+  <dd></dd>
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<p class="copyright"> Copyright &copy; 2013 <a href="http://www.oscaf.org/"><acronym>OSCAF</acronym></a><sup>&reg;</sup>
+The ontologies are made available under the terms of OSCAF <a href="LICENSE.txt">software license</a>
+</p>
+
+
+
+
+
+
+<hr />
+<h2><a class="mozTocH2" name="mozTocId474323"></a>Abstract</h2>
+
+
+
+
+
+
+<p style="text-align: justify;">The annotation ontology
+provides
+vocabulary that enables users to attach custom descriptions,
+identifiers, tags and ratings to resources on their desktop. Via other
+properties, the user is also able to make generic relationships between
+related resources explicit. Some relationships between resources are
+too general to be included at the domain ontology level. Instead, these
+properties are also defined in the annotation ontology. Given the
+high-level status of this ontology, these propreties can&nbsp;be
+used
+to&nbsp;link any related resources on the user's desktop, as well
+as
+provide custom human-readable textual annotations.</p>
+
+
+
+
+
+
+<h2><a class="mozTocH2" name="mozTocId596458"></a>Status
+of this document</h2>
+
+
+
+
+
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the [<a href="http://nepomuk.semanticdesktop.org/">NEPOMUK Project</a>].
+It presents the specifications for the first version of the NAO
+vocabulary. The ontology is still being tested, which means that the
+ontology and this specification document are prone to
+change.&nbsp;The
+document itself is pending a review by the general NEPOMUK consortium,
+upon which it might be promoted from a draft to an official form.
+Subsequent versions of NAO might mean that the specification documents
+of the later versions render this document obsolete, with respect to
+the version of NAO in use, but not with respect to this version. </p>
+
+
+
+
+
+
+
+<h2>Ontology Visualisation</h2>
+
+<div id="ov">
+<div class="figure"><a name="nao-visualization"></a><p class="title"></p><div class="figure-contents">
+	<a class="ulink" href="nao.png" target="_top">
+		<div class="mediaobject"><img src="nao.png" width="459"></div>
+	</a>
+	</div></div>
+</div>
+
+<h2>Change Log</h2>
+
+<div id="cl">
+<ul style="text-align: justify;">
+
+<li> Added
+    <ul> 
+      <li><a href="#trustLevel">nao:trustLevel</a></li>
+      <li><a href="#directTrust">nao:directTrust</a></li>
+	  <li><a href="#networkTrust">nao:networkTrust</a></li>
+	  <li><a href="#privacyLevel">nao:privacyLevel</a></li>
+	  <li><a href="#externalIdentifier">nao:externalIdentifier</a></li>
+	  <li><a href="#endorsedBy">nao:endorsedBy</a></li>
+	  <li><a href="#favouritedBy">nao:favouritedBy</a></li>
+	  <li><a href="#hasDataGraph">nao:hasDataGraph</a></li>
+    </ul>
+</li>
+
+</div>
+
+
+
+<div class="toc">
+<h2 id="contents"><a class="mozTocH2" name="mozTocId577732"></a>Contents</h2>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div>
+<ul id="mozToc">
+
+
+
+
+<!--mozToc h2 1 h3 2 h4 3 h5 4--><li><a href="#mozTocId474323">Abstract</a></li>
+
+
+
+
+  <li><a href="#mozTocId596458">Status
+of this document</a></li>
+
+<li><a href="#mozTocIdOntologyVisualisation">Ontology Visualisation </a></li>
+  
+<li><a href="#mozTocIdChangeLog">Change Log </a></li>
+
+
+  <li><a href="#mozTocId577732">Contents</a></li>
+
+
+
+
+  <li><a href="#mozTocId738538">1. Introduction</a></li>
+
+
+
+
+  <li><a href="#mozTocId127057">2. Generic
+Annotation Vocabulary</a>
+    
+    
+    
+    
+    <ul>
+
+
+
+
+      <li><a href="#mozTocId775195">2.1.
+Basic Annotation</a>
+        
+        
+        
+        
+        <ul>
+
+
+
+
+          <li><a href="#mozTocId991277">2.1.1. nao:annotation
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId95916">2.1.2. rdfs:label
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId231785">2.1.3. rdfs:comment
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId827817">2.1.4. nao:hasSymbol
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId309849">2.1.5. nao:rating
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId802441">2.1.6. nao:identifier
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId554293">2.1.7. nao:Symbol
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId323566">2.1.8. nao:Tag
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId540464">2.1.9. nao:Party
+
+            </a></li>
+
+
+
+
+        
+        
+        
+        
+        </ul>
+
+
+
+
+      </li>
+
+
+
+
+      <li><a href="#mozTocId187157">2.2. More
+Specific Annotation</a>
+        
+        
+        
+        
+        <ul>
+
+
+
+
+          <li><a href="#mozTocId17438">2.2.1. nao:isRelated
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId953268">2.2.2.&nbsp;nao:hasTopic
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId682683">2.2.3. nao:isTopicOf
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId292538">2.2.4. nao:hasTag</a></li>
+
+
+
+
+          <li><a href="#mozTocId891981">2.2.5.
+nao:isTagFor</a></li>
+
+
+
+
+          <li><a href="#mozTocId460510">2.2.6. nao:prefLabel
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId337732">2.2.7. nao:altLabel
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId418437">2.2.8.
+nao:pluralPrefLabel
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId541375">2.2.9. nao:prefSymbol
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId27440">2.2.10. nao:altSymbol</a></li>
+
+
+
+
+          <li><a href="#mozTocId845316">2.2.11.
+nao:description
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId591601">2.2.12.
+nao:personalIdentifier
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId4771">2.2.13.
+nao:numericRating</a></li>
+
+
+
+
+          <li><a href="#mozTocId430224">2.2.14. nao:creator</a></li>
+
+
+
+
+          <li><a href="#mozTocId321643">2.2.15.
+nao:contributor</a></li>
+
+
+
+
+          <li><a href="#mozTocId287675">2.2.16. nao:modified</a></li>
+
+
+
+
+          <li><a href="#mozTocId288437">2.2.17. nao:created</a></li>
+
+
+
+
+          <li><a href="#mozTocId412121">2.2.18.
+nao:lastModified</a></li>
+
+
+
+
+          <li><a href="#mozTocId601106">2.2.19.
+nao:score</a></li>
+
+
+
+
+          <li><a href="#mozTocId105820">2.2.20.
+nao:scoreParameter</a></li>
+
+
+
+
+          <li><a href="#mozTocId400559">2.2.21.
+nao:FreeDesktopIcon</a></li>
+
+
+
+
+          <li><a href="#mozTocId232585">2.2.22.
+nao:iconName</a></li>
+
+
+
+
+          <li><a href="#mozTocId880189">2.2.23.
+nao:hasSubResource</a></li>
+
+
+
+
+          <li><a href="#mozTocId693750">2.2.24.
+nao:hasSuperResource</a></li>
+
+
+
+
+        
+        
+        
+        
+        </ul>
+
+
+
+
+      </li>
+
+
+
+
+      <li><a href="#mozTocId620976">2.3.
+Tagging as Annotation
+
+        </a></li>
+
+
+
+
+      <li><a href="#mozTocId873837">2.4.
+Generic Annotation Example</a></li>
+
+
+
+
+    
+    
+    
+    
+    </ul>
+
+
+
+
+  </li>
+
+
+
+
+  <li><a href="#mozTocId836701">3. Graph
+Metadata Vocabulary</a>
+    
+    
+    
+    
+    <ul>
+
+
+
+
+      <li><a href="#mozTocId215877">3.1
+General Graph Metadata</a>
+        
+        
+        
+        
+        <ul>
+
+
+
+
+          <li><a href="#mozTocId925972">3.1.4.
+nao:hasDefaultNamespace</a></li>
+
+
+
+
+          <li><a href="#mozTocId505129">3.1.5.
+nao:hasDefaultNamespaceAbbreviation</a></li>
+
+
+
+
+          <li><a href="#mozTocId297228">3.1.6.
+nao:engineeringTool
+
+            </a></li>
+
+
+
+
+          <li><a href="#mozTocId652689">3.1.7. nao:version</a></li>
+
+
+
+
+          <li><a href="#mozTocId642918">3.1.8. nao:status</a></li>
+
+
+
+
+        
+        
+        
+        
+        </ul>
+
+
+
+
+      </li>
+
+
+
+
+      <li><a href="#mozTocId370287">3.2. Document
+Graph Metadata</a>
+        
+        
+        
+        
+        <ul>
+
+
+
+
+          <li><a href="#mozTocId89753">3.3.1.
+nao:serializationLanguage</a></li>
+
+
+
+
+        
+        
+        
+        
+        </ul>
+
+
+
+
+      </li>
+
+
+
+
+      <li><a href="#mozTocId785190">3.3. Graph
+Metadata Example</a></li>
+
+
+
+
+    
+    
+    
+    
+    </ul>
+
+
+
+
+  </li>
+
+
+
+
+  <li><a href="#mozTocId760420">References</a></li>
+
+
+
+
+  <li><a href="#mozTocId78171">Appendix
+A. NAO Vocabulary Summary
+
+    </a>
+    
+    
+    
+    
+    <ul>
+
+
+
+
+      <li><a href="#mozTocId177728">A1:
+Ontology Classes Description</a></li>
+
+
+
+
+      <li><a href="#mozTocId918756">A2:
+Ontology Properties Description</a></li>
+
+
+
+
+    
+    
+    
+    
+    </ul>
+
+
+
+
+  </li>
+
+
+
+
+</ul>
+
+
+
+
+
+
+<hr style="width: 100%; height: 2px;" />
+<h1>NAO Vocabulary Specification</h1>
+
+
+
+
+
+
+<p style="text-align: justify;">This document presents the
+specifications for the NEPOMUK Annotation Ontology, a vocabulary for
+resource annotation that is based on the NEPOMUK Representational
+Language [<a href="#References">NRL SPECIFICATION</a>].
+The ontology is available for general and individual use and
+is independent of the domain for which it was initially designed for,
+namely the [<a href="http://nepomuk.semanticdesktop.org/">NEPOMUK
+Social Semantic Desktop</a>] initiative.&nbsp;The
+NEPOMUK in
+the ontology name (NAO) has been
+retained only for historic purposes.&nbsp;</p>
+
+
+
+
+
+
+<p style="text-align: justify;">The document is
+structured as follows.
+Section 1 provides an insight of what we consider to be annotation
+within the context of NRL and the social semantic desktop. Section 2
+introduces vocabulary for generic annotation, i.e. general annotation
+of resources, with a particular emphasis on how conventional tagging
+can also be represented using this ontology. Section 3 introduces
+vocabulary that supports annotation for graphs, or graph metadata.
+Given the important role that named graphs have in NRL,
+annotation&nbsp;for graphs is also consideted part of&nbsp;this
+ontology. Finallya summary of all the NAO
+vocabulary elements is given in&nbsp;[ <a href="#Appendix_A._NAO_Vocabulary_Summary">Appendix A</a>].
+</p>
+
+
+
+
+
+
+<h2><a class="mozTocH2" name="mozTocId738538"></a><a name="1._Introduction"></a>1. Introduction</h2>
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>The meaning of the term annotation is highly contextual.
+Depending
+on the context, anything or nothing can be considered as annotation
+within a data set (or named graph). &nbsp;On the social semantic
+desktop, the average user is frequently seen creating representations
+of objects on their desktop, while the more experienced user is also
+frequently creating representations of concepts and their
+relationships.&nbsp;Sharing and creating relationships between all
+these resources across multiple desktops is what makes a user's desktop
+social and semantic. Within this context, we consider annotation to be
+anything that goes further than creating&nbsp;resources and
+defining
+their elementary relationships. A user can create an instance of a
+'Person', and provide values for all the elementary properties that an
+instance of 'Person' can have. The user can then go one step ahead and
+annotate the resources with more information, of a textual (e.g. custom
+human-readable descriptions) or non-textual (e.g. links to related
+resources)
+nature.&nbsp;In a typical scenario there may be a
+number of domain-centric properties for the classes 'Person' (e.g.
+name, address, knows etc.) and 'Document' (e.g. author, title etc.).
+Via vocabulary in the annotation ontology the user can provide
+personalized, user-friendly labels and descriptions for a resource, as
+well as other things like tags and ratings.&nbsp;Generic
+relationships may exist between resources across multiple domains, and
+making these relationships explicit would be of great benefit for the
+user. For example, a user wants to state that a
+'Document' is about some instance of 'Person'. This relationship is too
+general to be applied&nbsp;at the domain
+ontology level, since such a relationship may exist between
+other&nbsp;concepts in other domains e.g. between 'Conference' and
+'Technology'. Vocabulary that is able to express these generic
+relationships are therefore provided by the annotation
+ontology. Although this information is optional and does not reflect
+the elementary nature of a 'Document', it&nbsp;contributes to
+improved
+data unification and eases user search.&nbsp; </p>
+
+
+
+
+
+
+<p style="text-align: justify;">We model annotation via
+properties, rather than classes, since
+we
+believe that annotation is a relationship and not a concept. This was
+also the idea for the rdfs:label and rdfs:comment properties in the
+RDFS vocabulary, which we consider as textual annotation. These
+properties are in fact included in our specifications, especially since
+in the context of this ontology and that of the social semantic desktop
+they have a slightly different meaning.&nbsp;Generic annotation is
+represented at its highest level with the abstract nao:annotation
+property. Although it is not meant to be used, it is the superproperty
+of many other annotation properties in this ontology. Vocabulary for
+generic annotation is introduced in <a href="#2._Generic_Annotation_Vocabulary">Section 2</a>.</p>
+
+
+
+
+
+
+<p style="text-align: justify;">Graph Metadata is also a
+form of annotation, where instead
+of annotating general resources, one annotates Named
+Graphs. Therefore graph metadata properties can be modelled
+under&nbsp;the general annotation&nbsp;property <a href="#2.1.1._nao:annotation">nao:annotation</a>,
+where the resource being annotated is a graph role (instance
+of nrl:Data) and the annotations are provided via the graph metadata
+properties. The major difference&nbsp;is
+that while generic annotation can be stored within any graph the user
+is working with (e.g. the graph where the annotated resource is
+defined),
+metadata about a graph should always be stored&nbsp;outside that
+graph,
+in a separate special named graph that is aptly represented in NRL
+by&nbsp;<span style="background-color: rgb(255, 255, 255);">[<a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2.7._nrl:GraphMetadata">nrl:GraphMetadata</a>].
+Graph Metadat Vocabulary is introduced in <a href="#3._Graph_Metadata_Vocabulary">Section 3</a>.
+</span></p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<span style="background-color: rgb(255, 255, 0);"></span>
+<h2 style="text-align: justify;"><a class="mozTocH2" name="mozTocId127057"></a><a name="2._Generic_Annotation_Vocabulary"></a>2. Generic
+Annotation Vocabulary</h2>
+
+
+
+
+
+
+<p style="text-align: justify;">In this section we
+introduce&nbsp;vocabulary that serves generic annotation, i.e.,
+vocabulary that models general, common relationships between things. <a href="#2.1._Basic_Annotation">Section 2.1</a> presents
+the basic annotation vocabulary. All other vocabulary in the annotation
+ontology will require or derive from these basic terms. <a href="#2.2._More_Specific_Annotation">Section 2.2</a>
+introduces richer annotation relationships that derive from the basic
+annotation properties presented in Section 2.1. &nbsp;In <a href="#2.3._Tagging_as_Annotation">Section 2.3</a> we
+discuss how we also model tagging as a form of annotation and finally
+in <a href="#2.4._Generic_Annotation_Example">Section 2.4</a>
+we present a concise example of how the vocabulary presented in this
+section can be employed.<br />
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+<h3><a class="mozTocH3" name="mozTocId775195"></a><a name="2.1._Basic_Annotation"></a>2.1.
+Basic Annotation</h3>
+
+
+
+
+
+
+<p style="text-align: justify;">The most basic annotation
+property is nao:annotation, which simply defines a
+descriptive
+property for a resource. Given that an annotation's nature can be
+textual or non-textual (i.e. semantic annotation pointing to
+a resource), the range of this abstract high-level property is left
+undefined. Specific subproperties
+can have richer semantics (e.g. symmetric properties), but in order to
+abstract over all annotation properties, no such semantics are defined
+for <a href="#2.1.1._nao:annotation">nao:annotation</a>.&nbsp;</p>
+
+
+
+
+
+
+<p style="text-align: justify;">rdfs:label and
+rdfs:comment are also (indirectly) considered as part of our annotation
+ontology, as they provide textual annotations for a resource. Although
+we&nbsp;do not&nbsp;define them as being subproperties of
+nao:annotation, we also include them in these specifications, in order
+to define their meaning in the context of the social semantic
+desktop.&nbsp;</p>
+
+
+
+
+
+
+<p style="text-align: justify;">These and other annotation
+properties and required classes are specified below. The annotation
+properties defined in this section are also illustrated in <a href="#Fig_1">Fig.1</a>.<br />
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+<div style="text-align: center;"><img src="basic.png" alt="basic" style="width: 425px; height: 173px;" /><br />
+
+
+
+
+
+
+<a name="Fig_1"></a>
+Figure1. Basic annotation properties<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId991277"></a><a name="2.1.1._nao:annotation"></a>2.1.1. nao:annotation<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">An abstract property
+representing a
+general&nbsp;annotation for a resource. Given its abstract nature
+and its undefined range, this property is not meant to be used directly.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId95916"></a><a name="2.1.2._rdfs:label"></a>2.1.2. rdfs:label<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">We consider this RDFS
+property as part of our annotation
+ontology, since it provides a textual annotation which relates a
+resource to
+a literal. In the context of the social semantic desktop this property
+provides&nbsp;technical labels for a resource,&nbsp;i.e, a
+non-user
+customizable label that is not meant to be seen by the user.
+User-customizable labels are possible via the use of our own
+sub-properties <a href="#2.2.6._nao:prefLabel">nao:prefLabel</a>
+and <a href="#2.2.7._nao:altLabel">nao:altLabel</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId231785"></a><a name="2.1.3._rdfs:comment"></a>2.1.3. rdfs:comment<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This RDFS property is also
+considered as part of our
+annotation ontology,
+since it provides a textual annotation which relates a resource to
+a literal.
+In the context of the social semantic desktop, this property
+provides&nbsp;technical descriptions for a
+resource.&nbsp;Non-technical, custom user descriptions can be
+provided &nbsp;by our own subproperty, <a href="#2.2.11._nao:description">nao:description</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId827817"></a><a name="2.1.4._nao:hasSymbol"></a>2.1.4. nao:hasSymbol<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">A resource can be
+annotated with an instance of <a href="#2.1.7._nao:Symbol">nao:Symbol</a>
+via
+subproperties of this abstract property, <a href="#2.2.9._nao:prefSymbol">nao:prefSymbol</a> and <a href="#2.2.10._nao:altSymbol">nao:altSymbol</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId309849"></a><a name="2.1.5._nao:rating"></a>2.1.5. nao:rating<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">Users can rate a resource
+via subproperties of this property,
+which is not meant to be used directly. Specific subproperties can
+extend it and&nbsp;be used to rate resources, e.g. an audio file.
+The range of this property is undefined. Numeric ratings can be
+assigned via <a href="#2.2.13._nao:numericRating">nao:numericRating</a>
+(maximum cardinality 1).
+If other&nbsp;kinds of ratings are needed, this property can
+arbitrarily and easily extend be extended (e.g. with a property that
+has as range a class for which a number of instances can be enumerated).</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId802441"></a><a name="2.1.6._nao:identifier"></a>2.1.6. nao:identifier<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property enables
+further types of identifiers for a
+resource, apart from its standard URI. The property itself
+is not meant to be directly used since it is an abstract property and
+does not have a defined range. &nbsp;The annotation ontology
+provides a &nbsp;subproperty for this property, &nbsp;<a href="#2.2.12._nao:personalIdentifier">nao:personalIdentifier</a>.
+&nbsp;Although this property is not applied any form of
+restriction, all its subproperties, including&nbsp;<a href="#2.2.12._nao:personalIdentifier">nao:personalIdentifier</a>,
+are meant to be inverse functional. <span style="font-weight: bold;"></span></p>
+
+
+
+
+
+
+<div style="text-align: center;">
+<div style="text-align: left;">
+<h4><a class="mozTocH4" name="mozTocId554293"></a><a name="2.1.7._nao:Symbol"></a>2.1.7. nao:Symbol<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This
+class&nbsp;represents a symbol, which can be an icon
+or an&nbsp;image for example, that is used to annotate a resource.
+Resources can be annotated with a standard graphical symbol via the
+subproperties of <a href="#2.1.4._nao:hasSymbol">nao:hasSymbol</a>,&nbsp;<a href="#2.2.9._nao:prefSymbol">nao:prefSymbol</a> and <a href="#2.2.10._nao:altSymbol">nao:altSymbol</a>. Any
+such graphical symbol that is in this way used to annotate a resource
+automatically becomes an instance of this class.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId323566"></a><a name="2.1.8._nao:Tag"></a>2.1.8. <span style="background-color: rgb(255, 255, 0);"></span>nao:Tag<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This class is useful for
+modelling conventional tagging practices. The user can tag resources in
+conventional ways, automatically creating an instance of this tag,
+which is then related to the annotated&nbsp;resource via the <a href="#2.2.4._nao:hasTag">nao:hasTag</a> property. For
+more on tagging as annotation see <a href="#2.3._Tagging_as_Annotation">Section 2.3</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId540464"></a><a name="2.1.9._nao:Party"></a>2.1.9. nao:Party<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;"><span style="background-color: rgb(255, 255, 255);">Annotations
+are provided by an individual or a group of individuals. Some
+annotations are contained in a separate named graph whose role is to
+provide annotations about another named graph (e.g. graph metadata for
+a graph, See <a href="#3._Graph_Metadata_Vocabulary">Graph
+Metadata Vocabulary</a>). In such cases it is useful to
+state&nbsp;the contributor(s) for the set of annotations. This
+class
+is provided to represent a party who created such a set of annotations,
+where a party can be either one individual or a group of individuals
+(e.g. an organization). Once a user or an group provides these
+annotations, they automatically become an instance of this
+class.&nbsp;</span></p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h3><a class="mozTocH3" name="mozTocId187157"></a><a name="2.2._More_Specific_Annotation"></a>2.2. More
+Specific Annotation</h3>
+
+
+
+
+
+
+<p style="text-align: justify;">The Annotation Ontology
+provides more specific vocabulary that
+extends the description power of the basic annotation vocabulary
+presented in
+the previous section. &nbsp;Vocabulary in this category consists
+solely of properties which extend properties given in <a href="#2.1._Basic_Annotation">Section 2.1</a>.&nbsp;An
+overview of these properties is illustrated in <a href="#Fig_2">Fig.2</a>.&nbsp;The
+specifications for this vocabulary are given below.&nbsp; </p>
+
+
+
+
+
+
+<span style="font-weight: bold;"></span>
+<div style="text-align: center;"><img style="width: 664px; height: 271px;" alt="lower level properties" src="lowerLevel.png" /><br />
+
+
+
+
+
+
+<a name="Fig_2"></a>
+Figure&nbsp;2. More specific annotation properties<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId17438"></a><a name="2.2.1._nao:isRelated"></a>2.2.1. nao:isRelated<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property defines a
+symmetric relation between any two&nbsp;resources. A subproperty of
+<a href="#2.1.1._nao:annotation">nao:annotation</a>,
+one can use this property to annotate a resource with pointers
+to&nbsp;related resources. For example, a blog entry for an event
+may
+be linked to an image of the same event via this property.&nbsp;In
+order for this property to be used legally, the relationship must be
+symmetric.&nbsp;</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId953268"></a><a name="2.2.2._nao:hasTopic"></a>2.2.2.&nbsp;nao:hasTopic<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">A subproperty of <a href="#2.2.1._nao:isRelated">nao:isRelated</a>,
+this property does not inherit its symmetric nature. It further defines
+the relationship given by its superproperty, stating that a resource is
+about some concept. Instead, this vocabulary provides an inverse
+property for this property, <a href="#2.2.3._nao:isTopicOf">nao:isTopicOf</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId682683"></a><a name="2.2.3._nao:isTopicOf"></a>2.2.3. nao:isTopicOf<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property is also a
+subproperty of <a href="#2.2.1._nao:isRelated">nao:isRelated</a>
+and is the inverse property of <a href="#2.2.2._nao:hasTopic">nao:hasTopic</a>.
+It is used to create a relationship between two resources, where the
+subject resource is said to be the topic of the&nbsp;object. It is
+not
+a symmetric property.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId292538"></a><a name="2.2.4._nao:hasTag"></a>2.2.4. nao:hasTag</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">Used to model conventional
+tagging practices, this property annotates a resource with a tag,
+represented by an instance of <a href="#2.1.8._nao:Tag">nao:Tag</a>.
+For
+more on tagging as annotation see <a href="#2.3._Tagging_as_Annotation">Section 2.3</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId891981"></a><a name="2.2.5._nao:isTagFor"></a>2.2.5.
+nao:isTagFor</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property is the
+inverse of <a href="#2.2.4._nao:hasTag">nao:hasTag</a>.
+It links an instance of <a href="#2.1.8._nao:Tag">nao:Tag</a>
+to resources that are tagged with it. For more on tagging as annotation
+see <a href="#2.3._Tagging_as_Annotation">Section 2.3</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId460510"></a><a name="2.2.6._nao:prefLabel"></a>2.2.6. nao:prefLabel<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property is one of
+two provided by this ontology to handle
+custom user labels.&nbsp;Alternative
+labels can be provided via <a href="#2.2.7._nao:altLabel">nao:altLabel</a>.
+Both properties are subproperties of&nbsp;<a href="#2.1.2._rdfs:label">rdfs:labe</a>l
+and expect a
+literal as value. Given that the domain of this property is
+rdfs:Resource, it is not applied
+any&nbsp;cardinality&nbsp;restrictions. Where required, such
+properties
+can&nbsp;be defined by extending this property via appropriate
+subproperties. However, it is intended that at most one
+value per (natural) language is defined via this property&nbsp;and
+that at most one literal without any
+defined language exists. Other usages, although legal, are considered
+invalid NAO data and are strongly&nbsp;discouraged as
+they&nbsp;may generate errors.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId337732"></a><a name="2.2.7._nao:altLabel"></a>2.2.7. nao:altLabel<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">Via this property a user
+can provide further custom labels for
+resources on their desktop, alongside the required, unique value given
+by <a href="#2.2.6._nao:prefLabel">nao:prefLabel</a>.&nbsp;Both
+properties are subproperties of&nbsp;<a href="#2.1.2._rdfs:label">rdfs:labe</a>l
+and expect a literal as value.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId418437"></a><a name="2.2.8._nao:pluralPrefLabel"></a>2.2.8.
+nao:pluralPrefLabel<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property supplements <a href="#2.2.6._nao:prefLabel">nao:prefLabel</a>
+to provide plural forms for custom user resource labels. In particular
+it is useful to refer to multiple instances of a calss. It is also a
+subproperty of&nbsp;<a href="#2.1.2._rdfs:label">rdfs:labe</a>l
+and expects a
+literal as value. No&nbsp;cardinality&nbsp;restrictions are
+imposed.
+</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId541375"></a><a name="2.2.9._nao:prefSymbol"></a>2.2.9. nao:prefSymbol<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">A subproperty of <a href="#2.1.4._nao:hasSymbol">nao:hasSymbol</a>, this
+property specifies a preferred symbol for resource annotation, given by
+an instance of <a href="#2.1.7._nao:Symbol">nao:Symbol</a>.
+Resources can be
+annotated with alternative symbols via nao:altSymbol. </p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId27440"></a><a name="2.2.10._nao:altSymbol"></a>2.2.10. nao:altSymbol</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">This property is used to
+annotate a resource with alternative symbols, given by instances
+of&nbsp;<a href="#2.1.7._nao:Symbol">nao:Symbol</a>,
+alongside the preferred symbol that is linked via <a href="#2.2.9._nao:prefSymbol">nao:prefSymbol</a>. It
+is a subproperty of <a href="#2.1.4._nao:hasSymbol">nao:hasSymbol</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId845316"></a><a name="2.2.11._nao:description"></a>2.2.11.
+nao:description<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p style="text-align: justify;">A subproperty of <a href="#2.1.3._rdfs:comment">rdfs:comment</a>, the
+purpose of this property is similar to <a href="#2.2.6._nao:prefLabel">nao:prefLabel</a> and <a href="#2.2.7._nao:altLabel">nao:altLabel</a>. However
+this property is also a subproperty of <a href="#2.1.1._nao:annotation">nao:annotation</a>.
+Whereas
+in the context of the social semantic desktop the textual annotation
+provided via <a href="#2.1.3._rdfs:comment">rdfs:comment</a>
+is meant for technical users, the textual annotation here
+is&nbsp;aimed
+at average users and is meant to be used to define custom descriptions
+of resources on their desktop. The maximum cardinality is 1, and the
+property expects a literal value.<br />
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId591601"></a><a name="2.2.12._nao:personalIdentifier"></a>2.2.12.
+nao:personalIdentifier<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<p>This property should be used to provide alternative values
+that identify&nbsp;a
+resource
+alongside the default URI. A subproperty of the abstract <a href="#2.1.6._nao:identifier">nao:identifier</a>,
+the range of this property is a literal. The property is inverse
+functional, which effectively means that personal identifiers for
+resources should be unique, and two resources cannot have the same
+personal identifier.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId4771"></a><a name="2.2.13._nao:numericRating"></a>2.2.13.
+nao:numericRating</h4>
+
+
+
+
+
+
+<p>This property extends <a href="#2.1.5._nao:rating">nao:rating</a>,
+to restrict the range to an XSD float datatype. Values must be between
+'1' and '10' whereas a value of '0' is interpreted as&nbsp;not
+set.&nbsp;Furthermore,
+resources can only be given at most one numeric rating, thus the
+maximum cardinality is 1.&nbsp;</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId430224"></a><a name="2.2.14._nao:creator"></a>2.2.14. nao:creator</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>Via this&nbsp;property the creator/s of a resource can be
+specified graph. The creator
+can be a an individual or a group as represented by an instance of the
+<a href="#2.1.9._nao:Party">nao:Party</a>
+class.&nbsp;</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId321643"></a><a name="2.2.15._nao:contributor"></a>2.2.15.
+nao:contributor</h4>
+
+
+
+
+
+
+<p>This property
+refers&nbsp;to additional contributors for a resource and is
+otherwise similar to <a href="#2.2.14._nao:creator">nao:creator</a>.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId287675"></a><a name="2.2.16._nao:modified"></a>2.2.16. nao:modified</h4>
+
+
+
+
+
+
+<p>Represents the modification date/time&nbsp;&nbsp;[<a href="http://www.w3.org/TR/xmlschema-2/#dateTime">xsd:dateTime</a>]
+for a resource. More of an abstract class, its subproperties <a href="#2.2.17._nao:created">nao:created</a> and <a href="#2.2.18._nao:lastModified">nao:lastModified</a>
+prove to be more useful.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId288437"></a><a name="2.2.17._nao:created"></a>2.2.17. nao:created</h4>
+
+
+
+
+
+
+<p>Via this property the creation date/time for a resource can be
+defined. A subproperty of nao:modified, the expected value is of
+type&nbsp;[<a href="http://www.w3.org/TR/xmlschema-2/#dateTime">xsd:dateTime</a>]
+and a typical value is of the form
+"2007-08-15T23:59:55.329Z". The maximum cardinality for this property
+is set to 1.</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId412121"></a><a name="2.2.18._nao:lastModified"></a>2.2.18.
+nao:lastModified</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>This property defines the date/time when a resource was most
+recently modified. It is a subproperty of <a href="#2.2.16._nao:modified">nao:modified</a>.&nbsp;The
+maximum cardinality
+for this property is also set to 1.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId601106"></a><a name="2.2.19._nao:score"></a>2.2.19.
+nao:score</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">
+
+
+<p>This property refers to an authorative score for an item
+(resource), valued between [0, 1].&nbsp;A score is a weight of a
+resource compared to all other resources, and it is computed via a
+mathematical combination of score
+parameters&nbsp;e.g.&nbsp;nao:numericRating,&nbsp;
+nao:lastModified as well external parameters. For this purpose,
+parameters
+that go into the score need to be marked as being sub-properties of <a href="#2.2.20._nao:scoreParameter">nao:scoreParameter</a>.&nbsp;Allowed&nbsp;values
+for this property are of the [<a href="http://www.w3.org/TR/xmlschema-2/#float">xsd:float</a>]
+datatype.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId105820"></a><a name="2.2.20._nao:scoreParameter"></a>2.2.20.
+nao:scoreParameter</h4>
+
+
+
+
+
+
+<p>Multiple score parameters
+(e.g.&nbsp;nao:numericRating,&nbsp;
+nao:lastModified) can be input to a mathematical
+algorithm&nbsp;that
+computes an overall <a href="#2.2.19._nao:score">nao:score</a>
+for a resource. The&nbsp;score parameters in question need to be
+defined as a subproperty of this property - thus effectively
+nao:scoreParamter is a marker property.&nbsp;Ranking algorithms
+will compute the values of multiple subproperties of scoreParameter and
+then compute the nao:score based on a mathematical combination of score
+parameters. The allowed range is a float number. The exact algorithm is
+open to implementations. Allowed&nbsp;values for this property are
+of the [<a href="http://www.w3.org/TR/xmlschema-2/#float">xsd:float</a>]
+datatype.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId400559"></a><a name="2.2.21._nao:FreeDesktopIcon"></a>2.2.21.
+nao:FreeDesktopIcon</h4>
+
+
+
+
+
+
+<p>This class represents a desktop icon as defined
+in&nbsp;the <a href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">FreeDesktop
+Icon Naming standard</a> and it is a subclass of <a href="#2.1.7._nao:Symbol">nao:Symbol</a>. <a href="#2.2.22._nao:iconName">nao:iconName</a> is a
+required property&nbsp;referring to the name of the icon.</p>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId232585"></a><a name="2.2.22._nao:iconName"></a>2.2.22.
+nao:iconName</h4>
+
+
+
+
+
+
+<p>Values of this property contain the FreeDesktop standard icon
+name (literal) as
+defined in the <a href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">FreeDesktop
+Naming Specification</a>. The use of the property is required for
+every instance of <a href="#2.2.21._nao:FreeDesktopIcon">nao:FreeDesktopIcon</a>
+since its minimum cardinality is set to 1.</p>
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId880189"></a><a name="2.2.23._nao:hasSubResource"></a>2.2.23.
+nao:hasSubResource</h4>
+
+
+
+
+
+
+<p>This property defines a super-sub relationship between two instances
+of rdfs:Resource - whereby one resource can be treated as dependent on
+another. Thus if a resource is deleted or removed from a system, all
+its subresources can also be automatically removed, unless they have
+other superresources still existant on the system. This property is the
+inverse property of <a href="#2.2.24._nao:hasSuperResource">nao:hasSuperResource</a>. This property is transitive in nature.
+</p>
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId693750"></a><a name="2.2.24._nao:hasSuperResource"></a>2.2.24.
+nao:hasSuperResource</h4>
+
+
+
+
+
+
+<p>This property is the inverse of <a href="#2.2.23._nao:hasSubResource">nao:hasSubResource</a>.
+It defines a dependency relationship between two resources such that,
+when the superresource is removed from a system, the defined
+subresources should also be removed unless they are also subresources
+of other remaining superresources. This property is transitive in
+nature.<span style="text-decoration: underline;"></span><br />
+
+
+
+
+</p>
+
+
+
+
+<p>
+
+</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h3><a class="mozTocH3" name="mozTocId620976"></a><a name="2.3._Tagging_as_Annotation"></a>2.3.
+Tagging as Annotation<br />
+
+
+
+
+
+
+</h3>
+
+
+
+
+
+
+<p style="text-align: justify;">Given tagging is a popular
+Web 2.0
+concept which we want to adopt and retain in our semantic approach to
+data modelling, in this section we provide an example of how semantic
+tagging can be performed using our annotation ontology. <a href="#Fig_3">Fig.3</a> shows how
+nao:Tag can
+be used as a special case of the nao:annotation relation given in
+<a href="#Fig_2">Fig.2</a>. The unique
+default&nbsp;name given by the user when creating a
+tag is defined by <a href="#2.2.6._nao:prefLabel">nao:prefLabel</a>.
+Other custom names for the tag can be defined using <a href="#2.2.7._nao:altLabel">nao:altLabel</a> while a
+custom user description can be provided via <a href="#2.2.11._nao:description">nao:description</a>. A
+custom default icon or image&nbsp;can be attached to the tag via <a href="#2.2.9._nao:prefSymbol">nao:prefSymbol</a>,
+making the icon in question an instance of <a href="#2.1.7._nao:Symbol">nao:Symbol</a>.
+This icon, like any other resource, can also be annotated. The newly
+created tag is then linked to the resource being tagged (or annotated)
+via <a href="#2.2.4._nao:hasTag">nao:hasTag</a>. An
+automatic inverse relationship is created to link the new tag with the
+resource via <a href="#2.2.5._nao:isTagFor">nao:isTagFor</a>.<br />
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+<div style="text-align: center;"><img style="width: 533px; height: 174px;" alt="tag class" src="tagClass.png" /><br />
+
+
+
+
+
+
+<a name="Fig_3"></a>
+Figure 3. Modelling conventional tagging<span style="font-weight: bold;"></span></div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<h3><a class="mozTocH3" name="mozTocId873837"></a><a name="2.4._Generic_Annotation_Example"></a>2.4.
+Generic Annotation Example</h3>
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>A person wants to annotate a file of type
+image/photo on their personal desktop. The photo depicts a friend,
+Claudia, drinking coffee in the
+SAP offices. The user states that the photo 'is related' (via
+nao:isRelated - a symmetric property) to the following resources:</p>
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+  <li>[1] a resource representing Claudia on the user's desktop
+(ex:Claudia)&nbsp;</li>
+
+
+
+
+
+
+  <li>[2] a resource representing the organisation SAP on the
+user's desktop (ex:SAP)</li>
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+Furthermore, the user states that the photo 'is about' (via
+nao:hasTopic) the following resources:
+<ul>
+
+
+
+
+
+
+  <li>[3] a concept from a Work ontology defining a colleague at
+work (work:Colleague)</li>
+
+
+
+
+
+
+  <li>[4] a concept from a Work ontology defining&nbsp;a
+working office (work:Office)</li>
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+[5] The user defines a custom personal identifier for the photo,
+'ClaudiaOffice20070815'.<br />
+
+
+
+
+
+
+[6] Finally, the user also tags the photo with an instance of nao:Tag
+they create:<br />
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+  <li>[7],[8] The user labels the new tag 'Work', with the
+alternative labels 'SAP' and 'WorkPlace'.</li>
+
+
+
+
+
+
+  <li>[9],[10] The user also selects an icon for the new tag that
+they
+find on their desktop, and creates a custom description for the new tag.</li>
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+<p>The resulting statements are generated and stored
+within&nbsp;a
+named graph 'ex:i1'. Apart from the obvious statements,
+note&nbsp;the
+following automatically generated statements&nbsp;</p>
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+  <li>[11] Since nao:hasTag has the inverse property
+nao:isTagFor, the
+newly generated tag is also related to the tagged resource via this
+inverse property.<br />
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+  <li>[12] The icon used as a symbol for the tag (ex:WorkIcon) is
+now also an instance of nao:Symbol.</li>
+
+
+
+
+
+
+  <li>Since nao:isRelated is symmetric the resources related to
+the
+photo via this property (ex:SAP and ex:Claudia) are themselves defined
+as related to the photo.</li>
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+<p> </p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<table style="text-align: left; font-family: monospace; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td><span style="font-family: monospace;">&nbsp;
+&nbsp; &nbsp;ex:i1 {</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[1]&nbsp;&nbsp;ex:DSCF001&nbsp;</span><span style="font-family: monospace;">nao:isRelated ex:Claudia ,</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[2]
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; ex:SAP ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[3]&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; nao:hasTopic work:Colleague ,</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[4]&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;work:Office ;<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">[5]
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; nao:personalIdentifier "ClaudiaOffice20070815" ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[6] &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nao:hasTag
+ex:Work .</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+&nbsp;
+ex:Work&nbsp;a nao:Tag ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[7] &nbsp;
+&nbsp;
+&nbsp; &nbsp;&nbsp; nao:prefLabel "Work" ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[8]
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; nao:altLabel
+"WorkPlace" ,</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp; "SAP" ;</span><span style="font-family: monospace;"><br />
+
+
+
+
+
+
+[9] &nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: monospace;">nao:hasSymbol ex:WorkIcon ;</span><span style="font-family: monospace;">&nbsp;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[10]
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: monospace;"></span><span style="font-family: monospace;">nao:description "Represents
+all about my work, workplace, workmates
+etc" ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[11]
+&nbsp; &nbsp; &nbsp; &nbsp; nao:isTagFor ex:DSCF001 .</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[12]
+ex:WorkIcon a nao:Symbol . </span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">&nbsp;
+&nbsp; </span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[13] ex:SAP
+nao:isRelated ex:DSCF001 .</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[14]
+ex:Claudia nao:isRelated ex:DSCF001 . }</span> </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<h2><a class="mozTocH2" name="mozTocId836701"></a><a name="3._Graph_Metadata_Vocabulary"></a>3. Graph
+Metadata Vocabulary</h2>
+
+
+
+
+
+
+<div style="text-align: center;">
+<div style="text-align: justify;">
+<p>In this section we
+provide the
+description and specifications for the subpart of the annotation
+ontology dealing with Graph Metadata. Graph metadata
+is&nbsp;a form of annotation where the subject of the annotations
+are
+named graphs, as specified in&nbsp;[<a href="#References">NRL
+SPECIFICATION</a>].
+Given the important and central role that named graphs have in the NRL
+concept, this graph metadata, or graph annotation, vocabulary is
+considered to be part of the
+annotation ontology, and the properties are subproperties
+of&nbsp;nao:annotation.&nbsp;</p>
+
+
+
+
+
+
+<p>NRL already provides&nbsp;vocabulary
+that is
+used to define&nbsp;essential graph metadata [See <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2._Graph_Roles_Vocabulary">Graph
+Roles Vocabulary</a>],
+including graph role speficiation and whether the graph is a document
+graph (see <a href="#Fig_4">Fig.4.</a>), whether
+a graph is updatable or otherwise (via <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl/#mozTocId379929">nrl:updatable</a>)
+and specification of the declarative
+semantics for a graph (via <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl/#mozTocId737534">nrl:hasSemantics</a>).</p>
+
+
+
+
+
+
+<p>Generic annotation vocabulary given in this ontology is also
+applicable to named graphs (which are in fact special cases of a
+resource). In particular, <a href="#2.2.14._nao:creator">nao:creator</a>,
+<a href="#2.2.15._nao:contributor">nao:contributor</a>,
+<a href="#2.2.17._nao:created">nao:created </a>and <a href="#2.2.18._nao:lastModified">nao:lastModified</a>
+are of special relevance when it comes to providing metadata for a
+named graph. The vocabulary provided in this section enables additional
+graph annotations to those provided by NRL and by the NAO generic
+annotation vocabulary. An example that makes full use of all the
+relevant vocabulary is given in <a href="#3.3._Graph_Metadata_Example">Section 3.3</a>.<br />
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+<p>
+In
+contrast to vocabularies like the Ontology Metadata Vocabulary [<a href="#References">OMV REPORT</a>],
+which was a major source of inspiration for this vocabulary, our
+vocabulary
+is applicable to all Graph Roles as defined in NRL (<a href="#Fig_4">Fig.4.</a>),
+and not
+just ontologies. The majority of graph metadata properties thus have
+nrl:Data as their domain. Other properties apply specifically
+to&nbsp;nrl:DocumentGraph (documents that encode
+named graphs). <span style="background-color: rgb(255, 255, 255);"></span></p>
+
+
+
+
+
+
+<span style="background-color: rgb(255, 255, 255);"></span></div>
+
+
+
+
+
+
+<div style="text-align: center;"><img style="width: 602px; height: 349px;" alt="roles" src="NamedGraphs.png" /><br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div style="text-align: center;"><a name="Fig_4"></a>
+Figure 4. Graph Roles Hierarchy</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>While generic annotation
+for a resource is usually stored within the graph where the resource is
+defined,
+metadata about a graph&nbsp;is stored outside that graph, in a
+separate but associated metadata graph. <span style="background-color: rgb(255, 255, 255);">These special
+graphs
+are marked using the [<a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2.7._nrl:GraphMetadata">nrl:GraphMetadata</a>]
+role, also shown in <a href="#Fig_4">Fig.4.</a> and
+linked to their respective graphs via [<a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2.8._nrl:graphMetadataFor">nrl:graphMetadataFor</a>].
+The unique metadata graph that defines the non-subjective attributes
+(graph role, semantics,
+namespace,&nbsp; etc) for a graph is instead linked to that graph
+via [<a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2.9._nrl:coreGraphMetadataFor">nrl:coreGraphMetadataFor</a>].</span></p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h3><a class="mozTocH3" name="mozTocId215877"></a><a name="3.1_General_Graph_Metadata_Vocabulary"></a>3.1
+General Graph Metadata</h3>
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>The following vocabulary
+applies to
+all NRL Graph Roles. Although some of them&nbsp; appear to be
+ontology-specific,
+properties which&nbsp;apply to e.g. both
+nrl:InstanceBase and nrl:Ontology are listed here, since their common
+superclass is nrl:Data. Given that graph metadata is considered to be a
+special case of annotation, most of the vocabulary consists of
+subproperties of&nbsp;nao:annotation. These properties are depicted
+in
+<a href="#Fig_5">Fig.5.</a> and described
+individually in the following subsections.
+Although the use of none of these properties is compulsory, their use
+is recommended as a best practice.</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<div style="text-align: center;"><img style="width: 706px; height: 264px;" alt="Data Properties" src="DataProperties.png" /><br />
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<a name="Fig_5"></a>
+Figure 5. General Graph Metadata properties<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId925972"></a><a name="3.1.4._nao:hasDefaultNamespace"></a>3.1.4.
+nao:hasDefaultNamespace</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">This property
+explicitally defines the default namespace for a
+named graph. The value for this property should therefore be a valid
+URI ending with the '#' sign.<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId505129"></a><a name="3.1.5._nao:hasDefaultNamespaceAbbreviation"></a>3.1.5.
+nao:hasDefaultNamespaceAbbreviation</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">A default namespace
+abbreviation for a named graph can be defined via the use of this
+property. This&nbsp;prevents a scenario where different random
+abbreviations are generated from different applications for the same
+graph.<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId297228"></a><a name="3.1.6._nao:engineeringTool"></a>3.1.6.
+nao:engineeringTool<br />
+
+
+
+
+
+
+</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">Graphs that are
+generated via a specific graph engineering tool can make use of this
+property.
+The value is a string stating the name of the editing tool.<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId652689"></a><a name="3.1.7._nao:version"></a>3.1.7. nao:version</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">This property specifies
+version
+information for the graph role and&nbsp;is particularly useful
+for&nbsp;tracking,
+comparing and
+merging data. Legal values for this property are of the [<a href="http://www.w3.org/TR/xmlschema-2/#float">xsd:float</a>]
+datatype. A graph can have at most one version, hence the
+maximum cardinality is 1.
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId642918"></a><a name="3.1.8._nao:status"></a>3.1.8. nao:status</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">Tracking
+information for the contents of a graph can be specified via this
+property. Typical&nbsp;values, of type string,
+include "Stable", "Unstable" and "Testing".&nbsp;
+</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<h3><a class="mozTocH3" name="mozTocId370287"></a><a name="3.2._Document_Graph_Metadata"></a>3.2. Document
+Graph Metadata</h3>
+
+
+
+
+
+
+<div style="text-align: justify;">
+A special class in the NRL specifications,&nbsp;&nbsp;[<a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.1.2._nrl:DocumentGraph">nrl:DocumentGraph</a>],
+is defined to mark graphs that are completely represented within a
+document which can be accessed via a URL, which effectively also
+becomes the name of the graph. The following property, also shown in
+<a href="Fig_6">Fig.6.</a>, applies only to
+instances of such graphs.<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<div style="text-align: center;"><img style="width: 476px; height: 84px;" alt="Document Graph" src="DocumentGraph.png" /><br />
+
+
+
+
+
+
+<a name="Fig_6"></a>
+Figure 6. Graph Metadata for&nbsp;Graphs encoded in documents<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h4><a class="mozTocH4" name="mozTocId89753"></a><a name="3.3.1._nao:serializationLanguage"></a>3.3.1.
+nao:serializationLanguage</h4>
+
+
+
+
+
+
+<div style="text-align: justify;">
+This property states&nbsp;the graph serialization
+language for the document, e.g. XML/RDFS, RDFS/N3, TriG etc.<br />
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<br />
+
+
+
+
+
+
+<h3><a class="mozTocH2" name="mozTocId785190"></a><a name="3.3._Graph_Metadata_Example"></a>3.3. Graph
+Metadata Example</h3>
+
+
+
+
+
+
+<div style="text-align: justify;">
+<p>The following example demonstrates the use and best practice
+for the Graph&nbsp;Metadata Vocabulary given in this section.</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div style="text-align: justify;">[1] In this example we
+assume that a named graph with the role of an ontology exists and is
+given by ex:o1.<br />
+
+
+
+
+
+
+[2] Graph metadata for this ontology is provided by the metadata graph
+ex:o1_metadata. This graph consists of annotations for&nbsp;the
+ontology stored in graph ex:o1. These annotations are defined using the
+graph metadata vocabulary specified in this document. <br />
+
+
+
+
+
+
+[3],[4] The metadata graph includes first and foremost a description
+about itself, stating that it is indeed a named graph with a
+nrl:GraphMetadata role. It is further stated that this is the core
+graph
+metadata that defines the core properties for the graph
+ex:o1, via <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2.9._nrl:coreGraphMetadataFor">nrl:coreGraphMetadataFor</a>.<br />
+
+
+
+
+
+
+[5] Metadata for the actual graph being described is then provided.
+This metadata includes the following:<br />
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+  <li>[6] The creator of the ontology is defined to be ex:SAP,
+with two
+separate contributors being ex:Dirk and ex:Claudia. This automatically
+generates the statement <span style="background-color: rgb(255, 255, 255);">(usually not
+within this
+graph)</span> that ex:SAP, ex:Dirk
+and ex:Claudia are annotators and therefore instances of nao:Party.</li>
+
+
+
+
+
+
+  <li>[7] The ontology is defined to be 'Stable' at version 1.2.
+The last modified time is also represented.</li>
+
+
+
+
+
+
+  <li>[8] &nbsp;A static, standard namespace and namespace
+abbreviation are defined.</li>
+
+
+
+
+
+
+  <li>[9] The graph is said to be non-updatable, meaning that if
+the
+ontology needs to be changed, a new version needs to be generated while
+leaving the original unchanged. See <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#3.2.14._nrl:updatable">nrl:updatable</a>.</li>
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td><span style="font-family: monospace;">[1] </span><span style="font-family: monospace;">ex:o1 {<br />
+
+
+
+
+
+
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; # Work Ontology
+provided in this named graph<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">&nbsp;&nbsp;
+&nbsp;&nbsp;</span><span style="font-family: monospace;"> &nbsp; &nbsp;}<br />
+
+
+
+
+
+
+      <br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">[2]
+ex:o1/metadata { </span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[3] &nbsp;
+      </span><span style="font-family: monospace;">ex:o1/metadata
+a&nbsp;nrl:GraphMetadata&nbsp;;<br />
+
+
+
+
+
+
+[4]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; nrl:coreGraphMetadataFor
+ex:o1 .</span><span style="font-family: monospace;">&nbsp;}&nbsp;</span><span style="font-family: monospace;">&nbsp; <br />
+
+
+
+
+
+
+      <br />
+
+
+
+
+
+
+[5] &nbsp;&nbsp;</span><span style="font-family: monospace;">ex:o1&nbsp;a
+nrl:Ontology ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">[6]
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;nao:creator
+ex:SAP ;<br />
+
+
+
+
+
+
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp;nao:contributor ex:Dirk ,<br />
+
+
+
+
+
+
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;ex:Claudia ;<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">[7]&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;nao:version "1.2" ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;"></span><span style="font-family: monospace;"> &nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp;nao:lastModified "2007-08-15T23:59:55.329Z" .<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; nao:status "Stable" ;<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">[8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+nao:hasNamespace "http://www.example.org/ontologies/work#" ;</span><br style="font-family: monospace;" />
+
+
+
+
+
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;nao:hasNamespaceAbbreviation "work" ;<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;">[9]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;nrl:updatable "0" . }<br />
+
+
+
+
+
+
+      </span><span style="font-family: monospace;"></span><span style="font-family: monospace;"><br />
+
+
+
+
+
+
+      </span></td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h2><a class="mozTocH2" name="mozTocId760420"></a><a name="References"></a>References</h2>
+
+
+
+
+
+
+<dl>
+
+
+
+
+
+
+  <dt>[NRL SPECIFICATIONS]</dt>
+
+
+
+
+
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/nrl">NEPOMUK&nbsp;Representation
+Language (NRL) Vocabulary Specification</a><cite></cite>.</dd>
+
+
+
+
+
+
+  <dd>NEPOMUK.,&nbsp; Task-Force Ontologies.</dd>
+
+
+
+
+
+
+  <dd><small style="font-family: monospace;"><a href="http://www.semanticdesktop.org/ontologies/nrl">http://www.semanticdesktop.org/ontologies/nrl</a>.</small></dd>
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+<span style="font-weight: bold;">[OMV Report]
+<br />
+
+
+
+
+
+
+</span>
+<div style="margin-left: 40px;"><a href="http://ontoware.org/projects/omv/">Ontology Metadata
+Vocabulary for the Semantic. Web</a>. Jens Hartmann (University
+of Karlsruhe), Raul Palma (Universidad Politecnica de Madrid) and Elena
+Paslaru Bontas (Free University of Berlin).<small style="font-family: monospace;"><br />
+
+
+
+
+
+
+<a href="http://ontoware.org/projects/omv/">http://ontoware.org/projects/omv/</a>.</small><br />
+
+
+
+
+
+
+<small style="font-family: monospace;">
+</small></div>
+
+
+
+
+
+
+<dl>
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<h2><a class="mozTocH2" name="mozTocId78171"></a><a name="Appendix_A._NAO_Vocabulary_Summary"></a>Appendix
+A. NAO Vocabulary Summary<br />
+
+
+
+
+
+
+</h2>
+
+
+
+
+
+
+
+
+
+<h3><a class="mozTocH2" name="mozTocId177728"></a><a name="A1:_Ontology_Classes_Description"></a>A1:
+Ontology Classes Description</h3>
+
+<a name="Agent">
+<h3>Agent</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application">nfo:Application</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSystem">nfo:OperatingSystem</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software">nfo:Software</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td> --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2010/01/25/nuao#initiatingAgent">nuao:initiatingAgent</a>,  <a href="#maintainedBy">nao:maintainedBy</a></td></tr> 
+<tr><td>Description </td><td> An agent is the artificial counterpart to nao:Party. It can be a software component or some service.</td></tr> 
+</table>
+
+
+<a name="FreeDesktopIcon">
+<h3>FreeDesktopIcon</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource,  <a href="#Symbol">nao:Symbol</a></td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#iconName">nao:iconName</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td> --</td></tr> 
+<tr><td>Description </td><td> Represents a desktop icon as defined in the FreeDesktop Icon Naming Standard (http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).</td></tr> 
+</table>
+
+
+<a name="Party">
+<h3>Party</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact">nco:Contact</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationContact">nco:OrganizationContact</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#Person">pimo:Person</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact">nco:PersonContact</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td> --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#contributor">nao:contributor</a>,  <a href="#creator">nao:creator</a>,  <a href="#endorsedBy">nao:endorsedBy</a>,  <a href="#favouritedBy">nao:favouritedBy</a></td></tr> 
+<tr><td>Description </td><td> Represents a single or a group of individuals</td></tr> 
+</table>
+
+
+<a name="Symbol">
+<h3>Symbol</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="#FreeDesktopIcon">nao:FreeDesktopIcon</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td> --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#altSymbol">nao:altSymbol</a>,  <a href="#hasSymbol">nao:hasSymbol</a>,  <a href="#prefSymbol">nao:prefSymbol</a></td></tr> 
+<tr><td>Description </td><td> Represents a symbol, a visual representation of a resource. Typically a local or remote file would be double-typed to be used as a symbol. An alternative is nao:FreeDesktopIcon.</td></tr> 
+</table>
+
+
+<a name="Tag">
+<h3>Tag</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#Tag">pimo:Tag</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#Topic">pimo:Topic</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#isTagFor">nao:isTagFor</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#hasTag">nao:hasTag</a></td></tr> 
+<tr><td>Description </td><td> Represents a generic tag</td></tr> 
+</table>
+
+
+<h3><a class="mozTocH2" name="mozTocId918756"></a><a name="A2:_Ontology_Properties_Description"></a>A2:
+Ontology Properties Description</h3>
+
+
+<a name="altLabel">
+<h3>altLabel</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> rdfs:label</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> An alternative label alongside the preferred label for a resource</td></tr> 
+</table>
+
+
+<a name="altSymbol">
+<h3>altSymbol</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Symbol">nao:Symbol</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#hasSymbol">nao:hasSymbol</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> An alternative symbol representation for a resource</td></tr> 
+</table>
+
+
+<a name="annotation">
+<h3>annotation</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> --</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#actor">nmm:actor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#artist">nexif:artist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#assistantDirector">nmm:assistantDirector</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#attendee">pimo:attendee</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#attends">pimo:attends</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#audienceRating">nmm:audienceRating</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#backgroundArtist">nid3:backgroundArtist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#cinematographer">nmm:cinematographer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#composer">nid3:composer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#composer">nmm:composer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#conductor">nid3:conductor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentCreated">nie:contentCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentLastModified">nie:contentLastModified</a>,  <a href="#contributor">nao:contributor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor">nco:contributor</a>,  <a href="#created">nao:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created">ncal:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created">nie:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#creator">pimo:creator</a>,  <a href="#creator">nao:creator</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator">nco:creator</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#date">nid3:date</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#dateTime">nexif:dateTime</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#definingResource">dlpo:definingResource</a>,  <a href="http://www.semanticdesktop.org/ontologies/2008/05/20/tmo#dependencyDescription">tmo:dependencyDescription</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#description">ncal:description</a>,  <a href="#description">nao:description</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#description">nie:description</a>,  <a href="#directTrust">nao:directTrust</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#director">nmm:director</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#encodedBy">nid3:encodedBy</a>,  <a href="#engineeringTool">nao:engineeringTool</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated">nfo:fileCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified">nfo:fileLastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry">nfo:foundry</a>,  <a href="#hasDefaultNamespace">nao:hasDefaultNamespace</a>,  <a href="#hasDefaultNamespaceAbbreviation">nao:hasDefaultNamespaceAbbreviation</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#hasInterest">pimo:hasInterest</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#hasLocation">pimo:hasLocation</a>,  <a href="#hasSubResource">nao:hasSubResource</a>,  <a href="#hasSuperResource">nao:hasSuperResource</a>,  <a href="#hasTag">nao:hasTag</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#hasTag">pimo:hasTag</a>,  <a href="#hasTopic">nao:hasTopic</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#interpretedBy">nid3:interpretedBy</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#isComposedOf">dlpo:isComposedOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isInterestOf">pimo:isInterestOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isLocationOf">pimo:isLocationOf</a>,  <a href="#isRelated">nao:isRelated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isRelated">pimo:isRelated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isTagFor">pimo:isTagFor</a>,  <a href="#isTagFor">nao:isTagFor</a>,  <a href="#isTopicOf">nao:isTopicOf</a>,  <a href="#lastModified">nao:lastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#lastModified">nie:lastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#lyricist">nmm:lyricist</a>,  <a href="#maintainedBy">nao:maintainedBy</a>,  <a href="#modified">nao:modified</a>,  <a href="#networkTrust">nao:networkTrust</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note">nco:note</a>,  <a href="#numericRating">nao:numericRating</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#originalArtist">nid3:originalArtist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#originalTextWriter">nid3:originalTextWriter</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#performer">nmm:performer</a>,  <a href="#privacyLevel">nao:privacyLevel</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#producer">nmm:producer</a>,  <a href="#rating">nao:rating</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#relatedResource">dlpo:relatedResource</a>,  <a href="#score">nao:score</a>,  <a href="#scoreParameter">nao:scoreParameter</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">nmo:sentDate</a>,  <a href="#status">nao:status</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#synopsis">nmm:synopsis</a>,  <a href="http://www.semanticdesktop.org/ontologies/2008/05/20/tmo#taskDescription">tmo:taskDescription</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#textWriter">nid3:textWriter</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/duho#timestamp">duho:timestamp</a>,  <a href="#trustLevel">nao:trustLevel</a>,  <a href="#version">nao:version</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#writer">nmm:writer</a></td></tr> 
+<tr><td>Description </td><td> Generic annotation for a resource</td></tr> 
+</table>
+
+
+<a name="contributor">
+<h3>contributor</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Party">nao:Party</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>, dc:contributor</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#actor">nmm:actor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#artist">nexif:artist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#assistantDirector">nmm:assistantDirector</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#backgroundArtist">nid3:backgroundArtist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#cinematographer">nmm:cinematographer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#composer">nid3:composer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#composer">nmm:composer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#conductor">nid3:conductor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor">nco:contributor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator">nco:creator</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#director">nmm:director</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#encodedBy">nid3:encodedBy</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry">nfo:foundry</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#interpretedBy">nid3:interpretedBy</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#lyricist">nmm:lyricist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#originalArtist">nid3:originalArtist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#originalTextWriter">nid3:originalTextWriter</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#performer">nmm:performer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#producer">nmm:producer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#textWriter">nid3:textWriter</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#writer">nmm:writer</a></td></tr> 
+<tr><td>Description </td><td> Refers to a single or a group of individuals that contributed to a resource</td></tr> 
+</table>
+
+
+<a name="created">
+<h3>created</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#modified">nao:modified</a>, dcterms:modified</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentCreated">nie:contentCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created">nie:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created">ncal:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#date">nid3:date</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated">nfo:fileCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">nmo:sentDate</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/duho#timestamp">duho:timestamp</a></td></tr> 
+<tr><td>Description </td><td> States the creation, or first modification time for a resource</td></tr> 
+</table>
+
+
+<a name="creator">
+<h3>creator</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Party">nao:Party</a></td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>, dc:creator</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#artist">nexif:artist</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#composer">nid3:composer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#creator">pimo:creator</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator">nco:creator</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#foundry">nfo:foundry</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#originalArtist">nid3:originalArtist</a></td></tr> 
+<tr><td>Description </td><td> Refers to the single or group of individuals that created the resource</td></tr> 
+</table>
+
+
+<a name="deprecated">
+<h3>deprecated</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> If this property is assigned, the subject class, property, or resource, is deprecated and should not be used in production systems any longer. It may be removed without further notice.</td></tr> 
+</table>
+
+
+<a name="description">
+<h3>description</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>, rdfs:comment</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2008/05/20/tmo#dependencyDescription">tmo:dependencyDescription</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#description">nie:description</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#description">ncal:description</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note">nco:note</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#synopsis">nmm:synopsis</a>,  <a href="http://www.semanticdesktop.org/ontologies/2008/05/20/tmo#taskDescription">tmo:taskDescription</a></td></tr> 
+<tr><td>Description </td><td> A non-technical textual annotation for a resource</td></tr> 
+</table>
+
+
+<a name="directTrust">
+<h3>directTrust</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#Agent">pimo:Agent</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:double</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#trustLevel">nao:trustLevel</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> A direct trust value assigned to an agent, either manually by a user or semi-/automatically by a system. Allowed values range from 0 (no trust) to 1 (very high trust).</td></tr> 
+</table>
+
+
+<a name="endorsedBy">
+<h3>endorsedBy</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Party">nao:Party</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#favouritedBy">nao:favouritedBy</a></td></tr> 
+<tr><td>Description </td><td> Signifies social endorsment of a resource by a specific agent. Endorsement includes social actions like favouriting, liking, voting for, starring a resource.</td></tr> 
+</table>
+
+
+<a name="engineeringTool">
+<h3>engineeringTool</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data">nrl:Data</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Specifies the engineering tool used to generate the graph</td></tr> 
+</table>
+
+
+<a name="externalIdentifier">
+<h3>externalIdentifier</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#identifier">nao:identifier</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> An external identifier for a resource that has been retreived from an external source.</td></tr> 
+</table>
+
+
+<a name="favouritedBy">
+<h3>favouritedBy</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Party">nao:Party</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#endorsedBy">nao:endorsedBy</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Signifies social endorsment by an agent, by way of marking the resource as a favourite.</td></tr> 
+</table>
+
+
+<a name="hasDataGraph">
+<h3>hasDataGraph</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#InstanceBase">nrl:InstanceBase</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#isDataGraphFor">nao:isDataGraphFor</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/duho#hasPastDataGraph">duho:hasPastDataGraph</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isDefinedBy">pimo:isDefinedBy</a></td></tr> 
+<tr><td>Description </td><td> Links a resource to the graph which contains its metadata. Its typical usage would be to link the file resource to the graph containing its extracted file metadata. This allows for easy maintenance later on. Inverse property of nao:isDataGraphFor.</td></tr> 
+</table>
+
+
+<a name="hasDefaultNamespace">
+<h3>hasDefaultNamespace</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data">nrl:Data</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Defines the default static namespace for a graph</td></tr> 
+</table>
+
+
+<a name="hasDefaultNamespaceAbbreviation">
+<h3>hasDefaultNamespaceAbbreviation</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data">nrl:Data</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Defines the default static namespace abbreviation for a graph</td></tr> 
+</table>
+
+
+<a name="hasPastDataGraph">
+<h3>hasPastDataGraph</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> --</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> </td></tr> 
+</table>
+
+
+<a name="hasSubResource">
+<h3>hasSubResource</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasSuperResource">nao:hasSuperResource</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#isRelated">nao:isRelated</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#isComposedOf">dlpo:isComposedOf</a></td></tr> 
+<tr><td>Description </td><td> Defines a relationship between a resource and one or more sub resources. Descriptions of sub-resources are only interpretable when the super-resource exists. Deleting a super-resource should then also delete all sub-resources, and transferring a super-resource (for example, sending it to another user) must also include the sub-resource.</td></tr> 
+</table>
+
+
+<a name="hasSuperResource">
+<h3>hasSuperResource</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasSubResource">nao:hasSubResource</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#isRelated">nao:isRelated</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#definingResource">dlpo:definingResource</a></td></tr> 
+<tr><td>Description </td><td> Defines a relationship between a resource and one or more super resources</td></tr> 
+</table>
+
+
+<a name="hasSymbol">
+<h3>hasSymbol</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Symbol">nao:Symbol</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#altSymbol">nao:altSymbol</a>,  <a href="#prefSymbol">nao:prefSymbol</a></td></tr> 
+<tr><td>Description </td><td> Annotation for a resource in the form of a visual representation. Typically the symbol is a double-typed image file or a nao:FreeDesktopIcon.</td></tr> 
+</table>
+
+
+<a name="hasTag">
+<h3>hasTag</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Tag">nao:Tag</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#isTagFor">nao:isTagFor</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#hasInterest">pimo:hasInterest</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#hasTag">pimo:hasTag</a></td></tr> 
+<tr><td>Description </td><td> Defines an existing tag for a resource</td></tr> 
+</table>
+
+
+<a name="hasTopic">
+<h3>hasTopic</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#isTopicOf">nao:isTopicOf</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#isRelated">nao:isRelated</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Defines a relationship between two resources, where the object is a topic of the subject</td></tr> 
+</table>
+
+
+<a name="iconName">
+<h3>iconName</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#FreeDesktopIcon">nao:FreeDesktopIcon</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Minimal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#identifier">nao:identifier</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Defines a name for a FreeDesktop Icon as defined in the FreeDesktop Icon Naming Standard</td></tr> 
+</table>
+
+
+<a name="identifier">
+<h3>identifier</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> --</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contactUID">nco:contactUID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#deviceIdentifier">ddo:deviceIdentifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#deviceName">ddo:deviceName</a>,  <a href="#externalIdentifier">nao:externalIdentifier</a>,  <a href="#iconName">nao:iconName</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier">nie:identifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#imID">nco:imID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#imageUniqueID">nexif:imageUniqueID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#internationalStandardRecordingCode">nmm:internationalStandardRecordingCode</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#messageId">nmo:messageId</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicBrainzAlbumID">nmm:musicBrainzAlbumID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicBrainzTrackID">nmm:musicBrainzTrackID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicCDIdentifier">nmm:musicCDIdentifier</a>,  <a href="#personalIdentifier">nao:personalIdentifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#tagLabel">pimo:tagLabel</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#uid">ncal:uid</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#uniqueFileIdentifier">nid3:uniqueFileIdentifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid">nfo:uuid</a></td></tr> 
+<tr><td>Description </td><td> Defines a generic identifier for a resource</td></tr> 
+</table>
+
+
+<a name="isDataGraphFor">
+<h3>isDataGraphFor</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#InstanceBase">nrl:InstanceBase</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasDataGraph">nao:hasDataGraph</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/duho#isPastDataGraphFor">duho:isPastDataGraphFor</a></td></tr> 
+<tr><td>Description </td><td> Links a named graph to the resource for which it contains metadata. Its typical usage would be to link the graph containing extracted file metadata to the file resource. This allows for easy maintenance later on. Inverse property of nao:hasDataGraph.</td></tr> 
+</table>
+
+
+<a name="isPastDataGraphFor">
+<h3>isPastDataGraphFor</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> --</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> </td></tr> 
+</table>
+
+
+<a name="isRelated">
+<h3>isRelated</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#SymmetricProperty">nrl:SymmetricProperty</a></td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#attendee">pimo:attendee</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#attends">pimo:attends</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#definingResource">dlpo:definingResource</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#hasLocation">pimo:hasLocation</a>,  <a href="#hasSubResource">nao:hasSubResource</a>,  <a href="#hasSuperResource">nao:hasSuperResource</a>,  <a href="#hasTopic">nao:hasTopic</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#isComposedOf">dlpo:isComposedOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isLocationOf">pimo:isLocationOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isRelated">pimo:isRelated</a>,  <a href="#isTopicOf">nao:isTopicOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#relatedResource">dlpo:relatedResource</a></td></tr> 
+<tr><td>Description </td><td> Defines an annotation for a resource in the form of a relationship between the subject resource and another resource</td></tr> 
+</table>
+
+
+<a name="isTagFor">
+<h3>isTagFor</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#Tag">nao:Tag</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasTag">nao:hasTag</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isInterestOf">pimo:isInterestOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#isTagFor">pimo:isTagFor</a></td></tr> 
+<tr><td>Description </td><td> States which resources a tag is associated with</td></tr> 
+</table>
+
+
+<a name="isTopicOf">
+<h3>isTopicOf</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasTopic">nao:hasTopic</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#isRelated">nao:isRelated</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Defines a relationship between two resources, where the subject is a topic of the object</td></tr> 
+</table>
+
+
+<a name="lastModified">
+<h3>lastModified</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#modified">nao:modified</a>, dcterms:modified</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentLastModified">nie:contentLastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#dateTime">nexif:dateTime</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified">nfo:fileLastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#lastModified">nie:lastModified</a></td></tr> 
+<tr><td>Description </td><td> States the last modification time for a resource</td></tr> 
+</table>
+
+
+<a name="maintainedBy">
+<h3>maintainedBy</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Agent">nao:Agent</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> The agent that maintains this resource, ie. created it and knows what to do with it.</td></tr> 
+</table>
+
+
+<a name="modified">
+<h3>modified</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>, dcterms:modified</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentCreated">nie:contentCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#contentLastModified">nie:contentLastModified</a>,  <a href="#created">nao:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created">ncal:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created">nie:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#date">nid3:date</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#dateTime">nexif:dateTime</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated">nfo:fileCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified">nfo:fileLastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#lastModified">nie:lastModified</a>,  <a href="#lastModified">nao:lastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">nmo:sentDate</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/duho#timestamp">duho:timestamp</a></td></tr> 
+<tr><td>Description </td><td> States the modification time for a resource</td></tr> 
+</table>
+
+
+<a name="networkTrust">
+<h3>networkTrust</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#Agent">pimo:Agent</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:double</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#trustLevel">nao:trustLevel</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> A network-derived trust value assigned to an agent, based on the shared direct trust values for the same agent, as set by participating agents in a network. Allowed values range from 0 (no trust) to 1 (very high trust).</td></tr> 
+</table>
+
+
+<a name="numericRating">
+<h3>numericRating</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:integer</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a>,  <a href="#rating">nao:rating</a>,  <a href="#scoreParameter">nao:scoreParameter</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td>  Annotation for a resource in the form of a numeric rating (float value), allowed values are between 1 and 10 whereas 0 is interpreted as not set</td></tr> 
+</table>
+
+
+<a name="personalIdentifier">
+<h3>personalIdentifier</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#InverseFunctionalProperty">nrl:InverseFunctionalProperty</a>, rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#identifier">nao:identifier</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#deviceName">ddo:deviceName</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#tagLabel">pimo:tagLabel</a></td></tr> 
+<tr><td>Description </td><td> Defines a personal string identifier for a resource</td></tr> 
+</table>
+
+
+<a name="pluralPrefLabel">
+<h3>pluralPrefLabel</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> rdfs:label</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> The plural form of the preferred label for a resource</td></tr> 
+</table>
+
+
+<a name="prefLabel">
+<h3>prefLabel</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> rdfs:label</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName">nfo:fileName</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname">nco:fullname</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#imageDescription">nexif:imageDescription</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#tagLabel">pimo:tagLabel</a>,  <a href="http://www.semanticdesktop.org/ontologies/2008/05/20/tmo#taskName">tmo:taskName</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie#title">nie:title</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#title">nid3:title</a></td></tr> 
+<tr><td>Description </td><td> A preferred label for a resource</td></tr> 
+</table>
+
+
+<a name="prefSymbol">
+<h3>prefSymbol</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Symbol">nao:Symbol</a></td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#hasSymbol">nao:hasSymbol</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> A unique preferred symbol representation for a resource</td></tr> 
+</table>
+
+
+<a name="privacyLevel">
+<h3>privacyLevel</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:double</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> A privacy level as defined for a resource. Allowed values range from 0 (private) to 1 (public).</td></tr> 
+</table>
+
+
+<a name="rating">
+<h3>rating</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> --</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#audienceRating">nmm:audienceRating</a>,  <a href="#numericRating">nao:numericRating</a></td></tr> 
+<tr><td>Description </td><td> Annotation for a resource in the form of an unrestricted rating</td></tr> 
+</table>
+
+
+<a name="score">
+<h3>score</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:float</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> An authoritative score for an item valued between 0 and 1</td></tr> 
+</table>
+
+
+<a name="scoreParameter">
+<h3>scoreParameter</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:float</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#numericRating">nao:numericRating</a></td></tr> 
+<tr><td>Description </td><td> A marker property to mark selected properties which are input to a mathematical algorithm to generate scores for resources. Properties are marked by being defined as subproperties of this property</td></tr> 
+</table>
+
+
+<a name="serializationLanguage">
+<h3>serializationLanguage</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DocumentGraph">nrl:DocumentGraph</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> States the serialization language for a named graph that is represented within a document</td></tr> 
+</table>
+
+
+<a name="status">
+<h3>status</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data">nrl:Data</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Literal</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Specifies the status of a graph, stable, unstable or testing</td></tr> 
+</table>
+
+
+<a name="trustLevel">
+<h3>trustLevel</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#Agent">pimo:Agent</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:double</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#directTrust">nao:directTrust</a>,  <a href="#networkTrust">nao:networkTrust</a></td></tr> 
+<tr><td>Description </td><td> A generalised trust level assigned to an agent, based on a combination of direct and network trust values it possesses. Allowed values range from 0 (no trust) to 1 (very high trust).</td></tr> 
+</table>
+
+
+<a name="userVisible">
+<h3>userVisible</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:boolean</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Mark a property, class, or even resource as user visible or not. Non-user-visible entities should never be presented to the user. By default everything is user-visible.</td></tr> 
+</table>
+
+
+<a name="version">
+<h3>version</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data">nrl:Data</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:float</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#annotation">nao:annotation</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Specifies the version of a graph, in numeric format</td></tr> 
+</table>
+
+
+
+</body></html>

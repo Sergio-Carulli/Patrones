@@ -10,7 +10,7 @@ rdf;object;2864;3;http://www.w3.org/1999/02/22-rdf-syntax-ns#object
 rdf;predicate;2705;3;http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
 rdf;Statement;2663;2;http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
 rdf;Bag;5;1;http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag
-rdfs;type;60189781;500;http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+rdf;type;60189781;500;http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 rdfs;label;44393909;410;http://www.w3.org/2000/01/rdf-schema#label
 rdfs;comment;245759;143;http://www.w3.org/2000/01/rdf-schema#comment
 rdfs;subClassOf;87142;93;http://www.w3.org/2000/01/rdf-schema#subClassOf

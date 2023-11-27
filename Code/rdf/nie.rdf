@@ -1,0 +1,1672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="oscaf.css" />
+  <title>Nepomuk Information Element Ontology (NIE)</title>
+
+
+</head>
+
+
+<body>
+
+<div class="head">
+<div class="nav"> <a href="http://www.dime-project.eu/"> <img style="border: 0px solid; width: 80px; height: 88px;" alt="di.me Logo" src="dime_logo_1000x1000_transparent_Bg.png" /></a><br />
+<h1>NEPOMUK Information Element Ontology</h1>
+
+<big style="color: rgb(0, 90, 156);">OSCAF Recommendation 28.08.2013<br />
+
+</big>
+<dl>
+
+  <dt>Latest Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie">http://www.semanticdesktop.org/ontologies/2007/01/19/nie</a>
+
+  <dt></dt>
+
+  <dt>This Version:</dt>
+
+  <dd>This file refers to the Revision 1.2 of NIE. Minor changes may be implemented in future revisions. 
+       With each new revision, the documentation and all serializations of the ontology will be updated. The URI identifying this version (but not the namespace) is <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/v1.2/">http://www.semanticdesktop.org/ontologies/2007/01/19/nie/v1.2/</a></dd>
+</dd>
+
+ <dt>Previous Version:</dt>
+
+  <dd><a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/v1.1/">http://www.semanticdesktop.org/ontologies/2007/01/19/nie/v1.1/</a>
+
+
+  <dt></dt>
+
+  <dt>Authors:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd>Leo Sauermann, DFKI, <a href="mailto:leo.sauermann@dfki.de">leo.sauermann@dfki.de</a></dd>
+
+  <dd>Michael Sintek, DFKI, <a href="mailto:michael.sintek@dfki.de">michael.sintek@dfki.de</a></dd>
+
+  <dd>Ludger van Elst, DFKI, <a href="mailto:elst@dfki.uni-kl.de">elst@dfki.uni-kl.de</a></dd>
+
+  <dt></dt>
+
+  <dt>Editor:</dt>
+
+  <dd>Antoni Mylka, DFKI, <a href="mailto:antoni.mylka@dfki.de">antoni.mylka@dfki.de</a></dd>
+
+  <dd>Judie Attard, DERI/NUIG, <a href="mailto:judie.attard@deri.org">judie.attard@deri.org</a></dd>
+
+  <dd></dd>
+
+  <dt>Contributors:</dt>
+
+  <dd>Evgeny 'phreedom' Egorochkin, KDE Strigi Developer, <a href="mailto:stexx@mail.ru">stexx@mail.ru</a></dd>
+
+  <dd>Christiaan Fluit, Aduna, <a href="mailto:christiaan.fluit@aduna-software.com">christiaan.fluit@aduna-software.com</a></dd>
+
+</dl>
+
+<dl>
+
+  <dt><span style="font-weight: bold;">Ontology:</span></dt>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/nie_data.rdfs">NIE
+(Data Graph Only)</a></dd>
+
+  <dd>XML/RDFS Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/nie_metadata.rdfs">NIE
+(Metadata Graph Only)</a></dd>
+
+  <dd>TriG Serialization: <a href="http://www.semanticdesktop.org/ontologies/2007/01/19/nie/nie.trig">NIE
+(Graph Set)</a></dd>
+
+</dl>
+
+</div>
+
+
+<p class="copyright"> Copyright &copy; 2012 <a href="http://www.oscaf.org/"><acronym>OSCAF</acronym></a><sup>&reg;</sup>
+The ontologies are made available under the terms of OSCAF <a href="LICENSE.txt">software license</a>
+</p>
+
+<hr />
+<h2>Abstract</h2>
+
+<p style="text-align: justify;"> The NEPOMUK Information
+Element Framework is an attempt to provide unified vocabulary for
+describing native resources available on the desktop. This document
+presents the high-level overview of the entire framework, its
+motivations and design decisions, as well as classes and properties
+that comprise the core part of the framework - the NEPOMUK Information
+Element Ontology itself.
+</p>
+
+<h2> Status of this document</h2>
+
+<div id="sotd">
+<p style="text-align: justify;"> This document arose from
+the work of the Task-Force ontologies within the <a href="http://nepomuk.semanticdesktop.org">NEPOMUK project</a>.
+This document is a DRAFT made available by the NEPOMUK Consortium for
+discussion only. This document is a work in progress and may be
+updated, replaced, or rendered obsolete by other documents at any time.</p>
+
+<p style="text-align: justify;"> This document is a part
+in a set of seven documents, which together comprise the complete
+specification of the NEPOMUK Information Element Ontology Framework.
+These are: <a href="http://www.semanticdesktop.org/ontologies/nie">NIE</a>, <a href="http://www.semanticdesktop.org/ontologies/nfo">NFO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nco">NCO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nmo">NMO</a>,
+<a href="http://www.semanticdesktop.org/ontologies/ncal">NCAL</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nexif">NEXIF</a>,
+<a href="http://www.semanticdesktop.org/ontologies/nid3">NID3</a>.
+</p>
+
+</div>
+
+<h2>Ontology Visualisation</h2>
+
+<div id="ov">
+<div class="figure"><a name="nie:fig-nie-ontology-visualization"></a><p class="title"></p><div class="figure-contents">
+	<a class="ulink" href="nie.png" target="_top">
+		<div class="mediaobject"><img src="nie.png" width="459"></div>
+	</a>
+	</div></div>
+</div>
+
+<h2>Change Log</h2>
+
+<div id="cl">
+<ul style="text-align: justify;">
+
+<li> Added
+    <ul> 
+      <li><a href="#DataSourceGraph">nie:DataSourceGraph</a></li>
+      <li><a href="#Mode">nie:Mode</a></li>
+	  <li><a href="#sourceMode">nie:sourceMode</a></li>
+    </ul>
+</li>
+
+<li> Modified
+</li>
+
+<li> Deprecated
+</li>
+
+
+</div>
+
+
+<div class="toc">
+<h2 id="contents">Contents</h2>
+
+<blockquote> <a href="#sec-introduction">1.
+Introduction</a><br />
+
+  <a href="#sec-background">2. Background</a><br />
+
+  <a href="#sec-nepomukontologies">3. Overview of the
+NEPOMUK ontology architecture</a><br />
+
+  <a href="#sec-basicdecisions">4. Basic design decisions</a>
+  <blockquote> <a href="#sec-nrl">4.1 Use NEPOMUK
+Representational Language</a><br />
+
+    <a href="#sec-usefullness">4.2 Make NIE usefull for
+the Semantic Desktop</a>
+    <blockquote> <a href="#sec-unification">4.2.1
+Unification of ontologies</a><br />
+
+      <a href="#sec-integration">4.2.2 Integration of
+ontologies</a> </blockquote>
+
+    <a href="#sec-scope">4.3 Don't go beyond the intended
+scope of NIE</a><br />
+
+    <a href="#sec-migration">4.4 Allow for easy migration
+and conform to the standards</a> </blockquote>
+
+  <a href="#sec-overview">5. High-level overview of the
+entire NIE Framework</a><br />
+
+  <a href="#sec-niedescription">6. Description of the NIE
+Ontology</a>
+  <blockquote> <a href="#sec-dataobjects">6.1 Data
+Objects</a><br />
+
+    <a href="#sec-informationelements">6.2 Information
+Elements</a><br />
+
+    <a href="#sec-datasources">6.3 Data Sources</a> </blockquote>
+
+  <a href="#sec-guidelines">7. Guidelines for extending NIE</a> <br />
+  <a href="#sec-examples">8. Examples</a>
+</blockquote>
+
+</div>
+
+<div>
+<a name="sec-introduction"></a>
+<h2><a name="sec-introduction">1. Introduction</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-introduction">Since the dawn of the Semantic
+Web much effort has been exercised to bring its power to the desktop.
+One of the most important parts of this aim is to leverage
+existing information sources and make them accessible to 'semantic'
+systems. This information is contained within various structures
+maintained by the operating system and a multitude of existing 'legacy'
+applications. These structures include files, messages, documents,
+pictures, calendar entries and contacts in addressbooks. Ludger van
+Elst coined the term `native structures' to
+describe them and 'native resources' for the pieces of information they
+contain.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-introduction">A successful Semantic Desktop
+system cannot deny the existence of native structures. Dealing with
+them is an issue that needs to be tackled on every attempt to realize
+the Semantic Desktop vision. What follows is an account of the approach
+adopted within the NEPOMUK Social Semantic Desktop project, followed by
+the specification of the NEPOMUK Information Element Framework (NIE),
+vocabulary developed to express native structures in RDF.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-introduction">Note that the abbreviation NIE
+may refer to the NIE Framework as a whole or to the NIE Ontology - the
+core part of the framework. In most cases the former meaning is used,
+unless explicitly stated otherwise.
+</a></p>
+
+</div>
+
+<div>
+<a name="sec-background"></a>
+<h2><a name="sec-background">2. Background</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-background">The problem is a difficult one
+given the multitude of applications and data formats. Previous semantic
+desktop projects (e.g. </a><a href="http://haystack.lcs.mit.edu/">Haystack</a> or <a href="http://www.gnowsis.org/">Gnowsis</a>) had to
+develop their solutions. Some attempts at standardization have been
+made (<a href="http://www.adobe.com/products/xmp/">Adobe
+XMP</a> or <a href="http://freedesktop.org/wiki/XesamAbout">Freedesktop.org
+XESAM</a>) but a definite standard hasn't emerged yet.</p>
+
+<p style="text-align: justify;">
+Apart from large metadata description frameworks there exists a
+considerable number of smaller single-purpose ontologies aimed at
+specific types of resources
+(e.g. <a href="http://www.w3.org/2002/12/cal/ical">ICAL</a>
+or <a href="http://www.w3.org/TR/vcard-rdf">VCARD</a>).
+A broad array of utilities has been developed for extracting RDF
+metadata from desktop sources (see <a href="http://simile.mit.edu/wiki/RDFizers">RDFizers website</a>,
+for an overview).</p>
+
+<p style="text-align: justify;">
+Various problems have been identified with those ontologies. They are
+expressed in many languages, often aren't as detailed as one would
+like, sometimes contain
+outright bugs. NEPOMUK Information Element Framework is an attempt to
+build upon
+that experience, to provide unified vocabulary to describe typical
+native resources that may be of interest to the user. These resources
+are intended to serve as raw data for other semantic applications. They
+can be browsed, searched,
+annotated and linked with each other. It is hoped that this framework
+will help to achieve the critical mass of raw RDF data that will ignite
+rapid development of applications which will bring actual value to the
+user and make everyday work
+easier and more productive.</p>
+
+<p style="text-align: justify;">
+The open source community has recently started a widespread
+standardization activity under the name of <a href="http://freedesktop.org/wiki/XesamAbout">XESAM Project</a>.
+It gathers together developers from many important desktop search
+projects like <a href="http://strigi.sourceforge.net/">Strigi</a>,
+<a href="http://beagle-project.org/">Gnome Beagle</a>,
+<a href="http://www.gnome.org/projects/tracker/">Gnome
+Tracker</a>, <a href="http://pinot.berlios.de">Pinot</a>
+and <a href="http://www.lesbonscomptes.com/recoll/">Recol</a>.
+The NEPOMUK project has been involved in this effort. NIE has
+benefitted much from the insight of XESAM developers (most notably
+Evgeny Egorochkin). Even though the ontologies themselves are kept
+separate, due
+to certain differences in requirements, NIE strived to maximize
+interoperability
+with XESAM and provide direct equivalents of XESAM classes an
+properties wherever possible.
+</p>
+
+</div>
+
+<div>
+<a name="sec-nepomukontologies"></a>
+<h2><a name="sec-nepomukontologies">3. Overview of
+the NEPOMUK ontology architecture</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-nepomukontologies">In order to justify the
+design decisions that were made when creating NIE, a short introduction
+on the ontology architecture of NEPOMUK is necessary. It can be
+conceptually divided in two tiers.
+</a></p>
+
+<div style="text-align: center;"><a name="sec-nepomukontologies">
+<img style="width: 464px; height: 403px;" alt="NEPOMUK Universe" src="nepomukUniverse.png" /></a></div>
+
+<p style="text-align: justify;">
+<a name="sec-nepomukontologies">The lower one is the data
+tier. It stores the native data extracted from various
+data sources on the desktop. These include filesystems, mailboxes,
+calendars, and addressbooks. They are usually maintained
+by external applications, that are not part of NEPOMUK by themselves.
+The user still uses Kontact or MS Outlook for contacts and events,
+OpenOffice or Word for writing documents etc. The upper ontology layer
+is composed of concepts and instances that make up the Personal
+Information Model. They represent more abstract entities. </a></p>
+
+<p style="text-align: justify;"><a name="sec-nepomukontologies">Native resources are extracted,
+converted to
+RDF and made available for Semantic Web software agents. An approach is
+to store
+converted RDF in a repository, making it queryable. Another approach is
+to adapt datasources dynamically, using virtual RDF graphs
+but in general, extraction and storing RDF in a queryable index is the
+common approach, also used by the other desktop search engines.</a></p>
+
+<p style="text-align: justify;"><a name="sec-nepomukontologies">Data represented in NIE has
+three roles. First, NIE data is intended to be generated by an
+extraction process.
+Second, RDF-based systems can create NIE structures natively, without
+building
+on existing applications. Third, data expressed in NIE can be imported
+back to native applications. The ontology is therefore a mediator
+between semantic and
+native applications. </a></p>
+
+<p style="text-align: justify;"><a name="sec-nepomukontologies">These roles explain some
+of the design decisions outlined below. They are a
+direct result of the following assumptions about the NEPOMUK
+architecture:</a></p>
+
+<ul style="text-align: justify;">
+
+  <a name="sec-nepomukontologies"> <li>The 'PIMO'
+layer can much more easily work with native resources if they are
+expressed
+in a single language (see </li>
+
+  </a><a href="#sec-nrl">here</a>), using
+limited vocabulary
+(see <a href="#unification">here</a>), where
+similar entities are always
+expressed in the same way with the same vocabulary elements (see <a href="#integration">here</a>). <li>The task of
+dealing with dynamic nature of the native resources can be more easily
+tackled
+when it is divided into two subtasks :
+    <ul>
+
+      <li>synchronizing the 'real-life' with the data repository,
+that doesn't contain abstract concepts</li>
+
+      <li>synchronizing the data repository with the abstract
+concepts in the personal information model</li>
+
+    </ul>
+
+These subtasks can be assigned to different components that only need
+limited
+knowledge to perform them and can thus be much simpler.</li>
+
+</ul>
+
+<p style="text-align: justify;">
+The authors of this document believe that these assumptions would also
+hold for
+other semantic desktop systems.<a name="sec-basicdecisions"></a></p>
+
+</div>
+
+<div>
+<h2><a name="sec-basicdecisions">4. Basic design
+decisions</a></h2>
+
+<p style="text-align: justify;"><a name="sec-basicdecisions">Requirements stated above led to
+certain guidelines for the ontology design.
+The following sections
+contain a brief outline of them. This is by no means a sound and
+complete set of
+axioms that are always correct, but a set of factors that were taken
+into
+account. They are given in their perceived order of importance.
+Developers of
+ontologies that will extend NIE to describe new kinds of data are
+strongly
+encouraged to be consistent with them.</a></p>
+
+<a name="sec-nrl">
+</a>
+<h3><a name="sec-nrl">4.1 Use NEPOMUK
+Representational Language</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-nrl">NIE is expressed in the NEPOMUK
+Representational Language as defined in the
+recently published specification (</a><a href="#ref-nrlspec">[NRLSPEC]</a>).
+This
+means, that whenever some existing ontologies are to be reused, they
+need to
+be adapted to NRL. Author's experience suggests that such an adaptation
+would usually entail following steps:</p>
+
+<ol style="text-align: justify;">
+
+  <li> Remove language constructs that are not present in RDFS.
+Some of them have
+their NRL equivalents (like FunctionalProperty or TransitiveProperty in
+OWL or
+Protege ontologies). Others don't (e.g. OWL unions or Protege
+overriding
+properties). If a construct has a NRL equivalent - it may be
+substituted. If
+not, then the information may be expressed in the, rdfs:comment or in
+the
+documentation.</li>
+
+  <li> Create a new namespace for the new ontology, to
+distinguish between the original
+one and the new representation in NRL. </li>
+
+  <li> Let all properties
+have concrete domains and ranges. Bring the ontology to a state where
+the data
+that conforms to it doesn't need to have any untyped nodes.</li>
+
+  <li> Provide links with the original ontology (e.g. via
+rdfs:subClassOf or
+rdfs:subPropertyOf relationships) if possible.</li>
+
+  <li>Examine the ontology for possibilities of alignment with
+existing NIE ontologies, in accordance with the <a href="#sec-integration">integration</a>
+guidelines.</li>
+
+</ol>
+
+<p style="text-align: justify;">
+This decision is fundamental in its nature. It could be interpreted as
+being
+against the spirit of reuse, pervasive in the Semantic Web community.
+It brings
+many benefits though. They include:</p>
+
+<ol>
+
+  <li style="text-align: justify;"> Easier consistency
+checking. There are differences between semantics
+of various ontology languages. Some of them don't specify any
+constraints.
+(e.g. RDF/S domains and ranges aren't interpreted as constraints that
+have to be met, but as rules that entail facts. [<a href="#ref-rdfsemantics">RDFSEMANTICS</a>]) Apart from
+that many well-established ontologies (like Dublin Core [<a href="#ref-dcspec">DCSPEC</a>], Kanzaki EXIF [<a href="#ref-exifrdf">EXIFRDF</a>] or important parts of
+ICAL [<a href="ref-icalrdf">ICALRDF</a>] don't have
+the
+domains and ranges specified at all, so there is nothing to check.</li>
+
+  <li style="text-align: justify;"> Simpler inference. An
+inferencer would have to reason
+over data that uses vocabulary from many ontologies in many languages. </li>
+
+  <li style="text-align: justify;"> Explicit connections
+between ontologies. The application developer would need to be aware of
+the fact
+that an instance of a class from one ontology, might also be annotated
+with
+properties from some other ontology. This is important information,
+that is not
+expressed in the ontology itself. </li>
+
+  <li style="text-align: justify;"> Unified ontology
+universe. Since the Personal Information Model would definitely be
+expressed in NRL
+- leaving the raw data described in its 'original' vocabulary would
+split the
+'NEPOMUK universe' into two parts - one consistent, well checked, where
+inference is efficient and well-implemented - the part in NRL, and the
+chaotic,
+unchecked part in all possible languages.</li>
+
+  <li style="text-align: justify;"> Easier data
+integration. Algorithms would need to have knowledge of multiple
+languages and
+differences in their semantics. Using single language removes this
+burden and
+paves the way for further benefits - described in the next section. </li>
+
+</ol>
+
+<a name="sec-usefullness">
+</a>
+<h3><a name="sec-usefullness">4.2 Make NIE usefull
+for the Semantic Desktop</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-usefullness">The main goal of the Semantic
+Desktop is to aid the user in his/her everyday
+tasks. In order to achieve this goal - the user wants to have a uniform
+view of
+all his/her data, where application boundaries are not important. This
+requirement is a very important one. It implies that wherever data with
+similar
+'meaning' is stored or processed - it needs to be described using the
+same
+vocabulary. Having multiple disparate vocabularies for dealing with
+similar
+entities would make the task of data integration much more difficult.
+In the
+previous section we mentioned that differences between representational
+languages are to be avoided. Here we fortify that claim by saying that
+overlap
+between multiple ontologies in the same domain is also unadvisable.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-usefullness">This statement has two practical
+consequences. They are outlined below.
+</a></p>
+
+<a name="sec-unification">
+</a>
+<h4><a name="sec-unification">4.2.1 Unification of
+ontologies</a></h4>
+
+<p style="text-align: justify;">
+<a name="sec-unification">In domains where there are many
+competing 'de facto standard' ontologies - for
+NIE either one of them is chosen (and adapted - see </a><a href="#ref-nrl">sec. 4.1</a>) or both are
+merged into a third one, with incosistencies resolved. It is definitely
+not the
+purpose of NEPOMUK to deny existence of publicly available ontologies.
+NEPOMUK
+wants to provide a platform that would simplify the development of
+semantically-enabled applications. To achieve this goal NEPOMUK aims to
+alleviate the burden of learning and supporting multiple vocabularies.</p>
+
+<p style="text-align: justify;">
+If the user needs to integrate data expressed in the vocabulary of some
+other
+ontology into the NEPOMUK knowledge base it needs to be transformed
+into NRL and
+aligned with other NEPOMUK ontologies. This will enable NEPOMUK
+applications to process it easily. Maintaining a single import/export
+utility is
+much less costly than having all applications support all vocabularies.
+In a
+domain where many applications need to work with many vocabularies,
+there is an
+entire matrix of combinations that need to be supported. A unified
+approach
+encouraged by NEPOMUK aims to reduce this complexity from quadratic to
+linear.</p>
+
+<p style="text-align: justify;">
+NEPOMUK doesn't aim to substitute existing data with their RDF
+counterparts. The
+complexity of existing and future data formats makes round-trip 1 to 1
+transformation between RDF and the native format nearly impossible.
+There were
+attempts at creating vocabularies that would express all complexities
+of a
+non-rdf data format. (e.g. [<a href="ref-icalrdf">ICALRDF</a>],
+or [<a href="ref-vcardrdf">VCARDRDF</a>]). Even
+if they succeeded in achieving high level of conformance, they didn't
+explore
+real benefits of RDF, like common datatypes and URI references.
+Ontologies that
+resulted from these attempts have deficiencies that inhibit their
+usefullness
+within social semantic desktop context.
+</p>
+
+<a name="sec-integration">
+</a>
+<h4><a name="sec-integration">4.2.2 Integration of
+ontologies</a></h4>
+
+<p style="text-align: justify;">
+<a name="sec-integration">Tight integration between
+ontologies is needed. Some data formats contain
+references to entities that fall beyond their intended scope, but are
+nevertheless important. Examples might include references to contacts
+in emails
+(to, from, cc, bcc fields), calendar events (attendee, rsvp) or text
+documents
+(author, reviewer). These references are mostly incomplete. (a 'to'
+field in an
+email usually contains only the address, sometimes a name).
+Nevertheless it is
+better for these occurences to be described as instances of classes
+from a
+specialized ontology (even though these instances might hardly contain
+more that
+one or two fields) than leave them as plain string values.</a></p>
+
+<p style="text-align: justify;">
+<a name="sec-integration">Having such incomplete instances
+facilitates ontology alignment. It is
+comparatively easy to create and algorithm that browses all instances
+of a given
+class and implements some similarity measure to detect duplicates in
+order to
+link them with a unique instance of some higher-level concept. If those
+instances were expressed with plain strings, the problem would become
+more
+difficult.
+</a></p>
+
+<a name="sec-scope">
+</a>
+<h3><a name="sec-scope">4.3 Don't go beyond the
+intended scope of NIE</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-scope">NIE contains concepts that are
+directly related to native resources available on
+a local desktop or in the network. These are mostly files or can be
+mapped to
+parts of files. (like calendar entries are parts of a calendar file,
+contacts
+are part of an addressbook file etc.) It doesn't contain abstract
+concepts that
+don't have their direct representations as sequences of bytes (like
+'Person',
+'Project', 'Publication', 'Job' etc.) These are delegated to other
+ontologies.
+It is the task of appropriate tools to map between the 'raw' data and
+those
+'high-level' concepts.
+</a></p>
+
+<a name="sec-migration">
+</a>
+<h3><a name="sec-migration">4.4 Allow for easy
+migration and conform to the standards</a></h3>
+
+<p style="text-align: justify;">
+<a name="sec-migration">The most immediate goal of NIE is
+to replace ontologies currently used by
+Aperture, Beagle++ and Strigi. That's why NIE is designed with easy
+migration in
+mind, wherever it didn't clash with above objectives. Moreover existing
+standards are to be observed. This means widespread norms, usually
+issued by
+official standardization bodies like World Wide Web Consortium (W3C
+Recommendations), Internet Engineering Task Force (RFC Documents),
+International
+Organization for Standardization etc. Specific attention is given to
+the
+standardization effort undertaken by the open source community in the
+XESAM
+Project (eXtEnsible Search And Metadata Specification).
+</a></p>
+
+</div>
+
+<div>
+<a name="sec-overview"></a>
+<h2><a name="sec-overview">5. High-level overview of
+the NIE Framework</a></h2>
+
+<div style="text-align: center;"><a name="sec-overview">
+<img style="width: 851px; height: 1220px;" alt="High-Level Overview" src="bigPicture.png" /></a></div>
+
+</div>
+
+<div>
+<a name="sec-niedescription"></a>
+<h2><a name="sec-niedescription">6. Description of
+the NIE Ontology</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-niedescription">The core of the NEPOMUK
+Information Element Ontology and the entire NIE Framework
+revolves around the concepts of </a><a href="#DataObject">DataObject</a>
+and <a href="#InformationElement">InformationElement</a>.
+They express
+the representation and content of a piece of data. Their specialized
+subclasses can
+be used to classify a wide array of desktop resources and express them
+in RDF.
+</p>
+
+<a name="sec-dataobjects">
+</a>
+<h3><a name="sec-dataobjects">6.1 DataObjects</a></h3>
+
+<p style="text-align: justify;">
+<a href="#DataObject">DataObjects</a> represent
+physical entities that contain data. They are extracted from
+filesystems,
+archives, contact lists, mailboxes etc. The representation itself is
+usually not
+interesting to the user. In order for a piece of data to be actually
+understood,
+it needs to be interpreted as an appropriate type of an
+InformationElement. Such
+an interpretation makes it possible to inspect the content of a <a href="#DataObject">DataObject</a>
+correctly, and possibly divide it into parts - new <a href="#DataObject">DataObjects</a> which can have
+their
+own interpretations. This process is iterative and continues as long as
+needed.</p>
+
+<p style="text-align: justify;">
+All
+resources on the desktop are basically related to each other with two
+most
+fundamental types of relations: interpretation and containment.</p>
+
+<p style="text-align: center;"><img style="width: 488px; height: 478px;" alt="Interpretation/Containment" src="interpretation-containment.png" /> </p>
+
+<p style="text-align: justify;">
+<a href="#DataObject">DataObject</a> represents a
+native entity the user works with. The usage of the term
+'native' is important. It means that a <a href="#DataObject">DataObject</a>
+can usually be directly mapped
+to a sequence of bytes. Examples include a file, a set of files or a
+part of a
+file. The granularity depends on the user. <a href="#DataObject">DataObject</a>
+is atomic in the sense, that in order to
+distinguish any more data objects within, it has to be interpreted
+first.</p>
+
+<p style="text-align: justify;">
+The detailed list of <a href="#DataObject">DataObject</a>
+subclasses is subject to extension. It is
+envisioned that future applications will define their own <a href="#DataObject">DataObject</a> subclasses
+in their own ontologies. The NEPOMUK Information Element Ontology
+defines only
+the most generic properties deemed applicable to all <a href="#DataObject">DataObjects</a>. More specific
+information is to be expressed using vocabularies extending NIE.
+</p>
+
+<a name="sec-informationelements">
+</a>
+<h3><a name="sec-informationelements">6.2
+Information Elements</a></h3>
+
+<p style="text-align: justify;">
+<a href="#InformationElement">InformationElement</a>
+is a piece of information stored within a data object. Content-specific
+properties are defined as
+properties of an <a href="#InformationElement">InformationElement</a>.
+It is separate from the <a href="#DataObject">DataObject</a>
+in order
+to make the interpretation independent of the representation. Research
+has shown
+that this flexibility is necessary to create a framework flexible
+enough to
+accomodate for the complexity of data structures present on the
+desktop. For
+example let's consider a mailbox. It is usually stored in a file (this
+is
+expressed as a FileDataObject interpreted as a Mailbox). An IMAP
+mailbox though is
+stored on a remote server, but from the interpretation point of view it
+doesn't
+differ from a file mailbox (in NIE this is expressed as a
+RemoteHostAddress
+interpreted as a Mailbox). Another representation may be a software
+service
+available through some interprocess communication mechanism (as is the
+case of
+the Outlook mailbox available via a COM interface). In NIE this is
+expressed
+as a SoftwareService interpreted as a mailbox). We have three
+completely
+different representations (file, remote host, software service) with an
+identical interpretation (Mailbox).</p>
+
+<p style="text-align: justify;">
+For a more thorough example see figure below. We see
+an in-file mailbox, containing an email, which contains an attachment.
+Notice
+that entities appearing on the right side can also appear at different
+levels.
+Apart from the already mentioned mailbox, there are other
+possibilities. A
+partition may be interpreted as a filesystem, but also a file
+containing an
+image of a DVD can be interpreted as a filesystem. A <a href="http://www.semanticdesktop.org/ontologies/nmo#MailboxDataObject">MailboxDataObject</a>
+can be
+interpreted as a <a href="http://www.semanticdesktop.org/ontologies/nmo#Message">Message</a>,
+but an .eml file too. The same applies to <a href="http://www.semanticdesktop.org/ontologies/nco#Contact">Contacts</a>.
+We
+may have a single .vcf file containing a single VCARD, which is
+interpreted as a
+<a href="http://www.semanticdesktop.org/ontologies/nco#Contact">Contact</a>,
+but an email
+<a href="http://www.semanticdesktop.org/ontologies/nfo#Attachment">Attachment</a>,
+or a <a href="http://www.semanticdesktop.org/ontologies/nfo#RemoteDataObject">RemoteDataObject</a>
+may have the same
+interpretation.</p>
+
+<div style="text-align: center;"><img style="width: 403px; height: 348px;" alt="Mail Attachment Example" src="exampleMailAttachment.png" />
+</div>
+
+<p style="text-align: justify;">
+This approach gives a uniform overview of data regardless of how it's
+represented.
+</p>
+
+<a name="sec-datasources">
+</a>
+<h3><a name="sec-datasources">6.3 Data Sources</a></h3>
+
+<p style="text-align: justify;">
+<a href="#DataObject">DataObject</a> instances don't
+just come out of thin air. They are usually extracted
+from some data source. These are represented by instances of a <a href="#DataSource">DataSource</a> class. Each instance
+represents a native application or system,
+that manages information. A <a href="#DataSource">DataSource</a>
+instance aggregates information required
+by the data extraction component to gain access to the source. In the
+case of a
+<a href="http://www.semanticdesktop.org/ontologies/nfo#Filesystem">Filesystem</a>,
+this
+may be a path, for a <a href="http://www.semanticdesktop.org/ontologies/nmo#Mailbox">Mailbox</a>
+this may be the hostname, login and password etc.</p>
+
+<p style="text-align: justify;">
+Various subclasses of a <a href="#DataSource">DataSource</a>
+are envisioned. They may include filesystems data sources,
+calendar data sources, website data sources etc. The exact choice of
+types and properties
+is considered specific to a particular rdf extraction application. Data
+extraction applications are encouraged
+to provide their own data source ontologies. Such an ontology should
+contain
+data source types supported by the application coupled with properties
+necessary
+to gain access to them.</p>
+
+<p style="text-align: justify;">
+It is important to notice that certain entities (such as a mailbox or a
+filesystem)
+may appear both as a DataSource and as an InformationElement. They
+should not
+be confused though. They are completely different classes with
+completely different
+meaning. DataSource is an entity for which an rdf extraction framework
+of choice
+has an adapter for. DataObjects are extracted from it, either
+automatically when
+they appear (with some kind of monitoring process) or manually at the
+wish of the user.</p>
+
+<p style="text-align: justify;">
+The choice of subclasses of a DataSource depends specifically
+on the capabilities of the chosen rdf extraction framework. Some
+frameworks prefer to
+use an integrated approach (like the 'personal information space' from
+Beagle) where the Desktop is treated as a whole, and no specific data
+sources are distinguished.
+Other (like Aperture), work with a specific set of data source types
+(e.g.
+FilesystemDataSource, IMAPDataSource, IcalDataSource etc.). In the
+Aperture example
+a Filesystem instance is extracted from a FilesystemDataSource, just as
+all files.</p>
+
+<p style="text-align: justify;">
+The provenance of a DataObject is represented by the <a href="#dataSource">dataSource</a> property. In many
+usage scenarios it is important to keep track of
+the provenance of each data object. This information is useful for a
+number of
+reasons.</p>
+
+<ul style="text-align: justify;">
+
+  <li>It augments the value of the information contained within
+the object itself. </li>
+
+  <li>It could be used to open a resource in it's native
+application for editing.</li>
+
+  <li>If a user wishes to remove a data source from the system,
+or stop monitoring it, the dataSource
+property can be used to identify resources that have been extracted
+from this
+data source, so that they can also be removed.</li>
+
+</ul>
+
+<p style="text-align: justify;">
+Note that this approach itself allows for an arbitrary hierarchy of
+data objects. It
+makes the structure of the extracted data independent of the
+capabilities of a particular extraction framework. It can
+be used by all-encompassing semantic desktop systems, as well as
+smaller libraries specialized in a single type of data
+source. The former would probably begin with some high-level concept
+such as
+<a href="http://www.semanticdesktop.org/ontologies/nfo#HardDiskPartition">HardDiskPartition</a>
+or a <a href="http://www.semanticdesktop.org/ontologies/nfo#SoftwareItem">SoftwareItem</a>
+interpreted as an <a href="http://www.semanticdesktop.org/ontologies/nfo#OperatingSystem">OperatingSystem</a>
+and build a containment tree to the very bottom. The latter could
+begin their work somewhere in the middle (e.g. an mbox file crawler)
+and proceed
+as deep as they like.
+</p>
+
+</div>
+
+<div>
+<a name="sec-guidelines"></a>
+<h2><a name="sec-guidelines">7. Guidelines for
+extending NIE</a></h2>
+
+<p style="text-align: justify;">
+<a name="sec-guidelines">As said before, The NIE Ontology
+is intended to serve as a foundation for a
+broad framework. Extensions are to be added to accomodate for various
+types of
+DataObjects and InformationElements. Each extension is a separate
+ontology,
+housed within a separate namespace. It should accept the assumptions
+outlined in
+section </a><a href="sec-basicdecisions">'Basic
+decisions'</a> - be expressed in NRL and try not to extend
+beyond native desktop resources. A NIE extension can define its own
+types of
+Data entities (subclasses of <a href="#DataObject">DataObject</a>)
+and their interpretations (subclasses
+of <a href="#InformationElement">InformationElement</a>)
+or simply augment vocabulary provided elsewhere. The
+developers are encouraged to reuse classes and properties already
+defined in NIE (as stated <a href="#sec-integration">above</a>)
+or provide specializations for them
+(subclasses and subproperties).
+</p>
+
+</div>
+
+<div>
+<a name="sec-examples"></a>
+<h2><a name="sec-examples">8. Examples</a></h2>
+
+Example files that show how to use the expressive power of the ontology will be
+published here in near future.
+
+</div>
+
+<div>
+<h2>References</h2>
+
+<dl>
+
+  <dt><a name="ref-nrlspec"></a>[NRLSPEC]</dt>
+
+  <dd><cite><a href="http://www.semanticdesktop.org/ontologies/nrl">NEPOMUK
+Representational Language (NRL) Vocabulary Specification.</a></cite>, NEPOMUK Task-Force Ontologies,
+http://www.semanticdesktop.org/ontologies/nrl</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-rdfsemantics"></a>[RDFSEMANTICS]</dt>
+
+  <dd><cite><a href="http://www.w3.org/TR/rdf-mt/">RDF
+Semantics</a></cite>, Patrick Hayes, W3C Recommendation
+http://www.w3.org/TR/rdf-mt/</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-dcspec"></a>[DCSPEC]</dt>
+
+  <dd><cite><a href="http://www.dublincore.org/documents/dces/"> Dublin
+core metadata element set, version 1.1</a></cite>, DCMI
+Recommendation http://www.dublincore.org/documents/dces/</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-icalrdf"></a>[ICALRDF]</dt>
+
+  <dd><cite><a href="http://www.w3.org/TR/rdfcal/">Rdf
+calendar - an application of the resource description framework to
+icalendar data</a></cite>, Dan Connolly and Libby Miller,
+W3C Interest Group Note 29 September 2005 http://www.w3.org/TR/rdfcal/</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-vcardrdf"></a>[VCARDRDF]</dt>
+
+  <dd><cite><a href="http://www.w3.org/TR/vcard-rdf">Representing
+vcard objects in rdf/xml</a></cite>, Renato
+Ianella, W3C Note 22 February 2001 http://www.w3.org/TR/vcard-rdf</dd>
+
+</dl>
+
+<dl>
+
+  <dt><a name="ref-exifrdf"></a>[EXIFRDF]</dt>
+
+  <dd><cite><a href="http://www.kanzaki.com/ns/exif">Exif
+data description vocabulary</a></cite>, Masahide
+Kanzaki http://www.kanzaki.com/ns/exif</dd>
+
+</dl>
+
+</div>
+
+<h2>Ontology Classes Description</h2>
+<a name="DataObject">
+<h3>DataObject</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem">nfo:ArchiveItem</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment">nfo:Attachment</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment">ncal:Attachment</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarDataObject">ncal:CalendarDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactListDataObject">nco:ContactListDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource">nfo:DeletedResource</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject">nfo:EmbeddedFileDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject">nfo:FileDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HardDiskPartition">nfo:HardDiskPartition</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#LocalFileDataObject">nfo:LocalFileDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailboxDataObject">nmo:MailboxDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream">nfo:MediaStream</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#P2PFile">ndo:P2PFile</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObject">nfo:RemoteDataObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemotePortAddress">nfo:RemotePortAddress</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareItem">nfo:SoftwareItem</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareService">nfo:SoftwareService</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#TorrentedFile">ndo:TorrentedFile</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#WebDataObject">nfo:WebDataObject</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer">nfo:belongsToContainer</a>,  <a href="#byteSize">nie:byteSize</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#copiedFrom">ndo:copiedFrom</a>,  <a href="#coreGraph">nie:coreGraph</a>,  <a href="#created">nie:created</a>,  <a href="#dataSource">nie:dataSource</a>,  <a href="#interpretedAs">nie:interpretedAs</a>,  <a href="#isPartOf">nie:isPartOf</a>,  <a href="#lastModified">nie:lastModified</a>,  <a href="#lastRefreshed">nie:lastRefreshed</a>,  <a href="#modified">nie:modified</a>,  <a href="#url">nie:url</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#attachedPicture">nid3:attachedPicture</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks">nfo:bookmarks</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#copiedFrom">ndo:copiedFrom</a>,  <a href="#depends">nie:depends</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#generalEncapsulatedObject">nid3:generalEncapsulatedObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream">nfo:hasMediaStream</a>,  <a href="#hasPart">nie:hasPart</a>,  <a href="#isStoredAs">nie:isStoredAs</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#key">nco:key</a>,  <a href="#links">nie:links</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#logo">nco:logo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#photo">nco:photo</a>,  <a href="#relatedTo">nie:relatedTo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#sound">nco:sound</a></td></tr> 
+<tr><td>Description </td><td> A unit of data that is created, annotated and processed on the user desktop. It represents a native structure the user works with. The usage of the term 'native' is important. It means that a DataObject can be directly mapped to a data structure maintained by a native application. This may be a file, a set of files or a part of a file. The granularity depends on the user. This class is not intended to be instantiated by itself. Use more specific subclasses.</td></tr> 
+</table>
+
+
+<a name="DataSource">
+<h3>DataSource</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dao#Account">dao:Account</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/ddo#Device">ddo:Device</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#currentMode">dcon:currentMode</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#lastActive">dcon:lastActive</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#lastMovementRegistered">dcon:lastMovementRegistered</a>,  <a href="#sourceMode">nie:sourceMode</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#dataSource">nie:dataSource</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#recordedBy">dcon:recordedBy</a>,  <a href="#rootElementOf">nie:rootElementOf</a></td></tr> 
+<tr><td>Description </td><td> A superclass for all entities from which DataObjects can be extracted. Each entity represents a native application or some other system that manages information that may be of interest to the user of the Semantic Desktop. Subclasses may include FileSystems, Mailboxes, Calendars, websites etc. The exact choice of subclasses and their properties is considered application-specific. Each data extraction application is supposed to provide it's own DataSource ontology. Such an ontology should contain supported data source types coupled with properties necessary for the application to gain access to the data sources.  (paths, urls, passwords  etc...)</td></tr> 
+</table>
+
+
+<a name="DataSourceGraph">
+<h3>DataSourceGraph</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td> --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td> --</td></tr> 
+<tr><td>Description </td><td> Represents the sum of all information that has been obtained from a data source. Each data source has its own personal information graph. When a data source is deleted, the graph becomes redundant and should also be deleted. If two or more items in two or more data source graphs are determined to be equivalent, they are integrated at the PIMO level, and the integrated representation plus the links to the original items are stored in the pimo:PersonalInformationModel graph.</td></tr> 
+</table>
+
+
+<a name="InformationElement">
+<h3>InformationElement</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#ActivityPost">dlpo:ActivityPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Alarm">ncal:Alarm</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application">nfo:Application</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive">nfo:Archive</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio">nfo:Audio</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#AudioPost">dlpo:AudioPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#AvailabilityPost">dlpo:AvailabilityPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#BlogPost">dlpo:BlogPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark">nfo:Bookmark</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder">nfo:BookmarkFolder</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar">ncal:Calendar</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#Checkin">dlpo:Checkin</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#Comment">dlpo:Comment</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact">nco:Contact</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup">nco:ContactGroup</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactList">nco:ContactList</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Cursor">nfo:Cursor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer">nfo:DataContainer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document">nfo:Document</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email">nmo:Email</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event">ncal:Event</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#EventPost">dlpo:EventPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Executable">nfo:Executable</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem">nfo:Filesystem</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemImage">nfo:FilesystemImage</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder">nfo:Folder</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font">nfo:Font</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Freebusy">ncal:Freebusy</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HtmlDocument">nfo:HtmlDocument</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#ID3Audio">nid3:ID3Audio</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#IMMessage">nmo:IMMessage</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Icon">nfo:Icon</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image">nfo:Image</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#ImagePost">dlpo:ImagePost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Journal">ncal:Journal</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#LivePost">dlpo:LivePost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Mailbox">nmo:Mailbox</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media">nfo:Media</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList">nfo:MediaList</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message">nmo:Message</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#Message">dlpo:Message</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimeEntity">nmo:MimeEntity</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MindMap">nfo:MindMap</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#Movie">nmm:Movie</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#MultimediaPost">dlpo:MultimediaPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#MusicAlbum">nmm:MusicAlbum</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#MusicPiece">nmm:MusicPiece</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#NotePost">dlpo:NotePost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSystem">nfo:OperatingSystem</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationContact">nco:OrganizationContact</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument">nfo:PaginatedTextDocument</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact">nco:PersonContact</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#Photo">nexif:Photo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark">nfo:Placemark</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer">nfo:PlacemarkContainer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument">nfo:PlainTextDocument</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#PresencePost">dlpo:PresencePost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Presentation">nfo:Presentation</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage">nfo:RasterImage</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software">nfo:Software</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode">nfo:SourceCode</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Spreadsheet">nfo:Spreadsheet</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#Status">dlpo:Status</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#TVSeason">nmm:TVSeason</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#TVSeries">nmm:TVSeries</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#TVShow">nmm:TVShow</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument">nfo:TextDocument</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone">ncal:Timezone</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo">ncal:Todo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#Torrent">ndo:Torrent</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Trash">nfo:Trash</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#VectorImage">nfo:VectorImage</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video">nfo:Video</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#VideoPost">dlpo:VideoPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual">nfo:Visual</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dlpo#WebDocumentPost">dlpo:WebDocumentPost</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Website">nfo:Website</a></td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#characterSet">nie:characterSet</a>,  <a href="#comment">nie:comment</a>,  <a href="#contentCreated">nie:contentCreated</a>,  <a href="#contentLastModified">nie:contentLastModified</a>,  <a href="#contentModified">nie:contentModified</a>,  <a href="#contentSize">nie:contentSize</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contributor">nco:contributor</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator">nco:creator</a>,  <a href="#description">nie:description</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#encryptionStatus">nfo:encryptionStatus</a>,  <a href="#generator">nie:generator</a>,  <a href="#generatorOption">nie:generatorOption</a>,  <a href="#hasLogicalPart">nie:hasLogicalPart</a>,  <a href="#hasPart">nie:hasPart</a>,  <a href="#htmlContent">nie:htmlContent</a>,  <a href="#identifier">nie:identifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#inEditMode">dcon:inEditMode</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#inForeground">dcon:inForeground</a>,  <a href="#informationElementDate">nie:informationElementDate</a>,  <a href="#isLogicalPartOf">nie:isLogicalPartOf</a>,  <a href="#isStoredAs">nie:isStoredAs</a>,  <a href="#keyword">nie:keyword</a>,  <a href="#language">nie:language</a>,  <a href="#legal">nie:legal</a>,  <a href="#links">nie:links</a>,  <a href="#mimeType">nie:mimeType</a>,  <a href="#plainTextContent">nie:plainTextContent</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#publisher">nco:publisher</a>,  <a href="#relatedTo">nie:relatedTo</a>,  <a href="#rootElementOf">nie:rootElementOf</a>,  <a href="#subject">nie:subject</a>,  <a href="#title">nie:title</a>,  <a href="#version">nie:version</a>,  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#writeable">dcon:writeable</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#activeFile">dcon:activeFile</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#groundingOccurrence">pimo:groundingOccurrence</a>,  <a href="#hasLogicalPart">nie:hasLogicalPart</a>,  <a href="#interpretedAs">nie:interpretedAs</a>,  <a href="#isLogicalPartOf">nie:isLogicalPartOf</a>,  <a href="#isPartOf">nie:isPartOf</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/11/01/pimo#referencingOccurrence">pimo:referencingOccurrence</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/04/30/ndo#referrer">ndo:referrer</a>,  <a href="http://www.semanticdesktop.org/ontologies/2010/01/25/nuao#targettedResource">nuao:targettedResource</a></td></tr> 
+<tr><td>Description </td><td> A unit of content the user works with. This is a superclass for all interpretations of a DataObject.</td></tr> 
+</table>
+
+
+<a name="Mode">
+<h3>Mode</h3>
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td> --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2011/10/05/dcon#currentMode">dcon:currentMode</a>,  <a href="#sourceMode">nie:sourceMode</a></td></tr> 
+<tr><td>Description </td><td> Representation for a standard set of device/application/service modes, corresponding to various sets of modes that are either inbuilt in a device (e.g. inbuilt phone modes such as silent, loud, general, vibrate, etc.) or available for applications and online services (e.g. IM system modes such as busy, available, invisible, etc.)</td></tr> 
+</table>
+
+
+<h2>Ontology Properties Description</h2>
+
+<a name="byteSize">
+<h3>byteSize</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:integer</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize">nfo:fileSize</a></td></tr> 
+<tr><td>Description </td><td> The overall size of the data object in bytes. That means the space taken by the DataObject in its container, and not the size of the content that is of interest to the user. For cases where the content size is different (e.g. in compressed files the content is larger, in messages the content excludes headings and is smaller) use more specific properties, not necessarily subproperties of this one.</td></tr> 
+</table>
+
+
+<a name="characterSet">
+<h3>characterSet</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Characterset in which the content of the InformationElement was created. Example: ISO-8859-1, UTF-8. One of the registered character sets at http://www.iana.org/assignments/character-sets. This characterSet is used to interpret any textual parts of the content. If more than one characterSet is used within one data object, use more specific properties.</td></tr> 
+</table>
+
+
+<a name="comment">
+<h3>comment</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment">ncal:comment</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#comments">nid3:comments</a></td></tr> 
+<tr><td>Description </td><td> A user comment about an InformationElement.</td></tr> 
+</table>
+
+
+<a name="contentCreated">
+<h3>contentCreated</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#annotation">nao:annotation</a>,  <a href="#contentModified">nie:contentModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#created">nao:created</a>, dc:date,  <a href="#informationElementDate">nie:informationElementDate</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#modified">nao:modified</a>, dcterms:modified</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#date">nid3:date</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">nmo:sentDate</a></td></tr> 
+<tr><td>Description </td><td> The date of the content creation. This may not necessarily be equal to the date when the DataObject (i.e. the physical representation) itself was created. Compare with nie:created property.</td></tr> 
+</table>
+
+
+<a name="contentLastModified">
+<h3>contentLastModified</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#annotation">nao:annotation</a>,  <a href="#contentModified">nie:contentModified</a>, dc:date,  <a href="#informationElementDate">nie:informationElementDate</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#lastModified">nao:lastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#modified">nao:modified</a>, dcterms:modified</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> The date of the last modification of the original content (not its corresponding DataObject or local copy). Compare with nie:lastModified.</td></tr> 
+</table>
+
+
+<a name="contentModified">
+<h3>contentModified</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#contentCreated">nie:contentCreated</a>,  <a href="#contentLastModified">nie:contentLastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#date">nid3:date</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">nmo:sentDate</a></td></tr> 
+<tr><td>Description </td><td> The date of a modification of the original content (not its corresponding DataObject or local copy). Compare with nie:modified.</td></tr> 
+</table>
+
+
+<a name="contentSize">
+<h3>contentSize</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:integer</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> The size of the content. This property can be used whenever the size of the content of an InformationElement differs from the size of the DataObject. (e.g. because of compression, encoding, encryption or any other representation issues). The contentSize in expressed in bytes.</td></tr> 
+</table>
+
+
+<a name="copyright">
+<h3>copyright</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dcterms:accessRights,  <a href="#legal">nie:legal</a>, dc:rights</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#copyright">nexif:copyright</a></td></tr> 
+<tr><td>Description </td><td> Content copyright</td></tr> 
+</table>
+
+
+<a name="coreGraph">
+<h3>coreGraph</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#InstanceBase">nrl:InstanceBase</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Connects the data object with the graph that contains information about it. Deprecated in favor of a more generic nao:isDataGraphFor.</td></tr> 
+</table>
+
+
+<a name="created">
+<h3>created</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#annotation">nao:annotation</a>, dcterms:created,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#created">nao:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#modified">nao:modified</a>, dcterms:modified,  <a href="#modified">nie:modified</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created">ncal:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated">nfo:fileCreated</a></td></tr> 
+<tr><td>Description </td><td> Date of creation of the DataObject. Note that this date refers to the creation of the DataObject itself (i.e. the physical representation). Compare with nie:contentCreated.</td></tr> 
+</table>
+
+
+<a name="dataSource">
+<h3>dataSource</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataSource">nie:DataSource</a></td></tr> 
+<tr><td class="rowheader">Minimal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:source</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Marks the provenance of a DataObject, what source does a data object come from.</td></tr> 
+</table>
+
+
+<a name="depends">
+<h3>depends</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#relatedTo">nie:relatedTo</a>, dc:relation</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Dependency relation. A piece of content depends on another piece of data in order to be properly understood/used/interpreted.</td></tr> 
+</table>
+
+
+<a name="description">
+<h3>description</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#annotation">nao:annotation</a>, rdfs:comment,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#description">nao:description</a>, dc:description</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#description">ncal:description</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note">nco:note</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#synopsis">nmm:synopsis</a></td></tr> 
+<tr><td>Description </td><td> A textual description of the resource. This property may be used for any metadata fields that provide some meta-information or comment about a resource in the form of a passage of text. This property is not to be confused with nie:plainTextContent. Use more specific subproperties wherever possible.</td></tr> 
+</table>
+
+
+<a name="disclaimer">
+<h3>disclaimer</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#legal">nie:legal</a>, dc:rights</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> A disclaimer</td></tr> 
+</table>
+
+
+<a name="generator">
+<h3>generator</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#prodid">ncal:prodid</a></td></tr> 
+<tr><td>Description </td><td> Software used to "generate" the contents. E.g. a word processor name.</td></tr> 
+</table>
+
+
+<a name="generatorOption">
+<h3>generatorOption</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> --</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#version">ncal:version</a></td></tr> 
+<tr><td>Description </td><td> A common superproperty for all settings used by the generating software. This may include compression settings, algorithms, autosave, interlaced/non-interlaced etc. Note that this property has no range specified and therefore should not be used directly. Always use more specific properties.</td></tr> 
+</table>
+
+
+<a name="hasLogicalPart">
+<h3>hasLogicalPart</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#isLogicalPartOf">nie:isLogicalPartOf</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dcterms:hasPart</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmark">nfo:containsBookmark</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsBookmarkFolder">nfo:containsBookmarkFolder</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#containsPlacemark">nfo:containsPlacemark</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#hasSeason">nmm:hasSeason</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#hasSeasonEpisode">nmm:hasSeasonEpisode</a></td></tr> 
+<tr><td>Description </td><td> Generic property used to express 'logical' containment relationships between InformationElements. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of InformationElement to use those specific subproperties. Note the difference between 'physical' containment (hasPart) and logical containment (hasLogicalPart)</td></tr> 
+</table>
+
+
+<a name="hasPart">
+<h3>hasPart</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#InverseFunctionalProperty">nrl:InverseFunctionalProperty</a>, rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#isPartOf">nie:isPartOf</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dcterms:hasPart,  <a href="#relatedTo">nie:relatedTo</a>, dc:relation</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#attach">ncal:attach</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#attachedPicture">nid3:attachedPicture</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#component">ncal:component</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#containsContact">nco:containsContact</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#generalEncapsulatedObject">nid3:generalEncapsulatedObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#hasAlarm">ncal:hasAlarm</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#hasAttachment">nmo:hasAttachment</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream">nfo:hasMediaStream</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#key">nco:key</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#logo">nco:logo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#photo">nco:photo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#sound">nco:sound</a></td></tr> 
+<tr><td>Description </td><td> Generic property used to express 'physical' containment relationships between DataObjects. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of DataObjects to use those specific subproperties. Note to the developers: Please be aware of the distinction between containment relation and provenance. The hasPart relation models physical containment, an InformationElement (a nmo:Message) can have a 'physical' part (an nfo:Attachment).  Also, please note the difference between physical containment (hasPart) and logical containment (hasLogicalPart) the former has more strict meaning. They may occur independently of each other.</td></tr> 
+</table>
+
+
+<a name="htmlContent">
+<h3>htmlContent</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#htmlMessageContent">nmo:htmlMessageContent</a></td></tr> 
+<tr><td>Description </td><td> The HTML content of an information element. This property can be used to store text including formatting in a generic fashion.</td></tr> 
+</table>
+
+
+<a name="identifier">
+<h3>identifier</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:identifier,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#identifier">nao:identifier</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#contactUID">nco:contactUID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#imageUniqueID">nexif:imageUniqueID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#internationalStandardRecordingCode">nmm:internationalStandardRecordingCode</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#messageId">nmo:messageId</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicBrainzAlbumID">nmm:musicBrainzAlbumID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicBrainzTrackID">nmm:musicBrainzTrackID</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicCDIdentifier">nmm:musicCDIdentifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#uid">ncal:uid</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#uniqueFileIdentifier">nid3:uniqueFileIdentifier</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#uuid">nfo:uuid</a></td></tr> 
+<tr><td>Description </td><td> An unambiguous reference to the InformationElement within a given context. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.</td></tr> 
+</table>
+
+
+<a name="informationElementDate">
+<h3>informationElementDate</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:date</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#contentCreated">nie:contentCreated</a>,  <a href="#contentLastModified">nie:contentLastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#date">nid3:date</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#releaseDate">nmm:releaseDate</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#sentDate">nmo:sentDate</a></td></tr> 
+<tr><td>Description </td><td> A point or period of time associated with an event in the lifecycle of an Information Element. A common superproperty for all date-related properties of InformationElements in the NIE Framework.</td></tr> 
+</table>
+
+
+<a name="interpretedAs">
+<h3>interpretedAs</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#isStoredAs">nie:isStoredAs</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Links the DataObject with the InformationElement it is interpreted as.</td></tr> 
+</table>
+
+
+<a name="isLogicalPartOf">
+<h3>isLogicalPartOf</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty">nrl:DefiningProperty</a>, rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasLogicalPart">nie:hasLogicalPart</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dcterms:isPartOf</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#isPartOfSeason">nmm:isPartOfSeason</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#musicAlbum">nmm:musicAlbum</a>,  <a href="http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#seasonOf">nmm:seasonOf</a></td></tr> 
+<tr><td>Description </td><td> Generic property used to express 'logical' containment relationships between DataObjects. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of InformationElement to use those specific subproperties. Note the difference between 'physical' containment (isPartOf) and logical containment (isLogicalPartOf)</td></tr> 
+</table>
+
+
+<a name="isPartOf">
+<h3>isPartOf</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty">nrl:DefiningProperty</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#FunctionalProperty">nrl:FunctionalProperty</a>, rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#hasPart">nie:hasPart</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dcterms:isPartOf</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#belongsToContainer">nfo:belongsToContainer</a></td></tr> 
+<tr><td>Description </td><td> Generic property used to express containment relationships between DataObjects. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of DataObjects to use those specific subproperties. Note to the developers: Please be aware of the distinction between containment relation and provenance. The isPartOf relation models physical containment, a nie:DataObject (e.g. an nfo:Attachment) is a 'physical' part of an nie:InformationElement (a nmo:Message). Also, please note the difference between physical containment (isPartOf) and logical containment (isLogicalPartOf) the former has more strict meaning. They may occur independently of each other.</td></tr> 
+</table>
+
+
+<a name="isStoredAs">
+<h3>isStoredAs</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Inverse property </td><td>  <a href="#interpretedAs">nie:interpretedAs</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Links the information element with the DataObject it is stored in.</td></tr> 
+</table>
+
+
+<a name="keyword">
+<h3>keyword</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Adapted DublinCore: The topic of the content of the resource, as keyword. No sentences here. Recommended best practice is to select a value from a controlled vocabulary or formal classification scheme. </td></tr> 
+</table>
+
+
+<a name="language">
+<h3>language</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:language</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#language">nid3:language</a></td></tr> 
+<tr><td>Description </td><td> Language the InformationElement is expressed in. This property applies to the data object in its entirety. If the data object is divisible into parts expressed in multiple languages - more specific properties should be used. Users are encouraged to use the two-letter code specified in the RFC 3066</td></tr> 
+</table>
+
+
+<a name="lastModified">
+<h3>lastModified</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#annotation">nao:annotation</a>, dc:date,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#lastModified">nao:lastModified</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#modified">nao:modified</a>, dcterms:modified,  <a href="#modified">nie:modified</a></td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#dateTime">nexif:dateTime</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified">nfo:fileLastModified</a></td></tr> 
+<tr><td>Description </td><td> Last modification date of the DataObject. Note that this date refers to the modification of the DataObject itself (i.e. the physical representation). Compare with nie:contentLastModified.</td></tr> 
+</table>
+
+
+<a name="lastRefreshed">
+<h3>lastRefreshed</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:date</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Date when information about this data object was retrieved (for the first time) or last refreshed from the data source. This property is important for metadata extraction applications that don't receive any notifications of changes in the data source and have to poll it regularly. This may lead to information becoming out of date. In these cases this property may be used to determine the age of data, which is an important element of it's dependability. </td></tr> 
+</table>
+
+
+<a name="legal">
+<h3>legal</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:rights</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#copyright">nexif:copyright</a>,  <a href="#copyright">nie:copyright</a>,  <a href="#disclaimer">nie:disclaimer</a>,  <a href="#license">nie:license</a>,  <a href="#licenseType">nie:licenseType</a></td></tr> 
+<tr><td>Description </td><td> A common superproperty for all properties that point at legal information about an Information Element</td></tr> 
+</table>
+
+
+<a name="license">
+<h3>license</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#legal">nie:legal</a>, dcterms:license, dc:rights</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Terms and intellectual property rights licensing conditions.</td></tr> 
+</table>
+
+
+<a name="licenseType">
+<h3>licenseType</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td> --</td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#legal">nie:legal</a>, dc:rights</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> The type of the license. Possible values for this field may include "GPL", "BSD", "Creative Commons" etc.</td></tr> 
+</table>
+
+
+<a name="links">
+<h3>links</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td>  <a href="#relatedTo">nie:relatedTo</a>, dc:relation</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks">nfo:bookmarks</a></td></tr> 
+<tr><td>Description </td><td> A linking relation. A piece of content links/mentions a piece of data</td></tr> 
+</table>
+
+
+<a name="mimeType">
+<h3>mimeType</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#contentMimeType">nmo:contentMimeType</a></td></tr> 
+<tr><td>Description </td><td> The mime type of the resource, if available. Example: "text/plain". See http://www.iana.org/assignments/media-types/. This property applies to data objects that can be described with one mime type. In cases where the object as a whole has one mime type, while it's parts have other mime types, or there is no mime type that can be applied to the object as a whole, but some parts of the content have mime types - use more specific properties.</td></tr> 
+</table>
+
+
+<a name="modified">
+<h3>modified</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:dateTime</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="#created">nie:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created">ncal:created</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#dateTime">nexif:dateTime</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileCreated">nfo:fileCreated</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileLastModified">nfo:fileLastModified</a>,  <a href="#lastModified">nie:lastModified</a></td></tr> 
+<tr><td>Description </td><td> Date the DataObject was changed in any way.  Note that this date refers to the modification of the DataObject itself (i.e. the physical representation). Compare with nie:contentModified.</td></tr> 
+</table>
+
+
+<a name="plainTextContent">
+<h3>plainTextContent</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#plainTextMessageContent">nmo:plainTextMessageContent</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#unsynchronizedTextContent">nid3:unsynchronizedTextContent</a></td></tr> 
+<tr><td>Description </td><td> Plain-text representation of the content of a InformationElement with all markup removed. The main purpose of this property is full-text indexing and search. Its exact content is considered application-specific. The user can make no assumptions about what is and what is not contained within. Applications should use more specific properties wherever possible.</td></tr> 
+</table>
+
+
+<a name="relatedTo">
+<h3>relatedTo</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:relation</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#attach">ncal:attach</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#attachedPicture">nid3:attachedPicture</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bookmarks">nfo:bookmarks</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#component">ncal:component</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#containsContact">nco:containsContact</a>,  <a href="#depends">nie:depends</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#generalEncapsulatedObject">nid3:generalEncapsulatedObject</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#hasAlarm">ncal:hasAlarm</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#hasAttachment">nmo:hasAttachment</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hasMediaStream">nfo:hasMediaStream</a>,  <a href="#hasPart">nie:hasPart</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#key">nco:key</a>,  <a href="#links">nie:links</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#logo">nco:logo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#photo">nco:photo</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#sound">nco:sound</a></td></tr> 
+<tr><td>Description </td><td> A common superproperty for all relations between a piece of content and other pieces of data (which may be interpreted as other pieces of content).</td></tr> 
+</table>
+
+
+<a name="rootElementOf">
+<h3>rootElementOf</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#DataSource">nie:DataSource</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> DataObjects extracted from a single data source are organized into a containment tree. This property links the root of that tree with the datasource it has been extracted from</td></tr> 
+</table>
+
+
+<a name="sourceMode">
+<h3>sourceMode</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataSource">nie:DataSource</a></td></tr> 
+<tr><td class="rowheader">Range </td><td>  <a href="#Mode">nie:Mode</a></td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> Represents a number of applicable modes for a data source.</td></tr> 
+</table>
+
+
+<a name="subject">
+<h3>subject</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dc:subject</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#messageSubject">nmo:messageSubject</a></td></tr> 
+<tr><td>Description </td><td> An overall topic of the content of a InformationElement</td></tr> 
+</table>
+
+
+<a name="title">
+<h3>title</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> rdfs:label,  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nao#prefLabel">nao:prefLabel</a>, dc:title</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname">nco:fullname</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nexif#imageDescription">nexif:imageDescription</a>,  <a href="http://www.semanticdesktop.org/ontologies/2007/05/10/nid3#title">nid3:title</a></td></tr> 
+<tr><td>Description </td><td> Name given to an InformationElement</td></tr> 
+</table>
+
+
+<a name="url">
+<h3>url</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty">nrl:DefiningProperty</a>, rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#DataObject">nie:DataObject</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Maximal cardinality </td><td> 1</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> --</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td>  <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl">nfo:fileUrl</a></td></tr> 
+<tr><td>Description </td><td> URL of a DataObject. It points to the location of the object. A typial usage is FileDataObject. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html.</td></tr> 
+</table>
+
+
+<a name="version">
+<h3>version</h3> 
+
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Type </td><td> rdf:Property, rdfs:Resource</td></tr> 
+<tr><td class="rowheader">Domain </td><td>  <a href="#InformationElement">nie:InformationElement</a></td></tr> 
+<tr><td class="rowheader">Range </td><td> xsd:string</td></tr> 
+<tr><td class="rowheader">Superproperties </td><td> dcterms:hasVersion</td></tr> 
+<tr><td class="rowheader">Subproperties </td><td> --</td></tr> 
+<tr><td>Description </td><td> The current version of the given data object. Exact semantics is unspecified at this level. Use more specific subproperties if needed.</td></tr> 
+</table>
+
+
+
+</body></html>

@@ -1,0 +1,1291 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/tribont/sample"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/tribont/sample">
+    <Prefix name="" IRI="https://w3id.org/tribont/sample"/>
+    <Prefix name="ns" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="ns1" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://gbol.life/ontology/bibo#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>https://w3id.org/tribont/material</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="ns:license"/>
+        <IRI>https://creativecommons.org/licenses/by-nc/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="bibo:status"/>
+        <Literal>published</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
+        <Literal>Work in progress</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal xml:lang="en">Izaskun Fernandez (Tekniker) 
+Domain expert:Iban Quintana (Tekniker) 
+Domain expert:Xana Fernandez (Tekniker)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+        <Literal>2023-05-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal xml:lang="en">Patricia Casla (Tekniker)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en">The goal of this module is to represent the sample systems , and the undelaying samples, involved in the tribological experiments.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <Literal>2023-05-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+        <Literal>Tekniker</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+        <Literal>Sample module</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>sample</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#OperationProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#SystemProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#TechnicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/material#ElementConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/material#ElementRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/material#FluidLubricant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/material#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/material#SolidLubricant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoatedSample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoatingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoatingThickness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoatingType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LubricatedSampleSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LubricationSample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SampleBatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SampleRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SampleSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#isCharacterisedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoating"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoreMaterial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLubricationSample"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMovingSample"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSampleRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStaticSample"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interactsWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCoatingFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCoreMaterialFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLubricationSampleFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMovingSampleFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSampleRoleFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStaticSampleFor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#executionDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#preparationDate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#reference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#target"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:maxQualifiedCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#CoatedSample"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sample"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasCoating"/>
+                <Class IRI="#Coating"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LubricatedSampleSystem"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SampleSystem"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasLubricationSample"/>
+                <Class IRI="#LubricationSample"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LubricationSample"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sample"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasCoreMaterial"/>
+                    <Class IRI="https://w3id.org/tribont/material#FluidLubricant"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasCoreMaterial"/>
+                    <Class IRI="https://w3id.org/tribont/material#SolidLubricant"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CoatedSample"/>
+        <Class IRI="#Sample"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coating"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coating"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#isCharacterisedBy"/>
+            <Class IRI="#CoatingProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coating"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCoreMaterial"/>
+            <Class IRI="https://w3id.org/tribont/material#Material"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coating"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCoreMaterial"/>
+            <Class IRI="https://w3id.org/tribont/material#Material"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoatingProperty"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoatingThickness"/>
+        <Class IRI="#CoatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoatingType"/>
+        <Class IRI="#CoatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LubricatedSampleSystem"/>
+        <Class IRI="#SampleSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LubricationSample"/>
+        <Class IRI="#Sample"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#isCharacterisedBy"/>
+            <Class IRI="https://w3id.org/tribont/core#TechnicalProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCoating"/>
+            <Class IRI="#Coating"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCoreMaterial"/>
+            <Class IRI="https://w3id.org/tribont/material#Material"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasSampleRole"/>
+            <Class IRI="#SampleRole"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCoating"/>
+            <Class IRI="#Coating"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSampleRole"/>
+            <Class IRI="#SampleRole"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#preparationDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCoating"/>
+            <Class IRI="#Coating"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCoreMaterial"/>
+            <Class IRI="https://w3id.org/tribont/material#Material"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCoating"/>
+            <Class IRI="#Coating"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleBatch"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#preparationDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleRole"/>
+        <Class IRI="https://w3id.org/tribont/core#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleSystem"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleSystem"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#isCharacterisedBy"/>
+            <Class IRI="https://w3id.org/tribont/core#SystemProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleSystem"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasLubricationSample"/>
+            <Class IRI="#LubricationSample"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleSystem"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasMovingSample"/>
+            <Class IRI="#Sample"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleSystem"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasStaticSample"/>
+            <Class IRI="#Sample"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/tribont/core#Body"/>
+        <Class IRI="https://w3id.org/tribont/material#Material"/>
+        <Class IRI="#Coating"/>
+        <Class IRI="#Sample"/>
+        <Class IRI="#SampleBatch"/>
+        <Class IRI="#SampleSystem"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/tribont/core#OperationProperty"/>
+        <Class IRI="https://w3id.org/tribont/core#SystemProperty"/>
+        <Class IRI="https://w3id.org/tribont/core#TechnicalProperty"/>
+        <Class IRI="https://w3id.org/tribont/material#ElementConcentration"/>
+        <Class IRI="#CoatingProperty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/tribont/material#ElementRole"/>
+        <Class IRI="#SampleRole"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#SampleRole"/>
+        <NamedIndividual IRI="#reference"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SampleRole"/>
+        <NamedIndividual IRI="#target"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCoating"/>
+        <ObjectProperty IRI="#isCoatingFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCoreMaterial"/>
+        <ObjectProperty IRI="#isCoreMaterialFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasLubricationSample"/>
+        <ObjectProperty IRI="#isLubricationSampleFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMovingSample"/>
+        <ObjectProperty IRI="#isMovingSampleFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSampleRole"/>
+        <ObjectProperty IRI="#isSampleRoleFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasStaticSample"/>
+        <ObjectProperty IRI="#isStaticSampleFor"/>
+    </InverseObjectProperties>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Sample"/>
+                <Variable IRI="urn:swrl:var#s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasBody"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+                <Variable IRI="urn:swrl:var#b"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasBody"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#b"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Sample"/>
+                <Variable IRI="urn:swrl:var#s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasCoating"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasCoating"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Sample"/>
+                <Variable IRI="urn:swrl:var#s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasCoreMaterial"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+                <Variable IRI="urn:swrl:var#m"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasCoreMaterial"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#m"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Sample"/>
+                <Variable IRI="urn:swrl:var#s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#preparationDate"/>
+                <Variable IRI="urn:swrl:var#sb"/>
+                <Variable IRI="urn:swrl:var#m"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#preparationDate"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#m"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SampleSystem"/>
+                <Variable IRI="urn:swrl:var#ss"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasMovingSample"/>
+                <Variable IRI="urn:swrl:var#ss"/>
+                <Variable IRI="urn:swrl:var#ms"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStaticSample"/>
+                <Variable IRI="urn:swrl:var#ss"/>
+                <Variable IRI="urn:swrl:var#sts"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="urn:swrl:var#ms"/>
+                <Variable IRI="urn:swrl:var#sts"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="urn:swrl:var#sts"/>
+                <Variable IRI="urn:swrl:var#ms"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CoatedSample</IRI>
+        <Literal>Sample body which has a coating moterial.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CoatedSample</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoatedSample</IRI>
+        <Literal>CoatedSample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#CoatedSample</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Coating</IRI>
+        <Literal>A thin layer covering of something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Coating</IRI>
+        <Literal>https://w3id.org/tribont/material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coating</IRI>
+        <Literal>Coating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Coating</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CoatingProperty</IRI>
+        <Literal>Qualifiable or quantifiable attribute, or characteristic of a coating.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CoatingProperty</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoatingProperty</IRI>
+        <Literal>CoatingProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#CoatingProperty</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CoatingThickness</IRI>
+        <Literal>Thickness of a coating.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CoatingThickness</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoatingThickness</IRI>
+        <Literal>CoatingThickness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#CoatingThickness</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CoatingType</IRI>
+        <Literal>Type of coating.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CoatingType</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoatingType</IRI>
+        <Literal>CoatingType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#CoatingType</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LubricatedSampleSystem</IRI>
+        <Literal>Sample system that includes a lubricant as part of it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LubricatedSampleSystem</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LubricatedSampleSystem</IRI>
+        <Literal>LubricatedSampleSystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#LubricatedSampleSystem</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LubricationSample</IRI>
+        <Literal>Portion of lubricant material selected from a larger quantity of lubricant material for Testing purposes. Lubricant material can be fluid or solid lubricants </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#LubricationSample</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LubricationSample</IRI>
+        <Literal>LubricationSample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#LubricationSample</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sample</IRI>
+        <Literal>Portion of material which can be transformed or not for Testing purposes. For example the moving and static samples in a tribological tests are transformed following a specific manufacturing process to achieve the required body characteristics, while lubricants acting as lubrication body are not transformed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Sample</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sample</IRI>
+        <Literal>Sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Sample</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SampleBatch</IRI>
+        <Literal>An aggrupation of samples which have been transformed at the same time using a same material and share a set of common atributes of characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SampleBatch</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SampleBatch</IRI>
+        <Literal>SampleBatch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#SampleBatch</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SampleRole</IRI>
+        <Literal>The position or purpose that a sample has in a situation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SampleRole</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SampleRole</IRI>
+        <Literal>SampleRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#SampleRole</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SampleSystem</IRI>
+        <Literal>Object aggregate that has two or more elements that interact with each other, and it is used for Testing purposes. For example, a tribological sample system aggregates at least a static and a moving sample body and can include or not a lubrication sample body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SampleSystem</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SampleSystem</IRI>
+        <Literal>SampleSystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#SampleSystem</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#executionDate</IRI>
+        <Literal>Data when something has been executed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#executionDate</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#executionDate</IRI>
+        <Literal>executionDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#executionDate</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBody</IRI>
+        <Literal>Relationship between something  and its body configuration..</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasBody</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBody</IRI>
+        <Literal>hasBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasBody</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoating</IRI>
+        <Literal>Relationship between a sample  and its coating.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCoating</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoating</IRI>
+        <Literal>hasCoating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasCoating</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoreMaterial</IRI>
+        <Literal>Relationship between something and the material of which it is made</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCoreMaterial</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoreMaterial</IRI>
+        <Literal>hasCoreMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasCoreMaterial</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLubricationSample</IRI>
+        <Literal>Relationship between a sample system and a lubricant material that is part of it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasLubricationSample</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLubricationSample</IRI>
+        <Literal>hasLubricationSample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasLubricationSample</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMovingSample</IRI>
+        <Literal>Relationship between a sample system and a moving sample body that is part of it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMovingSample</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMovingSample</IRI>
+        <Literal>hasMovingSample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasMovingSample</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSampleRole</IRI>
+        <Literal>Relationship between a sample and its role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSampleRole</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSampleRole</IRI>
+        <Literal>hasSampleRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasSampleRole</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStaticSample</IRI>
+        <Literal>Relationship between a sample system and a static sample body that is part of it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasStaticSample</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStaticSample</IRI>
+        <Literal>hasStaticSample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasStaticSample</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#interactsWith</IRI>
+        <Literal>Releation between sveral samples interacting one with each other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#interactsWith</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interactsWith</IRI>
+        <Literal>interactsWith</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#interactsWith</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCoatingFor</IRI>
+        <Literal>Relationship between a coating  and the sample  of which it is a part.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isCoatingFor</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCoatingFor</IRI>
+        <Literal>isCoatingFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isCoatingFor</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCoreMaterialFor</IRI>
+        <Literal>Relationship between  the material it is made of and something</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isCoreMaterialFor</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCoreMaterialFor</IRI>
+        <Literal>isCoreMaterialFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isCoreMaterialFor</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLubricationSampleFor</IRI>
+        <Literal>Relationship between a lubrication sample  and the sample system of which it is a part.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isLubricationSampleFor</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLubricationSampleFor</IRI>
+        <Literal>isLubricationSampleFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isLubricationSampleFor</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isMovingSampleFor</IRI>
+        <Literal>Relationship between a moving sample  and the sample system of which it is a part.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isMovingSampleFor</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isMovingSampleFor</IRI>
+        <Literal>isMovingSampleFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isMovingSampleFor</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSampleRoleFor</IRI>
+        <Literal>Relationship between a role and the sample to which it applies,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isSampleRoleFor</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSampleRoleFor</IRI>
+        <Literal>isSampleRoleFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isSampleRoleFor</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isStaticSampleFor</IRI>
+        <Literal>Relationship between a static sample  and the sample system of which it is a part.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isStaticSampleFor</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isStaticSampleFor</IRI>
+        <Literal>isStaticSampleFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isStaticSampleFor</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#preparationDate</IRI>
+        <Literal>Data when something has been prepared.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#preparationDate</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#preparationDate</IRI>
+        <Literal>preparationDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#preparationDate</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#reference</IRI>
+        <Literal>A reference against which the sample is tested.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#reference</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#reference</IRI>
+        <Literal>reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#reference</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#target</IRI>
+        <Literal>Target sample for the  testing  activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#target</IRI>
+        <Literal>https://w3id.org/tribont/sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#target</IRI>
+        <Literal>target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#target</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxQualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484112"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484113"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484114"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484115"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484116"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxQualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484117"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484118"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484119"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

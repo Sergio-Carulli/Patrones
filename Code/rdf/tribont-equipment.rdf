@@ -1,0 +1,1477 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/tribont/equipment"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/tribont/equipment">
+    <Prefix name="" IRI="https://w3id.org/tribont/equipment"/>
+    <Prefix name="ns" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="ns1" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://gbol.life/ontology/bibo#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Import>https://w3id.org/tribont/core</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="ns:license"/>
+        <IRI>https://creativecommons.org/licenses/by-nc/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="bibo:status"/>
+        <Literal>published</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
+        <Literal>Work in progress</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal xml:lang="en">Izaskun Fernandez (Tekniker) 
+Domain expert:Iban Quintana (Tekniker) 
+Domain expert:Xana Fernandez (Tekniker)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+        <Literal>2023-06-02</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal xml:lang="en">Patricia Casla (Tekniker)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en">The goal of this module is to represent the equipment hierarchy model involved in the tribological experiments.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <Literal>2023-06-02</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+        <Literal>Tekniker</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+        <Literal>Equipment module</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>equipment</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#HardnessProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#OperationProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Standard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#TechnicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#TribologicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/tribont/core#Weight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AbrasionTester"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Calibration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CalibrationDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipmentClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipmentStandard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExperimentalEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExperimentalEquipmentClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HardnessTester"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HardnessTesterClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MachineryBook"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManufacturerDataSheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasuringEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasuringEquipmentClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpticalMicroscope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpticalProfilometer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScanningElectronMicroscope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScratchTester"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnicalDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tribometer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TribometerClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/tribont/core#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/tribont/core#hasManufacturer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOperationCondition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOutputMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCalibration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holdsMovingSampleBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holdsSampleBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holdsStaticSampleBody"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHeldMovingSampleBodyBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHeldSampleBodyBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHeldStaticSampleBodyBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/tribont/core#longName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/tribont/core#shortNam"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#executionDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#measuringPrinciple"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#purpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#validityDate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AbrasionTester"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Calibration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+            <Class IRI="#CalibrationDocument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Calibration"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#executionDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Calibration"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#validityDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CalibrationDocument"/>
+        <Class IRI="https://w3id.org/tribont/core#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+            <Class IRI="#TechnicalDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+            <ObjectUnionOf>
+                <Class IRI="#CalibrationDocument"/>
+                <Class IRI="#TechnicalDocument"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasLocation"/>
+            <Class IRI="https://w3id.org/tribont/core#Company"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOperationCondition"/>
+            <Class IRI="https://w3id.org/tribont/core#OperationProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="https://w3id.org/tribont/core#TechnicalProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCalibration"/>
+            <Class IRI="#Calibration"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holdsSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasLocation"/>
+            <Class IRI="https://w3id.org/tribont/core#Company"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCalibration"/>
+            <Class IRI="#Calibration"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="https://w3id.org/tribont/core#shortNam"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#measuringPrinciple"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#purpose"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="https://w3id.org/tribont/core#longName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentClass"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentClass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+            <Class IRI="#TechnicalDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentClass"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+            <Class IRI="#TechnicalDocument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentClass"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holdsSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentClass"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#measuringPrinciple"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentClass"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#purpose"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipmentStandard"/>
+        <Class IRI="https://w3id.org/tribont/core#Standard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExperimentalEquipment"/>
+        <Class IRI="#Equipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExperimentalEquipmentClass"/>
+        <Class IRI="#EquipmentClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardnessTester"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardnessTester"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="https://w3id.org/tribont/core#HardnessProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardnessTesterClass"/>
+        <Class IRI="#MeasuringEquipmentClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MachineryBook"/>
+        <Class IRI="#TechnicalDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManufacturerDataSheet"/>
+        <Class IRI="#TechnicalDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasuringEquipment"/>
+        <Class IRI="#Equipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasuringEquipmentClass"/>
+        <Class IRI="#EquipmentClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpticalMicroscope"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpticalMicroscope"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOperationCondition"/>
+            <Class IRI="#OpticalMicroscope"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpticalProfilometer"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scale"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="https://w3id.org/tribont/core#Weight"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScanningElectronMicroscope"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScratchTester"/>
+        <Class IRI="#MeasuringEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnicalDocument"/>
+        <Class IRI="https://w3id.org/tribont/core#Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tribometer"/>
+        <Class IRI="#ExperimentalEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tribometer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#holdsMovingSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tribometer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#holdsStaticSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tribometer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/tribont/core#isCharacterisedByOutputMeasure"/>
+            <Class IRI="https://w3id.org/tribont/core#TribologicalProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tribometer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holdsMovingSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tribometer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holdsStaticSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribometerClass"/>
+        <Class IRI="#ExperimentalEquipmentClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribometerClass"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holdsMovingSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TribometerClass"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holdsStaticSampleBody"/>
+            <Class IRI="https://w3id.org/tribont/core#Body"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Property"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#SubjectOfInterest"/>
+        <Class IRI="https://w3id.org/isCharacterisedBy#Unit"/>
+        <Class IRI="https://w3id.org/tribont/core#Company"/>
+        <Class IRI="https://w3id.org/tribont/core#Document"/>
+        <Class IRI="https://w3id.org/tribont/core#Role"/>
+        <Class IRI="https://w3id.org/tribont/core#Standard"/>
+        <Class IRI="#Calibration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/tribont/core#Body"/>
+        <Class IRI="#Equipment"/>
+        <Class IRI="#EquipmentClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CalibrationDocument"/>
+        <Class IRI="#TechnicalDocument"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MachineryBook"/>
+        <Class IRI="#ManufacturerDataSheet"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#holdsMovingSampleBody"/>
+        <ObjectProperty IRI="#holdsSampleBody"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#holdsStaticSampleBody"/>
+        <ObjectProperty IRI="#holdsSampleBody"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isHeldMovingSampleBodyBy"/>
+        <ObjectProperty IRI="#isHeldSampleBodyBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isHeldStaticSampleBodyBy"/>
+        <ObjectProperty IRI="#isHeldSampleBodyBy"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#holdsMovingSampleBody"/>
+        <ObjectProperty IRI="#isHeldMovingSampleBodyBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#holdsSampleBody"/>
+        <ObjectProperty IRI="#isHeldSampleBodyBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#holdsStaticSampleBody"/>
+        <ObjectProperty IRI="#isHeldStaticSampleBodyBy"/>
+    </InverseObjectProperties>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#EquipmentClass"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Equipment"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/tribont/core#hasManufacturer"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+                <Variable IRI="urn:swrl:var#m"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/tribont/core#hasManufacturer"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#m"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+                <Variable IRI="urn:swrl:var#d"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Equipment"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#d"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Equipment"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#measuringPrinciple"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+                <Variable IRI="urn:swrl:var#mp"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#measuringPrinciple"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#mp"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Equipment"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/isCharacterisedBy#belongsTo"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#purpose"/>
+                <Variable IRI="urn:swrl:var#eqc"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#purpose"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Equipment"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasCalibration"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#c"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+                <Variable IRI="urn:swrl:var#c"/>
+                <Variable IRI="urn:swrl:var#d"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="https://w3id.org/tribont/core#hasDocument"/>
+                <Variable IRI="urn:swrl:var#eq"/>
+                <Variable IRI="urn:swrl:var#d"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AbrasionTester</IRI>
+        <Literal> An equipment that measures the abrasion resistance of something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#AbrasionTester</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AbrasionTester</IRI>
+        <Literal>AbrasionTester</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#AbrasionTester</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Calibration</IRI>
+        <Literal>The action or process of calibrating something to maintain accuracy, and repeatability in measurements, assuring reliable results.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Calibration</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Calibration</IRI>
+        <Literal>Calibration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Calibration</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CalibrationDocument</IRI>
+        <Literal>A document that contains all the relevant information related to a specific calibration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CalibrationDocument</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CalibrationDocument</IRI>
+        <Literal>CalibrationDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#CalibrationDocument</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Equipment</IRI>
+        <Literal>An object which is instrumental for reaching a particular purpose through its characteristic functioning process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Equipment</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Equipment</IRI>
+        <Literal>Equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Equipment</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EquipmentClass</IRI>
+        <Literal>An aggrupation of equipments with a set of common atributes of characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EquipmentClass</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EquipmentClass</IRI>
+        <Literal>EquipmentClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#EquipmentClass</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EquipmentStandard</IRI>
+        <Literal>A document approved by a recognized body that provides common to by fullfiled by an equipment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EquipmentStandard</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EquipmentStandard</IRI>
+        <Literal>EquipmentStandard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#EquipmentStandard</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExperimentalEquipment</IRI>
+        <Literal>An equipment that reproduces certain operation conditions for experimentation purposes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ExperimentalEquipment</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExperimentalEquipment</IRI>
+        <Literal>ExperimentalEquipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#ExperimentalEquipment</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ExperimentalEquipmentClass</IRI>
+        <Literal>An aggrupation of experimental equipments with a set of common atributes of characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ExperimentalEquipmentClass</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExperimentalEquipmentClass</IRI>
+        <Literal>ExperimentalEquipmentClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#ExperimentalEquipmentClass</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HardnessTester</IRI>
+        <Literal>An equipment that measures the hardness of a material, </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#HardnessTester</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HardnessTester</IRI>
+        <Literal>HardnessTester</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#HardnessTester</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HardnessTesterClass</IRI>
+        <Literal>An aggrupation of hardness testers with a set of common atributes of characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#HardnessTesterClass</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HardnessTesterClass</IRI>
+        <Literal>HardnessTesterClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#HardnessTesterClass</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MachineryBook</IRI>
+        <Literal>A document providing all the relevant information of the technical characteristics of an equipment, and describes how and when to use and mantain it. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MachineryBook</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MachineryBook</IRI>
+        <Literal>MachineryBook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#MachineryBook</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ManufacturerDataSheet</IRI>
+        <Literal>A document provided by the manufacturer that includes a summary of technical characteristics, and describes how and when to use something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ManufacturerDataSheet</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ManufacturerDataSheet</IRI>
+        <Literal>ManufacturerDataSheet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#ManufacturerDataSheet</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeasuringEquipment</IRI>
+        <Literal>An equipment used to measure technical attributes or characteristics of something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MeasuringEquipment</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MeasuringEquipment</IRI>
+        <Literal>MeasuringEquipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#MeasuringEquipment</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeasuringEquipmentClass</IRI>
+        <Literal>An aggrupation of measuring equipment with a set of common atributes of characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#MeasuringEquipmentClass</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MeasuringEquipmentClass</IRI>
+        <Literal>MeasuringEquipmentClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#MeasuringEquipmentClass</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OpticalMicroscope</IRI>
+        <Literal>An equipment used to assess surfaces by magnifying images with visible light.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#OpticalMicroscope</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OpticalMicroscope</IRI>
+        <Literal>OpticalMicroscope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#OpticalMicroscope</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OpticalProfilometer</IRI>
+        <Literal>An equipment used to measure precisely surface profiles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#OpticalProfilometer</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OpticalProfilometer</IRI>
+        <Literal>OpticalProfilometer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#OpticalProfilometer</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Scale</IRI>
+        <Literal>An equipment used to measure the weigth of somebody or something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Scale</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scale</IRI>
+        <Literal>Scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Scale</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ScanningElectronMicroscope</IRI>
+        <Literal>An equipment used to assess the materials surfaces by producing images of a sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ScanningElectronMicroscope</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScanningElectronMicroscope</IRI>
+        <Literal>ScanningElectronMicroscope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#ScanningElectronMicroscope</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ScratchTester</IRI>
+        <Literal>An equipment used to assess the coating adhesion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ScratchTester</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScratchTester</IRI>
+        <Literal>ScratchTester</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#ScratchTester</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TechnicalDocument</IRI>
+        <Literal>Information on how to to use and maintain something as for e.g. drawings, manuals, technical reports, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TechnicalDocument</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TechnicalDocument</IRI>
+        <Literal>TechnicalDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TechnicalDocument</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tribometer</IRI>
+        <Literal>An equipment used to measure tribological properties (e.g. friction coefficients, wear, etc.) by simulating the interaction of between two surfaces in contact under specific operation conditions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Tribometer</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tribometer</IRI>
+        <Literal>Tribometer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#Tribometer</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TribometerClass</IRI>
+        <Literal>An aggrupation of tribometers with a set of common atributes of characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#TribometerClass</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TribometerClass</IRI>
+        <Literal>TribometerClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#TribometerClass</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#executionDate</IRI>
+        <Literal>The date when a specific action has been performed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#executionDate</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#executionDate</IRI>
+        <Literal>executionDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#executionDate</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCalibration</IRI>
+        <Literal>The relation between a specific equipment and the calibrations performed on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCalibration</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCalibration</IRI>
+        <Literal>hasCalibration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#hasCalibration</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#holdsMovingSampleBody</IRI>
+        <Literal>Relationship between an equipment and the moving sample  body it can hold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#holdsMovingSampleBody</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#holdsMovingSampleBody</IRI>
+        <Literal>holdsMovingSampleBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#holdsMovingSampleBody</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#holdsSampleBody</IRI>
+        <Literal>Relationship between an equipment and the sample body it can hold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#holdsSampleBody</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#holdsSampleBody</IRI>
+        <Literal>holdsSampleBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#holdsSampleBody</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#holdsStaticSampleBody</IRI>
+        <Literal>Relationship between an equipment and the static sample  body it can hold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#holdsStaticSampleBody</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#holdsStaticSampleBody</IRI>
+        <Literal>holdsStaticSampleBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#holdsStaticSampleBody</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isHeldMovingSampleBodyBy</IRI>
+        <Literal>Relationship between a movig sample body and the equipment that hold it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isHeldMovingSampleBodyBy</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isHeldMovingSampleBodyBy</IRI>
+        <Literal>isHeldMovingSampleBodyBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isHeldMovingSampleBodyBy</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isHeldSampleBodyBy</IRI>
+        <Literal>Relationship between a sample body and the equipment that hold it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isHeldSampleBodyBy</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isHeldSampleBodyBy</IRI>
+        <Literal>isHeldSampleBodyBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isHeldSampleBodyBy</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isHeldStaticSampleBodyBy</IRI>
+        <Literal>Relationship between astatic  sample body and the equipment that hold it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isHeldStaticSampleBodyBy</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isHeldStaticSampleBodyBy</IRI>
+        <Literal>isHeldStaticSampleBodyBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#isHeldStaticSampleBodyBy</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#measuringPrinciple</IRI>
+        <Literal>The measuring principle followed by an equipment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#measuringPrinciple</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#measuringPrinciple</IRI>
+        <Literal>measuringPrinciple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#measuringPrinciple</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#purpose</IRI>
+        <Literal>The puspose of an equipment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#purpose</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#purpose</IRI>
+        <Literal>purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#purpose</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#validityDate</IRI>
+        <Literal>The date until which a given action is valid and after which it is necessary to repeat it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#validityDate</IRI>
+        <Literal>https://w3id.org/tribont/equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#validityDate</IRI>
+        <Literal>validityDate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns1:term_status"/>
+        <IRI>#validityDate</IRI>
+        <Literal>Testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484163"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484164"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484165"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484166"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484167"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484168"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484169"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484170"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484171"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+        <AnonymousIndividual nodeID="_:genid2147484172"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
