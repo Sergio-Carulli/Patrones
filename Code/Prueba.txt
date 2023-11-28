@@ -35,15 +35,20 @@ Fallo en la ontología cito en el import http://www.ontologydesignpatterns.org/c
 Fallo en la ontología ct en el import http://www.tele.pw.edu.pl/~sims-onto/ParticipantCharacteristic.owl
 Fallo en la ontología ctlog en el import https://w3id.org/arco/ontology/core/1.2
 Fallo en la ontología dataid en el import http://xmlns.com/foaf/0.1/
+Fallo en la ontología dataid en el soft reuse de un termino de http://lexvo.org/ontology#
 Fallo en la ontología dcite en el import http://purl.org/spar/literal
 Fallo en la ontología ddesc en el import https://w3id.org/arco/ontology/core/1.2
+Fallo en la ontología ddesc en el soft reuse de un termino de https://w3id.org/arco/ontology/core/
 Fallo en la ontología doco en el import http://purl.org/spar/deo
 Fallo en la ontología doco en el import http://purl.org/spar/po
 Fallo en la ontología dqc en el import http://spinrdf.org/spin
 Fallo en la ontología dtype en el import http://www.linkedmodel.org/schema/vaem
+Fallo en la ontología eac-cpf en el soft reuse de un termino de http://purl.org/vocab/bio/0.1/
+Fallo en la ontología eac-cpf en el soft reuse de un termino de http://xmlns.com/foaf/0.1/
 Fallo en la ontología edac en el import http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl
 Fallo en la ontología edu en el import https://schema.org/
 Fallo en la ontología eeo en el import http://purl.obolibrary.org/obo/bfo.owl
+Fallo en la ontología eeo en el soft reuse de un termino de http://purl.obolibrary.org/obo/
 Fallo en la ontología ei2a en el import http://www.w3.org/ns/locn
 Fallo en la ontología ei2a en el import http://www.w3.org/ns/person
 Fallo en la ontología ei2a en el import http://opendata.aragon.es/def/ei2a/categorization
@@ -51,9 +56,11 @@ Fallo en la ontología esco en el import http://purl.org/iso25964/skos-thes
 Fallo en la ontología eupont en el import http://xmlns.com/foaf/0.1/
 Fallo en la ontología fabio en el import http://purl.org/spar/frbr
 Fallo en la ontología gvp en el import http://purl.org/iso25964/skos-thes
+Fallo en la ontología iddo en el soft reuse de un termino de https://schema.org/
 Fallo en la ontología infor en el import http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
 Fallo en la ontología iol en el import http://www.ontologydesignpatterns.org/ont/dul/DUL.owl
 Fallo en la ontología irw en el import http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl
+Fallo en la ontología irw en el soft reuse de un termino de http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#
 Fallo en la ontología km4c en el import http://purl.oclc.org/NET/UNIS/fiware/iot-lite#
 Fallo en la ontología km4c en el import http://schema.rdfs.org/all
 Fallo en la ontología lmm1 en el import http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl
@@ -62,6 +69,8 @@ Fallo en la ontología lslife en el import http://ontology.cybershare.utep.edu/E
 Fallo en la ontología lslife en el import http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl
 Fallo en la ontología lslife en el import http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper-parameters.owl
 Fallo en la ontología lslife en el import http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl
+Fallo en la ontología lslife en el soft reuse de un termino de http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#
+Fallo en la ontología lslife en el soft reuse de un termino de http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#
 Fallo en la ontología lsmap en el import http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl
 Fallo en la ontología lsmap en el import http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl
 Fallo en la ontología lsmap en el import http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl
@@ -82,6 +91,8 @@ Fallo en la ontología msm en el import http://www.w3.org/ns/sawsdl
 Fallo en la ontología nen3610 en el import https://definities.geostandaarden.nl/rest/v1/nen3610/data?uri=http%3A%2F%2Fdefinities.geostandaarden.nl%2Fnen3610%2Fid%2Fcollectie%2Fmogelijk_geen_waarde&format=text/turtle
 Fallo en la ontología obws en el import http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
 Fallo en la ontología odpart en el import http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
+Fallo en la ontología odrl en el soft reuse de un termino de http://schema.org/
+Fallo en la ontología odrl en el soft reuse de un termino de http://xmlns.com/foaf/0.1/
 Fallo en la ontología ofrd en el import http://purl.org/opdm/utility#
 Fallo en la ontología ontopic en el import http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl
 Fallo en la ontología ontopic en el import http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl
@@ -111,6 +122,7 @@ Fallo en la ontología r-arco en el import https://w3id.org/arco/ontology/denota
 Fallo en la ontología r-arco en el import https://w3id.org/arco/ontology/immovable-property/0.2
 Fallo en la ontología r-arco en el import https://w3id.org/arco/ontology/location/1.2
 Fallo en la ontología r-arco en el import https://w3id.org/arco/ontology/movable-property/0.2
+Fallo en la ontología r-arco en el soft reuse de un termino de https://w3id.org/arco/ontology/context-description/
 Fallo en la ontología rb en el import https://w3id.org/stax/0.3.1/ontology
 Fallo en la ontología rbdoc en el import https://w3id.org/riverbench/schema/metadata/dev
 Fallo en la ontología react en el import https://w3id.org/affectedBy
@@ -122,6 +134,7 @@ Fallo en la ontología ro en el import http://purl.org/NET/dc_owl2dl/terms_od
 Fallo en la ontología ro en el import http://purl.org/ao/core/
 Fallo en la ontología ro en el import http://xmlns.com/foaf/0.1/
 Fallo en la ontología rto en el import http://standards.iso.org/iso/15926/part14/1.0
+Fallo en la ontología ruto en el soft reuse de un termino de http://spinrdf.org/spin#
 Fallo en la ontología seas en el import file:///C:/Trabajo/Patrones/Code/rdf/TimeOntology-1.0
 Fallo en la ontología seas en el import file:///C:/Trabajo/Patrones/Code/rdf/FeatureOfInterestOntology-1.0
 Fallo en la ontología seas en el import file:///C:/Trabajo/Patrones/Code/rdf/DeviceOntology-1.1
@@ -168,14 +181,64 @@ Fallo en la ontología seas-sys en el import file:///C:/Trabajo/Patrones/Code/rd
 Fallo en la ontología seas-sys en el import file:///pep/
 Fallo en la ontología seasb en el import file:///C:/Trabajo/Patrones/Code/rdf/ElectricPowerSystemOntology
 Fallo en la ontología seasbo en el import file:///C:/Trabajo/Patrones/Code/rdf/ZoneOntology
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo1 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemAt>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo6 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo2 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemThrough>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo7 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectionPointOf>
 Fallo en la ontología seasd en el import file:///C:/Trabajo/Patrones/Code/rdf/SystemOntology
 Fallo en la ontología seasd en el import file:///pep/
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo18 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo32 y objeto es <file:///pep/madeBy>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo42 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Property>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo44 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo5 y objeto es <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo29 y objeto es <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Property>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo6 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo7 y objeto es <file:///pep/madeBy>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo2 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo40 y objeto es <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo3 y objeto es <file:///pep/implements>
 Fallo en la ontología seasfo en el import file:///pep/pep-1.0
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo20 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Property>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo7 y objeto es <file:///pep/madeBy>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo6 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo8 y objeto es <file:///pep/implements>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo13 y objeto es <file:///pep/implements>
 Fallo en la ontología seast en el import file:///C:/Trabajo/Patrones/Code/rdf/EvaluationOntology
+Error en la ontología seast en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/hasTemporalContext>
+Error en la ontología seast en un triple cuyo sujeto es Anonimo3 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/hasTemporalContext>
 Fallo en la ontología seasto en el import file:///C:/Trabajo/Patrones/Code/rdf/PlayerOntology
 Fallo en la ontología seasto en el import file:///pep/
 Fallo en la ontología seasto en el import file:///C:/Trabajo/Patrones/Code/rdf/ElectricPowerSystemOntology
 Fallo en la ontología seasto en el import file:///C:/Trabajo/Patrones/Code/rdf/OfferingOntology
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo16 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo4 y objeto es <file:///pep/madeBy>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/TransmissionSystemOperator>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo3 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo1 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo15 y objeto es <file:///pep/madeBy>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo15 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Player>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo2 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo10 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/price>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo10 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/PriceProperty>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo20 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/isPropertyOf>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo20 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/ConnectionPoint>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo14 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/ElectricityTrader>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo14 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo5 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Player>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo21 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemAt>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo9 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/ElectricityTrader>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo9 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo12 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo6 y objeto es <file:///pep/madeBy>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo6 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/TransmissionSystemOperator>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo17 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo13 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo19 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo8 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo18 y objeto es <file:///pep/usedProcedure>
 Fallo en la ontología semiotics en el import http://www.ontologydesignpatterns.org/cp/owl/situation.owl
 Fallo en la ontología seo en el import http://www.essepuntato.it/2012/04/tvc
 Fallo en la ontología seo en el import https://w3id.org/scholarlydata/ontology/conference-ontology.owl
@@ -184,12 +247,17 @@ Fallo en la ontología seq en el import http://www.ontologydesignpatterns.org/sc
 Fallo en la ontología shoah en el import http://purl.org/vocab/bio/0.1/
 Fallo en la ontología shoah en el import http://xmlns.com/foaf/0.1/
 Fallo en la ontología shw en el import http://purl.oclc.org/NET/muo/ucum/
+Fallo en la ontología shw en el soft reuse de un termino de http://purl.oclc.org/NET/muo/ucum/unit/temperature/
+Fallo en la ontología shw en el soft reuse de un termino de http://purl.oclc.org/NET/muo/muo#
+Fallo en la ontología shw en el soft reuse de un termino de http://purl.oclc.org/NET/muo/ucum/unit/plane-angle/
+Fallo en la ontología shw en el soft reuse de un termino de http://purl.oclc.org/NET/muo/ucum/unit/fraction/
 Fallo en la ontología situ en el import http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
 Fallo en la ontología spfood en el import http://kmi.open.ac.uk/projects/smartproducts/ontologies/process.owl
 Fallo en la ontología spfood en el import http://kmi.open.ac.uk/projects/smartproducts/ontologies/product.owl
 Fallo en la ontología spin en el import http://spinrdf.org/sp
 Fallo en la ontología sto en el import https://raw.githubusercontent.com/i40-Tools/StandardOntology/master/concerns.ttl
 Fallo en la ontología sto en el import https://raw.githubusercontent.com/i40-Tools/StandardOntology/master/sto.ttl
+Fallo en la ontología sto en el soft reuse de un termino de http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#
 Fallo en la ontología tb en el import http://xmlns.com/foaf/0.1/
 Fallo en la ontología ti en el import http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl
 Fallo en la ontología tis en el import http://www.ontologydesignpatterns.org/cp/owl/situation.owl
@@ -210,3 +278,4 @@ Fallo en la ontología wl en el import http://www.w3.org/ns/sawsdl#
 Fallo en la ontología wo en el import http://purl.org/NET/scovo
 Fallo en la ontología wo en el import http://purl.org/stuff/rev
 Fallo en la ontología wo en el import http://purl.org/vocab/vann/
+Ha ocurrido un error inesperado en xapi

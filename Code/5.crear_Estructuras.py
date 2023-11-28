@@ -1,5 +1,5 @@
 from rdflib import Graph, URIRef, Literal, BNode
-from rdflib.namespace import FOAF, NamespaceManager
+from rdflib.namespace import RDF, NamespaceManager
 
 # Diccionario cuyo:
 #   key: URI de los terminos de lov
@@ -116,6 +116,11 @@ def tag(term_uri, i, tipo, name):
 
     return (tag)
 
+def get_namespaces(g_namespaces):
+
+    for prefix, suffix in g_namespaces:
+        namespaces[prefix] = suffix
+
 def parsear(ont_prefix):
 
     try:
@@ -128,12 +133,17 @@ def parsear(ont_prefix):
         print(f'Error al cargar la ontología: {ont_prefix}')
         return
     
+    get_namespaces(g.namespaces())
+    
     # Cargar los import de la ontología en el grafo auxiliar
-    for s, p, o in g.triples((None, URIRef('http://www.w3.org/2002/07/owl#imports'), None)):
+    for o in g.objects(None, URIRef('http://www.w3.org/2002/07/owl#imports'), None):
 
         try:
-            print(o)
-            aux_g.parse(o)
+
+            # No ha sido la ontología importada?
+            if o not in ont_import:
+                ont_import[o] = 0
+                aux_g.parse(o)       
         
         except:
             prueba.write(f'Fallo en la ontología {ont_prefix} en el import {o}\n')
@@ -163,14 +173,11 @@ def parsear(ont_prefix):
                 sujetos[tag1][tag2].append(tag3)
 
 # term = "prefijo:sufijo" del termino que estamos visitando
-def showReal(term, text, c):
+def showReal(term, text):
 
     # No hemos visitado este termino con anterioridad?
     if term not in visitado:
         visitado.append(term)
-
-        if c == 0: 
-            resultados.write(text+term+"\n")
 
         # Iterar los predicados en las que el termino sea sujeto (ordenadas alfabeticamente)
         for p in sorted(sujetos[term].keys()):
@@ -182,38 +189,18 @@ def showReal(term, text, c):
                 # Iterar los objetos para ese sujeto y predicado (ordenadas alfabeticamente)
                 for o in sorted(sujetos[term][p]):
 
-                    resultados.write(text+"  |"+p+"\n")
-                    resultados.write(text+"  |  |"+o+"\n")
+                    resultados.write(f'{text}  |{p}\n')
+                    resultados.write(f'{text}  |  |{o}\n')
 
                     if o in sujetos and o!=term and "Anonimo" in o:
-                        showReal(o, text+"  |  |", 1)
+                        showReal(o, f'{text}  |  |')
 
 # term = "prefijo:sufijo" del termino que estamos visitando
-def showTipo(term, text, c):
+def showTipo(term, text):
 
     # No hemos visitado este termino con anterioridad?
     if term not in visitado:
         visitado.append(term)
-
-        if c == 0:
-
-            try:
-                resultad.write(text+sujetos[term]["rdf:type"][0]+"\n")
-
-            except:
-                print(sujetos[term])
-                
-                if "Anonimo" in term: 
-                    resultad.write(text+"Anonimo"+"\n")
-
-                elif "#" in term: 
-                    resultad.write(text+"#Desconocido"+"\n")
-
-                elif "Literal" in term: 
-                    resultad.write(text+"Literal"+"\n")
-
-                else: 
-                    resultad.write(text+term+"\n")
 
         # Iterar los predicados en las que el termino sea sujeto (ordenadas alfabeticamente)
         for p in sorted(sujetos[term].keys()):
@@ -226,44 +213,80 @@ def showTipo(term, text, c):
                 for o in sorted(sujetos[term][p]):
                     
                     try:
-
                         resultad.write(text+"  |"+p+"\n")
-
-                        if o in sujetos and 'rdf:type' in sujetos[o]:
-                            # Adquirir tipos para ese elemento
-                            types = sujetos[o]["rdf:type"]
-
-                            if "#" in types[0]:
-                                resultad.write(text+"  |  |#Desconocido\n")
-
-                            elif "Anonimo" in types[0]:
-                                resultad.write(text+"  |  |Anonimo\n")
-
-                            else:
-                                # Ordenar alfabeticamente los tipos
-                                types.sort()
-                                resultad.write(text+"  |  |"+', '.join(types)+"\n")
-
-                        else:
-
-                            if "Anonimo" in o: 
-                                resultad.write(text+"  |  |"+"Anonimo"+"\n")
-
-                            elif 'xsd' in o:
-                                resultad.write(text+"  |  |"+"Datatype"+"\n")
-
-                            elif "Literal" in o: 
-                                resultad.write(text+"  |  |"+"Literal"+"\n")
-
-                            else: 
-                                #resultad.write(text+"  |  |"+o+"\n")
-                                resultad.write(text+"  |  |"+"#Desconocido"+"\n")
+                        escribir_tipo(o, f'{text}  |  |')
                         
                     except:
-                        prueba.write(f'Error en {term}\n')
+                        prueba.write(f'Error en la ontología {ont_prefix} en un triple cuyo sujeto es {term} y objeto es {o}\n')
 
                     if o in sujetos and o!=term and "Anonimo" in o:
-                        showTipo(o, text+"  |  |", 1)
+                        showTipo(o, text+"  |  |")
+
+def escribir_tipo(o, text):
+
+    if o in sujetos and 'rdf:type' in sujetos[o]:
+        # Adquirir tipos para ese elemento
+        types = sujetos[o]["rdf:type"]
+
+        # Ordenar alfabeticamente los tipos
+        types.sort()
+        resultad.write(f'{text}{", ".join(types)}\n')
+
+    else:
+
+        if "Anonimo" in o: 
+            resultad.write(f'{text}Anonimo\n')
+
+        elif 'xsd' in o:
+            resultad.write(f'{text}Datatype\n')
+
+        elif "Literal" in o:
+            resultad.write(f'{text}Literal\n')
+
+        elif 'owl:Thing' == o:
+            resultad.write(f'{text}owl:Class\n')
+
+        else:
+            # Ver si el termino ha sido definido en una de las ontologías importadas
+            types = term_reuse(o)
+
+            if types:
+                # Ordenar alfabeticamente los tipos
+                types.sort()
+                resultad.write(f'{text}{", ".join(types)}\n')
+            
+            else:
+                resultad.write(f'{text}#Desconocido\n')
+                
+
+def term_reuse(term):
+    types = []
+    term_uri = term
+
+    # El termino esta definido como "prefijo:sufijo"
+    if ':' in term and not 'http' in term:
+        # Obtener el prefijo
+        prefix, suffix = term.split(':', 1)
+        # Sabemos que ese prefijo ha sido defenido en la ontología (sino rdflib no lo dividiría en 
+        # "prefijo:sufijo"). Por ello, obtenemos el namespace.
+        ns = namespaces[prefix]
+        term_uri = f'{ns}{suffix}'
+
+        try:
+
+            if ns not in ont_import:
+                ont_import [ns] = 0
+                aux_g.parse(ns)
+                
+        except:
+            prueba.write(f'Fallo en la ontología {ont_prefix} en el soft reuse de un termino de {ns}\n')
+
+    uri_ref = URIRef(term_uri)
+
+    for o2 in aux_g.objects(uri_ref, RDF.type):
+        types.append(o2.n3(aux_g.namespace_manager))
+
+    return types
 
 # Crear un nuevo fichero en los que escribir los resultados de ejecutar este programa
 result = open("Result.csv", 'w', encoding='utf-8')
@@ -307,6 +330,12 @@ for ont_prefix in vocabularios:
 
     # Grafo auxiliar en el que cargar los import de una ontología
     aux_g = Graph()
+
+    # Diccionario en el que indicar las ontologías que han sido importadas
+    ont_import = {}
+
+    # Diccionario en el que guardar los namespaces de la ontología
+    namespaces = {}
     
     try:
         # Vaciar diccionarios
@@ -316,9 +345,6 @@ for ont_prefix in vocabularios:
         anonimizador=1
         # Cargar ontología
         parsear(ont_prefix)
-
-        if ont_prefix == 'w3c-ssn':
-            print(sujetos)
 
         # Contador que indica el número de tripletas de una ontología que satisface nuestras condiciones
         # para posteriormente detectar patrones
@@ -344,16 +370,24 @@ for ont_prefix in vocabularios:
                         resultados.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultados.write(s+"\n")
                         resultados.write("  |rdfs:subClassOf\n")
-                        showReal(o,"  |  |",0)
+                        resultados.write(f'  |  |{o}\n')
+                        showReal(o,"  |  |")
 
+                        visitado=[]
                         resultad.write("\n")
                         # Pintar de donde sale esta tripleta
                         resultad.write(f'Ontología: {ont_prefix}\n')
                         resultad.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultad.write("owl:Class\n")
                         resultad.write("  |rdfs:subClassOf\n")
-                        visitado=[]
-                        showTipo(o,"  |  |",0)
+
+                        try:
+                            escribir_tipo(o, "  |  |")
+
+                        except:
+                            prueba.write(f'Error en la ontología {ont_prefix} en {o}\n')
+                        
+                        showTipo(o, "  |  |")
 
             # Hay algun predicado para ese sujeto que sea "owl:equivalentClass"?
             if "owl:equivalentClass" in sujetos[s]:
@@ -371,23 +405,32 @@ for ont_prefix in vocabularios:
                         resultados.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultados.write(s+"\n")
                         resultados.write("  |owl:equivalentClass\n")
-                        showReal(o,"  |  |",0)
+                        resultados.write(f'  |  |{o}\n')
+                        showReal(o,"  |  |")
 
+                        visitado=[]
                         resultad.write("\n")
                         # Pintar de donde sale esta tripleta
                         resultad.write(f'Ontología: {ont_prefix}\n')
                         resultad.write(f'Estructura: {ont_prefix}-{contador}\n')
                         resultad.write("owl:Class\n")
                         resultad.write("  |owl:equivalentClass\n")
-                        visitado=[]
-                        showTipo(o,"  |  |",0)
+
+                        try:
+                            escribir_tipo(o, "  |  |")
+
+                        except:
+                            prueba.write(f'Error en la ontologia {ont_prefix} en {o}\n')
+                        
+                        showTipo(o, "  |  |")
 
         # prefijo de la ontología; numero de tripletas de esa ontología que satisfacen las condiciones
         result.write(f'{ont_prefix};{contador};\n')        
         print(f"{ont_prefix} - {contador}")
 
     except:
-        print('Ha ocurrido un error')
+        prueba.write(f'Ha ocurrido un error inesperado en {ont_prefix}\n')  
+        print(f'Ha ocurrido un error inesperado en {ont_prefix}\n')
 
 
 resultados.close()
