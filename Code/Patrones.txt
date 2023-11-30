@@ -1,16 +1,4 @@
 Patron 1
-Repeticiones 3009
-Ontologias distintas 69
-Ontologías en las que aparece a-loc (24); af (2); amlo-core (6); arco (2); aws (138); biotop (2); c4o (1); cbcm (44); cdesc (64); cevent (7); cis (13); cl (1); cocoon (8); common (9); cpmeta (3); ct (1); ctlog (13); ctrl (2); ddesc (39); dnbt (2); doco (7); dogont (924); dul (32); eac-cpf (2); ecrm (46); eeo (13); ei2a (3); eupont (5); fabio (69); fiesta-iot (102); gleif-base (1); hpont (1); ignf (1); infor (2); iol (26); ipo (4); ispra (6); lexinfo (2); lmm1 (2); lmm2 (15); m3lite (100); music (22); ngeo (1); obo (1012); odpart (2); ontopic (11); pmovn (4); pproc (1); pso (3); pwo (3); r-arco (25); s4agri (17); s4envi (1); s4inma (2); s4watr (3); saref (26); sbeo (2); semiotics (6); seo (3); simu (7); spfood (2); tddfa (8); tddm (30); tddom (36); tddt (4); topo (1); usability (3); vivo (24); wfont (6); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |owl:Class
-
-Patron 2
 Repeticiones 26
 Ontologias distintas 13
 Ontologías en las que aparece a-loc (1); amlo-core (2); cis (2); ctlog (1); ipo (1); ispra (1); medred (1); s4agri (2); s4inma (1); tddfa (2); tddm (7); tddom (4); usability (1); 
@@ -21,6 +9,18 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
   |  |  |owl:someValuesFrom
   |  |  |  |Datatype
+
+Patron 2
+Repeticiones 3012
+Ontologias distintas 72
+Ontologías en las que aparece a-loc (24); af (2); amlo-core (6); arco (2); aws (138); biotop (2); c4o (1); cbcm (44); cdesc (64); cevent (7); cis (13); cl (1); cocoon (8); common (9); cpmeta (3); ct (1); ctlog (13); ctrl (2); ddesc (39); dnbt (2); doco (7); dogont (924); dul (32); eac-cpf (2); ecrm (46); eeo (13); ei2a (3); eupont (5); fabio (69); fiesta-iot (102); gleif-base (1); gleif-elf (1); gleif-ra (1); hpont (1); ignf (1); infor (2); iol (26); ipo (4); ispra (6); lexinfo (2); lmm1 (2); lmm2 (15); m3lite (100); music (22); ngeo (1); obo (1012); odpart (2); ontopic (11); pmovn (4); pproc (1); pso (3); pwo (3); r-arco (25); s4agri (17); s4envi (1); s4inma (2); s4watr (3); saref (26); sbeo (2); semiotics (6); seo (3); simu (7); spfood (2); tddfa (8); tddm (30); tddom (36); tddt (4); todo (1); topo (1); usability (3); vivo (24); wfont (6); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
 
 Patron 3
 Repeticiones 183
@@ -35,9 +35,9 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
 
 Patron 4
-Repeticiones 1410
+Repeticiones 1418
 Ontologias distintas 72
-Ontologías en las que aparece a-loc (10); arco (2); atd (10); atm (17); atts (3); bibo (12); biopax (19); biro (4); caso (10); cdesc (105); cis (36); common (3); cpmeta (3); ct (1); ctlog (6); ctrl (9); dataid (11); dcat (1); dcite (5); ddesc (29); dogont (23); drama (5); dtype (8); dul (14); ei2a (8); eqp (2); fabio (14); fiesta-iot (2); fowl (2); ha (74); ibis (6); ids (2); ifc (136); ignf (2); infor (1); iol (5); irw (1); ispra (2); km4c (1); lexinfo (3); lime (2); lmm2 (3); nas (3); obo (49); ontopic (5); pmofn (2); pmonb (1); pmopb (1); pmovn (16); pwo (2); r-arco (65); rains (68); rico (32); s4agri (15); s4bldg (210); s4city (32); s4ehaw (1); s4ener (23); s4envi (21); s4inma (23); s4watr (19); s4wear (14); saont (3); saref (38); sbeo (15); seo (9); spfood (8); ssn (16); ssno (16); vaem (8); vivo (67); w3c-ssn (16); 
+Ontologías en las que aparece a-loc (10); arco (2); atd (10); atm (17); atts (3); bibo (12); biopax (19); biro (4); caso (10); cdesc (105); cis (36); common (3); cpmeta (3); ct (1); ctlog (6); ctrl (9); dataid (11); dcat (1); dcite (5); ddesc (29); dogont (23); drama (5); dtype (8); dul (14); ei2a (8); eqp (2); fabio (14); fiesta-iot (2); fowl (2); ha (74); ibis (6); ids (2); ifc (136); ignf (2); infor (1); iol (5); irw (1); ispra (2); km4c (9); lexinfo (3); lime (2); lmm2 (3); nas (3); obo (49); ontopic (5); pmofn (2); pmonb (1); pmopb (1); pmovn (16); pwo (2); r-arco (65); rains (68); rico (32); s4agri (15); s4bldg (210); s4city (32); s4ehaw (1); s4ener (23); s4envi (21); s4inma (23); s4watr (19); s4wear (14); saont (3); saref (38); sbeo (15); seo (9); spfood (8); ssn (16); ssno (16); vaem (8); vivo (67); w3c-ssn (16); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -59,9 +59,9 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
 
 Patron 6
-Repeticiones 59
+Repeticiones 62
 Ontologias distintas 19
-Ontologías en las que aparece a-loc (1); cdesc (2); cis (1); common (6); cpmeta (14); ddesc (1); ipo (2); nif (1); obo (8); pmonb (1); pmopb (1); pmovn (1); pproc (1); sbeo (2); shw (2); tddfa (2); tddom (4); tl (8); todo (1); 
+Ontologías en las que aparece a-loc (1); cdesc (2); cis (1); common (6); cpmeta (14); ddesc (1); ipo (2); nif (1); obo (8); pmonb (1); pmopb (1); pmovn (1); pproc (1); sbeo (2); shw (2); tddfa (2); tddom (4); tl (8); todo (4); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -97,18 +97,6 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
 
 Patron 9
-Repeticiones 61
-Ontologias distintas 21
-Ontologías en las que aparece amlo-core (1); bibo (1); biopax (1); cocoon (1); dogont (4); dtype (2); ecrm (8); gn (5); lmm2 (3); obo (1); premis (3); prov (1); prv (2); tb (4); te (3); test (1); time (3); tzont (3); vaem (4); vin (9); vivo (1); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:maxCardinality
-  |  |  |  |Literal
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 10
 Repeticiones 197
 Ontologias distintas 29
 Ontologías en las que aparece amlo-core (1); atm (2); c4o (3); caso (6); common (1); cpmeta (1); dcat (1); dogont (34); dtype (1); dul (1); ecrm (7); faldo (1); gn (1); ha (74); iddo (4); ispra (1); lime (1); m4i (1); ontopic (1); pmovn (4); prov (2); pso (1); ruto (14); sbeo (7); ssn (8); ssno (8); te (1); time (2); w3c-ssn (8); 
@@ -120,10 +108,22 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
+Patron 10
+Repeticiones 61
+Ontologias distintas 21
+Ontologías en las que aparece amlo-core (1); bibo (1); biopax (1); cocoon (1); dogont (4); dtype (2); ecrm (8); gn (5); lmm2 (3); obo (1); premis (3); prov (1); prv (2); tb (4); te (3); test (1); time (3); tzont (3); vaem (4); vin (9); vivo (1); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:maxCardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
 Patron 11
-Repeticiones 216
-Ontologias distintas 47
-Ontologías en las que aparece amlo-core (32); c4o (1); cbcm (18); cis (1); cocoon (6); cold (3); cpmeta (1); dcite (1); dogont (22); eeo (3); esco (1); eupont (2); fiesta-iot (15); geom (1); gleif-L1 (3); gleif-L2 (2); gleif-base (1); gleif-geo (4); gleif-ra (1); hpont (1); iddo (1); ispra (1); km4c (24); lime (2); ngeo (1); obo (4); obws (2); pmovn (3); qu (1); rico (12); rr (4); s4agri (2); s4bldg (2); s4city (2); s4ener (4); s4envi (5); s4inma (1); s4watr (2); s4wear (2); saref (2); sbeo (2); simu (2); spfood (1); tddom (5); usability (4); vartrans (3); wfont (3); 
+Repeticiones 220
+Ontologias distintas 48
+Ontologías en las que aparece amlo-core (32); c4o (1); cbcm (18); cis (1); cocoon (6); cold (3); cpmeta (1); dcite (1); dogont (22); eeo (3); esco (1); eupont (2); fiesta-iot (15); geom (1); gleif-L1 (4); gleif-L2 (2); gleif-base (2); gleif-geo (5); gleif-ra (1); gleif-repex (1); hpont (1); iddo (1); ispra (1); km4c (24); lime (2); ngeo (1); obo (4); obws (2); pmovn (3); qu (1); rico (12); rr (4); s4agri (2); s4bldg (2); s4city (2); s4ener (4); s4envi (5); s4inma (1); s4watr (2); s4wear (2); saref (2); sbeo (2); simu (2); spfood (1); tddom (5); usability (4); vartrans (3); wfont (3); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -173,9 +173,9 @@ owl:Class
   |  |  |  |Literal
 
 Patron 14
-Repeticiones 644
+Repeticiones 645
 Ontologias distintas 15
-Ontologías en las que aparece amlo-core (4); drama (1); esco (2); gleif-L1 (5); gleif-L2 (2); gleif-base (3); gleif-elf (1); gleif-ra (1); ifc (614); lime (3); ontolex (1); sbeo (4); simu (1); tddfa (1); vartrans (1); 
+Ontologías en las que aparece amlo-core (4); drama (1); esco (2); gleif-L1 (5); gleif-L2 (3); gleif-base (3); gleif-elf (1); gleif-ra (1); ifc (614); lime (3); ontolex (1); sbeo (4); simu (1); tddfa (1); vartrans (1); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -187,18 +187,6 @@ owl:Class
   |  |  |  |Literal
 
 Patron 15
-Repeticiones 16
-Ontologias distintas 6
-Ontologías en las que aparece amlo-core (2); biopax (1); common (8); esco (1); premis (2); sbeo (2); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:maxCardinality
-  |  |  |  |Literal
-  |  |  |owl:onProperty
-  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-
-Patron 16
 Repeticiones 40
 Ontologias distintas 16
 Ontologías en las que aparece amlo-core (1); biopax (2); common (7); esco (2); gleif-base (1); irw (1); obo (1); ontolex (1); premis (1); prov (1); sbeo (11); ssn (1); ssno (1); time (2); vin (6); w3c-ssn (1); 
@@ -206,6 +194,18 @@ owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:cardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
+
+Patron 16
+Repeticiones 16
+Ontologias distintas 6
+Ontologías en las que aparece amlo-core (2); biopax (1); common (8); esco (1); premis (2); sbeo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:maxCardinality
   |  |  |  |Literal
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
@@ -225,18 +225,6 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
 
 Patron 18
-Repeticiones 24
-Ontologias distintas 4
-Ontologías en las que aparece amlo-core (1); cpmeta (15); pproc (1); rto (7); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |rdfs:Datatype
-
-Patron 19
 Repeticiones 4
 Ontologias distintas 2
 Ontologías en las que aparece amlo-core (2); cpmeta (2); 
@@ -249,6 +237,18 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
+
+Patron 19
+Repeticiones 24
+Ontologias distintas 4
+Ontologías en las que aparece amlo-core (1); cpmeta (15); pproc (1); rto (7); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |rdfs:Datatype
 
 Patron 20
 Repeticiones 7
@@ -325,6 +325,18 @@ owl:Class
   |  |  |  |owl:DatatypeProperty
 
 Patron 25
+Repeticiones 209
+Ontologias distintas 25
+Ontologías en las que aparece atd (3); common (3); dogont (11); dtype (4); ecpo (1); esco (1); gleif-L1 (3); gleif-base (7); gleif-geo (6); gn (2); km4c (4); m4i (2); ruto (1); s4agri (3); s4ener (23); s4watr (4); saref (2); tb (1); te (16); test (1); ti (2); time (15); tzont (6); vaem (14); vivo (74); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:maxCardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Patron 26
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece atd (1); atm (1); 
@@ -359,18 +371,6 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Literal
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |owl:onProperty
-  |  |  |  |owl:DatatypeProperty
-
-Patron 26
-Repeticiones 209
-Ontologias distintas 25
-Ontologías en las que aparece atd (3); common (3); dogont (11); dtype (4); ecpo (1); esco (1); gleif-L1 (3); gleif-base (7); gleif-geo (6); gn (2); km4c (4); m4i (2); ruto (1); s4agri (3); s4ener (23); s4watr (4); saref (2); tb (1); te (16); test (1); ti (2); time (15); tzont (6); vaem (14); vivo (74); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:maxCardinality
-  |  |  |  |Literal
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
@@ -631,9 +631,9 @@ owl:Class
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
 Patron 39
-Repeticiones 80
-Ontologias distintas 8
-Ontologías en las que aparece biopax (7); ctlog (2); dul (1); ifc (54); ontopic (2); s4bldg (4); s4envi (2); vivo (8); 
+Repeticiones 81
+Ontologias distintas 9
+Ontologías en las que aparece biopax (7); ctlog (2); dul (1); ifc (54); km4c (1); ontopic (2); s4bldg (4); s4envi (2); vivo (8); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -715,9 +715,9 @@ owl:Class
   |  |  |  |  |  |  |  |rdf:List
 
 Patron 42
-Repeticiones 30
-Ontologias distintas 4
-Ontologías en las que aparece biotop (26); prvt (1); ro (2); wfont (1); 
+Repeticiones 28
+Ontologias distintas 3
+Ontologías en las que aparece biotop (26); prvt (1); wfont (1); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -967,9 +967,9 @@ owl:Class
   |  |  |  |#Desconocido
 
 Patron 53
-Repeticiones 4
-Ontologias distintas 3
-Ontologías en las que aparece biotop (1); rb (2); todo (1); 
+Repeticiones 3
+Ontologias distintas 2
+Ontologías en las que aparece biotop (1); rb (2); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -1195,18 +1195,6 @@ owl:Class
   |  |  |  |#Desconocido
 
 Patron 64
-Repeticiones 3
-Ontologias distintas 3
-Ontologías en las que aparece biotop (1); gleif-elf (1); gleif-ra (1); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |#Desconocido
-
-Patron 65
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece biro (1); iol (1); 
@@ -1220,10 +1208,10 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 66
-Repeticiones 196
+Patron 65
+Repeticiones 203
 Ontologias distintas 25
-Ontologías en las que aparece caso (3); dogont (10); dul (2); eeo (2); esco (1); fiesta-iot (4); gleif-L1 (2); gleif-L2 (1); gleif-base (1); gleif-geo (1); gleif-repex (1); iddo (8); ifc (54); ignf (1); iol (1); km4c (8); lime (1); ontolex (1); rico (62); rr (4); s4agri (3); s4ener (15); saref (7); sbeo (2); spfood (1); 
+Ontologías en las que aparece caso (3); dogont (10); dul (2); eeo (2); esco (1); fiesta-iot (4); gleif-L1 (2); gleif-L2 (1); gleif-base (2); gleif-geo (1); gleif-repex (1); iddo (8); ifc (54); ignf (1); iol (1); km4c (14); lime (1); ontolex (1); rico (62); rr (4); s4agri (3); s4ener (15); saref (7); sbeo (2); spfood (1); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -1234,7 +1222,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 67
+Patron 66
 Repeticiones 17
 Ontologias distintas 9
 Ontologías en las que aparece caso (1); cdesc (3); pmofn (1); pmonb (1); pmopb (1); pmovn (1); ssn (3); ssno (3); w3c-ssn (3); 
@@ -1248,7 +1236,7 @@ owl:Class
   |  |  |  |  |owl:inverseOf
   |  |  |  |  |  |owl:ObjectProperty
 
-Patron 68
+Patron 67
 Repeticiones 4
 Ontologias distintas 3
 Ontologías en las que aparece caso (1); irw (1); obo (2); 
@@ -1260,7 +1248,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 69
+Patron 68
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece cbcm (3); 
@@ -1304,7 +1292,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 70
+Patron 69
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece cbcm (2); 
@@ -1338,7 +1326,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 71
+Patron 70
 Repeticiones 51
 Ontologias distintas 10
 Ontologías en las que aparece cbcm (1); cold (1); doco (3); fabio (2); ifc (31); iol (2); obo (1); rains (3); seo (6); shw (1); 
@@ -1356,7 +1344,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 72
+Patron 71
 Repeticiones 196
 Ontologias distintas 6
 Ontologías en las que aparece cbcm (3); drama (2); dul (1); lexinfo (11); obo (178); vivo (1); 
@@ -1378,7 +1366,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 73
+Patron 72
 Repeticiones 9
 Ontologias distintas 3
 Ontologías en las que aparece cdesc (6); ctlog (1); r-arco (2); 
@@ -1390,7 +1378,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Literal
 
-Patron 74
+Patron 73
 Repeticiones 24
 Ontologias distintas 4
 Ontologías en las que aparece cdesc (16); ctlog (3); ddesc (3); r-arco (2); 
@@ -1402,7 +1390,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 75
+Patron 74
 Repeticiones 6
 Ontologias distintas 2
 Ontologías en las que aparece cdesc (2); obo (4); 
@@ -1424,7 +1412,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 76
+Patron 75
 Repeticiones 834
 Ontologias distintas 6
 Ontologías en las que aparece cdesc (3); cpmeta (2); dogont (2); ifc (825); lime (1); ontolex (1); 
@@ -1438,7 +1426,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 77
+Patron 76
 Repeticiones 5
 Ontologias distintas 5
 Ontologías en las que aparece cdesc (1); pmofn (1); ssn (1); ssno (1); w3c-ssn (1); 
@@ -1452,7 +1440,7 @@ owl:Class
   |  |  |  |  |owl:inverseOf
   |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 78
+Patron 77
 Repeticiones 10
 Ontologias distintas 4
 Ontologías en las que aparece cevent (1); doco (6); seo (2); simu (1); 
@@ -1470,7 +1458,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 79
+Patron 78
 Repeticiones 3
 Ontologias distintas 3
 Ontologías en las que aparece cevent (1); r-arco (1); shw (1); 
@@ -1482,7 +1470,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Datatype
 
-Patron 80
+Patron 79
 Repeticiones 67
 Ontologias distintas 3
 Ontologías en las que aparece cis (29); cpmeta (1); vivo (37); 
@@ -1494,7 +1482,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
-Patron 81
+Patron 80
 Repeticiones 30
 Ontologias distintas 3
 Ontologías en las que aparece cis (22); cpmeta (3); obo (5); 
@@ -1506,19 +1494,19 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |rdfs:Datatype
 
-Patron 82
-Repeticiones 10
-Ontologias distintas 1
-Ontologías en las que aparece cis (10); 
+Patron 81
+Repeticiones 23
+Ontologias distintas 4
+Ontologías en las que aparece cis (10); edac (2); lexinfo (9); spfood (2); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Restriction
   |  |  |owl:hasValue
-  |  |  |  |:CISType, owl:Class, owl:NamedIndividual
+  |  |  |  |owl:NamedIndividual
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 83
+Patron 82
 Repeticiones 6
 Ontologias distintas 2
 Ontologías en las que aparece cis (1); rains (5); 
@@ -1544,7 +1532,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 84
+Patron 83
 Repeticiones 16
 Ontologias distintas 2
 Ontologías en las que aparece cis (2); vivo (14); 
@@ -1556,7 +1544,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 85
+Patron 84
 Repeticiones 14
 Ontologias distintas 6
 Ontologías en las que aparece cito (1); gleif-L1 (2); gleif-base (1); pmovn (2); sbeo (2); tddom (6); 
@@ -1570,7 +1558,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 86
+Patron 85
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece cl (2); 
@@ -1598,7 +1586,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 87
+Patron 86
 Repeticiones 3
 Ontologias distintas 2
 Ontologías en las que aparece co (1); olo (2); 
@@ -1610,10 +1598,10 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty, rdf:Property
 
-Patron 88
-Repeticiones 114
+Patron 87
+Repeticiones 115
 Ontologias distintas 20
-Ontologías en las que aparece cocoon (11); cpmeta (1); dogont (51); drama (1); ei2a (3); fiesta-iot (1); gleif-L1 (6); gleif-L2 (1); gleif-base (2); iddo (1); ifc (3); ispra (1); km4c (1); pproc (1); rico (4); rr (1); s4agri (1); s4ener (22); s4inma (1); shw (1); 
+Ontologías en las que aparece cocoon (11); cpmeta (1); dogont (51); drama (1); ei2a (3); fiesta-iot (1); gleif-L1 (7); gleif-L2 (1); gleif-base (2); iddo (1); ifc (3); ispra (1); km4c (1); pproc (1); rico (4); rr (1); s4agri (1); s4ener (22); s4inma (1); shw (1); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -1624,7 +1612,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 89
+Patron 88
 Repeticiones 33
 Ontologias distintas 4
 Ontologías en las que aparece common (19); premis (5); r-arco (4); sbeo (5); 
@@ -1636,7 +1624,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 90
+Patron 89
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece common (2); 
@@ -1648,7 +1636,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 91
+Patron 90
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece cpmeta (4); 
@@ -1656,11 +1644,11 @@ owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:hasValue
-  |  |  |  |:ThematicCenter, owl:NamedIndividual
+  |  |  |  |owl:NamedIndividual
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 92
+Patron 91
 Repeticiones 5
 Ontologias distintas 4
 Ontologías en las que aparece cpmeta (2); drama (1); iol (1); s4envi (1); 
@@ -1672,7 +1660,67 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:InverseFunctionalProperty, owl:ObjectProperty
 
+Patron 92
+Repeticiones 7
+Ontologias distintas 5
+Ontologías en las que aparece cpmeta (1); ei2a (1); pmovn (2); r-arco (1); sbeo (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+
 Patron 93
+Repeticiones 15
+Ontologias distintas 7
+Ontologías en las que aparece ctlog (1); ei2a (2); gleif-L2 (1); gleif-base (1); ids (8); obo (1); sto (1); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:List
+
+Patron 94
+Repeticiones 6
+Ontologias distintas 1
+Ontologías en las que aparece dataid (6); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |owl:onProperty
+  |  |  |  |rdf:Property
+
+Patron 95
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece dataid (3); 
@@ -1684,22 +1732,10 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:AnnotationProperty, rdf:Property
 
-Patron 94
+Patron 96
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece dataid (5); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:allValuesFrom
-  |  |  |  |owl:Class
-  |  |  |owl:onProperty
-  |  |  |  |rdf:Property
-
-Patron 95
-Repeticiones 6
-Ontologias distintas 1
-Ontologías en las que aparece dataid (6); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -1708,7 +1744,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |rdf:Property
 
-Patron 96
+Patron 97
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece dataid (1); esco (1); 
@@ -1720,7 +1756,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 97
+Patron 98
 Repeticiones 9
 Ontologias distintas 3
 Ontologías en las que aparece dcite (5); eeo (1); m4i (3); 
@@ -1734,7 +1770,19 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 98
+Patron 99
+Repeticiones 100
+Ontologias distintas 6
+Ontologías en las que aparece dcite (1); geofla (4); obo (66); s4envi (3); spfood (20); sto (6); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:hasValue
+  |  |  |  |owl:NamedIndividual
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 100
 Repeticiones 14
 Ontologias distintas 5
 Ontologías en las que aparece ddesc (3); r-arco (2); s4bldg (1); s4envi (7); sbeo (1); 
@@ -1746,7 +1794,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 99
+Patron 101
 Repeticiones 5
 Ontologias distintas 2
 Ontologías en las que aparece deo (1); obo (4); 
@@ -1768,7 +1816,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 100
+Patron 102
 Repeticiones 41
 Ontologias distintas 3
 Ontologías en las que aparece doco (10); obo (27); s4wear (4); 
@@ -1790,7 +1838,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 101
+Patron 103
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece doco (5); 
@@ -1822,7 +1870,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 102
+Patron 104
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece doco (3); 
@@ -1850,7 +1898,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 103
+Patron 105
 Repeticiones 40
 Ontologias distintas 5
 Ontologías en las que aparece doco (3); lmm2 (3); obo (29); sbeo (4); seo (1); 
@@ -1872,7 +1920,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 104
+Patron 106
 Repeticiones 3
 Ontologias distintas 2
 Ontologías en las que aparece doco (2); seo (1); 
@@ -1886,7 +1934,7 @@ owl:Class
   |  |  |  |  |owl:complementOf
   |  |  |  |  |  |owl:Class
 
-Patron 105
+Patron 107
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece doco (3); 
@@ -1918,7 +1966,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 106
+Patron 108
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece doco (4); 
@@ -1948,7 +1996,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 107
+Patron 109
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece doco (2); 
@@ -1990,7 +2038,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 108
+Patron 110
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece doco (1); seo (1); 
@@ -2012,7 +2060,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 109
+Patron 111
 Repeticiones 565
 Ontologias distintas 3
 Ontologías en las que aparece dogont (561); lexinfo (3); time (1); 
@@ -2024,7 +2072,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
-Patron 110
+Patron 112
 Repeticiones 5
 Ontologias distintas 2
 Ontologías en las que aparece dogont (2); obo (3); 
@@ -2036,7 +2084,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 111
+Patron 113
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece dogont (2); 
@@ -2062,7 +2110,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 112
+Patron 114
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece drama (2); 
@@ -2114,7 +2162,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 113
+Patron 115
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece drama (2); 
@@ -2158,7 +2206,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 114
+Patron 116
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece drama (2); 
@@ -2200,7 +2248,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 115
+Patron 117
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece drama (5); 
@@ -2222,7 +2270,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 116
+Patron 118
 Repeticiones 4
 Ontologias distintas 2
 Ontologías en las que aparece drama (1); shw (3); 
@@ -2244,7 +2292,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 117
+Patron 119
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece drama (3); 
@@ -2268,7 +2316,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 118
+Patron 120
 Repeticiones 3
 Ontologias distintas 2
 Ontologías en las que aparece drama (1); shw (2); 
@@ -2290,7 +2338,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 119
+Patron 121
 Repeticiones 12
 Ontologias distintas 2
 Ontologías en las que aparece drama (1); obo (11); 
@@ -2326,7 +2374,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 120
+Patron 122
 Repeticiones 12
 Ontologias distintas 2
 Ontologías en las que aparece dul (11); ispra (1); 
@@ -2338,7 +2386,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, owl:ReflexiveProperty, owl:TransitiveProperty
 
-Patron 121
+Patron 123
 Repeticiones 4
 Ontologias distintas 2
 Ontologías en las que aparece dul (2); qu (2); 
@@ -2350,7 +2398,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 122
+Patron 124
 Repeticiones 105
 Ontologias distintas 13
 Ontologías en las que aparece dul (2); edac (3); event (2); geom (5); lexinfo (15); lmm1 (2); lslife (9); lsweb (9); lswmo (1); mo (6); obo (48); semiotics (2); vivo (1); 
@@ -2362,7 +2410,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 123
+Patron 125
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece dul (1); s4envi (1); 
@@ -2374,7 +2422,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, owl:SymmetricProperty
 
-Patron 124
+Patron 126
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece eac-cpf (6); 
@@ -2386,7 +2434,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Literal
 
-Patron 125
+Patron 127
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece eac-cpf (3); 
@@ -2398,7 +2446,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Literal
 
-Patron 126
+Patron 128
 Repeticiones 3
 Ontologias distintas 2
 Ontologías en las que aparece edac (2); obo (1); 
@@ -2424,7 +2472,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 127
+Patron 129
 Repeticiones 5
 Ontologias distintas 3
 Ontologías en las que aparece edac (2); lslife (1); lsweb (2); 
@@ -2436,7 +2484,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Literal
 
-Patron 128
+Patron 130
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece eeo (5); 
@@ -2454,7 +2502,89 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 129
+Patron 131
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece ei2a (3); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+
+Patron 132
+Repeticiones 12
+Ontologias distintas 5
+Ontologías en las que aparece ei2a (6); gleif-L2 (1); gleif-base (1); gleif-geo (1); sbeo (3); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+
+Patron 133
+Repeticiones 4
+Ontologias distintas 4
+Ontologías en las que aparece ei2a (1); gleif-L2 (1); obo (1); sto (1); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+
+Patron 134
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ei2a (2); 
@@ -2466,7 +2596,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:AsymmetricProperty, owl:FunctionalProperty, owl:IrreflexiveProperty, owl:ObjectProperty
 
-Patron 130
+Patron 135
 Repeticiones 3
 Ontologias distintas 3
 Ontologías en las que aparece ei2a (1); lemon (1); skosxl (1); 
@@ -2478,7 +2608,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, rdf:Property
 
-Patron 131
+Patron 136
 Repeticiones 5
 Ontologias distintas 2
 Ontologías en las que aparece esco (2); test (3); 
@@ -2490,7 +2620,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |rdf:Property
 
-Patron 132
+Patron 137
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece esco (5); 
@@ -2502,7 +2632,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 133
+Patron 138
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece esco (3); 
@@ -2514,7 +2644,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 134
+Patron 139
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece esco (2); 
@@ -2566,7 +2696,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 135
+Patron 140
 Repeticiones 9
 Ontologias distintas 3
 Ontologías en las que aparece fabio (4); ignf (1); seo (4); 
@@ -2592,7 +2722,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 136
+Patron 141
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece fabio (1); obo (1); 
@@ -2624,7 +2754,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 137
+Patron 142
 Repeticiones 4
 Ontologias distintas 2
 Ontologías en las que aparece faldo (2); ignf (2); 
@@ -2654,7 +2784,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 138
+Patron 143
 Repeticiones 3
 Ontologias distintas 3
 Ontologías en las que aparece foio (1); s4syst (1); seas-sys (1); 
@@ -2666,7 +2796,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 139
+Patron 144
 Repeticiones 59
 Ontologias distintas 1
 Ontologías en las que aparece fowl (59); 
@@ -2682,7 +2812,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 140
+Patron 145
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece fowl (2); 
@@ -2708,7 +2838,19 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 141
+Patron 146
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece fresnel (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class, owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |rdfs:Class
+  |  |  |owl:onProperty
+  |  |  |  |rdf:Property
+
+Patron 147
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece fresnel (3); 
@@ -2730,19 +2872,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |rdf:Property
 
-Patron 142
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece fresnel (2); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Class, owl:Restriction
-  |  |  |owl:allValuesFrom
-  |  |  |  |rdfs:Class
-  |  |  |owl:onProperty
-  |  |  |  |rdf:Property
-
-Patron 143
+Patron 148
 Repeticiones 10
 Ontologias distintas 1
 Ontologías en las que aparece fresnel (10); 
@@ -2758,21 +2888,21 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 144
-Repeticiones 2
+Patron 149
+Repeticiones 4
 Ontologias distintas 1
-Ontologías en las que aparece fresnel (2); 
+Ontologías en las que aparece fresnel (4); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:allValuesFrom
-  |  |  |  |rdfs:Class
+  |  |  |  |owl:Class
   |  |  |owl:minCardinality
   |  |  |  |Literal
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 145
+Patron 150
 Repeticiones 13
 Ontologias distintas 1
 Ontologías en las que aparece fresnel (13); 
@@ -2788,21 +2918,21 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
-Patron 146
-Repeticiones 4
+Patron 151
+Repeticiones 2
 Ontologias distintas 1
-Ontologías en las que aparece fresnel (4); 
+Ontologías en las que aparece fresnel (2); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:allValuesFrom
-  |  |  |  |owl:Class
+  |  |  |  |rdfs:Class
   |  |  |owl:minCardinality
   |  |  |  |Literal
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 147
+Patron 152
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece fresnel (2); 
@@ -2828,19 +2958,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 148
-Repeticiones 5
-Ontologias distintas 2
-Ontologías en las que aparece geofla (4); spfood (1); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |owl:NamedIndividual
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 149
+Patron 153
 Repeticiones 4
 Ontologias distintas 3
 Ontologías en las que aparece geom (1); lslife (1); lsweb (2); 
@@ -2854,7 +2972,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 150
+Patron 154
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece gleif-L1 (2); 
@@ -2870,7 +2988,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |owl:onClass
-  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
   |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
   |  |  |  |  |  |  |  |  |  |  |owl:qualifiedCardinality
@@ -2898,7 +3016,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
@@ -2912,7 +3030,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 151
+Patron 155
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece gleif-L1 (2); 
@@ -2940,47 +3058,93 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 152
-Repeticiones 4
-Ontologias distintas 4
-Ontologías en las que aparece gleif-L1 (1); gleif-base (1); gleif-geo (1); gleif-repex (1); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onClass
-  |  |  |  |#Desconocido
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-  |  |  |owl:qualifiedCardinality
-  |  |  |  |Literal
-
-Patron 153
-Repeticiones 3
+Patron 156
+Repeticiones 2
 Ontologias distintas 2
-Ontologías en las que aparece gleif-base (1); km4c (2); 
+Ontologías en las que aparece gleif-L1 (1); gleif-L2 (1); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:minQualifiedCardinality
   |  |  |  |Literal
   |  |  |owl:onClass
-  |  |  |  |#Desconocido
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:oneOf
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 154
-Repeticiones 7
-Ontologias distintas 3
-Ontologías en las que aparece gn (2); iddo (4); ruto (1); 
+Patron 157
+Repeticiones 4
+Ontologias distintas 4
+Ontologías en las que aparece gleif-repex (1); obo (1); pmovn (1); shw (1); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+
+Patron 158
+Repeticiones 12
+Ontologias distintas 4
+Ontologías en las que aparece gn (2); iddo (3); lemon (2); ruto (5); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:cardinality
   |  |  |  |Literal
   |  |  |owl:onProperty
-  |  |  |  |#Desconocido
+  |  |  |  |rdf:Property
 
-Patron 155
+Patron 159
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece ibis (4); 
@@ -2992,7 +3156,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, owl:TransitiveProperty, rdf:Property
 
-Patron 156
+Patron 160
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece iddo (1); irw (1); 
@@ -3004,7 +3168,19 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |#Desconocido
 
-Patron 157
+Patron 161
+Repeticiones 5
+Ontologias distintas 2
+Ontologías en las que aparece iddo (4); ruto (1); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:cardinality
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |#Desconocido
+
+Patron 162
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece iddo (8); 
@@ -3018,19 +3194,19 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 158
-Repeticiones 15
-Ontologias distintas 3
-Ontologías en las que aparece iddo (8); lemon (2); ruto (5); 
+Patron 163
+Repeticiones 5
+Ontologias distintas 1
+Ontologías en las que aparece iddo (5); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:cardinality
   |  |  |  |Literal
   |  |  |owl:onProperty
-  |  |  |  |rdf:Property
+  |  |  |  |owl:AnnotationProperty, rdf:Property
 
-Patron 159
+Patron 164
 Repeticiones 37
 Ontologias distintas 4
 Ontologías en las que aparece iddo (28); km4c (3); rr (3); s4ener (3); 
@@ -3044,21 +3220,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
-Patron 160
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece iddo (2); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:minQualifiedCardinality
-  |  |  |  |Literal
-  |  |  |owl:onDataRange
-  |  |  |  |Datatype
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 161
+Patron 165
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece iddo (2); 
@@ -3082,7 +3244,21 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 162
+Patron 166
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece iddo (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:minQualifiedCardinality
+  |  |  |  |Literal
+  |  |  |owl:onDataRange
+  |  |  |  |Datatype
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 167
 Repeticiones 73
 Ontologias distintas 1
 Ontologías en las que aparece ifc (73); 
@@ -3098,7 +3274,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 163
+Patron 168
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece ifc (6); 
@@ -3120,7 +3296,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 164
+Patron 169
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ifc (2); 
@@ -3140,7 +3316,7 @@ owl:Class
   |  |  |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |  |  |owl:Class
 
-Patron 165
+Patron 170
 Repeticiones 22
 Ontologias distintas 1
 Ontologías en las que aparece ifc (22); 
@@ -3160,7 +3336,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 166
+Patron 171
 Repeticiones 20
 Ontologias distintas 1
 Ontologías en las que aparece ifc (20); 
@@ -3174,7 +3350,7 @@ owl:Class
   |  |  |  |  |rdf:rest
   |  |  |  |  |  |rdf:List
 
-Patron 167
+Patron 172
 Repeticiones 6
 Ontologias distintas 2
 Ontologías en las que aparece ifc (5); vgo (1); 
@@ -3204,7 +3380,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 168
+Patron 173
 Repeticiones 15
 Ontologias distintas 2
 Ontologías en las que aparece ifc (14); seo (1); 
@@ -3230,7 +3406,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 169
+Patron 174
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ifc (2); 
@@ -3324,7 +3500,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 170
+Patron 175
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece ifc (7); 
@@ -3350,7 +3526,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 171
+Patron 176
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ifc (2); 
@@ -3366,7 +3542,7 @@ owl:Class
   |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
 
-Patron 172
+Patron 177
 Repeticiones 13
 Ontologias distintas 1
 Ontologías en las que aparece ifc (13); 
@@ -3400,7 +3576,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 173
+Patron 178
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece ifc (4); 
@@ -3442,7 +3618,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 174
+Patron 179
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece ifc (3); 
@@ -3480,7 +3656,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 175
+Patron 180
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ifc (2); 
@@ -3526,7 +3702,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 176
+Patron 181
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece ifc (3); 
@@ -3550,7 +3726,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 177
+Patron 182
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ignf (2); 
@@ -3580,7 +3756,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 178
+Patron 183
 Repeticiones 294
 Ontologias distintas 2
 Ontologías en las que aparece iol (1); obo (293); 
@@ -3596,7 +3772,7 @@ owl:Class
   |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
 
-Patron 179
+Patron 184
 Repeticiones 5
 Ontologias distintas 2
 Ontologías en las que aparece ipo (4); shw (1); 
@@ -3608,7 +3784,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 180
+Patron 185
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece ipo (4); 
@@ -3620,45 +3796,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Datatype
 
-Patron 181
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece km4c (2); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:allValuesFrom
-  |  |  |  |#Desconocido
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 182
-Repeticiones 10
-Ontologias distintas 3
-Ontologías en las que aparece km4c (7); r-arco (2); ro (1); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:allValuesFrom
-  |  |  |  |#Desconocido
-  |  |  |owl:onProperty
-  |  |  |  |#Desconocido
-
-Patron 183
-Repeticiones 4
-Ontologias distintas 1
-Ontologías en las que aparece km4c (4); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:minQualifiedCardinality
-  |  |  |  |Literal
-  |  |  |owl:onClass
-  |  |  |  |owl:Class
-  |  |  |owl:onProperty
-  |  |  |  |#Desconocido
-
-Patron 184
+Patron 186
 Repeticiones 5
 Ontologias distintas 2
 Ontologías en las que aparece km4c (4); pwo (1); 
@@ -3672,7 +3810,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 185
+Patron 187
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece km4c (4); 
@@ -3686,7 +3824,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 186
+Patron 188
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lemon (2); 
@@ -3698,7 +3836,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty, rdf:Property
 
-Patron 187
+Patron 189
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece lemon (4); 
@@ -3710,7 +3848,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, rdf:Property
 
-Patron 188
+Patron 190
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lemon (2); 
@@ -3722,10 +3860,10 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 189
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece lexinfo (3); 
+Patron 191
+Repeticiones 4
+Ontologias distintas 2
+Ontologías en las que aparece lexinfo (3); shw (1); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -3738,13 +3876,13 @@ owl:Class
   |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |:Case, owl:NamedIndividual, owl:Thing
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 190
+Patron 192
 Repeticiones 16
 Ontologias distintas 1
 Ontologías en las que aparece lexinfo (16); 
@@ -3766,7 +3904,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 191
+Patron 193
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece lexinfo (6); 
@@ -3796,7 +3934,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 192
+Patron 194
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lexinfo (2); 
@@ -3826,7 +3964,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 193
+Patron 195
 Repeticiones 34
 Ontologias distintas 3
 Ontologías en las que aparece lexinfo (28); obo (2); shw (4); 
@@ -3844,7 +3982,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 194
+Patron 196
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece lexinfo (6); 
@@ -3865,30 +4003,6 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
-
-Patron 195
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece lexinfo (3); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |:TermElement, owl:NamedIndividual, owl:Thing
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 196
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece lexinfo (2); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |:NounPOS, :PartOfSpeech, owl:NamedIndividual, owl:Thing
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
 
 Patron 197
 Repeticiones 3
@@ -3952,18 +4066,6 @@ owl:Class
 
 Patron 199
 Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece lexinfo (2); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |:AdpositionPOS, :PartOfSpeech, owl:NamedIndividual, owl:Thing
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 200
-Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece lexinfo (1); ontopic (1); 
 owl:Class
@@ -3974,7 +4076,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 201
+Patron 200
 Repeticiones 7
 Ontologias distintas 2
 Ontologías en las que aparece lmm1 (1); obo (6); 
@@ -4004,7 +4106,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 202
+Patron 201
 Repeticiones 14
 Ontologias distintas 3
 Ontologías en las que aparece lmm1 (2); obo (9); semiotics (3); 
@@ -4030,7 +4132,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 203
+Patron 202
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece lslife (1); lswpm (1); 
@@ -4064,7 +4166,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 204
+Patron 203
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece lslife (1); lswmo (1); 
@@ -4090,7 +4192,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 205
+Patron 204
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lslife (2); 
@@ -4124,19 +4226,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 206
-Repeticiones 4
-Ontologias distintas 2
-Ontologías en las que aparece lslife (1); ro (3); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |#Desconocido
-  |  |  |owl:someValuesFrom
-  |  |  |  |owl:Class
-
-Patron 207
+Patron 205
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lslife (2); 
@@ -4178,7 +4268,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 208
+Patron 206
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lsweb (2); 
@@ -4192,19 +4282,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 209
-Repeticiones 176
-Ontologias distintas 1
-Ontologías en las que aparece lswpm (176); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |Literal
-  |  |  |owl:onProperty
-  |  |  |  |owl:DatatypeProperty
-
-Patron 210
+Patron 207
 Repeticiones 53
 Ontologias distintas 1
 Ontologías en las que aparece lswpm (53); 
@@ -4234,7 +4312,19 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 211
+Patron 208
+Repeticiones 176
+Ontologias distintas 1
+Ontologías en las que aparece lswpm (176); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Restriction
+  |  |  |owl:hasValue
+  |  |  |  |Literal
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Patron 209
 Repeticiones 22
 Ontologias distintas 1
 Ontologías en las que aparece lswpm (22); 
@@ -4258,7 +4348,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 212
+Patron 210
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece lswpm (3); 
@@ -4300,7 +4390,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 213
+Patron 211
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece lswpm (7); 
@@ -4330,7 +4420,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 214
+Patron 212
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece lswpm (2); 
@@ -4428,7 +4518,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 215
+Patron 213
 Repeticiones 7
 Ontologias distintas 4
 Ontologías en las que aparece m4i (1); ssn (2); ssno (2); w3c-ssn (2); 
@@ -4442,7 +4532,7 @@ owl:Class
   |  |  |  |  |owl:inverseOf
   |  |  |  |  |  |owl:ObjectProperty
 
-Patron 216
+Patron 214
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece m4i (1); medred (1); 
@@ -4456,7 +4546,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 217
+Patron 215
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece nen2660 (8); 
@@ -4468,7 +4558,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 218
+Patron 216
 Repeticiones 3
 Ontologias distintas 2
 Ontologías en las que aparece nen2660 (1); test (2); 
@@ -4480,7 +4570,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |rdf:Property
 
-Patron 219
+Patron 217
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece nen2660 (2); 
@@ -4502,7 +4592,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, rdf:Property
 
-Patron 220
+Patron 218
 Repeticiones 28
 Ontologias distintas 1
 Ontologías en las que aparece obo (28); 
@@ -4528,7 +4618,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 221
+Patron 219
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -4564,7 +4654,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 222
+Patron 220
 Repeticiones 53
 Ontologias distintas 2
 Ontologías en las que aparece obo (52); pwo (1); 
@@ -4590,7 +4680,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 223
+Patron 221
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -4620,7 +4710,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 224
+Patron 222
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece obo (4); 
@@ -4636,7 +4726,7 @@ owl:Class
   |  |  |  |  |owl:onProperty
   |  |  |  |  |  |owl:ObjectProperty
 
-Patron 225
+Patron 223
 Repeticiones 41
 Ontologias distintas 1
 Ontologías en las que aparece obo (41); 
@@ -4662,7 +4752,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 226
+Patron 224
 Repeticiones 25
 Ontologias distintas 1
 Ontologías en las que aparece obo (25); 
@@ -4688,7 +4778,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 227
+Patron 225
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -4714,7 +4804,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 228
+Patron 226
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -4724,9 +4814,9 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
   |  |  |owl:someValuesFrom
-  |  |  |  |owl:Class, owl:NamedIndividual
+  |  |  |  |owl:NamedIndividual
 
-Patron 229
+Patron 227
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -4742,7 +4832,7 @@ owl:Class
   |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
 
-Patron 230
+Patron 228
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece obo (5); 
@@ -4758,7 +4848,7 @@ owl:Class
   |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
 
-Patron 231
+Patron 229
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -4784,7 +4874,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 232
+Patron 230
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece obo (6); 
@@ -4824,7 +4914,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 233
+Patron 231
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece obo (6); 
@@ -4886,7 +4976,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 234
+Patron 232
 Repeticiones 417
 Ontologias distintas 1
 Ontologías en las que aparece obo (417); 
@@ -4926,7 +5016,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 235
+Patron 233
 Repeticiones 444
 Ontologias distintas 1
 Ontologías en las que aparece obo (444); 
@@ -4980,7 +5070,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 236
+Patron 234
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece obo (4); 
@@ -5020,7 +5110,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 237
+Patron 235
 Repeticiones 44
 Ontologias distintas 1
 Ontologías en las que aparece obo (44); 
@@ -5070,7 +5160,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 238
+Patron 236
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -5152,7 +5242,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 239
+Patron 237
 Repeticiones 78
 Ontologias distintas 1
 Ontologías en las que aparece obo (78); 
@@ -5174,19 +5264,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 240
-Repeticiones 50
-Ontologias distintas 1
-Ontologías en las que aparece obo (50); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |obo:OBI_0000835, owl:NamedIndividual
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 241
+Patron 238
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece obo (7); 
@@ -5248,7 +5326,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 242
+Patron 239
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -5308,7 +5386,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 243
+Patron 240
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -5334,7 +5412,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 244
+Patron 241
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece obo (4); 
@@ -5402,7 +5480,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 245
+Patron 242
 Repeticiones 24
 Ontologias distintas 1
 Ontologías en las que aparece obo (24); 
@@ -5428,7 +5506,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 246
+Patron 243
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -5496,7 +5574,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 247
+Patron 244
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -5570,7 +5648,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 248
+Patron 245
 Repeticiones 4
 Ontologias distintas 2
 Ontologías en las que aparece obo (3); vivo (1); 
@@ -5602,7 +5680,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 249
+Patron 246
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece obo (4); 
@@ -5628,7 +5706,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 250
+Patron 247
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -5668,7 +5746,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 251
+Patron 248
 Repeticiones 46
 Ontologias distintas 1
 Ontologías en las que aparece obo (46); 
@@ -5702,7 +5780,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 252
+Patron 249
 Repeticiones 14
 Ontologias distintas 1
 Ontologías en las que aparece obo (14); 
@@ -5766,7 +5844,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 253
+Patron 250
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -5810,7 +5888,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 254
+Patron 251
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -5840,7 +5918,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 255
+Patron 252
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -5876,7 +5954,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 256
+Patron 253
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -5902,7 +5980,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 257
+Patron 254
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -5934,7 +6012,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 258
+Patron 255
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece obo (1); vivo (1); 
@@ -5970,7 +6048,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 259
+Patron 256
 Repeticiones 310
 Ontologias distintas 1
 Ontologías en las que aparece obo (310); 
@@ -6010,7 +6088,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 260
+Patron 257
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -6050,7 +6128,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 261
+Patron 258
 Repeticiones 9
 Ontologias distintas 1
 Ontologías en las que aparece obo (9); 
@@ -6120,10 +6198,10 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 262
-Repeticiones 12
+Patron 259
+Repeticiones 34
 Ontologias distintas 1
-Ontologías en las que aparece obo (12); 
+Ontologías en las que aparece obo (34); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -6160,59 +6238,13 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000051, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 263
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece obo (2); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000001, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-
-Patron 264
+Patron 260
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -6238,7 +6270,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 265
+Patron 261
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece obo (6); 
@@ -6298,7 +6330,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 266
+Patron 262
 Repeticiones 16
 Ontologias distintas 1
 Ontologías en las que aparece obo (16); 
@@ -6374,7 +6406,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 267
+Patron 263
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece obo (4); 
@@ -6406,7 +6438,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 268
+Patron 264
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece obo (6); 
@@ -6494,7 +6526,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 269
+Patron 265
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece obo (8); 
@@ -6562,10 +6594,10 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 270
-Repeticiones 4
+Patron 266
+Repeticiones 17
 Ontologias distintas 1
-Ontologías en las que aparece obo (4); 
+Ontologías en las que aparece obo (17); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -6624,13 +6656,13 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000051, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 271
+Patron 267
 Repeticiones 11
 Ontologias distintas 1
 Ontologías en las que aparece obo (11); 
@@ -6714,13 +6746,13 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000051, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 272
+Patron 268
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece obo (6); 
@@ -6776,211 +6808,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 273
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece obo (3); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty, owl:TransitiveProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000280, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-
-Patron 274
-Repeticiones 5
-Ontologias distintas 1
-Ontologías en las que aparece obo (5); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty, owl:TransitiveProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000003, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-
-Patron 275
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece obo (3); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty, owl:TransitiveProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000105, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-
-Patron 276
+Patron 269
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece obo (5); 
@@ -7012,7 +6840,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 277
+Patron 270
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7044,7 +6872,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 278
+Patron 271
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7056,11 +6884,11 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Restriction
   |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |obo:UO_0000051, owl:NamedIndividual
+  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |owl:onProperty
   |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 279
+Patron 272
 Repeticiones 11
 Ontologias distintas 1
 Ontologías en las que aparece obo (11); 
@@ -7116,7 +6944,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 280
+Patron 273
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7146,7 +6974,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 281
+Patron 274
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7172,27 +7000,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 282
-Repeticiones 14
-Ontologias distintas 1
-Ontologías en las que aparece obo (14); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |owl:Restriction
-  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |owl:Class
-
-Patron 283
+Patron 275
 Repeticiones 11
 Ontologias distintas 1
 Ontologías en las que aparece obo (11); 
@@ -7226,7 +7034,27 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 284
+Patron 276
+Repeticiones 14
+Ontologias distintas 1
+Ontologías en las que aparece obo (14); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+
+Patron 277
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7256,99 +7084,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 285
-Repeticiones 14
-Ontologias distintas 1
-Ontologías en las que aparece obo (14); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000280, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-
-Patron 286
-Repeticiones 6
-Ontologias distintas 1
-Ontologías en las que aparece obo (6); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |obo:UO_0000105, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-
-Patron 287
+Patron 278
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7370,7 +7106,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 288
+Patron 279
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece obo (8); 
@@ -7392,7 +7128,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 289
+Patron 280
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7426,19 +7162,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 290
-Repeticiones 15
-Ontologias distintas 1
-Ontologías en las que aparece obo (15); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |obo:OBI_0000835, obo:OBI_0002989, owl:NamedIndividual
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 291
+Patron 281
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece obo (7); 
@@ -7468,7 +7192,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 292
+Patron 282
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7494,7 +7218,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 293
+Patron 283
 Repeticiones 12
 Ontologias distintas 1
 Ontologías en las que aparece obo (12); 
@@ -7562,7 +7286,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 294
+Patron 284
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7630,7 +7354,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 295
+Patron 285
 Repeticiones 26
 Ontologias distintas 1
 Ontologías en las que aparece obo (26); 
@@ -7684,7 +7408,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 296
+Patron 286
 Repeticiones 46
 Ontologias distintas 1
 Ontologías en las que aparece obo (46); 
@@ -7752,7 +7476,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 297
+Patron 287
 Repeticiones 16
 Ontologias distintas 1
 Ontologías en las que aparece obo (16); 
@@ -7812,7 +7536,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 298
+Patron 288
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7890,7 +7614,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 299
+Patron 289
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -7914,7 +7638,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 300
+Patron 290
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece obo (8); 
@@ -7992,7 +7716,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 301
+Patron 291
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece obo (5); 
@@ -8028,7 +7752,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 302
+Patron 292
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -8072,7 +7796,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 303
+Patron 293
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -8116,7 +7840,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 304
+Patron 294
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece obo (2); 
@@ -8142,7 +7866,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 305
+Patron 295
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece obo (3); 
@@ -8180,7 +7904,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 306
+Patron 296
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece olo (2); 
@@ -8192,7 +7916,25 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, rdf:Property
 
-Patron 307
+Patron 297
+Repeticiones 3
+Ontologias distintas 1
+Ontologías en las que aparece pmopb (3); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+
+Patron 298
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece premis (2); 
@@ -8204,7 +7946,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:InverseFunctionalProperty, owl:ObjectProperty
 
-Patron 308
+Patron 299
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece premis (5); 
@@ -8230,7 +7972,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 309
+Patron 300
 Repeticiones 2
 Ontologias distintas 2
 Ontologías en las que aparece premis (1); sbeo (1); 
@@ -8242,7 +7984,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:InverseFunctionalProperty, owl:ObjectProperty
 
-Patron 310
+Patron 301
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece qu (2); 
@@ -8272,7 +8014,19 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 311
+Patron 302
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece r-arco (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |#Desconocido
+  |  |  |owl:onProperty
+  |  |  |  |#Desconocido
+
+Patron 303
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece rains (2); 
@@ -8306,7 +8060,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 312
+Patron 304
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece rains (2); 
@@ -8348,7 +8102,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 313
+Patron 305
 Repeticiones 10
 Ontologias distintas 2
 Ontologías en las que aparece rico (9); s4ener (1); 
@@ -8372,7 +8126,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 314
+Patron 306
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece rico (3); 
@@ -8400,7 +8154,19 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 315
+Patron 307
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece ro (2); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty, rdf:Property
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+
+Patron 308
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ro (2); 
@@ -8412,7 +8178,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |#Desconocido
 
-Patron 316
+Patron 309
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece ro (2); 
@@ -8424,7 +8190,19 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Datatype
 
-Patron 317
+Patron 310
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece ro (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty, rdf:Property
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+
+Patron 311
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece rto (2); 
@@ -8446,7 +8224,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 318
+Patron 312
 Repeticiones 6
 Ontologias distintas 2
 Ontologías en las que aparece rto (5); traffic (1); 
@@ -8458,7 +8236,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 319
+Patron 313
 Repeticiones 13
 Ontologias distintas 1
 Ontologías en las que aparece rto (13); 
@@ -8470,7 +8248,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 320
+Patron 314
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece rto (8); 
@@ -8484,7 +8262,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty
 
-Patron 321
+Patron 315
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece rto (2); 
@@ -8496,7 +8274,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty
 
-Patron 322
+Patron 316
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece rto (7); 
@@ -8510,7 +8288,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 323
+Patron 317
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece rto (2); 
@@ -8528,7 +8306,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 324
+Patron 318
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece s4bldg (2); 
@@ -8550,19 +8328,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, owl:TransitiveProperty
 
-Patron 325
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece s4envi (3); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |owl:NamedIndividual, saref:Property
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 326
+Patron 319
 Repeticiones 4
 Ontologias distintas 2
 Ontologías en las que aparece s4syst (2); seas-sys (2); 
@@ -8574,25 +8340,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 327
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece sbeo (3); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:oneOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:NamedIndividual
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:NamedIndividual
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-
-Patron 328
+Patron 320
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece sbeo (6); 
@@ -8614,7 +8362,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 329
+Patron 321
 Repeticiones 5
 Ontologias distintas 2
 Ontologías en las que aparece seasbo (4); seasto (1); 
@@ -8624,8 +8372,21 @@ owl:Class
   |  |  |owl:allValuesFrom
   |  |  |  |owl:Class
   |  |  |owl:onProperty
+  |  |  |  |#Desconocido
 
-Patron 330
+Patron 322
+Repeticiones 16
+Ontologias distintas 4
+Ontologías en las que aparece seasd (6); seasfo (3); seast (2); seasto (5); 
+owl:Class
+  |rdfs:subClassOf
+  |  |Anonimo
+  |  |  |owl:onProperty
+  |  |  |  |#Desconocido
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Class
+
+Patron 323
 Repeticiones 4
 Ontologias distintas 3
 Ontologías en las que aparece seasd (2); seasfo (1); seasto (1); 
@@ -8635,19 +8396,9 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
   |  |  |owl:someValuesFrom
+  |  |  |  |#Desconocido
 
-Patron 331
-Repeticiones 16
-Ontologias distintas 4
-Ontologías en las que aparece seasd (6); seasfo (3); seast (2); seasto (5); 
-owl:Class
-  |rdfs:subClassOf
-  |  |Anonimo
-  |  |  |owl:onProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |owl:Class
-
-Patron 332
+Patron 324
 Repeticiones 11
 Ontologias distintas 3
 Ontologías en las que aparece seasd (4); seasfo (2); seasto (5); 
@@ -8655,10 +8406,11 @@ owl:Class
   |owl:equivalentClass
   |  |Anonimo
   |  |  |owl:onProperty
+  |  |  |  |#Desconocido
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 333
+Patron 325
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece seasto (5); 
@@ -8666,9 +8418,11 @@ owl:Class
   |rdfs:subClassOf
   |  |Anonimo
   |  |  |owl:onProperty
+  |  |  |  |#Desconocido
   |  |  |owl:someValuesFrom
+  |  |  |  |#Desconocido
 
-Patron 334
+Patron 326
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece seasto (2); 
@@ -8676,9 +8430,11 @@ owl:Class
   |rdfs:subClassOf
   |  |Anonimo
   |  |  |owl:allValuesFrom
+  |  |  |  |#Desconocido
   |  |  |owl:onProperty
+  |  |  |  |#Desconocido
 
-Patron 335
+Patron 327
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece seo (2); 
@@ -8700,7 +8456,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 336
+Patron 328
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece shw (3); 
@@ -8768,7 +8524,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 337
+Patron 329
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece shw (4); 
@@ -8872,7 +8628,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 338
+Patron 330
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece shw (4); 
@@ -8940,10 +8696,10 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 339
-Repeticiones 5
+Patron 331
+Repeticiones 8
 Ontologias distintas 1
-Ontologías en las que aparece shw (5); 
+Ontologías en las que aparece shw (8); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -8964,7 +8720,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:ComplexDerivedUnit, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
@@ -9008,7 +8764,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 340
+Patron 332
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece shw (7); 
@@ -9044,10 +8800,10 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 341
-Repeticiones 3
+Patron 333
+Repeticiones 4
 Ontologias distintas 1
-Ontologías en las que aparece shw (3); 
+Ontologías en las que aparece shw (4); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -9068,7 +8824,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:UnitOfMeasurement, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
@@ -9084,7 +8840,57 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 342
+Patron 334
+Repeticiones 2
+Ontologias distintas 1
+Ontologías en las que aparece shw (2); 
+owl:Class
+  |owl:equivalentClass
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |Anonimo
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdfs:Datatype
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onDatatype
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Datatype
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:withRestrictions
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |xsd:maxExclusive
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Literal
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+
+Patron 335
 Repeticiones 11
 Ontologias distintas 1
 Ontologías en las que aparece shw (11); 
@@ -9114,7 +8920,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 343
+Patron 336
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece shw (2); 
@@ -9154,7 +8960,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 344
+Patron 337
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece shw (3); 
@@ -9232,7 +9038,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:ComplexDerivedUnit, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
@@ -9258,7 +9064,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 345
+Patron 338
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece shw (4); 
@@ -9282,7 +9088,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:ComplexDerivedUnit, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
@@ -9362,75 +9168,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 346
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece shw (3); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |Anonimo
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |owl:intersectionOf
-  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:SimpleDerivedUnit, owl:NamedIndividual
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdfs:Datatype
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onDatatype
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Datatype
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:withRestrictions
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |xsd:minInclusive
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Literal
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdfs:Datatype
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onDatatype
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Datatype
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:withRestrictions
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Anonimo
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |xsd:maxExclusive
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |Literal
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-
-Patron 347
+Patron 339
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece shw (3); 
@@ -9498,10 +9236,10 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 348
-Repeticiones 5
+Patron 340
+Repeticiones 6
 Ontologias distintas 1
-Ontologías en las que aparece shw (5); 
+Ontologías en las que aparece shw (6); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -9522,7 +9260,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:ComplexDerivedUnit, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
@@ -9548,10 +9286,10 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 349
-Repeticiones 2
+Patron 341
+Repeticiones 3
 Ontologias distintas 1
-Ontologías en las que aparece shw (2); 
+Ontologías en las que aparece shw (3); 
 owl:Class
   |owl:equivalentClass
   |  |owl:Class
@@ -9572,7 +9310,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Restriction
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:hasValue
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |muo:UnitOfMeasurement, owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:onProperty
   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |#Desconocido
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
@@ -9616,7 +9354,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 350
+Patron 342
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece shw (2); 
@@ -9702,7 +9440,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 351
+Patron 343
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece shw (2); 
@@ -9734,7 +9472,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 352
+Patron 344
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece shw (2); 
@@ -9778,7 +9516,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 353
+Patron 345
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece shw (2); 
@@ -9906,7 +9644,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 354
+Patron 346
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece shw (2); 
@@ -9938,7 +9676,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 355
+Patron 347
 Repeticiones 157
 Ontologias distintas 1
 Ontologías en las que aparece sio (157); 
@@ -9952,21 +9690,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 356
-Repeticiones 9
-Ontologias distintas 1
-Ontologías en las que aparece sio (9); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |dc:identifier
-  |  |  |  |Literal
-  |  |  |owl:allValuesFrom
-  |  |  |  |owl:Class
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 357
+Patron 348
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece sio (5); 
@@ -9980,7 +9704,21 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty
 
-Patron 358
+Patron 349
+Repeticiones 9
+Ontologias distintas 1
+Ontologías en las que aparece sio (9); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |dc:identifier
+  |  |  |  |Literal
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Patron 350
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece sio (5); 
@@ -9994,7 +9732,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:IrreflexiveProperty, owl:ObjectProperty
 
-Patron 359
+Patron 351
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece sio (3); 
@@ -10008,7 +9746,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Datatype
 
-Patron 360
+Patron 352
 Repeticiones 9
 Ontologias distintas 1
 Ontologías en las que aparece sio (9); 
@@ -10044,7 +9782,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 361
+Patron 353
 Repeticiones 17
 Ontologias distintas 1
 Ontologías en las que aparece sio (17); 
@@ -10068,7 +9806,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 362
+Patron 354
 Repeticiones 21
 Ontologias distintas 1
 Ontologías en las que aparece sio (21); 
@@ -10082,7 +9820,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 363
+Patron 355
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10096,7 +9834,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |Literal
 
-Patron 364
+Patron 356
 Repeticiones 20
 Ontologias distintas 1
 Ontologías en las que aparece sio (20); 
@@ -10110,7 +9848,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 365
+Patron 357
 Repeticiones 21
 Ontologias distintas 1
 Ontologías en las que aparece sio (21); 
@@ -10124,7 +9862,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 366
+Patron 358
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10154,7 +9892,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 367
+Patron 359
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece sio (5); 
@@ -10184,7 +9922,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 368
+Patron 360
 Repeticiones 11
 Ontologias distintas 1
 Ontologías en las que aparece sio (11); 
@@ -10198,7 +9936,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 369
+Patron 361
 Repeticiones 5
 Ontologias distintas 1
 Ontologías en las que aparece sio (5); 
@@ -10212,7 +9950,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 370
+Patron 362
 Repeticiones 14
 Ontologias distintas 1
 Ontologías en las que aparece sio (14); 
@@ -10226,7 +9964,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 371
+Patron 363
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece sio (3); 
@@ -10262,7 +10000,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 372
+Patron 364
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece sio (3); 
@@ -10298,7 +10036,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 373
+Patron 365
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10312,7 +10050,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty, owl:FunctionalProperty
 
-Patron 374
+Patron 366
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10336,7 +10074,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 375
+Patron 367
 Repeticiones 15
 Ontologias distintas 1
 Ontologías en las que aparece sio (15); 
@@ -10352,7 +10090,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 376
+Patron 368
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece sio (7); 
@@ -10366,7 +10104,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 377
+Patron 369
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10396,7 +10134,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 378
+Patron 370
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece sio (4); 
@@ -10410,7 +10148,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 379
+Patron 371
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10440,7 +10178,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 380
+Patron 372
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10476,7 +10214,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 381
+Patron 373
 Repeticiones 16
 Ontologias distintas 1
 Ontologías en las que aparece sio (16); 
@@ -10492,7 +10230,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 382
+Patron 374
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10522,7 +10260,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 383
+Patron 375
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece sio (7); 
@@ -10558,7 +10296,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 384
+Patron 376
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece sio (4); 
@@ -10594,7 +10332,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 385
+Patron 377
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10630,7 +10368,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 386
+Patron 378
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece sio (3); 
@@ -10646,7 +10384,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 387
+Patron 379
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10704,7 +10442,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 388
+Patron 380
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece sio (4); 
@@ -10734,7 +10472,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 389
+Patron 381
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece sio (4); 
@@ -10770,7 +10508,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 390
+Patron 382
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10810,7 +10548,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 391
+Patron 383
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10846,7 +10584,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 392
+Patron 384
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sio (2); 
@@ -10864,31 +10602,7 @@ owl:Class
   |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
 
-Patron 393
-Repeticiones 19
-Ontologias distintas 1
-Ontologías en las que aparece spfood (19); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |owl:NamedIndividual, owl:Thing
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 394
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece spfood (2); 
-owl:Class
-  |owl:equivalentClass
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |owl:Class, owl:NamedIndividual
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 395
+Patron 385
 Repeticiones 66
 Ontologias distintas 3
 Ontologías en las que aparece ssn (22); ssno (22); w3c-ssn (22); 
@@ -10900,7 +10614,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 396
+Patron 386
 Repeticiones 3
 Ontologias distintas 3
 Ontologías en las que aparece ssn (1); ssno (1); w3c-ssn (1); 
@@ -10912,19 +10626,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:InverseFunctionalProperty, owl:ObjectProperty
 
-Patron 397
-Repeticiones 3
-Ontologias distintas 3
-Ontologías en las que aparece ssn (1); ssno (1); w3c-ssn (1); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:allValuesFrom
-  |  |  |  |owl:Class, rdfs:Class
-  |  |  |owl:onProperty
-  |  |  |  |owl:FunctionalProperty
-
-Patron 398
+Patron 387
 Repeticiones 3
 Ontologias distintas 3
 Ontologías en las que aparece ssn (1); ssno (1); w3c-ssn (1); 
@@ -10936,7 +10638,19 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty
 
-Patron 399
+Patron 388
+Repeticiones 3
+Ontologias distintas 3
+Ontologías en las que aparece ssn (1); ssno (1); w3c-ssn (1); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class, rdfs:Class
+  |  |  |owl:onProperty
+  |  |  |  |owl:FunctionalProperty
+
+Patron 389
 Repeticiones 9
 Ontologias distintas 3
 Ontologías en las que aparece ssn (3); ssno (3); w3c-ssn (3); 
@@ -10950,7 +10664,7 @@ owl:Class
   |  |  |  |  |owl:inverseOf
   |  |  |  |  |  |owl:ObjectProperty
 
-Patron 400
+Patron 390
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece sto (2); 
@@ -10962,34 +10676,22 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |#Desconocido
 
-Patron 401
-Repeticiones 6
+Patron 391
+Repeticiones 4
 Ontologias distintas 1
-Ontologías en las que aparece sto (6); 
+Ontologías en las que aparece sto (4); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:hasValue
-  |  |  |  |owl:NamedIndividual, sto:ArchitectureDescription, sto:StandardizationFramework
-  |  |  |owl:onProperty
-  |  |  |  |owl:ObjectProperty
-
-Patron 402
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece sto (3); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |owl:NamedIndividual, sto:StandardClassification, sto:Viewpoint
+  |  |  |  |owl:NamedIndividual
   |  |  |owl:onProperty
   |  |  |  |#Desconocido
 
-Patron 403
-Repeticiones 6
+Patron 392
+Repeticiones 8
 Ontologias distintas 3
-Ontologías en las que aparece tddfa (3); tddom (2); todo (1); 
+Ontologías en las que aparece tddfa (3); tddom (2); todo (3); 
 owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
@@ -10998,7 +10700,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 404
+Patron 393
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece tfo (2); 
@@ -11020,7 +10722,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |rdf:Property
 
-Patron 405
+Patron 394
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece tfo (3); 
@@ -11032,7 +10734,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |rdf:Property
 
-Patron 406
+Patron 395
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece time (2); 
@@ -11044,7 +10746,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 407
+Patron 396
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece time (2); 
@@ -11056,7 +10758,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 408
+Patron 397
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece tl (2); 
@@ -11068,7 +10770,7 @@ owl:Class
   |  |  |owl:someValuesFrom
   |  |  |  |owl:Class
 
-Patron 409
+Patron 398
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece tl (4); 
@@ -11090,7 +10792,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 410
+Patron 399
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece tl (2); 
@@ -11166,7 +10868,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 411
+Patron 400
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece tl (2); 
@@ -11188,31 +10890,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 412
-Repeticiones 3
-Ontologias distintas 1
-Ontologías en las que aparece todo (3); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |#Desconocido
-
-Patron 413
-Repeticiones 2
-Ontologias distintas 1
-Ontologías en las que aparece todo (2); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:onProperty
-  |  |  |  |owl:InverseFunctionalProperty, owl:ObjectProperty
-  |  |  |owl:someValuesFrom
-  |  |  |  |#Desconocido
-
-Patron 414
+Patron 401
 Repeticiones 10
 Ontologias distintas 1
 Ontologías en las que aparece usability (10); 
@@ -11236,7 +10914,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 415
+Patron 402
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece usability (2); 
@@ -11260,7 +10938,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 416
+Patron 403
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece usability (6); 
@@ -11284,7 +10962,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
-Patron 417
+Patron 404
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece usability (2); 
@@ -11308,7 +10986,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Literal
 
-Patron 418
+Patron 405
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece usability (4); 
@@ -11330,7 +11008,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 419
+Patron 406
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece usability (4); 
@@ -11354,19 +11032,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:DatatypeProperty
 
-Patron 420
-Repeticiones 13
-Ontologias distintas 1
-Ontologías en las que aparece vin (13); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |:WineFlavor, owl:Thing
-  |  |  |owl:onProperty
-  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-
-Patron 421
+Patron 407
 Repeticiones 14
 Ontologias distintas 1
 Ontologías en las que aparece vin (14); 
@@ -11378,19 +11044,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 422
-Repeticiones 19
-Ontologias distintas 1
-Ontologías en las que aparece vin (19); 
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Restriction
-  |  |  |owl:hasValue
-  |  |  |  |:WineColor, owl:Thing
-  |  |  |owl:onProperty
-  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
-
-Patron 423
+Patron 408
 Repeticiones 10
 Ontologias distintas 1
 Ontologías en las que aparece vin (10); 
@@ -11402,7 +11056,31 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 424
+Patron 409
+Repeticiones 13
+Ontologias distintas 1
+Ontologías en las que aparece vin (13); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:hasValue
+  |  |  |  |:WineFlavor, owl:Thing
+  |  |  |owl:onProperty
+  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
+
+Patron 410
+Repeticiones 19
+Ontologias distintas 1
+Ontologías en las que aparece vin (19); 
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:hasValue
+  |  |  |  |:WineColor, owl:Thing
+  |  |  |owl:onProperty
+  |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
+
+Patron 411
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece vin (4); 
@@ -11414,7 +11092,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 425
+Patron 412
 Repeticiones 8
 Ontologias distintas 1
 Ontologías en las que aparece vin (8); 
@@ -11436,7 +11114,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 426
+Patron 413
 Repeticiones 10
 Ontologias distintas 1
 Ontologías en las que aparece vin (10); 
@@ -11458,7 +11136,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 427
+Patron 414
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece vin (3); 
@@ -11480,7 +11158,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:FunctionalProperty, owl:ObjectProperty
 
-Patron 428
+Patron 415
 Repeticiones 3
 Ontologias distintas 1
 Ontologías en las que aparece vin (3); 
@@ -11492,7 +11170,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty, owl:TransitiveProperty
 
-Patron 429
+Patron 416
 Repeticiones 6
 Ontologias distintas 1
 Ontologías en las que aparece vin (6); 
@@ -11504,7 +11182,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 430
+Patron 417
 Repeticiones 2
 Ontologias distintas 1
 Ontologías en las que aparece vin (2); 
@@ -11526,7 +11204,7 @@ owl:Class
   |  |  |owl:onProperty
   |  |  |  |owl:ObjectProperty
 
-Patron 431
+Patron 418
 Repeticiones 4
 Ontologias distintas 1
 Ontologías en las que aparece vivo (4); 
@@ -11624,7 +11302,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:List
 
-Patron 432
+Patron 419
 Repeticiones 13
 Ontologias distintas 1
 Ontologías en las que aparece vivo (13); 
@@ -11650,7 +11328,7 @@ owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
 
-Patron 433
+Patron 420
 Repeticiones 7
 Ontologias distintas 1
 Ontologías en las que aparece vivo (7); 

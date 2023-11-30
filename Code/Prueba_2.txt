@@ -181,64 +181,64 @@ Fallo en la ontología seas-sys en el import file:///C:/Trabajo/Patrones/Code/rd
 Fallo en la ontología seas-sys en el import file:///pep/
 Fallo en la ontología seasb en el import file:///C:/Trabajo/Patrones/Code/rdf/ElectricPowerSystemOntology
 Fallo en la ontología seasbo en el import file:///C:/Trabajo/Patrones/Code/rdf/ZoneOntology
-Error en Anonimo2 en <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemAt>
-Error en Anonimo3 en <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
-Error en Anonimo4 en <file:///C:/Trabajo/Patrones/Code/rdf/connectionPointOf>
-Error en Anonimo6 en <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemThrough>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo1 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemAt>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo6 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo2 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemThrough>
+Error en la ontología seasbo en un triple cuyo sujeto es Anonimo7 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectionPointOf>
 Fallo en la ontología seasd en el import file:///C:/Trabajo/Patrones/Code/rdf/SystemOntology
 Fallo en la ontología seasd en el import file:///pep/
-Error en Anonimo13 en <file:///C:/Trabajo/Patrones/Code/rdf/Property>
-Error en Anonimo15 en <file:///pep/madeBy>
-Error en Anonimo25 en <file:///pep/usedProcedure>
-Error en Anonimo30 en <file:///pep/usedProcedure>
-Error en Anonimo5 en <file:///pep/implements>
-Error en Anonimo36 en <file:///pep/implements>
-Error en Anonimo1 en <file:///pep/madeBy>
-Error en Anonimo24 en <file:///pep/usedProcedure>
-Error en Anonimo35 en <file:///C:/Trabajo/Patrones/Code/rdf/Property>
-Error en Anonimo21 en <file:///pep/usedProcedure>
-Error en Anonimo8 en <file:///pep/implements>
-Error en Anonimo29 en <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo18 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo32 y objeto es <file:///pep/madeBy>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo42 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Property>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo44 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo5 y objeto es <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo29 y objeto es <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Property>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo6 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo7 y objeto es <file:///pep/madeBy>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo2 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo40 y objeto es <file:///pep/implements>
+Error en la ontología seasd en un triple cuyo sujeto es Anonimo3 y objeto es <file:///pep/implements>
 Fallo en la ontología seasfo en el import file:///pep/pep-1.0
-Error en Anonimo13 en <file:///pep/madeBy>
-Error en Anonimo6 en <file:///pep/usedProcedure>
-Error en Anonimo7 en <file:///C:/Trabajo/Patrones/Code/rdf/Property>
-Error en Anonimo11 en <file:///pep/usedProcedure>
-Error en Anonimo5 en <file:///pep/implements>
-Error en Anonimo20 en <file:///pep/implements>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo20 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Property>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo7 y objeto es <file:///pep/madeBy>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo6 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo8 y objeto es <file:///pep/implements>
+Error en la ontología seasfo en un triple cuyo sujeto es Anonimo13 y objeto es <file:///pep/implements>
 Fallo en la ontología seast en el import file:///C:/Trabajo/Patrones/Code/rdf/EvaluationOntology
-Error en Anonimo5 en <file:///C:/Trabajo/Patrones/Code/rdf/hasTemporalContext>
-Error en Anonimo4 en <file:///C:/Trabajo/Patrones/Code/rdf/hasTemporalContext>
+Error en la ontología seast en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/hasTemporalContext>
+Error en la ontología seast en un triple cuyo sujeto es Anonimo3 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/hasTemporalContext>
 Fallo en la ontología seasto en el import file:///C:/Trabajo/Patrones/Code/rdf/PlayerOntology
 Fallo en la ontología seasto en el import file:///pep/
 Fallo en la ontología seasto en el import file:///C:/Trabajo/Patrones/Code/rdf/ElectricPowerSystemOntology
 Fallo en la ontología seasto en el import file:///C:/Trabajo/Patrones/Code/rdf/OfferingOntology
-Error en Anonimo11 en <file:///pep/usedProcedure>
-Error en Anonimo9 en <file:///pep/madeBy>
-Error en Anonimo9 en <file:///C:/Trabajo/Patrones/Code/rdf/TransmissionSystemOperator>
-Error en Anonimo5 en <file:///pep/usedProcedure>
-Error en Anonimo15 en <file:///pep/madeBy>
-Error en Anonimo15 en <file:///C:/Trabajo/Patrones/Code/rdf/Player>
-Error en Anonimo7 en <file:///pep/usedProcedure>
-Error en Anonimo13 en <file:///pep/usedProcedure>
-Error en Anonimo2 en <file:///C:/Trabajo/Patrones/Code/rdf/price>
-Error en Anonimo2 en <file:///C:/Trabajo/Patrones/Code/rdf/PriceProperty>
-Error en Anonimo6 en <file:///C:/Trabajo/Patrones/Code/rdf/isPropertyOf>
-Error en Anonimo6 en <file:///C:/Trabajo/Patrones/Code/rdf/ConnectionPoint>
-Error en Anonimo20 en <file:///C:/Trabajo/Patrones/Code/rdf/ElectricityTrader>
-Error en Anonimo20 en <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
-Error en Anonimo4 en <file:///C:/Trabajo/Patrones/Code/rdf/Player>
-Error en Anonimo14 en <file:///C:/Trabajo/Patrones/Code/rdf/ElectricityTrader>
-Error en Anonimo14 en <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
-Error en Anonimo22 en <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemAt>
-Error en Anonimo12 en <file:///pep/usedProcedure>
-Error en Anonimo18 en <file:///pep/madeBy>
-Error en Anonimo18 en <file:///C:/Trabajo/Patrones/Code/rdf/TransmissionSystemOperator>
-Error en Anonimo10 en <file:///pep/usedProcedure>
-Error en Anonimo19 en <file:///pep/usedProcedure>
-Error en Anonimo21 en <file:///pep/usedProcedure>
-Error en Anonimo3 en <file:///pep/usedProcedure>
-Error en Anonimo16 en <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo16 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo4 y objeto es <file:///pep/madeBy>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo4 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/TransmissionSystemOperator>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo3 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo1 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo15 y objeto es <file:///pep/madeBy>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo15 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Player>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo2 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo10 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/price>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo10 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/PriceProperty>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo20 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/isPropertyOf>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo20 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/ConnectionPoint>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo14 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/ElectricityTrader>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo14 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo5 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/Player>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo21 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystemAt>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo9 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/ElectricityTrader>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo9 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/connectsSystem>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo12 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo6 y objeto es <file:///pep/madeBy>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo6 y objeto es <file:///C:/Trabajo/Patrones/Code/rdf/TransmissionSystemOperator>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo17 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo13 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo19 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo8 y objeto es <file:///pep/usedProcedure>
+Error en la ontología seasto en un triple cuyo sujeto es Anonimo18 y objeto es <file:///pep/usedProcedure>
 Fallo en la ontología semiotics en el import http://www.ontologydesignpatterns.org/cp/owl/situation.owl
 Fallo en la ontología seo en el import http://www.essepuntato.it/2012/04/tvc
 Fallo en la ontología seo en el import https://w3id.org/scholarlydata/ontology/conference-ontology.owl

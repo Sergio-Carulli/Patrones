@@ -228,9 +228,15 @@ def escribir_tipo(o, text):
         # Adquirir tipos para ese elemento
         types = sujetos[o]["rdf:type"]
 
-        # Ordenar alfabeticamente los tipos
-        types.sort()
-        resultad.write(f'{text}{", ".join(types)}\n')
+    
+        # Es un individuo?
+        if 'owl:NamedIndividual' in types:
+            resultad.write(f'{text}owl:NamedIndividual\n')
+        
+        else:
+            # Ordenar alfabeticamente los tipos
+            types.sort()
+            resultad.write(f'{text}{", ".join(types)}\n')
 
     else:
 
@@ -251,9 +257,15 @@ def escribir_tipo(o, text):
             types = term_reuse(o)
 
             if types:
-                # Ordenar alfabeticamente los tipos
-                types.sort()
-                resultad.write(f'{text}{", ".join(types)}\n')
+
+                # Es un individuo?
+                if 'owl:NamedIndividual' in types:
+                    resultad.write(f'{text}owl:NamedIndividual\n')
+                
+                else:
+                    # Ordenar alfabeticamente los tipos
+                    types.sort()
+                    resultad.write(f'{text}{", ".join(types)}\n')
             
             else:
                 resultad.write(f'{text}#Desconocido\n')
@@ -263,11 +275,11 @@ def term_reuse(term):
     types = []
     term_uri = term
 
-    # El termino esta definido como "prefijo:sufijo"
-    if ':' in term and not 'http' in term:
+    # El termino esta definido como "prefijo:sufijo"?
+    if term_uri[0] != '<' and term_uri[-1] != '>':
         # Obtener el prefijo
         prefix, suffix = term.split(':', 1)
-        # Sabemos que ese prefijo ha sido defenido en la ontología (sino rdflib no lo dividiría en 
+        # Sabemos que ese prefijo ha sido definido en la ontología (sino rdflib no lo dividiría en 
         # "prefijo:sufijo"). Por ello, obtenemos el namespace.
         ns = namespaces[prefix]
         term_uri = f'{ns}{suffix}'
@@ -280,6 +292,27 @@ def term_reuse(term):
                 
         except:
             prueba.write(f'Fallo en la ontología {ont_prefix} en el soft reuse de un termino de {ns}\n')
+    
+    else:
+        # El termino es una URI completa (no se ha definido un prefijo en la ontologia).
+        # En este caso tenemos que obtener lo que seria el prefijo para cargar la ontología a la que hace referencia.
+        try:
+            
+            # En rdflib si no se ha definido un namespace para dicha URI, la URI esta entre '<' y '>'
+            term_uri = term_uri[1:-1]
+
+            ns = obtener_prefijo(term_uri)
+            
+            try:
+                if ns not in ont_import:
+                    ont_import [ns] = 0
+                    aux_g.parse(ns)
+                    
+            except:
+                prueba.write(f'Fallo en la ontología {ont_prefix} en el soft reuse de un termino de {ns}\n')
+
+        except:
+            prueba.write(f'Fallo en la ontología {ont_prefix} al leer el prefijo del termino {term_uri}\n')
 
     uri_ref = URIRef(term_uri)
 
@@ -287,6 +320,22 @@ def term_reuse(term):
         types.append(o2.n3(aux_g.namespace_manager))
 
     return types
+
+# Funcion para obtener el prefijo de una URI. 
+# Recorremos la URI en sentido inverso hasta encontrar un '#' o un '/'.
+def obtener_prefijo(term_uri):
+    prefix = ''
+    last_hash_or_slash = False
+    for i in reversed(term_uri):
+
+        if i == '/' or i == '#':
+            last_hash_or_slash = True
+
+        if last_hash_or_slash:
+            prefix = i + prefix
+
+    return prefix
+
 
 # Crear un nuevo fichero en los que escribir los resultados de ejecutar este programa
 result = open("Result.csv", 'w', encoding='utf-8')
@@ -430,7 +479,6 @@ for ont_prefix in vocabularios:
 
     except:
         prueba.write(f'Ha ocurrido un error inesperado en {ont_prefix}\n')  
-        print(f'Ha ocurrido un error inesperado en {ont_prefix}\n')
 
 
 resultados.close()
