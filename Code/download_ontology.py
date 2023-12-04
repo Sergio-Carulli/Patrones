@@ -30,7 +30,7 @@ def load_otologies_dictionary(csv_path, error_log):
         except:
             error_log.write(f'Error reading the line {line} of the csv. The line must has the following format: prefix;URI\n')
 
-    # Close the csv file.
+    # Close the csv file
     ontology_csv.close()
 
 # Function to download the ontologies into the "ontology_path" directory.

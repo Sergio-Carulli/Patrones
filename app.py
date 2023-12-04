@@ -3,11 +3,12 @@ import sys
 import os.path
 from Code.download_ontology import download_ontologies
 from Code.create_structure import create_structure
+from Code.identify_patterns import identify_patterns
 
 def main(csv_path, ontology_path, app_directory):
     # Create a new file in which to write the logs 
     error_log = open("error_log.txt" , "w", encoding='utf-8')
-    # Empty the file (in case the program has been run before).
+    # Empty the file (in case the program has been run before)
     error_log.truncate()
     # Get the path to the application directory
     app_directory = os.path.dirname(app_directory)
@@ -15,7 +16,9 @@ def main(csv_path, ontology_path, app_directory):
     # Is there an error in the csv file?
     if(check_csv_error(csv_path, error_log) and check_ontology_error(ontology_path, error_log)):
         #download_ontologies(csv_path, ontology_path, error_log)
-        create_structure(ontology_path, app_directory, error_log)
+        create_structure(ontology_path, error_log)
+        identify_patterns('Structure_term_type.txt', 'Patterns_type')
+        identify_patterns('Structure_term_name.txt', 'Patterns_name')
 
     error_log.close()
 
