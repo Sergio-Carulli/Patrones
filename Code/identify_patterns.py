@@ -27,7 +27,7 @@ def load_structures(input_path):
     # Open the file with the detected structures
     structure = open(input_path , "r", encoding='utf-8')
     # Skip the first line (it is a white line)
-    line = structure.readline()
+    structure.readline()
     # Read the second line (already contains data)
     line = structure.readline()
 

@@ -1,2 +1,0 @@
-Fallo en la ontología a-loc en el import https://w3id.org/arco/ontology/core/1.2
-Ha ocurrido un error inesperado en a-loc
