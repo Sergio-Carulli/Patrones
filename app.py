@@ -6,6 +6,8 @@ from Code.create_structure import create_structure
 from Code.identify_patterns import identify_patterns
 from Code.infer_types import infer_types
 
+import time
+
 def main(ontology_path, csv_path, patterns_type, app_directory):
     # Create a new file in which to write the logs 
     error_log = open("error_log.txt" , "w", encoding='utf-8')
@@ -31,7 +33,7 @@ def main(ontology_path, csv_path, patterns_type, app_directory):
     create_structure(ontology_path, error_log)
     infer_types()
 
-    # Has the user specified that the patterns are going to be created from the type of the terms?
+    """# Has the user specified that the patterns are going to be created from the type of the terms?
     if patterns_type == 'type':
         identify_patterns('Structure_term_type.txt', 'Patterns_type')
     
@@ -41,7 +43,7 @@ def main(ontology_path, csv_path, patterns_type, app_directory):
     
     else:
         identify_patterns('Structure_term_type.txt', 'Patterns_type')
-        identify_patterns('Structure_term_name.txt', 'Patterns_name')
+        identify_patterns('Structure_term_name.txt', 'Patterns_name')"""
 
     error_log.close()
 

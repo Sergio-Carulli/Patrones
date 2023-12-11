@@ -45,33 +45,110 @@ def infer_types():
 def infer_structure_type():
     structure_len = len(structure)
     i = 0
+
     # Iterate the array (which contains the structure)
     while i < structure_len:
-        print(f'{i}\n')
         line = structure[i]
-        print(line)
         deep = count_vertical_bar(line)
 
         if 'owl:Restriction' in line:
             i = restriction(i + 1, structure_len, deep)
         
+        elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
+            i = intersection_union(i + 1, structure_len, deep)
+        
+        elif 'owl:complementOf' in line:
+            i += 1
+            complement(i)
+        
+        elif 'owl:oneOf' in line:
+            i = one_of(i + 1, structure_len, deep)
+
         else:
             i += 1
 
+def intersection_union(i, structure_len, res_deep):
+
+    while i < structure_len:
+        line = structure[i]
+        deep = count_vertical_bar(line)
+
+        if deep <= res_deep:
+            # We are out the intersection/union of class descriptions
+            return i
+        
+        elif 'rdf:first' in line:
+            i += 1
+            structure[i] = structure[i].replace('#Unknown', 'owl:Class')
+
+        else:
+
+            if 'owl:Restriction' in line:
+                i = restriction(i + 1, structure_len, deep)
+            
+            elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
+                i = intersection_union(i + 1, structure_len, deep)
+            
+            elif 'owl:complementOf' in line:
+                i += 1
+                complement(i)
+
+            elif 'owl:oneOf' in line:
+                i = one_of(i + 1, structure_len, deep)
+            
+            else:
+                i += 1
+    
+    return i
+
+def one_of(i, structure_len, res_deep):
+
+    while i < structure_len:
+        line = structure[i]
+        deep = count_vertical_bar(line)
+
+        if deep <= res_deep:
+            # We are out the enumeration of classes
+            return i
+        
+        elif 'rdf:first' in line:
+            i += 1
+            structure[i] = structure[i].replace('#Unknown', 'owl:Class')
+
+        else:
+
+            if 'owl:Restriction' in line:
+                i = restriction(i + 1, structure_len, deep)
+            
+            elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
+                i = intersection_union(i + 1, structure_len, deep)
+            
+            elif 'owl:complementOf' in line:
+                i += 1
+                complement(i)
+
+            elif 'owl:oneOf' in line:
+                i = one_of(i + 1, structure_len, deep)
+            
+            else:
+                i += 1
+    
+    return i
+
+def complement(i):
+    structure[i] = structure[i].replace('#Unknown', 'owl:Class')
+
 def restriction(i, structure_len, res_deep):
-    print('Ha entrado harry\n')
     property = ''
     p_position = 0
     target = ''
     t_position = 0
 
     while i < structure_len:
-        #print(f'{i}\n')
         line = structure[i]
         deep = count_vertical_bar(line)
 
         if deep <= res_deep:
-            print('salir\n')
             change_restriction_type(property, p_position, target, t_position)
             return i
 
@@ -84,14 +161,26 @@ def restriction(i, structure_len, res_deep):
                 # (owl:ObjectProperty, owl:DatatypeProperty or #Unknown)
                 property = structure[i + 1]
                 p_position = i + 1
-                i += 2
+                i += 1
             
-            elif 'owl:someValuesFrom' in line or 'owl:allValuesFrom' in line:
+            elif 'owl:someValuesFrom' in line or 'owl:allValuesFrom' in line or 'owl:onClass' in line or 'owl:onDataRange' in line:
                 # We know that in the next line the type of the target is defined
                 # (owl:Class, rdfs:Class, datatype or #Unknown)
                 target = structure[i + 1]
                 t_position = i + 1
-                i += 2
+                i += 1
+            
+            elif 'owl:hasValue' in line:
+                # We know that in the next line the type of the target is defined
+                # (owl:Class, rdfs:Class, datatype or #Unknown)
+                target = structure[i + 1]
+
+                if 'Datatype' not in target and 'Literal' not in target and 'owl:Class' not in target and 'rdfs:Class' not in target:
+                    structure[i + 1] = f'{"  |" * (deep + 1)}owl:Class\n'
+                    target = 'owl:Class'
+
+                t_position = i + 1
+                i += 1
             
             else:
                 i += 1
@@ -101,6 +190,16 @@ def restriction(i, structure_len, res_deep):
             if 'owl:Restriction' in line:
                 i = restriction(i + 1, structure_len, deep)
             
+            elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
+                i = intersection_union(i + 1, structure_len, deep)
+            
+            elif 'owl:complementOf' in line:
+                i += 1
+                complement(i)
+            
+            elif 'owl:oneOf' in line:
+                i = one_of(i + 1, structure_len, deep)
+            
             else:
                 i += 1
 
@@ -108,29 +207,21 @@ def restriction(i, structure_len, res_deep):
     return i
 
 def change_restriction_type(property, p_position, target, t_position):
-    print('Ha entrado saul\n')
-    print(property)
-    print()
-    print(target)
-    print()
+
     if '#Unknown' in property:
 
-        if 'owl:Class' in target or 'rdfs:Class' in target:
-            print('Entro1\n')
+        if 'owl:Class' in target or 'rdfs:Class' in target or 'owl:Restriction' in target:
             structure[p_position] = structure[p_position].replace('#Unknown', 'owl:ObjectProperty')
         
-        elif 'Datatype' in target:
-            print('Entro2\n')
+        elif 'Datatype' in target or 'Literal' in target:
             structure[p_position] = structure[p_position].replace('#Unknown', 'owl:DatatypeProperty')
         
     elif '#Unknown' in target:
 
         if 'owl:ObjectProperty' in property:
-            print('Entro3\n')
             structure[t_position] = structure[t_position].replace('#Unknown', 'owl:Class')
         
         elif 'owl:DatatypeProperty' in property:
-            print('Entro4\n')
             structure[t_position] = structure[t_position].replace('#Unknown', 'Datatype')
 
 # Function to count the number of times '|' appears in a line.

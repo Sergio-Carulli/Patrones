@@ -79,12 +79,12 @@ def create_structure(ontology_path, error_log):
         ont_path = os.path.join(ontology_path, ont_name)
         # Write the global variable
         ont_prefix = ont_name
+        # Optional print to see from the terminal what is happening
+        print(f'Loading ontology {ont_name}')
 
         # Is there not an error in the ontology file?
         if ontology_path_error(ont_path, error_log):
-            # Optional print to see from the terminal what is happening
-            print(f'Loading ontology {ont_name}')
-
+            
             try:
                 # Emptying dictionaries
                 subjects = {}
@@ -194,6 +194,8 @@ def create_structure(ontology_path, error_log):
             except:
                 error_log.write(f'An unexpected error occurs parsing {ont_name}\n')
     
+    structure_type.write('\n')
+    structure_name.write('\n')
     # Close files
     structure_csv.close()
     structure_type.close()
@@ -355,16 +357,6 @@ def get_prefix(term_uri):
             last_hash_or_slash = i
             break
 
-
-    """# Iterate the URI in reverse way
-    for i in reversed(term_uri):
-
-        if i == '/' or i == '#':
-            last_hash_or_slash = True
-
-        if last_hash_or_slash:
-            prefix = i + prefix"""
-
     return term_uri[0:last_hash_or_slash]
 
 # Function to store the namespaces, which are definined in an ontology, in a dictionary
@@ -385,6 +377,8 @@ def tag(term_type, term_name, error_log):
 
     # Is the term an anonymous class?
     if "BNode" in term_type:
+
+        #print(term_type)
 
         # Has been this anonymous class been visited before?
         if term_name not in anonymous:
@@ -421,9 +415,14 @@ def parse_ontology(ont_path, error_log):
         # Parsing the ontology into a graph
         g = Graph()
         g.parse(ont_path)
+
+        import pprint
+        for stm in g:
+            pprint.pprint(stm)
     
     except:
         error_log.write(f'Error parsing the ontology: {ont_path}\n')
+        print(f'Error parsing the ontology: {ont_path}')
         return
 
     # Load ontology namespaces
