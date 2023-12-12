@@ -110,7 +110,7 @@ def create_structure(ontology_path, error_log):
                         for o in sorted(subjects[s]["rdfs:subClassOf"]):
 
                             # Does the "object" represents an anonymous class?
-                            if o in subjects and "Anonymous" in o:
+                            if o in subjects and "Blank node" in o:
                                 # New structure found
                                 structure_id += 1
 
@@ -152,7 +152,7 @@ def create_structure(ontology_path, error_log):
                         for o in sorted(subjects[s]["owl:equivalentClass"]):
 
                             # El objeto representa una clase anonima?
-                            if o in subjects and "Anonymous" in o:
+                            if o in subjects and "Blank node" in o:
                                 # New structure found
                                 structure_id += 1
 
@@ -230,7 +230,7 @@ def iterate_structure(term, text, error_log, already_visited):
                         error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
 
                     # Is the object of the triple an anonymous class?
-                    if o in subjects and o != term and "Anonymous" in o:
+                    if o in subjects and o != term and "Blank node" in o:
                         iterate_structure(o, f'{text}  |  |', error_log, already_visited)
 
 # Function to write the type of a term
@@ -248,12 +248,12 @@ def write_type(o, text, error_log):
         #   - a reused term
 
         # Is it an anonymous class?
-        if "Anonymous" in o: 
-            structure_type.write(f'{text}owl:Class\n')
+        if "Blank node" in o: 
+            structure_type.write(f'{text}Blank node\n')
         
-        # Is it a literal?
-        elif "Literal" in o:
-            structure_type.write(f'{text}Literal\n')
+        # Is it a Data value?
+        elif "Data value" in o:
+            structure_type.write(f'{text}Data value\n')
 
         # Is it a datatype?
         elif 'xsd' in o:
@@ -378,12 +378,10 @@ def tag(term_type, term_name, error_log):
     # Is the term an anonymous class?
     if "BNode" in term_type:
 
-        #print(term_type)
-
         # Has been this anonymous class been visited before?
         if term_name not in anonymous:
             # Create an unique identifier for that anonymous classS
-            tag = f'Anonymous{anonimizador}'
+            tag = f'Blank node{anonimizador}'
             # Store the unique identifier of that anonymous class
             anonymous[term_name] = tag
             anonimizador += 1
@@ -398,7 +396,7 @@ def tag(term_type, term_name, error_log):
 
     # Is the term a data value?
     elif "Literal" in term_type:
-        tag = f"Literal [{term_name}]"
+        tag = f"Data value [{term_name}]"
 
     # Was it possible to identify what the term represent?
     if tag == "":
@@ -416,9 +414,9 @@ def parse_ontology(ont_path, error_log):
         g = Graph()
         g.parse(ont_path)
 
-        import pprint
+        """import pprint
         for stm in g:
-            pprint.pprint(stm)
+            pprint.pprint(stm)"""
     
     except:
         error_log.write(f'Error parsing the ontology: {ont_path}\n')

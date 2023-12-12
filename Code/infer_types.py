@@ -175,7 +175,7 @@ def restriction(i, structure_len, res_deep):
                 # (owl:Class, rdfs:Class, datatype or #Unknown)
                 target = structure[i + 1]
 
-                if 'Datatype' not in target and 'Literal' not in target and 'owl:Class' not in target and 'rdfs:Class' not in target:
+                if 'Datatype' not in target and 'Data value' not in target and 'owl:Class' not in target and 'rdfs:Class' not in target:
                     structure[i + 1] = f'{"  |" * (deep + 1)}owl:Class\n'
                     target = 'owl:Class'
 
@@ -213,7 +213,7 @@ def change_restriction_type(property, p_position, target, t_position):
         if 'owl:Class' in target or 'rdfs:Class' in target or 'owl:Restriction' in target:
             structure[p_position] = structure[p_position].replace('#Unknown', 'owl:ObjectProperty')
         
-        elif 'Datatype' in target or 'Literal' in target:
+        elif 'Datatype' in target or 'Data value' in target:
             structure[p_position] = structure[p_position].replace('#Unknown', 'owl:DatatypeProperty')
         
     elif '#Unknown' in target:
