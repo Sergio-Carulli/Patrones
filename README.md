@@ -1,9 +1,24 @@
-# TFG_Patrones_Ontologias
+# Detecting ontologies design patterns
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+Ontologies are formal knowledge models that describe concepts and relationships and enable data integration, information search, and reasoning. Ontology Design Patterns (ODPs) are reusable solutions intended to simplify ontology development and support the use of semantic technologies by ontology engineers. This work focuses on detecting design patterns in a set of ontologies of the user's choice.
 
-El diseño y desarrollo de ontologías es un proceso complejo incluso para los ingenieros de ontologías, plagado de inconvenientes y dificultades. La problemática asociada a este proceso es inevitable pero también es atenuable, con el fin de mitigar estas dificultades se recomienda la reutilización de ontologías ya definidas, pero no siempre es posible y aun siendo posible tampoco es trivial. 
+## Description of the tool
 
-Los patrones de diseño en ontologías pretenden servir de guía para reducir las dificultades y ayudar a crear ontologías de forma más sencilla y libres de errores. Este trabajo se centra en encontrar patrones de diseño en lenguajes ontologías incluidos en Linked Open Vocabularies, creando de esos patrones una representación formal que permita utilizar y reutilizar los patrones detectados, ayudando a la creación y consulta de los contenidos modelizados.
+1. The user can fill in a csv file with the name and URI of the published ontologies from which the design patterns will be detected. The tool will download these ontologies and store them locally, giving the file the name of the ontology indicated in the csv. This step is optional and can be omitted if the user already has the desired ontologies stored locally.
+2. The content of each ontology is extracted by filtering out those terms that are the subject of a triple whose predicate is either "owl:equivalentClass" or "rdfs:subClassOf" and its object is a blank node. These structures are represented as trees in order to emphasize the different components of the blank nodes. The tool will generate two files:
+  * A 
+3. 
 
-Para cumplir ese objetivo se muestran las herramientas automatizadas desarrolladas que permitan extraer el contenido de los lenguajes de ontología, se registra dicha información en un formato libre y se procesa mostrando los resultados obtenidos en gráficas que se utilizan para detectar posibles patrones en las extracciones realizadas.
+## How to execute the tool
+
+The tool can be executed via the command line as follows:
+
+```bash
+app.py [-h] [-ontology ONTOLOGY_PATH] [-csv CSV_PATH] [-patterns {type,name,both}]
+```
+
+where:
+
+* ONTOLOGY_PATH is the path to a folder where the ontologies are going to be downloaded. The patterns are going to be identified using the ontologies stored in this folder
+* CSV_PATH is the path to the csv file indicating what ontologies are going to be downloaded.
+* PATTERNS is a flag to indicate if the patterns are going to be created from the type of the terms or from the name of the terms or from both
