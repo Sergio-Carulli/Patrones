@@ -1,2 +1,2 @@
-requests
-rdflib
+requests==2.31.0
+rdflib==7.0.0
