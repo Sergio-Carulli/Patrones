@@ -2,6 +2,51 @@ import os.path
 from rdflib import Graph, URIRef
 from rdflib.namespace import RDF
 
+# Dictionary with the predefined datatypes
+predefined_datatypes = {
+    'owl:rational':'',
+    'http://www.w3.org/2002/07/owl#rational':'',
+    'owl:real':'',
+    'http://www.w3.org/2002/07/owl#real':'',
+    'rdf:langString':'',
+    'http://www.w3.org/1999/02/22-rdf-syntax-ns#langString':'',
+    'rdf:PlainLiteral':'',
+    'http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral':'',
+    'rdf:XMLLiteral':'',
+    'http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral':'',
+    'rdfs:Literal':'',
+    'http://www.w3.org/2000/01/rdf-schema#Literal':'',
+    'xsd:anyURI':'',
+    'xsd:base64Binary':'',
+    'xsd:boolean':'',
+    'xsd:byte':'',
+    'xsd:dateTime':'',
+    'xsd:dateTimeStamp':'',
+    'xsd:decimal':'',
+    'xsd:double':'',
+    'xsd:float':'',
+    'xsd:hexBinary':'',
+    'xsd:int':'',
+    'xsd:integer':'',
+    'xsd:language':'',
+    'xsd:long':'',
+    'xsd:Name':'',
+    'xsd:NCName':'',
+    'xsd:negativeInteger':'',
+    'xsd:NMTOKEN':'',
+    'xsd:nonNegativeInteger':'',
+    'xsd:nonPositiveInteger':'',
+    'xsd:normalizedString':'',
+    'xsd:positiveInteger':'',
+    'xsd:short':'',
+    'xsd:string':'',
+    'xsd:token':'',
+    'xsd:unsignedByte':'',
+    'xsd:unsignedInt':'',
+    'xsd:unsignedLong':'',
+    'xsd:unsignedShort':''
+    }
+
 # Dictionary to store the ontology triples whose:
 #   - key: subject of a triple
 #   - value: dictionary to store the "predicate" and "object" of triples with the same "subject" whose:
@@ -120,7 +165,7 @@ def create_structure(ontology_path, error_log):
                                 structure_name.write(f'Structure: {ont_name}-{structure_id}\n')
                                 structure_name.write(f'{s}\n')
                                 structure_name.write("  |rdfs:subClassOf\n")
-                                structure_name.write(f'  |  |{o}\n')
+                                structure_name.write(f'  |  |Blank node\n')
 
                                 # Write the structure (writing the type of the terms)
                                 structure_type.write("\n")
@@ -162,7 +207,7 @@ def create_structure(ontology_path, error_log):
                                 structure_name.write(f'Structure: {ont_prefix}-{structure_id}\n')
                                 structure_name.write(f'{s}\n')
                                 structure_name.write("  |owl:equivalentClass\n")
-                                structure_name.write(f'  |  |{o}\n')
+                                structure_name.write(f'  |  |Blank node\n')
 
                                 # Write the structure (writing the type of the terms)
                                 structure_type.write("\n")
@@ -213,25 +258,32 @@ def iterate_structure(term, text, error_log, already_visited):
         for p in sorted(subjects[term].keys()):
 
             # Skip "rdf:type" predicates
-            if p!="rdf:type":
+            if p!="rdf:type" and (p.startswith("rdf:") or p.startswith("rdfs:") or p.startswith("owl:")):
                  
                 # Iterate in alphabetical order the "objects" for that "subject" and "predicate"
                 for o in sorted(subjects[term][p]):
                     # Write the URI of the "predicate" and the "object"
                     structure_name.write(f'{text}  |{p}\n')
-                    structure_name.write(f'{text}  |  |{o}\n')
+                    structure_type.write(f'{text}  |{p}\n')
 
-                    # Write the type of the "predicate" and the "object"
-                    try:
-                        structure_type.write(text+"  |"+p+"\n")
-                        write_type(o, f'{text}  |  |', error_log)
+                    if p != 'owl:oneOf':
+
+                        if "Blank node" in o:
+                            structure_name.write(f'{text}  |  |Blank node\n')
                         
-                    except:
-                        error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
+                        else:
+                            structure_name.write(f'{text}  |  |{o}\n')
 
-                    # Is the object of the triple an anonymous class?
-                    if o in subjects and o != term and "Blank node" in o:
-                        iterate_structure(o, f'{text}  |  |', error_log, already_visited)
+                        # Write the type of the "predicate" and the "object"
+                        try:
+                            write_type(o, f'{text}  |  |', error_log)
+                            
+                        except:
+                            error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
+
+                        # Is the object of the triple an anonymous class?
+                        if o in subjects and o != term and "Blank node" in o:
+                            iterate_structure(o, f'{text}  |  |', error_log, already_visited)
 
 # Function to write the type of a term
 def write_type(o, text, error_log):
@@ -256,8 +308,8 @@ def write_type(o, text, error_log):
             structure_type.write(f'{text}Data value\n')
 
         # Is it a datatype?
-        elif 'xsd' in o:
-            structure_type.write(f'{text}Datatype\n')
+        elif o in predefined_datatypes:
+            structure_type.write(f'{text}rdfs:Datatype\n')
 
         # Is it a class?
         elif 'owl:Thing' == o:

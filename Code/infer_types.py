@@ -195,7 +195,7 @@ def complement(i):
 # Function to infer the #Unknown types inside a restriction.
 # In the restrictions there are two key elements:
 #   - One refers to a property.
-#   -The other refers to the target of the restriction.
+#   - The other refers to the target of the restriction.
 # If one of the type of the key elements is not #Unknown, the other type can be infer.
 def restriction(i, structure_len, res_deep):
     # Variable to store the type of a property involved in a resctriction

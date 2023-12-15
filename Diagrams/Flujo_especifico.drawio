@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-14T11:18:47.936Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="4szsgph8rp5jiifWtm0X" version="22.1.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-14T15:00:00.673Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="eeyvHfw_HHvtvuFajmjU" version="22.1.8" type="device">
   <diagram name="Página-1" id="mPE1J9Nlh4gU2GfA061W">
-    <mxGraphModel dx="2193" dy="745" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1510" dy="372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -550,7 +550,7 @@
         <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-208" value="Infer complement type" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="1340" y="1418.33" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-221" value="Read line" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-221" value="Infer&lt;br&gt;union&lt;br&gt;type" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="1340" y="1600.02" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-241" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ZGgF5hQ5RpT2w8QsAeHO-146" target="ZGgF5hQ5RpT2w8QsAeHO-183" edge="1">
@@ -595,7 +595,7 @@
         <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-249" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-180;" parent="1" vertex="1">
           <mxGeometry x="1540" y="1036.6799999999998" width="20" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-250" value="In the restrictions there are two key elements:&lt;br&gt;&lt;ul&gt;&lt;li&gt;One refers to a property.&lt;/li&gt;&lt;li&gt;The other refers to the target of the restriction.&lt;/li&gt;&lt;/ul&gt;If one of the type of the key elements is not #Unknown, the other type can be infer." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-250" value="In the restrictions there are two key elements:&lt;br&gt;&lt;ul&gt;&lt;li&gt;One refers to a property.&lt;/li&gt;&lt;li&gt;The other refers to the type of the restriction.&lt;/li&gt;&lt;/ul&gt;If one of the type of the key elements is not #Unknown, the other type can be infer." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1560" y="1036.6799999999998" width="540" height="120" as="geometry" />
         </mxCell>
         <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-251" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-180;" parent="1" vertex="1">
@@ -645,7 +645,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-262" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
-          <mxGeometry x="1005" y="694" width="1090" height="1060" as="geometry" />
+          <mxGeometry x="3520" y="710" width="1090" height="1060" as="geometry" />
         </mxCell>
         <mxCell id="ZGgF5hQ5RpT2w8QsAeHO-264" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ZGgF5hQ5RpT2w8QsAeHO-221" target="ZGgF5hQ5RpT2w8QsAeHO-143" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
