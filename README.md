@@ -6,8 +6,21 @@ Ontologies are formal knowledge models that describe concepts and relationships 
 
 1. The user can fill in a csv file with the name and URI of the published ontologies from which the design patterns will be detected. The tool will download these ontologies and store them locally, giving the file the name of the ontology indicated in the csv. This step is optional and can be omitted if the user already has the desired ontologies stored locally.
 2. The content of each ontology is extracted by filtering out those terms that are the subject of a triple whose predicate is either "owl:equivalentClass" or "rdfs:subClassOf" and its object is a blank node. These structures are represented as trees in order to emphasize the different components of the blank nodes. The tool will generate two files:
-  * A 
-3. 
+  * Structure_term_name: A file where the term URIs are specified.
+  * Structure_term_type: A file where the type of the terms are specified instead of their URIs.
+3. Sometimes the type of a term can not be specified due to different errors in the ontology:
+  * The term is defined in the ontology but the owner has not specified a type.
+  * The term is a reused term but the origin ontology could not be loaded.
+  * The term is a reused term and the origin ontology could be loaded, but the owner has not specified a type.
+  In these cases the types is #Unknwon. However, in order to maintain the maximum number of useful structures the following inferences are applied:
+  * Restrictions: In the restrictions there are two key elements (the property and the type of the restriction). If one of these key elements is not #Unknown, the type of the other element can be infer.
+  * Intersection and union of classes: The elements involved in an intersection or union must be classes. Blank nodes are always recognized, because they have to be defined in the ontology. Therefhore, the type of the terms, which have been identified as #Unknwon, inside an intersection or union or classes must be named classes (owl:Class).
+  * Complement class: The element involved in a complement must be a class. Blank nodes are always recognized, because they have to be defined in the ontology. Therefhore, the type of the term, which have been identified as #Unknwon, inside a complement must be named classes (owl:Class).
+  * Enumeration: The elements involved in an enumeration can be either individuals or data values. Data values are always recognized as "Data value". Therefhore, the type of the term, which have been identified as #Unknwon, inside a oneOf must be named individuals (owl:NamedIndividual).
+  The structures resulting from applying the inference process explained above are written in a file called Structure_term_inferred_type.
+4. Finally, patterns are identified through finding equals structures. The only condition for identifying a pattern is that there are at least two structures with the same content. The tool will generate two files:
+  * Patterns_name: A file which contains the patterns which have been found through the Structure_term_name file.
+  * Patterns_tyoe: A file which contains the patterns which have been found through the Structure_term_inferred_type file.
 
 ## How to execute the tool
 

@@ -165,7 +165,7 @@ def create_structure(ontology_path, error_log):
                                 structure_name.write(f'Structure: {ont_name}-{structure_id}\n')
                                 structure_name.write(f'{s}\n')
                                 structure_name.write("  |rdfs:subClassOf\n")
-                                structure_name.write(f'  |  |Blank node\n')
+                                #structure_name.write(f'  |  |Blank node\n')
 
                                 # Write the structure (writing the type of the terms)
                                 structure_type.write("\n")
@@ -174,20 +174,24 @@ def create_structure(ontology_path, error_log):
 
                                 try:
                                     # Write the type of the "subject"
-                                    write_type(s, "", error_log)
+                                    term_type = get_type(s, "", error_log)
+                                    structure_type.write(f"{term_type}\n")
 
                                 except:
                                     error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
 
                                 structure_type.write("  |rdfs:subClassOf\n")
 
-                                try:
+                                write_object(o, "  |  |", error_log)
+
+                                """try:
                                     # Write the type of the "object"
-                                    write_type(o, "  |  |", error_log)
+                                    term_type = get_type(o, "  |  |", error_log)
+                                    structure_type.write(f"  |  |{term_type}\n")
 
                                 except:
                                     error_log.write(f'Error in the ontology {ont_name} trying to obtain the type of {o}\n')
-                                
+                                """
                                 iterate_structure(o, "  |  |", error_log, [])
 
                     # # Is there a "owl:equivalentClass" "predicate" for that "subject"?
@@ -216,20 +220,22 @@ def create_structure(ontology_path, error_log):
 
                                 try:
                                     # Write the type of the "subject"
-                                    write_type(s, "", error_log)
+                                    term_type = get_type(s, "", error_log)
+                                    structure_type.write(f"{term_type}\n")
 
                                 except:
                                     error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
 
                                 structure_type.write("  |owl:equivalentClass\n")
-
-                                try:
+                                write_object(o, "  |  |", error_log)
+                                """try:
                                     # Write the type of the "object"
-                                    write_type(o, "  |  |", error_log)
+                                    term_type = get_type(o, "  |  |", error_log)
+                                    structure_type.write(f"  |  |{term_type}\n")
 
                                 except:
                                     error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
-                                
+                                """
                                 iterate_structure(o, "  |  |", error_log, [])
 
                 # Write the number of structures found for each ontology 
@@ -262,37 +268,70 @@ def iterate_structure(term, text, error_log, already_visited):
                  
                 # Iterate in alphabetical order the "objects" for that "subject" and "predicate"
                 for o in sorted(subjects[term][p]):
-                    # Write the URI of the "predicate" and the "object"
+                    # Write the URI of the "predicate"
                     structure_name.write(f'{text}  |{p}\n')
                     structure_type.write(f'{text}  |{p}\n')
 
                     if p != 'owl:oneOf':
 
-                        if "Blank node" in o:
-                            structure_name.write(f'{text}  |  |Blank node\n')
+                        if p == 'owl:intersectionOf' or p == 'owl:unionOf':
+                            # Write the type and the URI of the "object"
+                            structure_name.write(f'{text}  |  |rdf:List\n')
+                            structure_type.write(f'{text}  |  |rdf:List\n')
+
+                        elif p == 'rdf:rest':
+
+                            if o != 'rdf:nil':
+                                structure_name.write(f'{text}  |  |rdf:List\n')
+                                structure_type.write(f'{text}  |  |rdf:List\n')
+                            
+                            else:
+                                structure_name.write(f'{text}  |  |{o}\n')
+                                structure_type.write(f'{text}  |  |{o}\n')
                         
                         else:
-                            structure_name.write(f'{text}  |  |{o}\n')
-
-                        # Write the type of the "predicate" and the "object"
-                        try:
-                            write_type(o, f'{text}  |  |', error_log)
-                            
-                        except:
-                            error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
+                            # Write the type and the URI of the "object"
+                            write_object(o, f'{text}  |  |', error_log)
 
                         # Is the object of the triple an anonymous class?
                         if o in subjects and o != term and "Blank node" in o:
                             iterate_structure(o, f'{text}  |  |', error_log, already_visited)
 
+def write_object(o, text, error_log):
+
+    try:
+        term_type = get_type(o, f'{text}  |  |', error_log)
+        structure_type.write(f'{text}{term_type}\n')
+
+        if "Blank node" in o:
+
+            if term_type != '#Unknown':
+                structure_name.write(f'{text}{term_type}\n')
+            
+            else:
+                structure_name.write(f'{text}Blank node\n')
+        
+        else:
+            structure_name.write(f'{text}{o}\n')
+        
+    except:
+        error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
+
+        if "Blank node" in o:
+            structure_name.write(f'{text}Blank node\n')
+        
+        else:
+            structure_name.write(f'{text}{o}\n')
+
 # Function to write the type of a term
-def write_type(o, text, error_log):
+def get_type(term, text, error_log):
+    term_type = '#Unknown'
 
     # Is the type of the element defined in the ontology?
-    if o in subjects and 'rdf:type' in subjects[o]:
+    if term in subjects and 'rdf:type' in subjects[term]:
         # Get the "objects" of the triples whose "predicate" is "rdf:type"
-        types = subjects[o]["rdf:type"]
-        alphabetical_order(types, text)
+        types = subjects[term]["rdf:type"]
+        term_type = alphabetical_order(types, text)
 
     else:
         # In this case we are reading:
@@ -300,44 +339,57 @@ def write_type(o, text, error_log):
         #   - a reused term
 
         # Is it an anonymous class?
-        if "Blank node" in o: 
-            structure_type.write(f'{text}Blank node\n')
+        if "Blank node" in term:
+            term_type = 'Blank node'
+            #structure_type.write(f'{text}Blank node\n')
         
         # Is it a Data value?
-        elif "Data value" in o:
-            structure_type.write(f'{text}Data value\n')
+        elif "Data value" in term:
+            term_type = 'Data value'
+            #structure_type.write(f'{text}Data value\n')
 
         # Is it a datatype?
-        elif o in predefined_datatypes:
-            structure_type.write(f'{text}rdfs:Datatype\n')
+        elif term in predefined_datatypes:
+            term_type = 'rdfs:Datatype'
+            #structure_type.write(f'{text}rdfs:Datatype\n')
 
         # Is it a class?
-        elif 'owl:Thing' == o:
-            structure_type.write(f'{text}owl:Class\n')
+        elif 'owl:Thing' == term:
+            term_type = 'owl:Class'
+            #structure_type.write(f'{text}owl:Class\n')
 
         else:
             # In this case the term may be reused from another ontology
-            types = term_reuse(o, error_log)
+            types = term_reuse(term, error_log)
 
             # Does the term has been defined in another ontology?
             if types:
-                alphabetical_order(types, text)
+                term_type = alphabetical_order(types, text)
 
             else:
                 # The type of the term has not been obtained
-                structure_type.write(f'{text}#Unknown\n')
+                term_type = '#Unknown'
+                #structure_type.write(f'{text}#Unknown\n')
+    
+    return term_type
 
 # Function to write in alphabetical order the types of a term
 def alphabetical_order(types, text):
+
     # Is the term an individual?
     if 'owl:NamedIndividual' in types:
         # This is a special type because we want to skip the class membership
-        structure_type.write(f'{text}owl:NamedIndividual\n')
+        #structure_type.write(f'{text}owl:NamedIndividual\n')
+        types_order = 'owl:NamedIndividual'
+        
     
     else:
         # Write alphabetically the types of the term
         types.sort()
-        structure_type.write(f'{text}{", ".join(types)}\n')
+        #structure_type.write(f'{text}{", ".join(types)}\n')
+        types_order = ", ".join(types)
+    
+    return types_order
 
 # Function to get the types of a term which is defined in another ontology
 def term_reuse(term, error_log):
