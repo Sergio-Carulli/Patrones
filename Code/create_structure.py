@@ -211,7 +211,7 @@ def create_structure(ontology_path, error_log):
                                 structure_name.write(f'Structure: {ont_prefix}-{structure_id}\n')
                                 structure_name.write(f'{s}\n')
                                 structure_name.write("  |owl:equivalentClass\n")
-                                structure_name.write(f'  |  |Blank node\n')
+                                #structure_name.write(f'  |  |Blank node\n')
 
                                 # Write the structure (writing the type of the terms)
                                 structure_type.write("\n")
@@ -274,7 +274,7 @@ def iterate_structure(term, text, error_log, already_visited):
 
                     if p != 'owl:oneOf':
 
-                        if p == 'owl:intersectionOf' or p == 'owl:unionOf':
+                        if p == 'owl:intersectionOf' or p == 'owl:unionOf' or p == 'owl:withRestrictions':
                             # Write the type and the URI of the "object"
                             structure_name.write(f'{text}  |  |rdf:List\n')
                             structure_type.write(f'{text}  |  |rdf:List\n')
