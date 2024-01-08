@@ -51,7 +51,7 @@ predefined_datatypes = {
 #   - key: subject of a triple
 #   - value: dictionary to store the "predicate" and "object" of triples with the same "subject" whose:
 #       - key: triple predicate whose subject is the key of the above dictionary
-#       - value: an array which represents the "object" of triples with the same "subject" and "predicate"
+#       - value: a list which represents the "object" of triples with the same "subject" and "predicate"
 subjects = {}
 
 # Dictionary to store the rdflib URIs to identify anonymous classes whose:
@@ -165,7 +165,6 @@ def create_structure(ontology_path, error_log):
                                 structure_name.write(f'Structure: {ont_name}-{structure_id}\n')
                                 structure_name.write(f'{s}\n')
                                 structure_name.write("  |rdfs:subClassOf\n")
-                                #structure_name.write(f'  |  |Blank node\n')
 
                                 # Write the structure (writing the type of the terms)
                                 structure_type.write("\n")
@@ -181,17 +180,7 @@ def create_structure(ontology_path, error_log):
                                     error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
 
                                 structure_type.write("  |rdfs:subClassOf\n")
-
                                 write_object(o, "  |  |", error_log)
-
-                                """try:
-                                    # Write the type of the "object"
-                                    term_type = get_type(o, "  |  |", error_log)
-                                    structure_type.write(f"  |  |{term_type}\n")
-
-                                except:
-                                    error_log.write(f'Error in the ontology {ont_name} trying to obtain the type of {o}\n')
-                                """
                                 iterate_structure(o, "  |  |", error_log, [])
 
                     # # Is there a "owl:equivalentClass" "predicate" for that "subject"?
@@ -211,7 +200,6 @@ def create_structure(ontology_path, error_log):
                                 structure_name.write(f'Structure: {ont_prefix}-{structure_id}\n')
                                 structure_name.write(f'{s}\n')
                                 structure_name.write("  |owl:equivalentClass\n")
-                                #structure_name.write(f'  |  |Blank node\n')
 
                                 # Write the structure (writing the type of the terms)
                                 structure_type.write("\n")
@@ -228,14 +216,6 @@ def create_structure(ontology_path, error_log):
 
                                 structure_type.write("  |owl:equivalentClass\n")
                                 write_object(o, "  |  |", error_log)
-                                """try:
-                                    # Write the type of the "object"
-                                    term_type = get_type(o, "  |  |", error_log)
-                                    structure_type.write(f"  |  |{term_type}\n")
-
-                                except:
-                                    error_log.write(f'Error in the ontology {ont_prefix} trying to obtain the type of {o}\n')
-                                """
                                 iterate_structure(o, "  |  |", error_log, [])
 
                 # Write the number of structures found for each ontology 
@@ -264,7 +244,7 @@ def iterate_structure(term, text, error_log, already_visited):
         for p in sorted(subjects[term].keys()):
 
             # Skip "rdf:type" predicates
-            if p!="rdf:type" and (p.startswith("rdf:") or p.startswith("rdfs:") or p.startswith("owl:")):
+            if p!="rdf:type" and (p.startswith("rdf:") or p.startswith("rdfs:") or p.startswith("owl:") or p.startswith("xsd:")):
                  
                 # Iterate in alphabetical order the "objects" for that "subject" and "predicate"
                 for o in sorted(subjects[term][p]):
@@ -393,7 +373,7 @@ def alphabetical_order(types, text):
 
 # Function to get the types of a term which is defined in another ontology
 def term_reuse(term, error_log):
-    # Array to store the types of the term
+    # List to store the types of the term
     types = []
     # Variable to store the term URI (without namespace)
     term_uri = term

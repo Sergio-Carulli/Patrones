@@ -2,7 +2,7 @@
 #   - key : structure detected in a ontology
 #   - value: dictionary in which the following elements are stored:
 #       - times: Number of times this pattern is repeated in all ontologies
-#       - est_name: Array with the name of the detected structures
+#       - est_name: List with the name of the detected structures
 #       - ont_con: Number of different ontologies in which this pattern appears
 #       - ont_name: Dictionary whose:
 #           - key: name of the ontology in which the pattern has been found
