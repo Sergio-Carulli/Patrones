@@ -6,13 +6,15 @@ from Code.create_structure import create_structure
 from Code.identify_patterns import identify_patterns
 from Code.infer_structures import infer_structures
 
-def main(ontology_path, csv_path, patterns_type, app_directory):
+def main(ontology_path, csv_path, patterns_type, flatten_lists, app_directory):
     # Create a new file in which to write the logs 
     error_log = open("error_log.txt" , "w", encoding='utf-8')
     # Empty the file (in case the program has been run before)
     error_log.truncate()
     # Get the path to the application directory
     app_directory = os.path.dirname(app_directory)
+    # Cast string to boolean
+    flatten = True if flatten_lists == 'yes' else False
 
     # Is there an error in the path to the csv file?
     if csv_path != '' and check_csv_error(csv_path, error_log):
@@ -28,7 +30,7 @@ def main(ontology_path, csv_path, patterns_type, app_directory):
     if csv_path != '':
         download_ontologies(csv_path, ontology_path, error_log)
 
-    create_structure(ontology_path, error_log)
+    create_structure(ontology_path, error_log, flatten)
     infer_structures()
 
     # Has the user specified that the patterns are going to be created from the type of the terms?
@@ -92,6 +94,11 @@ if __name__ == "__main__":
                         help='Flag to indicate if the patterns are going to be created from the type of the terms or from the name of the terms or from both',
                         choices=['type', 'name', 'both'],
                         default='type')
+    parser.add_argument('-flatten', '--flatten_lists', 
+                        type=str, 
+                        help='Flag to indicate if the collections are going to be flatted if they just contain named classes',
+                        choices=['yes', 'no'],
+                        default='no')
     
     args = parser.parse_args()
-    main(args.ontology_path, args.csv_path, args.patterns_type, sys.argv[0])
+    main(args.ontology_path, args.csv_path, args.patterns_type, args.flatten_lists, sys.argv[0])
