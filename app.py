@@ -1,18 +1,15 @@
 import argparse
-import sys
 import os.path
 from Code.download_ontology import download_ontologies
 from Code.create_structure import create_structure
 from Code.identify_patterns import identify_patterns
 from Code.infer_structures import infer_structures
 
-def main(ontology_path, csv_path, patterns_type, flatten_lists, app_directory):
+def main(ontology_path, csv_path, patterns_type, flatten_lists):
     # Create a new file in which to write the logs 
     error_log = open("error_log.txt" , "w", encoding='utf-8')
     # Empty the file (in case the program has been run before)
     error_log.truncate()
-    # Get the path to the application directory
-    app_directory = os.path.dirname(app_directory)
     # Cast string to boolean
     flatten = True if flatten_lists == 'yes' else False
 
@@ -101,4 +98,4 @@ if __name__ == "__main__":
                         default='no')
     
     args = parser.parse_args()
-    main(args.ontology_path, args.csv_path, args.patterns_type, args.flatten_lists, sys.argv[0])
+    main(args.ontology_path, args.csv_path, args.patterns_type, args.flatten_lists)
