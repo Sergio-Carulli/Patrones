@@ -1,6 +1,4 @@
-from create_diagram_element import create_box
-from create_diagram_element import create_arrow
-from create_diagram_element import create_empty_box
+from create_diagram_element import *
 
 # Global variable to store the content of the XML file
 diagram = ''
@@ -15,13 +13,14 @@ def create_diagram(pattern_path):
         # Read the first pattern
         pattern = read_pattern(pattern_file)
 
+        # Variable to store the starting Y axis of a new pattern. In order to not overlap the figures
+        y_axis = 0
+
         # Iterate while there is at least one pattern unread
         while(len(pattern) > 0):
-            print(pattern)
-            visualize_pattern(pattern)
+            y_axis = visualize_pattern(pattern, y_axis)
             # Read a new pattern
             pattern = read_pattern(pattern_file)
-        print(pattern)
 
         # Close the csv file
         pattern_file.close()
@@ -31,25 +30,6 @@ def create_diagram(pattern_path):
         f = open('Visualization.xml', 'w', encoding='utf-8')
         f.write(diagram)
         f.close()
-        """try:
-            generate_XML_headers()
-            namespaces_width, namespaces_height = generate_namespaces(namespaces)
-            metadata_height = generate_metadata(g, namespaces_width)
-
-            first_y = max(namespaces_height, metadata_height) + 80
-
-            first_x = generate_classes_hierarchy(g, first_y)
-            first_x = generate_object_properties(g, first_y, first_x)
-            generate_datatype_properties_2(g, first_y, first_x)
-            #generate_datatype_properties(g, first_y, first_x)
-            generate_footers()
-
-            f = open(output_path, 'w', encoding='utf-8')
-            f.write(diagram)
-            f.close()
-        except Exception as error:
-            print(f"Error: {error}")
-            traceback.print_exc()"""
 
 # Function to parse just one pattern into a list
 # Different patterns are separated by blank lines        
@@ -83,9 +63,9 @@ def read_pattern(pattern_file):
     
     return pattern
 
-def visualize_pattern(pattern):
+def visualize_pattern(pattern, y_axis):
     global diagram
-    width, figure_id = visualize_beggining(clean_term(pattern[0].strip()), clean_term(pattern[1].strip()), clean_term(pattern[2].strip()))
+    x_axis, figure_id = visualize_beggining(pattern, y_axis)
     
     index = 2
     pattern_len = len(pattern)
@@ -99,32 +79,135 @@ def visualize_pattern(pattern):
         # Does the line represents the beggining of a restriction?
         if 'owl:Restriction' in line:
             # Get the line where the restriction ends
-            index = iterate_restriction(index + 1, pattern, pattern_len, deep, figure_id)
+            index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
+        
+        elif 'owl:oneOf' in line:
+            # Get the line where the enumeration ends
+            index, y_axis = iterate_enumeration(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
+        
+        elif 'owl:intersectionOf' in line:
+            # Get the line where the intersection ends
+            index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
         
         else:
             # Get the next line
             index += 1
 
-    return
+    return y_axis + 60
 
-def visualize_beggining(subject, predicate, object):
+def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
     global diagram
-    box, box_id, box_width = create_box(subject, 0, 0)
-    width = len(predicate) * 8 + box_width
+
+    # Iterate the structure
+    while index < pattern_len:
+        # Read a line of the structure
+        line = pattern[index]
+        # Get the deep of the line (the number of "  |")
+        deep = get_deep(line)
+
+        # Is the line outside the intersection or union of classes?
+        if deep <= father_deep:
+            # Return the line where the intersection/union ends
+            return index, y_axis - 60
+        
+        # Does the line represents an element of the intersection or union of classes?
+        elif 'rdf:first' in line:
+            # Get the position of the next line
+            index += 1
+            # Create the figure representing a member of the enumeration
+            box, box_id, box_width = create_box(clean_term(pattern[index].strip()), x_axis + 60, y_axis)
+            # Create the arrow linking the figure to the enumeration
+            arrow = create_empty_dashed_arrow(figure_id, box_id)
+            diagram += f'{box}{arrow}'
+            y_axis += 60
+
+        else:
+            # Get the position of the next line
+            index += 1
+    
+    # In this case we have reached the end of the structure
+    # Return a number which is greater than the number of lines in the list
+    return index, y_axis - 60
+
+def visualize_beggining(pattern, y_axis):
+    global diagram
+
+    subject = clean_term(pattern[0].strip())
+    predicate = clean_term(pattern[1].strip())
+    object = clean_term(pattern[2].strip())
+
+    box, box_id, box_width = create_box(subject, 0, y_axis)
+    x_axis = len(predicate) * 8 + box_width
 
     if 'owl:Restriction' in object:
-        box2, box2_id, box2_width = create_empty_box(width, 0)
-        width += box2_width
-        arrow = create_arrow(predicate, box_id, box2_id)
-        diagram += f'{box}{box2}{arrow}'
+        figure, figure_id, figure_width = create_empty_box(x_axis, y_axis)
+    
+    elif 'owl:Class' in object or 'rdfs:Datatype' in object:
 
-    return width, box2_id
+        object = clean_term(pattern[3].strip())
 
-def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id):
+        if 'owl:oneOf' in object:
+            figure, figure_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis, y_axis)
+
+        elif 'owl:intersectionOf' in object:
+            figure, figure_id, figure_width = create_ellipse('⨅', x_axis, y_axis)
+        
+        else:
+            raise Exception('Structure corrupted')
+    
+    else:
+        raise Exception('Structure corrupted')
+
+    x_axis += figure_width
+    arrow = create_arrow(predicate, box_id, figure_id)
+    diagram += f'{box}{figure}{arrow}'
+
+    return x_axis, figure_id
+
+def iterate_enumeration(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
+    global diagram
+
+    # Iterate the structure
+    while index < pattern_len:
+        # Read a line of the structure
+        line = pattern[index]
+        # Get the deep of the line (the number of "  |")
+        deep = get_deep(line)
+
+        # Is the line outside the enumeration?
+        if deep <= father_deep:
+            # Return the line where the enumeration ends
+            return index, y_axis - 60
+        
+        # Does the line represents an element of the enumeration?
+        elif 'rdf:first' in line:
+            # Get the position of the next line
+            index += 1
+            # Create the figure representing a member of the enumeration
+            box, box_id, box_width = create_box(clean_term(pattern[index].strip()), x_axis + 60, y_axis)
+            # Create the arrow linking the figure to the enumeration
+            arrow = create_empty_dashed_arrow(figure_id, box_id)
+            diagram += f'{box}{arrow}'
+            y_axis += 60
+
+        else:
+            # Get the position of the next line
+            index += 1
+    
+    # In this case we have reached the end of the structure
+    # Return a number which is greater than the number of lines in the list
+    return index, y_axis - 60
+
+def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
+    global diagram
+
     # Variable to store the type of a property involved in a resctriction
     property = ''
     # Variable to store the type of the target involved in a resctriction
     target = ''
+    # Variable to store the identifier of the figure which represents the target of a resctriction.
+    # This variable is filled if the target of a restriction is another blank node.
+    target_id = ''
     # Variable to store the type of the resctriction
     type = ''
 
@@ -137,10 +220,10 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id):
 
         # Is the line outside the restriction?
         if deep <= father_deep:
-            # Visualizate the restriction
-            visualize_restriction()
+            # Create the figures representing the restriction
+            visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, target_id)
             # Return the position where the restriction ends
-            return index
+            return index, y_axis
 
         # Does the line represents an element of the restriction?
         if deep == father_deep + 1:
@@ -172,7 +255,7 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id):
                 # Get the target type
                 target = pattern[index]
                 # Get the restriction type
-                type = '(some)'
+                type = '(all)'
             
             # Does the line represents the target?
             elif 'owl:onClass' in line or 'owl:onDataRange' in line:
@@ -236,22 +319,99 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id):
 
             # Does the line represents the beggining of a restriction?
             if 'owl:Restriction' in line:
+                # Create the figure to represent the beggining of a new restriction
+                figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
+                diagram += f'{figure}'
                 # Get the line where the restriction ends
-                # index = iterate_restriction(index + 1, pattern, pattern_len, deep)
-                index += 1
+                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+
+            elif 'owl:oneOf' in line:
+                # Create the figure to represent the beggining of a new enumeration
+                figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
+                diagram += f'{figure}'
+                # Get the line where the enumeration ends
+                index, y_axis = iterate_enumeration(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+        
+    
             
             else:
                 # Get the position of the next line
                 index += 1
 
     # In this case we have reached the end of the structure
-    # Infer the "Unknown" types
-    visualize_restriction()
+    # Create the figures representing the restriction
+    visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, target_id)
+    
     # Return a number which is greater than the number of lines in the list
-    return index
+    return index, y_axis
 
-def visualize_restriction():
-    return
+def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_axis, target_id):
+    global diagram
+
+    # Variable to store the property with the chowlk format. For example:
+    #   - Pattern format: owl:FunctionalProperty, owl:ObjectProperty
+    #   - Chowlk format: (F) owl:ObjectProperty
+    cleaned_property = ''
+
+    # It is neccesary to check if the property has additional types defined. This additional types are separated
+    # through simple commas ','
+    if ',' in property:
+
+        # Variable to store if a main property type is defined. It can be the cased that the user has defined
+        # the property as rdfs:Property
+        property_not_defined = True
+
+        # Parse pattern format to chowlk format
+
+        if 'owl:FunctionalProperty' in property:
+            cleaned_property += '(F) '
+        
+        if 'owl:InverseFunctionalProperty' in property:
+            cleaned_property += '(IF) '
+        
+        if 'owl:SymmetricProperty' in property:
+            cleaned_property += '(S) '
+        
+        if 'owl:TransitiveProperty' in property:
+            cleaned_property += '(T) '
+
+        if 'owl:ObjectProperty' in property:
+            cleaned_property += 'owl:ObjectProperty '
+            property_not_defined = False
+        
+        if 'owl:DatatypeProperty' in property:
+            cleaned_property += 'owl:DatatypeProperty '
+            property_not_defined = False
+        
+        if property_not_defined:
+            cleaned_property += 'rdf:Property '
+    
+    else:
+        # Just the type of the property is defined
+        cleaned_property = property
+
+    # Calculate the x axis where the next box is going to be located
+    x_axis = (len(cleaned_property) + len(type)) * 8 + previous_x_axis
+
+    if not target_id:
+
+        # Create the figure representing the target involved
+        if target:
+            # In this case a restriction with target is being read (e.g. qualified cardinality restriction, etc)
+            box, box_id, box_width = create_box(target, x_axis, y_axis)
+
+        else:
+            # In this case a restriction without target is being read (e.g. cardinality restriction, etc)
+            box, box_id, box_width = create_empty_box(x_axis, y_axis)
+        
+        diagram += box
+    
+    else:
+        box_id = target_id
+
+    # Create the figure representing the property involved
+    arrow = create_arrow(f'{type} {cleaned_property}', figure_id, box_id)
+    diagram += arrow
 
 # Function to get the value of the term from the last occurrence of the '|' character      
 def clean_term(term):
