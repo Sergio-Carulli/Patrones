@@ -66,3 +66,19 @@ def create_hexagon(hexagon_value, x_pos, y_pos):
                  '        </mxCell>\n'
     
     return hexagon, id, width
+
+def create_block_arrow(source, target):
+    global arrow_identifier
+    arrow_identifier += 1
+    arrow = f'        <mxCell id="arrow-{arrow_identifier}" value="" style="endArrow=block;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" source="{source}" target="{target}" parent="1">\n'\
+             '          <mxGeometry relative="1" as="geometry" />\n'\
+             '        </mxCell>\n'
+    return arrow
+
+def create_double_block_dashed_arrow(line_value, source, target):
+    global arrow_identifier
+    arrow_identifier += 1
+    arrow = f'        <mxCell id="arrow-{arrow_identifier}" value="{line_value}" style="endArrow=open;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endFill=0;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;startArrow=open;startFill=0;startSize=8;rounded=0;" edge="1" source="{source}" target="{target}" parent="1">\n'\
+             '          <mxGeometry relative="1" as="geometry" />\n'\
+             '        </mxCell>\n'
+    return arrow

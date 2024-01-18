@@ -85,15 +85,105 @@ def visualize_pattern(pattern, y_axis):
             # Get the line where the enumeration ends
             index, y_axis = iterate_enumeration(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
         
-        elif 'owl:intersectionOf' in line:
+        elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
             # Get the line where the intersection ends
             index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
+        
+        elif 'owl:complementOf' in line:
+            # Get the line where the intersection ends
+            index, y_axis = iterate_complement(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
         
         else:
             # Get the next line
             index += 1
 
     return y_axis + 60
+
+def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
+    global diagram
+    # Variable to store the type of the target involved in a resctriction
+    target = ''
+    # Variable to store the identifier of the figure which represents the target of a resctriction.
+    # This variable is filled if the target of a restriction is another blank node.
+    target_id = ''
+    # Iterate the structure
+    while index < pattern_len:
+        # Read a line of the structure
+        line = pattern[index]
+        # Get the deep of the line (the number of "  |")
+        deep = get_deep(line)
+
+        # Is the line outside the restriction?
+        if deep <= father_deep:
+            # Return the position where the restriction ends
+            return index, y_axis
+
+        if 'owl:Restriction' in line:
+            # Create the figure to represent the beggining of a new restriction
+            figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
+            arrow = create_arrow('owl:complementOf', figure_id, target_id)
+            diagram += f'{figure}{arrow}'
+            # Get the line where the restriction ends
+            index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+        
+        else:
+            target = line
+
+            if index + 1 < pattern_len:
+                line = pattern[index + 1]
+                deep = get_deep(line)
+
+                if deep > father_deep:
+
+                    if 'owl:oneOf' in line:
+                        # Create the figure to represent the beggining of a new enumeration
+                        figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
+                        # Create the arrow linking the figure to the intersection
+                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        diagram += f'{figure}{arrow}'
+                        # Get the line where the enumeration ends
+                        index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                        continue
+
+                    elif 'owl:intersectionOf' in line:
+                        # Create the figure to represent the beggining of a new enumeration
+                        figure, target_id, figure_width = create_ellipse('⨅', x_axis + 200, y_axis)
+                        # Create the arrow linking the figure to the intersection
+                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        diagram += f'{figure}{arrow}'
+                        # Get the line where the enumeration ends
+                        index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                        continue
+
+                    elif 'owl:unionOf' in line:
+                        # Create the figure to represent the beggining of a new enumeration
+                        figure, target_id, figure_width = create_ellipse('⨆', x_axis + 200, y_axis)
+                        # Create the arrow linking the figure to the intersection
+                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        diagram += f'{figure}{arrow}'
+                        # Get the line where the enumeration ends
+                        index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                        continue
+
+                    elif 'owl:complementOf' in line:
+                        # Create the figure to represent the beggining of a new enumeration
+                        figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
+                        # Create the arrow linking the figure to the intersection
+                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        diagram += f'{figure}{arrow}'
+                        # Get the line where the enumeration ends
+                        index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                        continue
+
+            # Create the figure representing a member of the intersection
+            figure, target_id, figure_width = create_box(clean_term(target.strip()), x_axis + 200, y_axis)
+            # Create the arrow linking the figure to the intersection
+            arrow = create_arrow('owl:complementOf', figure_id, target_id)
+            diagram += f'{figure}{arrow}'
+            index += 1
+    
+    # Return a number which is greater than the number of lines in the list
+    return index, y_axis
 
 def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
     global diagram
@@ -114,12 +204,78 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
         elif 'rdf:first' in line:
             # Get the position of the next line
             index += 1
-            # Create the figure representing a member of the enumeration
-            box, box_id, box_width = create_box(clean_term(pattern[index].strip()), x_axis + 60, y_axis)
-            # Create the arrow linking the figure to the enumeration
-            arrow = create_empty_dashed_arrow(figure_id, box_id)
-            diagram += f'{box}{arrow}'
-            y_axis += 60
+            line = pattern[index]
+            deep = get_deep(line)
+
+            if 'owl:Restriction' in line:
+                # Create the figure to represent the beggining of a new restriction
+                figure, target_id, figure_width = create_empty_box(x_axis + 60, y_axis)
+                # Create the arrow linking the figure to the intersection
+                arrow = create_empty_dashed_arrow(figure_id, target_id)
+                diagram += f'{figure}{arrow}'
+                # Get the line where the restriction ends
+                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                y_axis += 60
+            
+            else:
+
+                if index + 1 < pattern_len:
+                    line = pattern[index + 1]
+                    deep = get_deep(line)
+
+                    if deep > father_deep:
+
+                        if 'owl:oneOf' in line:
+                            # Create the figure to represent the beggining of a new enumeration
+                            figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 60, y_axis)
+                            # Create the arrow linking the figure to the intersection
+                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            diagram += f'{figure}{arrow}'
+                            # Get the line where the enumeration ends
+                            index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            y_axis += 60
+                            continue
+
+                        elif 'owl:intersectionOf' in line:
+                            # Create the figure to represent the beggining of a new enumeration
+                            figure, target_id, figure_width = create_ellipse('⨅', x_axis + 60, y_axis)
+                            # Create the arrow linking the figure to the intersection
+                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            diagram += f'{figure}{arrow}'
+                            # Get the line where the enumeration ends
+                            index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            y_axis += 60
+                            continue
+
+                        elif 'owl:unionOf' in line:
+                            # Create the figure to represent the beggining of a new enumeration
+                            figure, target_id, figure_width = create_ellipse('⨆', x_axis + 60, y_axis)
+                            # Create the arrow linking the figure to the intersection
+                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            diagram += f'{figure}{arrow}'
+                            # Get the line where the enumeration ends
+                            index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            y_axis += 60
+                            continue
+
+                        elif 'owl:complementOf' in line:
+                            # Create the figure to represent the beggining of a new enumeration
+                            figure, target_id, figure_width = create_empty_box(x_axis + 60, y_axis)
+                            # Create the arrow linking the figure to the intersection
+                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            diagram += f'{figure}{arrow}'
+                            # Get the line where the enumeration ends
+                            index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            y_axis += 60
+                            continue
+
+
+                # Create the figure representing a member of the intersection
+                box, box_id, box_width = create_box(clean_term(pattern[index].strip()), x_axis + 60, y_axis)
+                # Create the arrow linking the figure to the intersection
+                arrow = create_empty_dashed_arrow(figure_id, box_id)
+                diagram += f'{box}{arrow}'
+                y_axis += 60
 
         else:
             # Get the position of the next line
@@ -152,6 +308,12 @@ def visualize_beggining(pattern, y_axis):
         elif 'owl:intersectionOf' in object:
             figure, figure_id, figure_width = create_ellipse('⨅', x_axis, y_axis)
         
+        elif 'owl:unionOf' in object:
+            figure, figure_id, figure_width = create_ellipse('⨆', x_axis, y_axis)
+        
+        elif 'owl:complementOf' in object:
+            figure, figure_id, figure_width = create_empty_box(x_axis, y_axis)
+        
         else:
             raise Exception('Structure corrupted')
     
@@ -159,7 +321,19 @@ def visualize_beggining(pattern, y_axis):
         raise Exception('Structure corrupted')
 
     x_axis += figure_width
-    arrow = create_arrow(predicate, box_id, figure_id)
+
+    if 'rdfs:subClassOf' in predicate:
+        arrow = create_block_arrow(box_id, figure_id)
+
+    elif 'owl:equivalentClass' in predicate:
+        arrow = create_double_block_dashed_arrow('&amp;lt;&amp;lt;owl:equivalentClass&amp;gt;&amp;gt;', box_id, figure_id)
+
+    elif 'owl:disjointWith' in predicate:
+        arrow = create_double_block_dashed_arrow('&amp;lt;&amp;lt;owl:disjointWith&amp;gt;&amp;gt;', box_id, figure_id)
+    
+    else:
+        arrow = create_arrow(predicate, box_id, figure_id)
+
     diagram += f'{box}{figure}{arrow}'
 
     return x_axis, figure_id
@@ -199,7 +373,6 @@ def iterate_enumeration(index, pattern, pattern_len, father_deep, figure_id, x_a
     return index, y_axis - 60
 
 def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
-    global diagram
 
     # Variable to store the type of a property involved in a resctriction
     property = ''
@@ -316,7 +489,8 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
                 index += 1
         
         else:
-
+            global diagram
+            #index, target = check_blank_node(index, line, pattern, pattern_len, deep, x_axis, y_axis)
             # Does the line represents the beggining of a restriction?
             if 'owl:Restriction' in line:
                 # Create the figure to represent the beggining of a new restriction
@@ -331,9 +505,28 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
                 diagram += f'{figure}'
                 # Get the line where the enumeration ends
                 index, y_axis = iterate_enumeration(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
-        
-    
+
+            elif 'owl:intersectionOf' in line:
+                # Create the figure to represent the beggining of a new enumeration
+                figure, target_id, figure_width = create_ellipse('⨅', x_axis + 200, y_axis)
+                diagram += f'{figure}'
+                # Get the line where the enumeration ends
+                index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
             
+            elif 'owl:unionOf' in line:
+                # Create the figure to represent the beggining of a new enumeration
+                figure, target_id, figure_width = create_ellipse('⨆', x_axis + 200, y_axis)
+                diagram += f'{figure}'
+                # Get the line where the enumeration ends
+                index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+            
+            elif 'owl:complementOf' in line:
+                # Create the figure to represent the beggining of a new restriction
+                figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
+                diagram += f'{figure}'
+                # Get the line where the restriction ends
+                index, y_axis = iterate_complement(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+
             else:
                 # Get the position of the next line
                 index += 1
