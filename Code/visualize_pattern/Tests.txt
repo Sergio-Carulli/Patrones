@@ -793,10 +793,10 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
 
 Pattern 40
-Times 53
-Different ontologies 1
-Ontologies in which it appears lswpm.rdf (53); 
-rdfs:Datatype
+Times
+Different ontologies
+Ontologies in which it appears 
+owl:Class
   |rdfs:subClassOf
   |  |owl:Restriction
   |  |  |owl:onDataRange
@@ -821,4 +821,54 @@ rdfs:Datatype
   |  |  |  |owl:DatatypeProperty
   |  |  |owl:qualifiedCardinality
   |  |  |  |Data value
+
+Pattern 41
+Times
+Different ontologies
+Ontologies in which it appears 
+rdfs:Datatype
+  |rdfs:subClassOf
+  |  |rdfs:Datatype
+  |  |  |owl:onDatatype
+  |  |  |  |rdfs:Datatype
+  |  |  |owl:withRestrictions
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |xsd:minInclusive
+  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |  |  |xsd:maxInclusive
+  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 42
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:oneOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
 

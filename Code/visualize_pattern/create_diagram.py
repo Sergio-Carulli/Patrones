@@ -11,16 +11,16 @@ def create_diagram(pattern_path):
         pattern_file = open(pattern_path , "r", encoding='utf-8')
 
         # Read the first pattern
-        pattern = read_pattern(pattern_file)
+        pattern, max_lenght, pattern_text, pattern_number = read_pattern(pattern_file)
 
         # Variable to store the starting Y axis of a new pattern. In order to not overlap the figures
         y_axis = 0
 
         # Iterate while there is at least one pattern unread
         while(len(pattern) > 0):
-            y_axis = visualize_pattern(pattern, y_axis)
+            y_axis = visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
             # Read a new pattern
-            pattern = read_pattern(pattern_file)
+            pattern, max_lenght, pattern_text, pattern_number = read_pattern(pattern_file)
 
         # Close the csv file
         pattern_file.close()
@@ -38,34 +38,53 @@ def read_pattern(pattern_file):
     pattern = []
 
     # Skip the first four lines of the pattern (these lines just contain metadata)
-    pattern_file.readline()
+    
+    pattern_number = pattern_file.readline()
     pattern_file.readline()
     pattern_file.readline()
     pattern_file.readline()
 
+    # Variable to store the length of the longest line
+    max_lenght = 0
+
     # Read fifth line (already contains pattern data)
     line = pattern_file.readline()
+
+    # Variable to store the pattern as text
+    pattern_text = ''
 
     # Iterate the lines of the TXT file
     while(line):
 
         # Is a pattern line being read?
         if len(line) > 1:
+            # Store the length of the longest line
+            max_lenght = max(max_lenght, len(line))
             # Add structure line
             pattern.append(line)
+            pattern_text += f'{line}&lt;br&gt;&amp;nbsp;'
 
         else:
+            pattern_text = pattern_text[:-20]
             # In this case a blank line is being read, i.e. the end of the pattern has been reached
             break
 
         # Read a new line
         line = pattern_file.readline()
     
-    return pattern
+    return pattern, max_lenght, pattern_text, pattern_number
 
-def visualize_pattern(pattern, y_axis):
+def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number):
     global diagram
-    x_axis, figure_id = visualize_beggining(pattern, y_axis)
+    x_axis, y_axis_document = visualize_document(pattern_text, max_lenght, len(pattern), y_axis, pattern_number)
+
+    try:
+        x_axis, figure_id = visualize_beggining(pattern, x_axis, y_axis)
+    
+    except:
+        box, box_id, box_width = create_box('No chowlk notation', x_axis, y_axis)
+        diagram += box
+        return max(y_axis, y_axis_document) + 60
     
     index = 2
     pattern_len = len(pattern)
@@ -97,7 +116,7 @@ def visualize_pattern(pattern, y_axis):
             # Get the next line
             index += 1
 
-    return y_axis + 60
+    return max(y_axis, y_axis_document) + 60
 
 def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
     global diagram
@@ -121,7 +140,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
         if 'owl:Restriction' in line:
             # Create the figure to represent the beggining of a new restriction
             figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
-            arrow = create_arrow('owl:complementOf', figure_id, target_id)
+            arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
             diagram += f'{figure}{arrow}'
             # Get the line where the restriction ends
             index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
@@ -139,7 +158,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
                         # Create the figure to represent the beggining of a new enumeration
                         figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
@@ -149,7 +168,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
                         # Create the figure to represent the beggining of a new enumeration
                         figure, target_id, figure_width = create_ellipse('⨅', x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
@@ -159,7 +178,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
                         # Create the figure to represent the beggining of a new enumeration
                         figure, target_id, figure_width = create_ellipse('⨆', x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
@@ -169,7 +188,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
                         # Create the figure to represent the beggining of a new enumeration
                         figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_arrow('owl:complementOf', figure_id, target_id)
+                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
@@ -178,7 +197,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
             # Create the figure representing a member of the intersection
             figure, target_id, figure_width = create_box(clean_term(target.strip()), x_axis + 200, y_axis)
             # Create the arrow linking the figure to the intersection
-            arrow = create_arrow('owl:complementOf', figure_id, target_id)
+            arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
             diagram += f'{figure}{arrow}'
             index += 1
     
@@ -285,15 +304,25 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
     # Return a number which is greater than the number of lines in the list
     return index, y_axis - 60
 
-def visualize_beggining(pattern, y_axis):
+def visualize_document(pattern_text, width_lenght, height_lenght, y_pos, pattern_number):
+    global diagram
+
+    #document, x_axis, y_axis_document = create_document(pattern_text, width_lenght, height_lenght, 0, y_pos)
+    document, x_axis, y_axis_document = create_document2(pattern_text, width_lenght, height_lenght, 0, y_pos, pattern_number)
+    y_axis_document += y_pos
+    diagram += document
+
+    return x_axis + 20, y_axis_document
+
+def visualize_beggining(pattern, x_axis, y_axis):
     global diagram
 
     subject = clean_term(pattern[0].strip())
     predicate = clean_term(pattern[1].strip())
     object = clean_term(pattern[2].strip())
 
-    box, box_id, box_width = create_box(subject, 0, y_axis)
-    x_axis = len(predicate) * 8 + box_width
+    box, box_id, box_width = create_box(subject, x_axis, y_axis)
+    x_axis += len(predicate) * 8 + box_width
 
     if 'owl:Restriction' in object:
         figure, figure_id, figure_width = create_empty_box(x_axis, y_axis)
