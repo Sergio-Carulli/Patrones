@@ -384,31 +384,15 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:intersectionOf
-  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |rdfs:Datatype
 
 Pattern 29
 Times
@@ -416,31 +400,21 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:intersectionOf
   |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:unionOf
-  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
 
 Pattern 30
 Times
@@ -448,23 +422,21 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:unionOf
   |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:complementOf
-  |  |  |  |  |  |  |  |  |  |owl:Class
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
 
 Pattern 31
 Times
@@ -472,16 +444,32 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:complementOf
   |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Pattern 32
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Class
+  |  |  |  |  |owl:oneOf
   |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:oneOf
+  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |  |  |  |  |rdf:first
   |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
@@ -491,38 +479,8 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |rdf:nil
-
-Pattern 32
-Times
-Different ontologies
-Ontologies in which it appears
-owl:Class
-  |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:intersectionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Restriction
-  |  |  |  |  |  |  |  |  |owl:onProperty
-  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
-  |  |  |  |  |  |  |  |  |owl:someValuesFrom
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
 
 Pattern 33
 Times
@@ -530,31 +488,15 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:unionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:intersectionOf
-  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
 
 Pattern 34
 Times
@@ -562,31 +504,15 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:unionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:unionOf
-  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
-  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |rdf:List
-  |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |rdf:rest
-  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |rdfs:Datatype
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
 
 Pattern 35
 Times
@@ -594,21 +520,19 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
-  |  |owl:Class
-  |  |  |owl:unionOf
-  |  |  |  |rdf:List
-  |  |  |  |  |rdf:first
-  |  |  |  |  |  |owl:Class
-  |  |  |  |  |rdf:rest
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:oneOf
   |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |owl:Class
-  |  |  |  |  |  |  |  |  |owl:complementOf
-  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |Data value
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:List
   |  |  |  |  |  |  |  |  |rdf:first
-  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |Data value
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
 
@@ -618,6 +542,372 @@ Different ontologies
 Ontologies in which it appears
 owl:Class
   |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:onDatatype
+  |  |  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:withRestrictions
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |  |  |xsd:minInclusive
+  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |  |  |  |  |xsd:maxInclusive
+  |  |  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 37
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:datatypeComplementOf
+  |  |  |  |  |  |rdfs:Datatype
+
+Pattern 38
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:oneOf
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Pattern 39
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:onDatatype
+  |  |  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:withRestrictions
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |  |  |xsd:minInclusive
+  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |  |  |  |  |xsd:maxInclusive
+  |  |  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Pattern 40
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |rdfs:Datatype
+  |  |  |  |  |owl:datatypeComplementOf
+  |  |  |  |  |  |rdfs:Datatype
+  |  |  |owl:onProperty
+  |  |  |  |owl:DatatypeProperty
+
+Pattern 41
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 42
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 43
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:complementOf
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 44
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:oneOf
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 45
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 46
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:intersectionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |rdfs:Datatype
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 47
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:intersectionOf
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 48
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:unionOf
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 49
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |owl:complementOf
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 50
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
   |  |owl:Class
   |  |  |owl:unionOf
   |  |  |  |rdf:List
@@ -644,7 +934,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 37
+Pattern 51
 Times
 Different ontologies
 Ontologies in which it appears
@@ -670,7 +960,33 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 38
+Pattern 52
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:unionOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |owl:Class
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |  |  |rdfs:Datatype
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 53
 Times
 Different ontologies
 Ontologies in which it appears
@@ -690,7 +1006,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 34
+Pattern 54
 Times
 Different ontologies
 Ontologies in which it appears
@@ -710,7 +1026,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 35
+Pattern 55
 Times
 Different ontologies
 Ontologies in which it appears
@@ -722,7 +1038,7 @@ owl:Class
   |  |  |  |  |owl:complementOf
   |  |  |  |  |  |owl:Class
 
-Pattern 36
+Pattern 56
 Times
 Different ontologies
 Ontologies in which it appears
@@ -742,7 +1058,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 37
+Pattern 57
 Times
 Different ontologies
 Ontologies in which it appears
@@ -756,7 +1072,21 @@ owl:Class
   |  |  |  |  |owl:someValuesFrom
   |  |  |  |  |  |owl:Class
 
-Pattern 38
+Pattern 58
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Class
+  |  |  |owl:complementOf
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |rdfs:Datatype
+
+Pattern 59
 Times
 Different ontologies
 Ontologies in which it appears
@@ -766,7 +1096,7 @@ owl:Class
   |  |  |owl:complementOf
   |  |  |  |owl:Class
 
-Pattern 39
+Pattern 60
 Times
 Different ontologies
 Ontologies in which it appears
@@ -792,7 +1122,7 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 40
+Pattern 61
 Times
 Different ontologies
 Ontologies in which it appears 
@@ -822,7 +1152,7 @@ owl:Class
   |  |  |owl:qualifiedCardinality
   |  |  |  |Data value
 
-Pattern 41
+Pattern 62
 Times
 Different ontologies
 Ontologies in which it appears 
@@ -846,7 +1176,7 @@ rdfs:Datatype
   |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |rdf:nil
 
-Pattern 42
+Pattern 63
 Times
 Different ontologies
 Ontologies in which it appears
@@ -871,4 +1201,38 @@ owl:Class
   |  |  |  |  |  |  |  |  |  |  |  |owl:NamedIndividual
   |  |  |  |  |  |  |  |  |  |  |rdf:rest
   |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 64
+Times
+Different ontologies
+Ontologies in which it appears
+rdfs:Datatype
+  |owl:equivalentClass
+  |  |rdfs:Datatype
+  |  |  |owl:onDatatype
+  |  |  |  |rdfs:Datatype
+  |  |  |owl:withRestrictions
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |xsd:minInclusive
+  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |rdfs:Description
+  |  |  |  |  |  |  |  |  |xsd:maxInclusive
+  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:nil
+
+Pattern 65
+Times
+Different ontologies
+Ontologies in which it appears
+rdfs:Datatype
+  |owl:equivalentClass
+  |  |rdfs:Datatype
+  |  |  |owl:datatypeComplementOf
+  |  |  |  |rdfs:Datatype
 

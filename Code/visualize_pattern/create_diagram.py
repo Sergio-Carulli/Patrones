@@ -82,8 +82,7 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
         x_axis, figure_id = visualize_beggining(pattern, x_axis, y_axis)
     
     except:
-        box, box_id, box_width = create_box('No chowlk notation', x_axis, y_axis)
-        diagram += box
+        diagram += create_cloud("No chowlk&lt;br&gt;notation", x_axis, y_axis)
         return max(y_axis, y_axis_document) + 60
     
     index = 2
@@ -233,7 +232,7 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
                 arrow = create_empty_dashed_arrow(figure_id, target_id)
                 diagram += f'{figure}{arrow}'
                 # Get the line where the restriction ends
-                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + 60 + figure_width, y_axis)
                 y_axis += 60
             
             else:
@@ -407,11 +406,14 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
     property = ''
     # Variable to store the type of the target involved in a resctriction
     target = ''
-    # Variable to store the identifier of the figure which represents the target of a resctriction.
-    # This variable is filled if the target of a restriction is another blank node.
-    target_id = ''
     # Variable to store the type of the resctriction
     type = ''
+
+    aux = True
+
+    anonymous_type = 0
+    anonymous_index = 0
+    anonymous_deep = 0
 
     # Iterate the structure
     while index < pattern_len:
@@ -423,7 +425,7 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
         # Is the line outside the restriction?
         if deep <= father_deep:
             # Create the figures representing the restriction
-            visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, target_id)
+            y_axis = visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len)
             # Return the position where the restriction ends
             return index, y_axis
 
@@ -517,63 +519,75 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
                 # Get the position of the next line
                 index += 1
         
-        else:
+        elif aux:
             global diagram
-            #index, target = check_blank_node(index, line, pattern, pattern_len, deep, x_axis, y_axis)
+
             # Does the line represents the beggining of a restriction?
             if 'owl:Restriction' in line:
-                # Create the figure to represent the beggining of a new restriction
-                figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
-                diagram += f'{figure}'
-                # Get the line where the restriction ends
-                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                aux = False
+                anonymous_type = 1
+                anonymous_index = index + 1
+                anonymous_deep = deep
 
             elif 'owl:oneOf' in line:
-                # Create the figure to represent the beggining of a new enumeration
-                figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
-                diagram += f'{figure}'
-                # Get the line where the enumeration ends
-                index, y_axis = iterate_enumeration(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                aux = False
+                anonymous_type = 2
+                anonymous_index = index + 1
+                anonymous_deep = deep
 
             elif 'owl:intersectionOf' in line:
-                # Create the figure to represent the beggining of a new enumeration
-                figure, target_id, figure_width = create_ellipse('⨅', x_axis + 200, y_axis)
-                diagram += f'{figure}'
-                # Get the line where the enumeration ends
-                index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
-            
+                aux = False
+                anonymous_type = 3
+                anonymous_index = index + 1
+                anonymous_deep = deep
+
             elif 'owl:unionOf' in line:
-                # Create the figure to represent the beggining of a new enumeration
-                figure, target_id, figure_width = create_ellipse('⨆', x_axis + 200, y_axis)
-                diagram += f'{figure}'
-                # Get the line where the enumeration ends
-                index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
-            
+                aux = False
+                anonymous_type = 4
+                anonymous_index = index + 1
+                anonymous_deep = deep
+
             elif 'owl:complementOf' in line:
-                # Create the figure to represent the beggining of a new restriction
-                figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
-                diagram += f'{figure}'
-                # Get the line where the restriction ends
-                index, y_axis = iterate_complement(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+                aux = False
+                anonymous_type = 5
+                anonymous_index = index + 1
+                anonymous_deep = deep
+            
+            elif 'owl:withRestrictions' in line:
+                aux = False
+                anonymous_type = 6
+                anonymous_index = index + 1
+                anonymous_deep = deep
+            
+            elif 'owl:datatypeComplementOf' in line:
+                aux = False
+                anonymous_type = 7
+                anonymous_index = index + 1
+                anonymous_deep = deep
 
             else:
                 # Get the position of the next line
                 index += 1
+        
+        else:
+            index += 1
 
     # In this case we have reached the end of the structure
     # Create the figures representing the restriction
-    visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, target_id)
+    y_axis = visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len)
     
     # Return a number which is greater than the number of lines in the list
     return index, y_axis
 
-def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_axis, target_id):
+def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len):
     global diagram
 
     # Variable to store the property with the chowlk format. For example:
     #   - Pattern format: owl:FunctionalProperty, owl:ObjectProperty
     #   - Chowlk format: (F) owl:ObjectProperty
     cleaned_property = ''
+
+    datatype_property = False
 
     # It is neccesary to check if the property has additional types defined. This additional types are separated
     # through simple commas ','
@@ -603,6 +617,7 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
         
         if 'owl:DatatypeProperty' in property:
             cleaned_property += 'owl:DatatypeProperty '
+            datatype_property = True
             property_not_defined = False
         
         if property_not_defined:
@@ -612,28 +627,95 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
         # Just the type of the property is defined
         cleaned_property = property
 
+        if 'owl:DatatypeProperty' in property:
+            datatype_property = True
+
     # Calculate the x axis where the next box is going to be located
     x_axis = (len(cleaned_property) + len(type)) * 8 + previous_x_axis
 
-    if not target_id:
+    if anonymous_type == 1:
+        figure, target_id, figure_width = create_empty_box(x_axis, y_axis)
+        diagram += f'{figure}'
+        # Get the line where the restriction ends
+        index, y_axis = iterate_restriction(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
 
-        # Create the figure representing the target involved
-        if target:
-            # In this case a restriction with target is being read (e.g. qualified cardinality restriction, etc)
-            box, box_id, box_width = create_box(target, x_axis, y_axis)
+    elif anonymous_type == 2:
 
-        else:
-            # In this case a restriction without target is being read (e.g. cardinality restriction, etc)
-            box, box_id, box_width = create_empty_box(x_axis, y_axis)
+        if datatype_property:
+            box, target_id, box_width = create_box(f'{type} {cleaned_property}: {target}', previous_x_axis - 60, y_axis + 30)
+            diagram += box
+            diagram += create_cloud("No chowlk&lt;br&gt;notation", x_axis, y_axis)
+            return y_axis
         
-        diagram += box
-    
-    else:
-        box_id = target_id
+        else:
+            # Create the figure to represent the beggining of a new enumeration
+            figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis, y_axis)
+            diagram += f'{figure}'
+            # Get the line where the enumeration ends
+            index, y_axis = iterate_enumeration(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
 
-    # Create the figure representing the property involved
-    arrow = create_arrow(f'{type} {cleaned_property}', figure_id, box_id)
-    diagram += arrow
+    
+    elif anonymous_type == 3:
+        # Create the figure to represent the beggining of a new enumeration
+        figure, target_id, figure_width = create_ellipse('⨅', x_axis, y_axis)
+        diagram += f'{figure}'
+        # Get the line where the enumeration ends
+        index, y_axis = iterate_intersection(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
+    
+    
+    elif anonymous_type == 4:
+        # Create the figure to represent the beggining of a new enumeration
+        figure, target_id, figure_width = create_ellipse('⨆', x_axis, y_axis)
+        diagram += f'{figure}'
+        # Get the line where the enumeration ends
+        index, y_axis = iterate_intersection(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
+            
+    
+    elif anonymous_type == 5:
+        # Create the figure to represent the beggining of a new restriction
+        figure, target_id, figure_width = create_empty_box(x_axis, y_axis)
+        diagram += f'{figure}'
+        # Get the line where the restriction ends
+        index, y_axis = iterate_complement(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
+
+    else:
+
+        if datatype_property:
+            y_axis += 30
+            # Create the figure representing the target involved
+            if target:
+                # In this case a restriction with target is being read (e.g. qualified cardinality restriction, etc)
+                box, target_id, box_width = create_box(f'{type} {cleaned_property}: {target}', previous_x_axis - 60, y_axis)
+
+            else:
+                # In this case a restriction without target is being read (e.g. cardinality restriction, etc)
+                box, target_id, box_width = create_box(f'{type} {cleaned_property}', previous_x_axis - 60, y_axis)
+            
+            diagram += box
+
+            if anonymous_type == 6 or anonymous_type == 7:
+                diagram += create_cloud("No chowlk&lt;br&gt;notation", x_axis, y_axis - 30)
+                return y_axis
+        
+        else:
+
+            # Create the figure representing the target involved
+            if target:
+                # In this case a restriction with target is being read (e.g. qualified cardinality restriction, etc)
+                box, target_id, box_width = create_box(target, x_axis, y_axis)
+
+            else:
+                # In this case a restriction without target is being read (e.g. cardinality restriction, etc)
+                box, target_id, box_width = create_empty_box(x_axis, y_axis)
+            
+            diagram += box
+    
+    if not datatype_property:
+        # Create the figure representing the property involved
+        arrow = create_arrow(f'{type} {cleaned_property}', figure_id, target_id)
+        diagram += arrow
+    
+    return y_axis
 
 # Function to get the value of the term from the last occurrence of the '|' character      
 def clean_term(term):

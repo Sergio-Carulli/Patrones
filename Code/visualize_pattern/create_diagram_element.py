@@ -116,3 +116,12 @@ def create_document2(document_value, width_lenght, height_lenght, x_pos, y_pos, 
                  '        </mxCell>\n'
     
     return document, width, height
+
+def create_cloud(cloud_value, x_pos, y_pos):
+    global ellipse_identifier
+    ellipse_identifier += 1
+    ellipse =   f'        <mxCell id="ellipse-{ellipse_identifier}" value="{cloud_value}" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">\n'\
+                f'          <mxGeometry x="{x_pos}" y="{y_pos}" width="120" height="80" as="geometry" />\n'\
+                 '        </mxCell>\n'
+    
+    return ellipse
