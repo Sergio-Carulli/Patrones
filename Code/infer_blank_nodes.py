@@ -1,5 +1,3 @@
-from Code.infer_types import get_deep
-
 # Dictionary with the possible predicates inside a restriction
 restrictions = {
     'owl:allValuesFrom':'',
@@ -51,9 +49,9 @@ def iterate_structure_blank_nodes(structure_name, structure_type):
         # Read a line of the structure
         line = structure_name[i]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
-        # Does the line represents the beggining of a blank node?
+        # Does the line represents the beginning of a blank node?
         if 'Blank node' in line:
             # Infer the "Blank node" types
             infer_blank_node(i, structure_name, structure_type, structure_len, deep, top_type)

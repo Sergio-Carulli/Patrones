@@ -1236,3 +1236,109 @@ rdfs:Datatype
   |  |  |owl:datatypeComplementOf
   |  |  |  |rdfs:Datatype
 
+Pattern 66
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Pattern 67
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:allValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:allValuesFrom
+  |  |  |  |  |  |  |  |rdfs:Datatype
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+
+Pattern 68
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |owl:Class
+
+Pattern 69
+Times
+Different ontologies
+Ontologies in which it appears
+owl:Class
+  |rdfs:subClassOf
+  |  |owl:Restriction
+  |  |  |owl:onProperty
+  |  |  |  |owl:ObjectProperty
+  |  |  |owl:someValuesFrom
+  |  |  |  |owl:Restriction
+  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |owl:ObjectProperty
+  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |owl:Restriction
+  |  |  |  |  |  |  |owl:onProperty
+  |  |  |  |  |  |  |  |owl:DatatypeProperty
+  |  |  |  |  |  |  |owl:someValuesFrom
+  |  |  |  |  |  |  |  |rdfs:Datatype
+
+Pattern 70
+Times
+Different ontologies
+Ontologies in which it appears
+rdfs:Datatype
+  |rdfs:subClassOf
+  |  |rdfs:Datatype
+  |  |  |owl:oneOf
+  |  |  |  |rdf:List
+  |  |  |  |  |rdf:first
+  |  |  |  |  |  |Data value
+  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |rdf:List
+  |  |  |  |  |  |  |  |  |  |  |rdf:first
+  |  |  |  |  |  |  |  |  |  |  |  |Data value
+  |  |  |  |  |  |  |  |  |  |  |rdf:rest
+  |  |  |  |  |  |  |  |  |  |  |  |rdf:nil
+

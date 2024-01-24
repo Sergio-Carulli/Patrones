@@ -17,24 +17,24 @@ def infer_structure_type(structure):
         # Read a line of the structure
         line = structure[i]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
-        # Does the line represents the beggining of a restriction?
+        # Does the line represents the beginning of a restriction?
         if 'owl:Restriction' in line:
             # Get the line where the restriction ends
             i = restriction(i + 1, structure, structure_len, deep)
         
-        # Does the line reprsents the beggining of an intersection of union of classes?
+        # Does the line reprsents the beginning of an intersection of union of classes?
         elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
             # Get the line where the intersection/union ends
             i = intersection_union(i + 1, structure, structure_len, deep)
 
-        # Does the line represents the beggining of a complement class?
+        # Does the line represents the beginning of a complement class?
         elif 'owl:complementOf' in line:
             i += 1
             complement(i, structure)
         
-        # Does the line represents the beggining of an enumeration?
+        # Does the line represents the beginning of an enumeration?
         elif 'owl:oneOf' in line:
             # Get the line where the enumeration ends
             i = one_of(i + 1, structure, structure_len, deep)
@@ -56,7 +56,7 @@ def intersection_union(i, structure, structure_len, res_deep):
         # Read a line of the structure
         line = structure[i]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the intersection or union of classes?
         if deep <= res_deep:
@@ -72,24 +72,24 @@ def intersection_union(i, structure, structure_len, res_deep):
 
         else:
 
-            # Does the line represents the beggining of a restriction?
+            # Does the line represents the beginning of a restriction?
             if 'owl:Restriction' in line:
                 # Get the line where the restriction ends
                 i = restriction(i + 1, structure, structure_len, deep)
             
-            # Does the line represents the beggining of an intersection of union of classes?
+            # Does the line represents the beginning of an intersection of union of classes?
             elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
                 # Get the line where the intersection/union ends
                 i = intersection_union(i + 1, structure, structure_len, deep)
             
-            # Does the line represents the beggining of a complement class?
+            # Does the line represents the beginning of a complement class?
             elif 'owl:complementOf' in line:
                 # Get the next line of the complement. This is a special case because if there is an #Unknown
                 # is because there is not a blank node. 
                 i += 1
                 complement(i, structure)
 
-            # Does the line represents the beggining of an enumeration?
+            # Does the line represents the beginning of an enumeration?
             elif 'owl:oneOf' in line:
                 # Get the line where the enumeration ends
                 i = one_of(i + 1, structure, structure_len, deep)
@@ -115,7 +115,7 @@ def one_of(i, structure, structure_len, res_deep):
         # Read a line of the structure
         line = structure[i]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the enumeration?
         if deep <= res_deep:
@@ -131,24 +131,24 @@ def one_of(i, structure, structure_len, res_deep):
 
         else:
 
-            # Does the line represents the beggining of a restriction?
+            # Does the line represents the beginning of a restriction?
             if 'owl:Restriction' in line:
                 # Get the line where the restriction ends
                 i = restriction(i + 1, structure, structure_len, deep)
             
-            # Does the line represents the beggining of an intersection of union of classes?
+            # Does the line represents the beginning of an intersection of union of classes?
             elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
                 # Get the line where the intersection/union ends
                 i = intersection_union(i + 1, structure, structure_len, deep)
             
-            # Does the line represents the beggining of a complement class?
+            # Does the line represents the beginning of a complement class?
             elif 'owl:complementOf' in line:
                 # Get the next line of the complement. This is a special case because if there is an #Unknown
                 # is because there is not a blank node. 
                 i += 1
                 complement(i, structure)
 
-            # Does the line represents the beggining of an enumeration?
+            # Does the line represents the beginning of an enumeration?
             elif 'owl:oneOf' in line:
                 # Get the line where the enumeration ends
                 i = one_of(i + 1, structure, structure_len, deep)
@@ -190,7 +190,7 @@ def restriction(i, structure, structure_len, res_deep):
         # Read a line of the structure
         line = structure[i]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the restriction?
         if deep <= res_deep:
@@ -247,24 +247,24 @@ def restriction(i, structure, structure_len, res_deep):
         
         else:
 
-            # Does the line represents the beggining of a restriction?
+            # Does the line represents the beginning of a restriction?
             if 'owl:Restriction' in line:
                 # Get the line where the restriction ends
                 i = restriction(i + 1, structure, structure_len, deep)
             
-            # Does the line represents the beggining of an intersection of union of classes?
+            # Does the line represents the beginning of an intersection of union of classes?
             elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
                 # Get the line where the intersection/union ends
                 i = intersection_union(i + 1, structure, structure_len, deep)
             
-            # Does the line represents the beggining of a complement class?
+            # Does the line represents the beginning of a complement class?
             elif 'owl:complementOf' in line:
                 # Get the next line of the complement. This is a special case because if there is an #Unknown
                 # is because there is not a blank node. 
                 i += 1
                 complement(i, structure)
             
-            # Does the line represents the beggining of an enumeration?
+            # Does the line represents the beginning of an enumeration?
             elif 'owl:oneOf' in line:
                 i = one_of(i + 1, structure, structure_len, deep)
             
@@ -302,29 +302,3 @@ def change_restriction_type(structure, property, p_position, target, t_position)
         # Should the type of the target be a datatype?
         elif 'owl:DatatypeProperty' in property:
             structure[t_position] = structure[t_position].replace('#Unknown', 'rdfs:Datatype')
-
-# Function to calculate the deep of a structure line.
-# The deep is represented by the number of times '|' appears in a line.
-def get_deep(line):
-    # Variable to store the line deep
-    deep = 0
-
-    # Iterate each character of the line
-    for char in line:
-
-        # Does the char represent ' '?
-        if char == ' ':
-            # This means there is a '|' ahead
-            continue
-
-        # Does the char represent '|'?
-        elif char == '|':
-            # Increase the line deep
-            deep += 1
-
-        else:
-            # In this case the term has been reached and the line deep has been calculated
-            break
-    
-    # Return the line deep
-    return deep

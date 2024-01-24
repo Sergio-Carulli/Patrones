@@ -2,44 +2,52 @@ from create_diagram_element import *
 
 # Global variable to store the content of the XML file
 diagram = ''
+# Global variable to create unique identifiers for each figure
+figure_identifier = 0
 
-# Function to create the XML diagram where the patterns are going to be visualizated
+# Function to create the XML diagram where the patterns are going to be visualizated.
+# This XML file has to follow the drawio.io structure (since this application is going to open the XML).
 def create_diagram(pattern_path):
+        
+        # Create the neccesary headers of the XML which contains the visualization
         generate_XML_headers()
-
         # Open the file with the detected patterns
         pattern_file = open(pattern_path , "r", encoding='utf-8')
-
         # Read the first pattern
         pattern, max_lenght, pattern_text, pattern_number = read_pattern(pattern_file)
-
-        # Variable to store the starting Y axis of a new pattern. In order to not overlap the figures
+        # Variable to store the starting Y axis of a new pattern (to not overlap the figures)
         y_axis = 0
 
         # Iterate while there is at least one pattern unread
         while(len(pattern) > 0):
+            # Create the visualization of the pattern
             y_axis = visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
             # Read a new pattern
             pattern, max_lenght, pattern_text, pattern_number = read_pattern(pattern_file)
 
-        # Close the csv file
+        # Close the the file with the detected patterns (the end has been reached)
         pattern_file.close()
-
+        # Create the neccesary footers of the XML which contains the visualization
         generate_footers()
 
+        # Write the results
         f = open('Visualization.xml', 'w', encoding='utf-8')
         f.write(diagram)
         f.close()
 
-# Function to parse just one pattern into a list
-# Different patterns are separated by blank lines        
+# Function to parse just one pattern into a list. Different patterns are separated by blank lines.
+# When a blank node is read this function returns:
+#   - The pattern parsed into a list (in order to iterate the pattern)
+#   - The pattern as a raw string (in order to create a document figure)
+#   - The length of the longest pattern line (in order to calculate the width of the document figure)
+#   - The unique identifier of the pattern    
 def read_pattern(pattern_file):
     # List that will store each line of the pattern being read
     pattern = []
 
-    # Skip the first four lines of the pattern (these lines just contain metadata)
-    
-    pattern_number = pattern_file.readline()
+    # The first line contains the identifier of the pattern
+    pattern_identifier = pattern_file.readline().strip()
+    # The following three lines contain metadata (Skip them)
     pattern_file.readline()
     pattern_file.readline()
     pattern_file.readline()
@@ -49,42 +57,51 @@ def read_pattern(pattern_file):
 
     # Read fifth line (already contains pattern data)
     line = pattern_file.readline()
-
     # Variable to store the pattern as text
     pattern_text = ''
 
-    # Iterate the lines of the TXT file
-    while(line):
-
-        # Is a pattern line being read?
-        if len(line) > 1:
-            # Store the length of the longest line
-            max_lenght = max(max_lenght, len(line))
-            # Add structure line
-            pattern.append(line)
-            pattern_text += f'{line}&lt;br&gt;&amp;nbsp;'
-
-        else:
-            pattern_text = pattern_text[:-20]
-            # In this case a blank line is being read, i.e. the end of the pattern has been reached
-            break
-
+    # Iterate the lines of the TXT file until a blank node is read (i.e. until the end of a pattern has been reached)
+    while(line and len(line) > 1):
+        # Check if the line that is being read is longer than the previous lines
+        max_lenght = max(max_lenght, len(line))
+        # Add structure line
+        pattern.append(line)
+        # Add structure line as raw text
+        pattern_text += f'{line.strip()}&lt;br&gt;&amp;nbsp;'
         # Read a new line
         line = pattern_file.readline()
     
-    return pattern, max_lenght, pattern_text, pattern_number
+    # It is neccesary to remove the last "&lt;br&gt;&amp;nbsp;", which represents a line break
+    return pattern, max_lenght, pattern_text[:-20], pattern_identifier
 
+
+# This function will create for each pattern the necessary XML code in order to visualizate them using drawio.io
 def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number):
+    # Declare global variables (in order to change them)
     global diagram
+
+    # Create a vertical container element in order to write the pattern as raw text
     x_axis, y_axis_document = visualize_document(pattern_text, max_lenght, len(pattern), y_axis, pattern_number)
 
     try:
-        x_axis, figure_id = visualize_beggining(pattern, x_axis, y_axis)
+        # Create the elements that represents the beggining of a pattern
+        x_axis, figure_id = visualize_beginning(pattern, x_axis, y_axis)
     
     except:
-        diagram += create_cloud("No chowlk&lt;br&gt;notation", x_axis, y_axis)
+        # In this case a exception has been raised indicating that there is no Chowlk notation to represents the pattern
+
+        # Declare global variables (in order to change them)
+        global figure_identifier
+
+        # Create a new cloud element and add it to the diagram
+        figure_identifier += 1
+        diagram += create_cloud(figure_identifier, "No chowlk&lt;br&gt;notation", x_axis, y_axis)
+
+        # Return where the new pattern should start checking what is higher: 
+        # the figure representing the pattern as raw text or the figure representing the pattern
         return max(y_axis, y_axis_document) + 60
     
+    # ME HE QUEDADO AQUI PONIENDO COMENTARIOS
     index = 2
     pattern_len = len(pattern)
     # Iterate the structure
@@ -92,9 +109,9 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
         # Read a line of the pattern
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
-        # Does the line represents the beggining of a restriction?
+        # Does the line represents the beginning of a restriction?
         if 'owl:Restriction' in line:
             # Get the line where the restriction ends
             index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
@@ -115,10 +132,12 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
             # Get the next line
             index += 1
 
+    # Return where the new pattern should start checking what is higher: 
+    # the figure representing the pattern as raw text or the figure representing the pattern
     return max(y_axis, y_axis_document) + 60
 
 def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
-    global diagram
+    global diagram, figure_identifier
     # Variable to store the type of the target involved in a resctriction
     target = ''
     # Variable to store the identifier of the figure which represents the target of a resctriction.
@@ -129,7 +148,7 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
         # Read a line of the structure
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the restriction?
         if deep <= father_deep:
@@ -137,66 +156,79 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
             return index, y_axis
 
         if 'owl:Restriction' in line:
-            # Create the figure to represent the beggining of a new restriction
-            figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
-            arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
-            diagram += f'{figure}{arrow}'
+            figure_identifier += 1
+            target_id = f'class-{figure_identifier}'
+            # Create the figure to represent the beginning of a new restriction
+            # figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 200, y_axis)
+            figure_identifier += 1
+            diagram += create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+            # diagram += f'{figure}{arrow}'
             # Get the line where the restriction ends
-            index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
+            index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + 200, y_axis)
         
         else:
             target = line
 
             if index + 1 < pattern_len:
                 line = pattern[index + 1]
-                deep = get_deep(line)
+                deep = line.count('  |')
 
                 if deep > father_deep:
 
                     if 'owl:oneOf' in line:
-                        # Create the figure to represent the beggining of a new enumeration
-                        figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
+                        figure_identifier += 1
+                        # Create the figure to represent the beginning of a new enumeration
+                        figure, target_id, figure_width = create_hexagon(figure_identifier, '&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        figure_identifier += 1
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
                     elif 'owl:intersectionOf' in line:
-                        # Create the figure to represent the beggining of a new enumeration
-                        figure, target_id, figure_width = create_ellipse('⨅', x_axis + 200, y_axis)
+                        figure_identifier += 1
+                        # Create the figure to represent the beginning of a new enumeration
+                        figure, target_id, figure_width = create_ellipse(figure_identifier, '⨅', x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        figure_identifier += 1
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
                     elif 'owl:unionOf' in line:
-                        # Create the figure to represent the beggining of a new enumeration
-                        figure, target_id, figure_width = create_ellipse('⨆', x_axis + 200, y_axis)
+                        figure_identifier += 1
+                        # Create the figure to represent the beginning of a new enumeration
+                        figure, target_id, figure_width = create_ellipse(figure_identifier, '⨆', x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        figure_identifier += 1
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
                     elif 'owl:complementOf' in line:
-                        # Create the figure to represent the beggining of a new enumeration
-                        figure, target_id, figure_width = create_empty_box(x_axis + 200, y_axis)
+                        figure_identifier += 1
+                        # Create the figure to represent the beginning of a new enumeration
+                        figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 200, y_axis)
                         # Create the arrow linking the figure to the intersection
-                        arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        figure_identifier += 1
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
             # Create the figure representing a member of the intersection
-            figure, target_id, figure_width = create_box(clean_term(target.strip()), x_axis + 200, y_axis)
+            figure_identifier += 1
+            figure, target_id, figure_width = create_box(figure_identifier, clean_term(target), x_axis + 200, y_axis)
             # Create the arrow linking the figure to the intersection
-            arrow = create_dashed_arrow('&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+            figure_identifier += 1
+            arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
             diagram += f'{figure}{arrow}'
             index += 1
     
@@ -204,14 +236,14 @@ def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_ax
     return index, y_axis
 
 def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
-    global diagram
+    global diagram, figure_identifier
 
     # Iterate the structure
     while index < pattern_len:
         # Read a line of the structure
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the intersection or union of classes?
         if deep <= father_deep:
@@ -223,31 +255,36 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
             # Get the position of the next line
             index += 1
             line = pattern[index]
-            deep = get_deep(line)
+            deep = line.count('  |')
 
             if 'owl:Restriction' in line:
-                # Create the figure to represent the beggining of a new restriction
-                figure, target_id, figure_width = create_empty_box(x_axis + 60, y_axis)
+                figure_identifier += 1
+                target_id = f'class-{figure_identifier}'
+                # Create the figure to represent the beginning of a new restriction
+                # figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 60, y_axis)
                 # Create the arrow linking the figure to the intersection
-                arrow = create_empty_dashed_arrow(figure_id, target_id)
-                diagram += f'{figure}{arrow}'
+                figure_identifier += 1
+                diagram += create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
+                # diagram += f'{figure}{arrow}'
                 # Get the line where the restriction ends
-                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + 60 + figure_width, y_axis)
+                index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + 60, y_axis)
                 y_axis += 60
             
             else:
 
                 if index + 1 < pattern_len:
                     line = pattern[index + 1]
-                    deep = get_deep(line)
+                    deep = line.count('  |')
 
                     if deep > father_deep:
 
                         if 'owl:oneOf' in line:
-                            # Create the figure to represent the beggining of a new enumeration
-                            figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 60, y_axis)
+                            figure_identifier += 1
+                            # Create the figure to represent the beginning of a new enumeration
+                            figure, target_id, figure_width = create_hexagon(figure_identifier, '&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 60, y_axis)
                             # Create the arrow linking the figure to the intersection
-                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            figure_identifier += 1
+                            arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
                             # Get the line where the enumeration ends
                             index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
@@ -255,10 +292,12 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
                             continue
 
                         elif 'owl:intersectionOf' in line:
-                            # Create the figure to represent the beggining of a new enumeration
-                            figure, target_id, figure_width = create_ellipse('⨅', x_axis + 60, y_axis)
+                            figure_identifier += 1
+                            # Create the figure to represent the beginning of a new enumeration
+                            figure, target_id, figure_width = create_ellipse(figure_identifier, '⨅', x_axis + 60, y_axis)
                             # Create the arrow linking the figure to the intersection
-                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            figure_identifier += 1
+                            arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
                             # Get the line where the enumeration ends
                             index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
@@ -266,10 +305,12 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
                             continue
 
                         elif 'owl:unionOf' in line:
-                            # Create the figure to represent the beggining of a new enumeration
-                            figure, target_id, figure_width = create_ellipse('⨆', x_axis + 60, y_axis)
+                            figure_identifier += 1
+                            # Create the figure to represent the beginning of a new enumeration
+                            figure, target_id, figure_width = create_ellipse(figure_identifier, '⨆', x_axis + 60, y_axis)
                             # Create the arrow linking the figure to the intersection
-                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            figure_identifier += 1
+                            arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
                             # Get the line where the enumeration ends
                             index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
@@ -277,10 +318,12 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
                             continue
 
                         elif 'owl:complementOf' in line:
-                            # Create the figure to represent the beggining of a new enumeration
-                            figure, target_id, figure_width = create_empty_box(x_axis + 60, y_axis)
+                            figure_identifier += 1
+                            # Create the figure to represent the beginning of a new enumeration
+                            figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 60, y_axis)
+                            figure_identifier += 1
                             # Create the arrow linking the figure to the intersection
-                            arrow = create_empty_dashed_arrow(figure_id, target_id)
+                            arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
                             # Get the line where the enumeration ends
                             index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
@@ -289,9 +332,11 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
 
 
                 # Create the figure representing a member of the intersection
-                box, box_id, box_width = create_box(clean_term(pattern[index].strip()), x_axis + 60, y_axis)
+                figure_identifier += 1
+                box, box_id, box_width = create_box(figure_identifier, clean_term(pattern[index]), x_axis + 60, y_axis)
                 # Create the arrow linking the figure to the intersection
-                arrow = create_empty_dashed_arrow(figure_id, box_id)
+                figure_identifier += 1
+                arrow = create_empty_dashed_arrow(figure_identifier, figure_id, box_id)
                 diagram += f'{box}{arrow}'
                 y_axis += 60
 
@@ -303,78 +348,138 @@ def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_
     # Return a number which is greater than the number of lines in the list
     return index, y_axis - 60
 
-def visualize_document(pattern_text, width_lenght, height_lenght, y_pos, pattern_number):
-    global diagram
+# This function will create a vertical container in order to represent the pattern as raw text.
+# This function returns the X and Y axes where the next element should be placed so it does not overlap with
+# the vertical container.
+def visualize_document(pattern_text, width_lenght, height_lenght, y_axis, pattern_number):
+    # Declare global variables (in order to change them)
+    global diagram, figure_identifier
 
-    #document, x_axis, y_axis_document = create_document(pattern_text, width_lenght, height_lenght, 0, y_pos)
-    document, x_axis, y_axis_document = create_document2(pattern_text, width_lenght, height_lenght, 0, y_pos, pattern_number)
-    y_axis_document += y_pos
-    diagram += document
+    # Create a new vertical container element
+    figure_identifier += 1
+    vertical_container, x_axis, y_axis_document = create_vertical_container(figure_identifier, pattern_text, width_lenght, height_lenght, 0, y_axis, pattern_number)
+    # Add the new element to the diagram
+    diagram += vertical_container
 
-    return x_axis + 20, y_axis_document
+    return x_axis + 20, y_axis_document + y_axis
 
-def visualize_beggining(pattern, x_axis, y_axis):
-    global diagram
+# This function will create the figures that correspond to the beginning of a pattern.
+# The beginning of a pattern contains the following elements:
+#   - Subject: The term is either a class or a datatype. Therefhore this term is always represented as a box
+#   - Predicate: This term represents a class axiom. This term is represented as a special type of arrow (depending of the class axiom)
+#   - Object: This term represents a blank node. The type of the figure depends on the blank node
+# This function returns:
+#   - The identifier of the element which represents the beginning of a blank node
+#   - The X axis where the next element should be placed so it does not overlap with the element which represents the beginning of the blank node (which is now the rightmost element)
+def visualize_beginning(pattern, x_axis, y_axis):
+    # Declare global variables (in order to change them)
+    global diagram, figure_identifier
 
-    subject = clean_term(pattern[0].strip())
-    predicate = clean_term(pattern[1].strip())
-    object = clean_term(pattern[2].strip())
+    # Get the terms related to the beginning of a pattern
+    subject = clean_term(pattern[0])
+    predicate = clean_term(pattern[1])
+    object = clean_term(pattern[2])
 
-    box, box_id, box_width = create_box(subject, x_axis, y_axis)
+    # Create a new box, which represents the subject
+    figure_identifier += 1
+    box, box_id, box_width = create_box(figure_identifier, subject, x_axis, y_axis)
+
+    # Calculate the X axis where the next element should be placed so it does not overlap with the box and 
+    # it leaves enough space for the arrow
     x_axis += len(predicate) * 8 + box_width
 
+    # The next lines will create the figure of the object
+    # Does the object represents a restriction?
     if 'owl:Restriction' in object:
-        figure, figure_id, figure_width = create_empty_box(x_axis, y_axis)
+        # The visualization of a restriction must be done after analyzing the type of the restriction.
+        # This is because the element which represents the beginning of the restriction changes depending of the type.
+
+        # Create the identifier of the element which will represent the origin of a restriction
+        figure_identifier += 1
+        figure_id = f'class-{figure_identifier}'
     
+    # Does the object represents another kind of blank node?
     elif 'owl:Class' in object or 'rdfs:Datatype' in object:
 
-        object = clean_term(pattern[3].strip())
+        # Get the line with the header (in order to know the type of the blank node)
+        object = clean_term(pattern[3])
 
+        # Does the object represent an enumeration?
         if 'owl:oneOf' in object:
-            figure, figure_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis, y_axis)
+            # Create a new hexagon element to represent the beginning of an enumeration
+            figure_identifier += 1
+            figure, figure_id, figure_width = create_hexagon(figure_identifier, '&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis, y_axis)
 
+        # Does the object represent an intersection?
         elif 'owl:intersectionOf' in object:
-            figure, figure_id, figure_width = create_ellipse('⨅', x_axis, y_axis)
+            # Create a new ellipse element to represent the beginning of an intersection
+            figure_identifier += 1
+            figure, figure_id, figure_width = create_ellipse(figure_identifier, '⨅', x_axis, y_axis)
         
+        # Does the object represent an union?
         elif 'owl:unionOf' in object:
-            figure, figure_id, figure_width = create_ellipse('⨆', x_axis, y_axis)
+            # Create a new ellipse element to represent the beginning of an union
+            figure_identifier += 1
+            figure, figure_id, figure_width = create_ellipse(figure_identifier, '⨆', x_axis, y_axis)
         
+        # Does the object represent a complement?
         elif 'owl:complementOf' in object:
-            figure, figure_id, figure_width = create_empty_box(x_axis, y_axis)
+            # Create a new empty box element to represent the beginning of a complement
+            figure_identifier += 1
+            figure, figure_id, figure_width = create_empty_box(figure_identifier, x_axis, y_axis)
         
         else:
-            raise Exception('Structure corrupted')
+            # There is no Chowlk notation to represent this pattern
+            raise Exception('There is no Chowlk notation')
+        
+        # Add the new element, which represents the beginning of the blank node, to the diagram
+        diagram += figure
+        # Calculate the X axis where the next element should be placed so it does not overlap with the element
+        # which represents the beginning of the blank node (which is now the rightmost element)
+        x_axis += figure_width
     
     else:
+        # This should not happen (the object always represents a blank node)
         raise Exception('Structure corrupted')
 
-    x_axis += figure_width
-
+    # The next lines will create the figure of the predicate
+    # Does the predicate represents a sub-class?
     if 'rdfs:subClassOf' in predicate:
-        arrow = create_block_arrow(box_id, figure_id)
+         # Create a new arrow element to represent the class axiom
+        figure_identifier += 1
+        arrow = create_block_arrow(figure_identifier, box_id, figure_id)
 
+    # Does the predicate represents an equivalent class?
     elif 'owl:equivalentClass' in predicate:
-        arrow = create_double_block_dashed_arrow('&amp;lt;&amp;lt;owl:equivalentClass&amp;gt;&amp;gt;', box_id, figure_id)
+        # Create a new arrow element to represent the class axiom
+        figure_identifier += 1
+        arrow = create_double_block_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:equivalentClass&amp;gt;&amp;gt;', box_id, figure_id)
 
+    # Does the predicate represents a disjoint class?
     elif 'owl:disjointWith' in predicate:
-        arrow = create_double_block_dashed_arrow('&amp;lt;&amp;lt;owl:disjointWith&amp;gt;&amp;gt;', box_id, figure_id)
+        # Create a new arrow element to represent the class axiom
+        figure_identifier += 1
+        arrow = create_double_block_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:disjointWith&amp;gt;&amp;gt;', box_id, figure_id)
     
     else:
-        arrow = create_arrow(predicate, box_id, figure_id)
+        # This should not happens
+        figure_identifier += 1
+        arrow = create_arrow(figure_identifier, predicate, box_id, figure_id)
 
-    diagram += f'{box}{figure}{arrow}'
+    # Add the elements which represent the subject and the predicate to the diagram
+    diagram += f'{box}{arrow}'
 
     return x_axis, figure_id
 
 def iterate_enumeration(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
-    global diagram
+    global diagram, figure_identifier
 
     # Iterate the structure
     while index < pattern_len:
         # Read a line of the structure
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the enumeration?
         if deep <= father_deep:
@@ -385,10 +490,18 @@ def iterate_enumeration(index, pattern, pattern_len, father_deep, figure_id, x_a
         elif 'rdf:first' in line:
             # Get the position of the next line
             index += 1
+            figure_identifier += 1
             # Create the figure representing a member of the enumeration
-            box, box_id, box_width = create_box(clean_term(pattern[index].strip()), x_axis + 60, y_axis)
+
+            if 'Data value' in pattern[index]:
+                box, box_id, box_width = create_quot_box(figure_identifier, 'Data Value', x_axis + 60, y_axis)
+            
+            else:
+                box, box_id, box_width = create_underlined_box(figure_identifier, clean_term(pattern[index]), x_axis + 60, y_axis)
+
             # Create the arrow linking the figure to the enumeration
-            arrow = create_empty_dashed_arrow(figure_id, box_id)
+            figure_identifier += 1
+            arrow = create_empty_dashed_arrow(figure_identifier, figure_id, box_id)
             diagram += f'{box}{arrow}'
             y_axis += 60
 
@@ -420,12 +533,12 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
         # Read a line of the structure
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
-        deep = get_deep(line)
+        deep = line.count('  |')
 
         # Is the line outside the restriction?
         if deep <= father_deep:
             # Create the figures representing the restriction
-            y_axis = visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len)
+            y_axis = visualize_restriction(clean_term(property), clean_term(target), type, figure_id, x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len)
             # Return the position where the restriction ends
             return index, y_axis
 
@@ -522,7 +635,7 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
         elif aux:
             global diagram
 
-            # Does the line represents the beggining of a restriction?
+            # Does the line represents the beginning of a restriction?
             if 'owl:Restriction' in line:
                 aux = False
                 anonymous_type = 1
@@ -574,14 +687,14 @@ def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_a
 
     # In this case we have reached the end of the structure
     # Create the figures representing the restriction
-    y_axis = visualize_restriction(clean_term(property.strip()), clean_term(target.strip()), type, figure_id, x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len)
+    y_axis = visualize_restriction(clean_term(property), clean_term(target), type, figure_id, x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len)
     
     # Return a number which is greater than the number of lines in the list
     return index, y_axis
 
 def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_axis, anonymous_type, anonymous_index, anonymous_deep, pattern, pattern_len):
-    global diagram
-
+    global diagram, figure_identifier
+    
     # Variable to store the property with the chowlk format. For example:
     #   - Pattern format: owl:FunctionalProperty, owl:ObjectProperty
     #   - Chowlk format: (F) owl:ObjectProperty
@@ -631,49 +744,63 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
             datatype_property = True
 
     # Calculate the x axis where the next box is going to be located
-    x_axis = (len(cleaned_property) + len(type)) * 8 + previous_x_axis
+    x_axis = (len(cleaned_property) + len(type)) * 8 + previous_x_axis + 60 # CAMBIAR el 60
 
     if anonymous_type == 1:
-        figure, target_id, figure_width = create_empty_box(x_axis, y_axis)
-        diagram += f'{figure}'
+        diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
+        figure_identifier += 1
+        target_id = f'class-{figure_identifier}'
+        """figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis, y_axis)
+        diagram += f'{figure}'"""
         # Get the line where the restriction ends
-        index, y_axis = iterate_restriction(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
+        index, y_axis = iterate_restriction(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis, y_axis)
 
     elif anonymous_type == 2:
 
         if datatype_property:
-            box, target_id, box_width = create_box(f'{type} {cleaned_property}: {target}', previous_x_axis - 60, y_axis + 30)
+            diagram += create_empty_box_2(figure_id, (len(f'{type} {cleaned_property}: {target}')) * 6.2, previous_x_axis, y_axis)
+            figure_identifier += 1
+            box, target_id, box_width = create_box(figure_identifier, f'{type} {cleaned_property}: {target}', previous_x_axis, y_axis + 30)
             diagram += box
-            diagram += create_cloud("No chowlk&lt;br&gt;notation", x_axis, y_axis)
+            figure_identifier += 1
+            diagram += create_cloud(figure_identifier, "No further chowlk &lt;br&gt;notation", x_axis, y_axis)
             return y_axis
         
         else:
-            # Create the figure to represent the beggining of a new enumeration
-            figure, target_id, figure_width = create_hexagon('&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis, y_axis)
+            diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
+            # Create the figure to represent the beginning of a new enumeration
+            figure_identifier += 1
+            figure, target_id, figure_width = create_hexagon(figure_identifier, '&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis, y_axis)
             diagram += f'{figure}'
             # Get the line where the enumeration ends
             index, y_axis = iterate_enumeration(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
 
     
     elif anonymous_type == 3:
-        # Create the figure to represent the beggining of a new enumeration
-        figure, target_id, figure_width = create_ellipse('⨅', x_axis, y_axis)
+        diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
+        figure_identifier += 1
+        # Create the figure to represent the beginning of a new enumeration
+        figure, target_id, figure_width = create_ellipse(figure_identifier, '⨅', x_axis, y_axis)
         diagram += f'{figure}'
         # Get the line where the enumeration ends
         index, y_axis = iterate_intersection(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
     
     
     elif anonymous_type == 4:
-        # Create the figure to represent the beggining of a new enumeration
-        figure, target_id, figure_width = create_ellipse('⨆', x_axis, y_axis)
+        diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
+        figure_identifier += 1
+        # Create the figure to represent the beginning of a new enumeration
+        figure, target_id, figure_width = create_ellipse(figure_identifier, '⨆', x_axis, y_axis)
         diagram += f'{figure}'
         # Get the line where the enumeration ends
         index, y_axis = iterate_intersection(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
             
     
     elif anonymous_type == 5:
-        # Create the figure to represent the beggining of a new restriction
-        figure, target_id, figure_width = create_empty_box(x_axis, y_axis)
+        diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
+        figure_identifier += 1
+        # Create the figure to represent the beginning of a new restriction
+        figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis, y_axis)
         diagram += f'{figure}'
         # Get the line where the restriction ends
         index, y_axis = iterate_complement(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis + figure_width, y_axis)
@@ -681,46 +808,67 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
     else:
 
         if datatype_property:
+
             y_axis += 30
+
             # Create the figure representing the target involved
             if target:
+                figure_identifier += 1
                 # In this case a restriction with target is being read (e.g. qualified cardinality restriction, etc)
-                box, target_id, box_width = create_box(f'{type} {cleaned_property}: {target}', previous_x_axis - 60, y_axis)
+                if type == '(value)':
+                    diagram += create_empty_box_2(figure_id, (len(f'{type} {cleaned_property}: &quot;{target}&quot;')) * 6.2, previous_x_axis, y_axis -30)
+                    box, target_id, box_width = create_box(figure_identifier, f'{type} {cleaned_property}: &quot;{target}&quot;', previous_x_axis, y_axis)
+
+                else:
+                    diagram += create_empty_box_2(figure_id, (len(f'{type} {cleaned_property}: {target}')) * 6.2, previous_x_axis, y_axis -30)
+                    box, target_id, box_width = create_box(figure_identifier, f'{type} {cleaned_property}: {target}', previous_x_axis, y_axis)
 
             else:
+                figure_identifier += 1
                 # In this case a restriction without target is being read (e.g. cardinality restriction, etc)
-                box, target_id, box_width = create_box(f'{type} {cleaned_property}', previous_x_axis - 60, y_axis)
+                diagram += create_empty_box_2(figure_id, (len(f'{type} {cleaned_property}')) * 6.2, previous_x_axis, y_axis -30)
+                box, target_id, box_width = create_box(figure_identifier, f'{type} {cleaned_property}', previous_x_axis, y_axis)
             
             diagram += box
 
             if anonymous_type == 6 or anonymous_type == 7:
-                diagram += create_cloud("No chowlk&lt;br&gt;notation", x_axis, y_axis - 30)
+                figure_identifier += 1
+                diagram += create_cloud(figure_identifier, "No further chowlk &lt;br&gt;notation", x_axis, y_axis - 30)
                 return y_axis
         
         else:
+            diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
 
             # Create the figure representing the target involved
             if target:
+                figure_identifier += 1
                 # In this case a restriction with target is being read (e.g. qualified cardinality restriction, etc)
-                box, target_id, box_width = create_box(target, x_axis, y_axis)
+                if type == '(value)':
+                    box, target_id, box_width = create_underlined_box(figure_identifier, target, x_axis, y_axis)
+
+                else:
+                    box, target_id, box_width = create_box(figure_identifier, target, x_axis, y_axis)
 
             else:
+                figure_identifier += 1
                 # In this case a restriction without target is being read (e.g. cardinality restriction, etc)
-                box, target_id, box_width = create_empty_box(x_axis, y_axis)
+                box, target_id, box_width = create_empty_box(figure_identifier, x_axis, y_axis)
             
             diagram += box
     
     if not datatype_property:
+        figure_identifier += 1
         # Create the figure representing the property involved
-        arrow = create_arrow(f'{type} {cleaned_property}', figure_id, target_id)
+        arrow = create_arrow(figure_identifier, f'{type} {cleaned_property}', figure_id, target_id)
         diagram += arrow
     
     return y_axis
 
-# Function to get the value of the term from the last occurrence of the '|' character      
+# Function to get the value of the term from the last occurrence of the '|' character.
+# Moreover, the whitespaces at the beginning and endind of the string are removed.
 def clean_term(term):
     index = term.rfind('|') + 1
-    return term[index:]
+    return term[index:].strip()
 
 # Function to generate the headers of the XML file.
 # Drawio.io needs this headers in order to correctly proccesed the diagram.
@@ -740,29 +888,3 @@ def generate_footers():
                         '    </mxGraphModel>\n'\
                         '  </diagram>\n'\
                         '</mxfile>\n'
-
-# Function to calculate the deep of a structure line.
-# The deep is represented by the number of times '|' appears in a line.
-def get_deep(line):
-    # Variable to store the line deep
-    deep = 0
-
-    # Iterate each character of the line
-    for char in line:
-
-        # Does the char represent ' '?
-        if char == ' ':
-            # This means there is a '|' ahead
-            continue
-
-        # Does the char represent '|'?
-        elif char == '|':
-            # Increase the line deep
-            deep += 1
-
-        else:
-            # In this case the term has been reached and the line deep has been calculated
-            break
-    
-    # Return the line deep
-    return deep

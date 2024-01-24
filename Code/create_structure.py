@@ -255,32 +255,23 @@ def iterate_structure(term, text, error_log, already_visited, flatten):
 
                     # Does the predicate represent the origin of a list?
                     if p == 'owl:intersectionOf' or p == 'owl:unionOf' or p == 'owl:withRestrictions' or p == 'owl:oneOf':
-                        """# Declare the beggining of a list
-                        aux_name += f'{text}  |  |rdf:List\n'
-                        aux_type += f'{text}  |  |rdf:List\n'"""
                         list_found = True
                         blank_found = True
-                        """structure_name.write(f'{text}  |  |rdf:List\n')
-                        structure_type.write(f'{text}  |  |rdf:List\n')"""
 
                     # Does the predicate represent the next element of a list?
                     elif p == 'rdf:rest':
 
                         # Is there another element in the list?
                         if o != 'rdf:nil':
-                            # Declare the beggining of another element in the list
+                            # Declare the beginning of another element in the list
                             aux_name += f'{text}  |  |rdf:List\n'
                             aux_type += f'{text}  |  |rdf:List\n'
-                            """structure_name.write(f'{text}  |  |rdf:List\n')
-                            structure_type.write(f'{text}  |  |rdf:List\n')"""
                         
                         else:
                             # In this case the end of the list have been reached
                             # Declare the ending of the list
                             aux_name += f'{text}  |  |rdf:nil\n'
                             aux_type += f'{text}  |  |rdf:nil\n'
-                            """structure_name.write(f'{text}  |  |{o}\n')
-                            structure_type.write(f'{text}  |  |{o}\n')"""
                     
                     else:
                         # Write the type and the URI of the "object"
@@ -288,8 +279,6 @@ def iterate_structure(term, text, error_log, already_visited, flatten):
                         aux_name += f'{text}  |  |{term_name}\n'
                         aux_type += f'{text}  |  |{term_type}\n'
                         blank_found = blank_found or "Blank node" in o
-                        """structure_name.write(f'{text}  |  |{term_name}\n')
-                        structure_type.write(f'{text}  |  |{term_type}\n')"""
 
                     # Is the object of the triple an anonymous class?
                     if o in subjects and o != term and "Blank node" in o:
@@ -305,7 +294,7 @@ def iterate_structure(term, text, error_log, already_visited, flatten):
                                     continue
                             
                             else:
-                                # Declare the beggining of a list
+                                # Declare the beginning of a list
                                 aux_name += f'{text}  |  |rdf:List\n'
                                 aux_type += f'{text}  |  |rdf:List\n'                    
                         
