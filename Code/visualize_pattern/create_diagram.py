@@ -74,7 +74,6 @@ def read_pattern(pattern_file):
     # It is neccesary to remove the last "&lt;br&gt;&amp;nbsp;", which represents a line break
     return pattern, max_lenght, pattern_text[:-20], pattern_identifier
 
-
 # This function will create for each pattern the necessary XML code in order to visualizate them using drawio.io
 def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number):
     # Declare global variables (in order to change them)
@@ -84,7 +83,7 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
     x_axis, y_axis_document = visualize_document(pattern_text, max_lenght, len(pattern), y_axis, pattern_number)
 
     try:
-        # Create the elements that represents the beggining of a pattern
+        # Create the elements that represents the beginning of a pattern
         x_axis, figure_id = visualize_beginning(pattern, x_axis, y_axis)
     
     except:
@@ -101,10 +100,13 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
         # the figure representing the pattern as raw text or the figure representing the pattern
         return max(y_axis, y_axis_document) + 60
     
-    # ME HE QUEDADO AQUI PONIENDO COMENTARIOS
+    # Variable to store the position of the list it is being read.
+    # The first position of interest represents the blank node after the predicate axiom 
     index = 2
+    # Variable to store the length of the list
     pattern_len = len(pattern)
-    # Iterate the structure
+
+    # Iterate the pattern
     while index < pattern_len:
         # Read a line of the pattern
         line = pattern[index]
@@ -116,14 +118,17 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
             # Get the line where the restriction ends
             index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
         
+        # Does the line represents the beginning of an enumeration?
         elif 'owl:oneOf' in line:
             # Get the line where the enumeration ends
             index, y_axis = iterate_enumeration(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
         
+        # Does the line represents the beginning of an intersection/union?
         elif 'owl:intersectionOf' in line or 'owl:unionOf' in line:
-            # Get the line where the intersection ends
+            # Get the line where the intersection/union ends
             index, y_axis = iterate_intersection(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
         
+        # Does the line represents the beginning of a complement?
         elif 'owl:complementOf' in line:
             # Get the line where the intersection ends
             index, y_axis = iterate_complement(index + 1, pattern, pattern_len, deep, figure_id, x_axis, y_axis)
@@ -136,208 +141,269 @@ def visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
     # the figure representing the pattern as raw text or the figure representing the pattern
     return max(y_axis, y_axis_document) + 60
 
-def iterate_complement(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
+# This function will create the figures that correspond to a complement class description.
+# An complement class description is represented in Chowlk notation through:
+#   - A blank box which represents the beginning of the complement. This blank box has been created previously and its identifier is "father_id"
+#   - The class description, which can be either a named class or another blank node.
+#   - An arrow, whose value is "<<owl:complementOf>>", which connects the class description to the blank box.
+# In order to classify the class description the following rules are applied:
+#   1) When a 'owl:Restriction' statement is being read, the class description is a restriction.
+#   2) When another element is being read (e.g. owl:Class) and the end of the complement has not been reached, 
+#       then the next line represents the beginning of a blank node.
+#   3) When another element is being read (e.g. owl:Class) and the end of the complement has been reached,
+#        then the class description is a named class
+# This function returns:
+#   - The position of the list where the enumeration ends
+#   - The Y axis where the next element should be placed so it does not overlap with the class description (which is now the lowest element)
+def iterate_complement(index, pattern, pattern_len, father_deep, father_id, x_axis, y_axis):
+    # Declare global variables (in order to change them)
     global diagram, figure_identifier
-    # Variable to store the type of the target involved in a resctriction
-    target = ''
-    # Variable to store the identifier of the figure which represents the target of a resctriction.
-    # This variable is filled if the target of a restriction is another blank node.
-    target_id = ''
-    # Iterate the structure
+
+    # Iterate the pattern
     while index < pattern_len:
-        # Read a line of the structure
+        # Read a line of the pattern
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
         deep = line.count('  |')
 
-        # Is the line outside the restriction?
+        # Is the line outside the complement?
         if deep <= father_deep:
-            # Return the position where the restriction ends
+            # Return the position where the complement ends and the next Y axis
             return index, y_axis
 
-        if 'owl:Restriction' in line:
+        # Does the line represents the beginning of a restriction?
+        elif 'owl:Restriction' in line:
+            # Create the identifier of the figure which represents the beginning of a restriction
             figure_identifier += 1
             target_id = f'class-{figure_identifier}'
-            # Create the figure to represent the beginning of a new restriction
-            # figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 200, y_axis)
+            # Create the arrow which represents this complement
+            # This arrow connects the blank box, which represents the beginning of this complement, to the figure which represents the beginning of a restriction
             figure_identifier += 1
-            diagram += create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
-            # diagram += f'{figure}{arrow}'
+            diagram += create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', father_id, target_id)
             # Get the line where the restriction ends
             index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + 200, y_axis)
         
         else:
+            # In this case the class description is either a named class or a blank node which is not a restriction
+            # This variable store the line where the class description starts
             target = line
 
+            # Is there a next line?
             if index + 1 < pattern_len:
+                # Read the next line of the pattern
                 line = pattern[index + 1]
+                # Get the deep of the next line (the number of "  |")
                 deep = line.count('  |')
 
+                # Is the line inside the complement?
                 if deep > father_deep:
 
+                    # Does the line represents the beginning of an enumeration?
                     if 'owl:oneOf' in line:
+                        # Create an hexagon to represent the beginning of a new enumeration
                         figure_identifier += 1
-                        # Create the figure to represent the beginning of a new enumeration
                         figure, target_id, figure_width = create_hexagon(figure_identifier, '&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 200, y_axis)
-                        # Create the arrow linking the figure to the intersection
+                        # Create the arrow which represents this complement
+                        # This arrow connects the blank box, which represents the beginning of this complement, to the hexagon, which represents the beginning of an enumeration
                         figure_identifier += 1
-                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', father_id, target_id)
                         diagram += f'{figure}{arrow}'
                         # Get the line where the enumeration ends
                         index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
+                    # Does the line represents the beginning of an intersection?
                     elif 'owl:intersectionOf' in line:
+                        # Create the ellipse to represent the beginning of an intersection
                         figure_identifier += 1
-                        # Create the figure to represent the beginning of a new enumeration
                         figure, target_id, figure_width = create_ellipse(figure_identifier, '⨅', x_axis + 200, y_axis)
-                        # Create the arrow linking the figure to the intersection
+                        # Create the arrow which represents this complement
+                        # This arrow connects the blank box, which represents the beginning of this complement, to the ellipse, which represents the beginning of an intersection
                         figure_identifier += 1
-                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', father_id, target_id)
                         diagram += f'{figure}{arrow}'
-                        # Get the line where the enumeration ends
+                        # Get the line where the intersection ends
                         index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
+                    # Does the line represents the beginning of an union?
                     elif 'owl:unionOf' in line:
+                        # Create the ellipse to represent the beginning of an union
                         figure_identifier += 1
-                        # Create the figure to represent the beginning of a new enumeration
                         figure, target_id, figure_width = create_ellipse(figure_identifier, '⨆', x_axis + 200, y_axis)
-                        # Create the arrow linking the figure to the intersection
+                        # Create the arrow which represents this complement
+                        # This arrow connects the blank box, which represents the beginning of this complement, to the ellipse, which represents the beginning of an union
                         figure_identifier += 1
-                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', father_id, target_id)
                         diagram += f'{figure}{arrow}'
-                        # Get the line where the enumeration ends
+                        # Get the line where the union ends
                         index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
+                    # Does the line represents the beginning of a complement?
                     elif 'owl:complementOf' in line:
+                        # Create the blank box to represent the beginning of a complement
                         figure_identifier += 1
-                        # Create the figure to represent the beginning of a new enumeration
                         figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 200, y_axis)
-                        # Create the arrow linking the figure to the intersection
+                        # Create the arrow which represents this complement
+                        # This arrow connects the blank box, which represents the beginning of this complement, to the blank box, which represents the beginning of a complement
                         figure_identifier += 1
-                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+                        arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', father_id, target_id)
                         diagram += f'{figure}{arrow}'
-                        # Get the line where the enumeration ends
+                        # Get the line where the complement ends
                         index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 200, y_axis)
                         continue
 
-            # Create the figure representing a member of the intersection
+            # In this case the class description represents a named class
+            # Create the box to represent a named class
             figure_identifier += 1
             figure, target_id, figure_width = create_box(figure_identifier, clean_term(target), x_axis + 200, y_axis)
-            # Create the arrow linking the figure to the intersection
+            # Create the arrow which represents this complement
+            # This arrow connects the blank box, which represents the beginning of this complement, to the box, which represents a named class
             figure_identifier += 1
-            arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', figure_id, target_id)
+            arrow = create_dashed_arrow(figure_identifier, '&amp;lt;&amp;lt;owl:complementOf&amp;gt;&amp;gt;', father_id, target_id)
             diagram += f'{figure}{arrow}'
+
+            # Get the next line
             index += 1
     
-    # Return a number which is greater than the number of lines in the list
+    # Return a number which is greater than the number of lines in the list and the next Y axis
     return index, y_axis
 
+# This function will create the figures that correspond to an intersection of class description.
+# An intersection of class description is represented in Chowlk notation through:
+#   - An ellipse which represents the beginning of the intersection. This ellipse has been created previously and its identifier is "father_id"
+#   - When a "rdf:first" statemnet is being read, the next element represents a class description, which can be either a named class or another blank node.
+#   - Dashed arrows connecting each class description to the hexagon
+# In order to classify the class description the following rules are applied:
+#   1) When a 'owl:Restriction' statement is being read, the class description is a restriction.
+#   2) When another element is being read (e.g. owl:Class) and the end of the intersection has not been reached, 
+#       then the next line represents the beginning of a blank node.
+#   3) When another element is being read (e.g. owl:Class) and the end of the intersection has been reached,
+#        then the class description is a named class
+# This function returns:
+#   - The position of the list where the intersection ends
+#   - The Y axis where the next element should be placed so it does not overlap with the class description (which is now the lowest element)
 def iterate_intersection(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
+    # Declare global variables (in order to change them)
     global diagram, figure_identifier
 
-    # Iterate the structure
+    # Iterate the pattern
     while index < pattern_len:
-        # Read a line of the structure
+        # Read a line of the pattern
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
         deep = line.count('  |')
 
-        # Is the line outside the intersection or union of classes?
+        # Is the line outside the intersection/union of classes?
         if deep <= father_deep:
             # Return the line where the intersection/union ends
             return index, y_axis - 60
         
-        # Does the line represents an element of the intersection or union of classes?
+        # Does the line represents that the next line contains an element of the intersection/union?
         elif 'rdf:first' in line:
             # Get the position of the next line
             index += 1
+            # Read the next line of the pattern
             line = pattern[index]
+            # Get the deep of the next line (the number of "  |")
             deep = line.count('  |')
 
+            # Does the line represents the beginning of a restriction?
             if 'owl:Restriction' in line:
+                # Create the identifier of the figure which represents the beginning of a restriction
                 figure_identifier += 1
                 target_id = f'class-{figure_identifier}'
-                # Create the figure to represent the beginning of a new restriction
-                # figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 60, y_axis)
-                # Create the arrow linking the figure to the intersection
+                # Create the arrow which connects the ellipse, which represents the beginning of this intersection/union, to the figure which represents the beginning of a restriction
                 figure_identifier += 1
                 diagram += create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
-                # diagram += f'{figure}{arrow}'
                 # Get the line where the restriction ends
                 index, y_axis = iterate_restriction(index + 1, pattern, pattern_len, deep, target_id, x_axis + 60, y_axis)
+                # Calculate the Y axis where the next element should be placed so it does not overlap with the restriction
                 y_axis += 60
             
             else:
+                # In this case the class description is either a named class or a blank node which is not a restriction
 
+                # Is there a next line?
                 if index + 1 < pattern_len:
+                    # Read the next line of the pattern
                     line = pattern[index + 1]
+                    # Get the deep of the next line (the number of "  |")
                     deep = line.count('  |')
 
+                    # Is the line inside the intersection/union?
                     if deep > father_deep:
 
+                        # Does the line represents the beginning of an enumeration?
                         if 'owl:oneOf' in line:
+                            # Create an hexagon to represent the beginning of a new enumeration
                             figure_identifier += 1
-                            # Create the figure to represent the beginning of a new enumeration
                             figure, target_id, figure_width = create_hexagon(figure_identifier, '&amp;lt;&amp;lt;owl:oneOf&amp;gt;&amp;gt;', x_axis + 60, y_axis)
-                            # Create the arrow linking the figure to the intersection
+                            # Create the arrow which connects the ellipse, which represents the beginning of this intersection/union, to the hexagon, which represents the beginning of a enumeration
                             figure_identifier += 1
                             arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
                             # Get the line where the enumeration ends
                             index, y_axis = iterate_enumeration(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            # Calculate the Y axis where the next element should be placed so it does not overlap with the enumeration
                             y_axis += 60
                             continue
 
+                        # Does the line represents the beginning of an intersection?
                         elif 'owl:intersectionOf' in line:
                             figure_identifier += 1
-                            # Create the figure to represent the beginning of a new enumeration
+                            # Create an ellipse to represent the beginning of a new intersection
                             figure, target_id, figure_width = create_ellipse(figure_identifier, '⨅', x_axis + 60, y_axis)
-                            # Create the arrow linking the figure to the intersection
+                            # Create the arrow which connects the ellipse, which represents the beginning of this intersection/union, to the ellipse, which represents the beginning of an intersection
                             figure_identifier += 1
                             arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
-                            # Get the line where the enumeration ends
+                            # Get the line where the intersection ends
                             index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            # Calculate the Y axis where the next element should be placed so it does not overlap with the intersection
                             y_axis += 60
                             continue
 
+                        # Does the line represents the beginning of an union?
                         elif 'owl:unionOf' in line:
                             figure_identifier += 1
-                            # Create the figure to represent the beginning of a new enumeration
+                            # Create an ellipse to represent the beginning of a new union
                             figure, target_id, figure_width = create_ellipse(figure_identifier, '⨆', x_axis + 60, y_axis)
-                            # Create the arrow linking the figure to the intersection
+                            # Create the arrow which connects the ellipse, which represents the beginning of this intersection/union, to the ellipse, which represents the beginning of an union
                             figure_identifier += 1
                             arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
-                            # Get the line where the enumeration ends
+                            # Get the line where the union ends
                             index, y_axis = iterate_intersection(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            # Calculate the Y axis where the next element should be placed so it does not overlap with the union
                             y_axis += 60
                             continue
 
+                        # Does the line represents the beginning of a complement?
                         elif 'owl:complementOf' in line:
                             figure_identifier += 1
-                            # Create the figure to represent the beginning of a new enumeration
+                            # Create a blank box to represent the beginning of a new complement
                             figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis + 60, y_axis)
                             figure_identifier += 1
-                            # Create the arrow linking the figure to the intersection
+                            # Create the arrow which connects the ellipse, which represents the beginning of this intersection/union, to the blank box, which represents the beginning of a complement
                             arrow = create_empty_dashed_arrow(figure_identifier, figure_id, target_id)
                             diagram += f'{figure}{arrow}'
-                            # Get the line where the enumeration ends
+                            # Get the line where the complement ends
                             index, y_axis = iterate_complement(index + 2, pattern, pattern_len, deep, target_id, x_axis + figure_width + 60, y_axis)
+                            # Calculate the Y axis where the next element should be placed so it does not overlap with the complement
                             y_axis += 60
                             continue
 
-
-                # Create the figure representing a member of the intersection
+                # In this case the class description represents a named class
+                # Create the box to represent a named class
                 figure_identifier += 1
                 box, box_id, box_width = create_box(figure_identifier, clean_term(pattern[index]), x_axis + 60, y_axis)
-                # Create the arrow linking the figure to the intersection
+                # Create the arrow which connects the ellipse, which represents the beginning of this intersection/union, to the box, which represents the named class
                 figure_identifier += 1
                 arrow = create_empty_dashed_arrow(figure_identifier, figure_id, box_id)
                 diagram += f'{box}{arrow}'
+                # Calculate the Y axis where the next element should be placed so it does not overlap with the named class
                 y_axis += 60
 
         else:
@@ -471,38 +537,53 @@ def visualize_beginning(pattern, x_axis, y_axis):
 
     return x_axis, figure_id
 
-def iterate_enumeration(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
+# This function will create the figures that correspond to an enumeration of individuals or data values.
+# An enumeration is represented in Chowlk notation through:
+#   - An hexagon which represents the beginning of the enumeration. This hexagon has been created previously and its identifier is "father_id"
+#   - When a "rdf:first" statemnet is being read, the next element represents an individual or a data value involved in the enumeration. 
+#       These terms are represented through special boxes.
+#   - Dashed arrows connecting each box to the hexagon.
+# This function returns:
+#   - The position of the list where the enumeration ends
+#   - The Y axis where the next element should be placed so it does not overlap with the last element of the enumeration (which is now the lowest element)
+def iterate_enumeration(index, pattern, pattern_len, father_deep, father_id, x_axis, y_axis):
+    # Declare global variables (in order to change them)
     global diagram, figure_identifier
 
-    # Iterate the structure
+    # Iterate the pattern
     while index < pattern_len:
-        # Read a line of the structure
+        # Read a line of the pattern
         line = pattern[index]
         # Get the deep of the line (the number of "  |")
         deep = line.count('  |')
 
         # Is the line outside the enumeration?
         if deep <= father_deep:
-            # Return the line where the enumeration ends
+            # Return the position where the enumeration ends and the next Y axis
             return index, y_axis - 60
         
-        # Does the line represents an element of the enumeration?
+        # Does the line represents that the next line contains an element of the enumeration?
         elif 'rdf:first' in line:
             # Get the position of the next line
             index += 1
-            figure_identifier += 1
             # Create the figure representing a member of the enumeration
+            figure_identifier += 1
 
+            # Does the element represent a data value?
             if 'Data value' in pattern[index]:
+                # Create the figure representing a data value (i.e. a box whose name is between "")
                 box, box_id, box_width = create_quot_box(figure_identifier, 'Data Value', x_axis + 60, y_axis)
             
             else:
+                # Create the figure representing an individual (i.e. an underlined box)
                 box, box_id, box_width = create_underlined_box(figure_identifier, clean_term(pattern[index]), x_axis + 60, y_axis)
 
-            # Create the arrow linking the figure to the enumeration
+            # Create the arrow connecting the box to the hexagon representing the beginning of the enumeration
             figure_identifier += 1
-            arrow = create_empty_dashed_arrow(figure_identifier, figure_id, box_id)
+            arrow = create_empty_dashed_arrow(figure_identifier, father_id, box_id)
+            # Add the new elements to the diagram
             diagram += f'{box}{arrow}'
+            # Calculate the Y axis where the next element should be placed so it does not overlap with the box
             y_axis += 60
 
         else:
@@ -510,9 +591,10 @@ def iterate_enumeration(index, pattern, pattern_len, father_deep, figure_id, x_a
             index += 1
     
     # In this case we have reached the end of the structure
-    # Return a number which is greater than the number of lines in the list
+    # Return a number which is greater than the number of lines in the list and the next Y axis
     return index, y_axis - 60
 
+# ME QUEDA PONER COMENTARIOS EN ESTA FUNCION Y LA SIGUIENTE
 def iterate_restriction(index, pattern, pattern_len, father_deep, figure_id, x_axis, y_axis):
 
     # Variable to store the type of a property involved in a resctriction
