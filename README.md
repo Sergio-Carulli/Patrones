@@ -20,18 +20,19 @@ Ontologies are formal knowledge models that describe concepts and relationships 
   The structures resulting from applying the inference process explained above are written in a file called Structure_term_inferred_type.
 4. Finally, patterns are identified through finding equals structures. The only condition for identifying a pattern is that there are at least two structures with the same content. The tool will generate two files:
   * Patterns_name: A file which contains the patterns which have been found through the Structure_term_name file.
-  * Patterns_tyoe: A file which contains the patterns which have been found through the Structure_term_inferred_type file.
+  * Patterns_type: A file which contains the patterns which have been found through the Structure_term_inferred_type file.
 
 ## How to execute the tool
 
 The tool can be executed via the command line as follows:
 
 ```bash
-app.py [-h] [-ontology ONTOLOGY_PATH] [-csv CSV_PATH] [-patterns {type,name,both}]
+app.py [-h] [-ontology ONTOLOGY_PATH] [-csv CSV_PATH] [-patterns {type,name,both}] [-flatten {yes,no}]
 ```
 
 where:
 
 * ONTOLOGY_PATH is the path to a folder where the ontologies are going to be downloaded. The patterns are going to be identified using the ontologies stored in this folder
-* CSV_PATH is the path to the csv file indicating what ontologies are going to be downloaded.
-* PATTERNS is a flag to indicate if the patterns are going to be created from the type of the terms or from the name of the terms or from both
+* CSV_PATH is the path to the csv file indicating what ontologies are going to be downloaded. This parameter is optional. If this parameter is not specified, it is assumed that the ontologies are already downloaded and are located in ONTOLOGY_PATH.
+* PATTERNS is a flag to indicate if the patterns are going to be created from the type of the terms or from the name of the terms or from both. This parameter is optional. By default the patterns are going to be creaded just by the type of the terms.
+* FLATTEN is a flag to indicate if the collections are going to be flattened if they only contain named classes. This parameter is optional. By default the collections are not going to be flattened.
