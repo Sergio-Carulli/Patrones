@@ -17,6 +17,7 @@ def identify_reuse(ontology_path, reuse_log):
         ont_prefix = ont_name
         # Optional print to see from the terminal what is happening
         print(f'Loading ontology {ont_name}')
+        reuse_log.write(f'Loading ontology {ont_name}\n')
 
         # Is there not an error in the ontology file?
         if ontology_path_error(ont_path, reuse_log):
@@ -38,24 +39,42 @@ def parse_ontology(ont_path, reuse_log):
         # Parsing the ontology into a graph
         g = Graph()
         g.parse(ont_path)
+    
+    except:
+        reuse_log.write(f'Error parsing the ontologyww: {ont_path}\n')
+        print(f'Error parsing the ontology: {ont_path}')
+
+    try:
         ont_uris = {}
         hard_reuse = {}
         soft_reuse = {}
-
+        ont_ann = {}
+        print('Hola')
+        ont_uri = ""
         # Get the ontology uri
         for s in g.subjects(RDF.type, URIRef('http://www.w3.org/2002/07/owl#Ontology')):
             print(s.strip())
             ont_uri = s.strip()
 
+        print('Hola')
         # Get the owl:imports
         for o in g.objects(None, URIRef('http://www.w3.org/2002/07/owl#imports'), None):
             print(o)
             hard_reuse[o.strip()] = 0
 
+        # Get the annotation properties
+        for s in g.subjects(None, URIRef('http://www.w3.org/2002/07/owl#AnnotationProperty')):
+            print(s)
+            ont_ann[s] = 0
+
         for s, p, o in g:
-            check_uri(s, ont_uris)
-            check_uri(p, ont_uris)
-            check_uri(o, ont_uris)
+
+            if s.strip() != ont_uri and s not in ont_ann:
+                check_uri(s, ont_uris)
+
+                if p not in ont_ann:
+                    check_uri(p, ont_uris)
+                    check_uri(o, ont_uris)
         
         for k in ont_uris:
             check_reuse(k, reuse_log, ont_uri, hard_reuse, soft_reuse)
@@ -64,7 +83,15 @@ def parse_ontology(ont_path, reuse_log):
             reuse_log.write(f'Hard reuse: {k} utilizado {v}\n')
         
         for k, v in soft_reuse.items():
-            reuse_log.write(f'Soft reuse: {k} utilizado {v}\n')
+
+            if k != 'http://www.w3.org/2000/01/rdf-schema#':
+
+                if k != 'http://www.w3.org/2002/07/owl#':
+
+                    if k != 'http://www.w3.org/2001/XMLSchema#':
+
+                        if k != 'http://www.w3.org/1999/02/22-rdf-syntax-ns#':
+                            reuse_log.write(f'Soft reuse: {k} utilizado {v}\n')
     
     except:
         reuse_log.write(f'Error parsing the ontology: {ont_path}\n')
@@ -73,8 +100,6 @@ def parse_ontology(ont_path, reuse_log):
 def check_reuse(term, reuse_log, ont_uri, hard_reuse, soft_reuse):
 
     prefix = get_prefix(term).strip()
-    print(f'{prefix} {ont_uri}')
-    print(prefix == ont_uri)
     if prefix == ont_uri:
         return
     

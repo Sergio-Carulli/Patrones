@@ -1,4 +1,5 @@
 from create_diagram_element import *
+from create_svg import create_svg
 
 # Global variable to store the content of the XML file
 diagram = ''
@@ -22,6 +23,7 @@ def create_diagram(pattern_path):
         while(len(pattern) > 0):
             # Create the visualization of the pattern
             y_axis = visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
+            create_svg(pattern, pattern_number)
             # Read a new pattern
             pattern, max_lenght, pattern_text, pattern_number = read_pattern(pattern_file)
 
@@ -947,7 +949,7 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
     return y_axis
 
 # Function to get the value of the term from the last occurrence of the '|' character.
-# Moreover, the whitespaces at the beginning and endind of the string are removed.
+# Moreover, the whitespaces at the beginning and ending of the string are removed.
 def clean_term(term):
     index = term.rfind('|') + 1
     return term[index:].strip()
