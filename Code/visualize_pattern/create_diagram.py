@@ -834,8 +834,6 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
         diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)
         figure_identifier += 1
         target_id = f'class-{figure_identifier}'
-        """figure, target_id, figure_width = create_empty_box(figure_identifier, x_axis, y_axis)
-        diagram += f'{figure}'"""
         # Get the line where the restriction ends
         index, y_axis = iterate_restriction(anonymous_index, pattern, pattern_len, anonymous_deep, target_id, x_axis, y_axis)
 
@@ -848,7 +846,7 @@ def visualize_restriction(property, target, type, figure_id, previous_x_axis, y_
             diagram += box
             figure_identifier += 1
             diagram += create_cloud(figure_identifier, "No further chowlk &lt;br&gt;notation", x_axis, y_axis)
-            return y_axis
+            return y_axis + 30
         
         else:
             diagram += create_empty_box_2(figure_id, 60, previous_x_axis, y_axis)

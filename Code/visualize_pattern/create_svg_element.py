@@ -39,6 +39,27 @@ def create_underlined_box(box_value, x_pos, y_pos):
     
     return box, width
 
+def create_quot_box(box_value, x_pos, y_pos):
+    width = (len(box_value)) * 6.2 + 20
+    box =   '      <g>\n'\
+            f'         <rect x="{x_pos}" y="{y_pos}" width="{width}" height="30" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>\n'\
+            '      </g>\n'\
+            '      <g>\n'\
+            '         <g transform="translate(-0.5 -0.5)">\n'\
+            '            <switch>\n'\
+            '               <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">\n'\
+            f'                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: {width - 2.4}px; height: 1px; padding-top: {y_pos + 15}px; margin-left: {x_pos + 1.5}px;">\n'\
+            '                     <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">\n'\
+            f'                        <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">"{box_value}"</div>\n'\
+            '                     </div>\n'\
+            '                  </div>\n'\
+            '               </foreignObject>\n'\
+            '            </switch>\n'\
+            '         </g>\n'\
+            '      </g>\n'
+    
+    return box, width
+
 def create_block_arrow(arrow_value, x_pos, y_pos):
     next_x = len(arrow_value) * 8 + x_pos
     arrow = '      <g>\n'\
@@ -182,9 +203,7 @@ def create_hexagon(hexagon_value, x_pos, y_pos, width):
     
     return hexagon, width
 
-def create_cloud(x_pos, y_pos):
-    print(x_pos, y_pos)
-    #437 30 
+def create_cloud(x_pos, y_pos, cloud_value): 
     cloud = '      <g>\n'\
             f'         <path d="M {x_pos + 37.3} {y_pos - 10} C {x_pos + 13.3} {y_pos - 10} {x_pos + 7.3} {y_pos + 10} {x_pos + 26.5} {y_pos + 14} C {x_pos + 7.3} {y_pos + 22.8} {x_pos + 28.9} {y_pos + 42} {x_pos + 44.5} {y_pos + 34} C {x_pos + 55.3} {y_pos + 50} {x_pos + 91.3} {y_pos + 50} {x_pos + 103.3} {y_pos + 34} C {x_pos + 127.3} {y_pos + 34} {x_pos + 127.3} {y_pos + 18} {x_pos + 112.3} {y_pos + 10} C {x_pos + 127.3} {y_pos - 6} {x_pos + 103.3} {y_pos - 22} {x_pos + 82.3} {y_pos - 14} C {x_pos + 67.3} {y_pos - 26} {x_pos + 43.3} {y_pos - 26} {x_pos + 37.3} {y_pos - 10} Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>\n'\
             '      </g>\n'\
@@ -194,7 +213,7 @@ def create_cloud(x_pos, y_pos):
             '               <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">\n'\
             f'                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: {y_pos + 10}px; margin-left: {x_pos + 8}px;">\n'\
             '                     <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">\n'\
-            '                        <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">No further chowlk <br />notation</div>\n'\
+            f'                        <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">{cloud_value}</div>\n'\
             '                     </div>\n'\
             '                  </div>\n'\
             '               </foreignObject>\n'\
