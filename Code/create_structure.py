@@ -90,11 +90,11 @@ structure_type = ''
 structure_name = ''
 
 # Function to create the files in which the results are going to be written
-def create_files():
+def create_files(structure_csv_path, structure_type_path, structure_name_path):
     global structure_csv, structure_type, structure_name
 
     # Create a new file in which to write the number of structures found per ontology 
-    structure_csv = open("Structure.csv", 'w', encoding='utf-8')
+    structure_csv = open(structure_csv_path, 'w', encoding='utf-8')
     # Empty the file (in case the program has been run before)
     structure_csv.truncate()
     # Naming the columns
@@ -102,20 +102,20 @@ def create_files():
 
     # Create a new file in which to write the type of the structures found 
     # (writing the type of the terms)
-    structure_type = open("Structure_term_type.txt", 'w', encoding='utf-8')
+    structure_type = open(structure_type_path, 'w', encoding='utf-8')
     # Empty the file (in case the program has been run before)
     structure_type.truncate()
 
     # Create a new file in which to write the type of the structures found 
     # (writing the URI of the terms)
-    structure_name = open("Structure_term_name.txt", 'w', encoding='utf-8')
+    structure_name = open(structure_name_path, 'w', encoding='utf-8')
     # Empty the file (in case the program has been run before)
     structure_name.truncate()
 
 # Function which creates the structures found in each ontology
-def create_structure(ontology_path, error_log, flatten):
+def create_structure(ontology_path, error_log, flatten, structure_csv_path, structure_type_path, structure_name_path):
     # Create the files in which the results are going to be written
-    create_files()
+    create_files(structure_csv_path, structure_type_path, structure_name_path)
     # Obtain the name of the downloaded ontologies
     ontologies = os.listdir(ontology_path)
     # Declare global variables
