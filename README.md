@@ -17,8 +17,14 @@ Ontologies are formal knowledge models that describe concepts and relationships 
   * Intersection and union of classes: The elements involved in an intersection or union must be classes. Blank nodes are always recognized, because they have to be defined in the ontology. Therefhore, the type of the terms, which have been identified as #Unknwon, inside an intersection or union or classes must be named classes (owl:Class).
   * Complement class: The element involved in a complement must be a class. Blank nodes are always recognized, because they have to be defined in the ontology. Therefhore, the type of the term, which have been identified as #Unknwon, inside a complement must be named classes (owl:Class).
   * Enumeration: The elements involved in an enumeration can be either individuals or data values. Data values are always recognized as "Data value". Therefhore, the type of the term, which have been identified as #Unknwon, inside a oneOf must be named individuals (owl:NamedIndividual).
+  
+  
   Moreover, in some cases the type of a blank node can not be specified due to there is not an explicit declaration of the blank node. In these cases the type is #Blank node. However, in order to maintain the maximum number of useful structures the blank node type is inferred.
+  
+  
   The structures resulting from applying the inference process explained above are written in a file called Structure_term_inferred_type and Structure_term_inferred_blank_nodes.
+
+  
 4. Finally, patterns are identified through finding equals structures. The only condition for identifying a pattern is that there are at least two structures with the same content. The tool will generate two files:
   * Patterns_name: A file which contains the patterns which have been found through the Structure_term_inferred_blank_nodes.
   * Patterns_type: A file which contains the patterns which have been found through the Structure_term_inferred_type file.
