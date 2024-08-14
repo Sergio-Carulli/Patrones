@@ -113,11 +113,16 @@ def create_files(structure_csv_path, structure_type_path, structure_name_path):
     structure_name.truncate()
 
 # Function which creates the structures found in each ontology
-def create_structure(ontology_path, error_log, flatten, structure_csv_path, structure_type_path, structure_name_path):
+def create_structure(ontology_path, error_log, flatten, structure_csv_path, structure_type_path, structure_name_path, lov, preffix):
     # Create the files in which the results are going to be written
     create_files(structure_csv_path, structure_type_path, structure_name_path)
-    # Obtain the name of the downloaded ontologies
-    ontologies = os.listdir(ontology_path)
+
+    if not lov:
+        # Obtain the name of the downloaded ontologies
+        ontologies = os.listdir(ontology_path)
+    else:
+        ontologies = [ontology_path]
+        
     # Declare global variables
     global ont_prefix, subjects, anonymous, namespaces, ont_import, aux_g, anonimizador
 
@@ -126,7 +131,10 @@ def create_structure(ontology_path, error_log, flatten, structure_csv_path, stru
         # Get the path to the downloaded ontology
         ont_path = os.path.join(ontology_path, ont_name)
         # Write the global variable
-        ont_prefix = ont_name
+        if not lov:
+            ont_prefix = ont_name
+        else:
+            ont_prefix = preffix
         # Optional print to see from the terminal what is happening
         print(f'Loading ontology {ont_name}')
 
@@ -153,15 +161,15 @@ def create_structure(ontology_path, error_log, flatten, structure_csv_path, stru
 
                     # Is there a "rdfs:subclassOf" "predicate" for that "subject"?
                     if "rdfs:subClassOf" in subjects[s]:
-                        structure_id = iterate_class_axiom(s, "rdfs:subClassOf", structure_id, ont_name, error_log, flatten)
+                        structure_id = iterate_class_axiom(s, "rdfs:subClassOf", structure_id, ont_prefix, error_log, flatten)
 
                     # Is there a "owl:equivalentClass" "predicate" for that "subject"?
                     if "owl:equivalentClass" in subjects[s]:
-                        structure_id = iterate_class_axiom(s, "owl:equivalentClass", structure_id, ont_name, error_log, flatten)
+                        structure_id = iterate_class_axiom(s, "owl:equivalentClass", structure_id, ont_prefix, error_log, flatten)
                     
                     # Is there a "owl:disjointWith" "predicate" for that "subject"?
                     if "owl:disjointWith" in subjects[s]:
-                        structure_id = iterate_class_axiom(s, "owl:disjointWith", structure_id, ont_name, error_log, flatten)
+                        structure_id = iterate_class_axiom(s, "owl:disjointWith", structure_id, ont_prefix, error_log, flatten)
 
                 # Write the number of structures found for each ontology 
                 structure_csv.write(f'{ont_prefix};{structure_id};\n')  
@@ -181,7 +189,7 @@ def create_structure(ontology_path, error_log, flatten, structure_csv_path, stru
 
 # This function iterates the triples whose predicate represents a class axiom (e.g. rdfs:subClassOf, etc).
 # Moreover, just the triples whose object represents a blank node are going to be iterate.
-def iterate_class_axiom(s, class_axiom, structure_id, ont_name, error_log, flatten):
+def iterate_class_axiom(s, class_axiom, structure_id, ont_prefix, error_log, flatten):
      # Iterate the "object" for that "subject" and "predicate"
     for o in sorted(subjects[s][class_axiom]):
 
@@ -192,15 +200,15 @@ def iterate_class_axiom(s, class_axiom, structure_id, ont_name, error_log, flatt
 
             # Write the structure (writing the URI of the terms)
             structure_name.write("\n")
-            structure_name.write(f'Ontology: {ont_name}\n')
-            structure_name.write(f'Structure: {ont_name}-{structure_id}\n')
+            structure_name.write(f'Ontology: {ont_prefix}\n')
+            structure_name.write(f'Structure: {ont_prefix}-{structure_id}\n')
             structure_name.write(f'{s}\n')
             structure_name.write(f'  |{class_axiom}\n')
 
             # Write the structure (writing the type of the terms)
             structure_type.write("\n")
-            structure_type.write(f'Ontology: {ont_name}\n')
-            structure_type.write(f'Structure: {ont_name}-{structure_id}\n')
+            structure_type.write(f'Ontology: {ont_prefix}\n')
+            structure_type.write(f'Structure: {ont_prefix}-{structure_id}\n')
 
             try:
                 # Write the type of the triple subject

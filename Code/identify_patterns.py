@@ -1,3 +1,5 @@
+import json
+
 # Dictionary whose:
 #   - key : structure detected in a ontology
 #   - value: dictionary in which the following elements are stored:
@@ -9,11 +11,18 @@
 #           - value: number of times the pattern has been found in that ontology
 patterns = {}
 
-def identify_patterns(input_path, output_path):
+def identify_patterns(input_path, output_path, lov, pattern_type):
     global patterns
     patterns = {}
-    load_structures(input_path)
-    write_pattern(output_path)
+
+    if not lov:
+        load_structures(input_path)
+        write_pattern(output_path)
+    
+    else:
+        for input in input_path:
+            load_structures(input)
+        print_pattern(pattern_type)
 
 # This function iterate the structures in order to identify patterns
 def load_structures(input_path):
@@ -141,6 +150,51 @@ def write_pattern(output_path):
     # Close files
     patterns_file.close()
     patterns_csv.close()
+
+def print_pattern(pattern_type):
+    # Create a new file in which to write the patterns
+    patterns_file = ""
+    # Create a new file in which to write for each pattern:
+    #   - Number of times that pattern appears in all the ontologies
+    #   - Number of different ontologies in which that pattern appears
+    #   - The structures from which the pattern has been identified
+    patterns_csv = ""
+    # Naming the columns
+    patterns_csv += ("Pattern;Times;Ontologies;Structures\n")
+
+    # Variable which is used to create an unique identifier per pattern
+    pattern_id = 1
+
+    # Iterate the patterns
+    for pattern in patterns.keys():
+
+        # A structure is considered a pattern if it is repeated at least twice
+        if patterns[pattern]['times'] > 1:
+            # Write the pattern name
+            patterns_file += f'Pattern {pattern_id}\n'
+            # Write the number of times the pattern appears
+            patterns_file += f"Times {patterns[pattern]['times']}\n"
+            # Write the number of different ontologies on which the pattern appears
+            patterns_file += f'Different ontologies {patterns[pattern]["ont_con"]}\n'
+            # Write how many times a pattern appears in each ontology
+            text = ontology_count(patterns[pattern]['ont_name'])
+            patterns_file += f'Ontologies in which it appears {text}\n'
+            # Write the pattern
+            patterns_file += f"{pattern}\n"
+
+            # Get the name of the structures from which the pattern has been identified
+            text = ';'.join(patterns[pattern]["est_name"])
+            # Write a new line in the csv
+            patterns_csv += f'Pattern {pattern_id};{patterns[pattern]["times"]};{patterns[pattern]["ont_con"]};{text}\n'
+
+            pattern_id += 1
+    
+    print(json.dumps({
+        f"pattern_{pattern_type}": patterns_file,
+        f"csv_{pattern_type}": patterns_csv
+    }))
+
+
 
 # Function to obtain for each ontology the number of times a pattern appears.
 # The format is the following: "Ontology (number of times the pattern appears in that ontology)"

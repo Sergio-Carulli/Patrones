@@ -48,20 +48,20 @@ def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
     if csv_path != '':
         download_ontologies(csv_path, ontology_path, error_log)
 
-    create_structure(ontology_path, error_log, flatten, structure_csv_path, structure_type_path, structure_name_path)
+    create_structure(ontology_path, error_log, flatten, structure_csv_path, structure_type_path, structure_name_path, False, None)
     infer_structures(inferred_type_path, inferred_blank_nodes_path, structure_type_path, structure_name_path)
 
     # Has the user specified that the patterns are going to be created from the type of the terms?
     if patterns_type == 'type':
-        identify_patterns(inferred_type_path, patterns_type_path)
+        identify_patterns(inferred_type_path, patterns_type_path, False, None)
     
     # Has the user specified that the patterns are going to be created from the name of the terms?
     elif patterns_type == 'name':
-        identify_patterns(inferred_blank_nodes_path, patterns_name_path)
+        identify_patterns(inferred_blank_nodes_path, patterns_name_path, False, None)
     
     else:
-        identify_patterns(inferred_type_path, patterns_type_path)
-        identify_patterns(inferred_blank_nodes_path, patterns_name_path)
+        identify_patterns(inferred_type_path, patterns_type_path, False, None)
+        identify_patterns(inferred_blank_nodes_path, patterns_name_path, False, None)
 
     error_log.close()
 
