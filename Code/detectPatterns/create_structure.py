@@ -112,7 +112,7 @@ def create_files(structure_csv_path, structure_type_path, structure_name_path):
     # Empty the file (in case the program has been run before)
     structure_name.truncate()
 
-# Function which creates the structures found in each ontology
+# Function which creates the files witch the structures found in each ontology
 def create_structure(ontology_path, error_log, flatten, structure_csv_path, structure_type_path, structure_name_path, lov, preffix):
     # Create the files in which the results are going to be written
     create_files(structure_csv_path, structure_type_path, structure_name_path)

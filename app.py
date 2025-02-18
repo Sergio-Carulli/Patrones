@@ -1,9 +1,9 @@
 import argparse
 import os.path
-from Code.download_ontology import download_ontologies
-from Code.create_structure import create_structure
-from Code.identify_patterns import identify_patterns
-from Code.infer_structures import infer_structures
+from Code.detectPatterns.download_ontology import download_ontologies
+from Code.detectPatterns.create_structure import create_structure
+from Code.detectPatterns.identify_patterns import identify_patterns
+from Code.detectPatterns.infer_structures import infer_structures
 
 def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
     print(output_path)

@@ -1,5 +1,5 @@
-from create_diagram_element import *
-from create_svg import create_svg
+from Code.visualize_pattern.create_diagram_element import *
+from Code.visualize_pattern.create_svg import create_svg
 
 # Global variable to store the content of the XML file
 diagram = ''
@@ -8,7 +8,7 @@ figure_identifier = 0
 
 # Function to create the XML diagram where the patterns are going to be visualizated.
 # This XML file has to follow the drawio.io structure (since this application is going to open the XML).
-def create_diagram(pattern_path):
+def create_diagram(pattern_path, diagram_path, svg_path):
         
         # Create the neccesary headers of the XML which contains the visualization
         generate_XML_headers()
@@ -23,7 +23,7 @@ def create_diagram(pattern_path):
         while(len(pattern) > 0):
             # Create the visualization of the pattern
             y_axis = visualize_pattern(pattern, y_axis, max_lenght, pattern_text, pattern_number)
-            create_svg(pattern, pattern_number)
+            create_svg(pattern, f'{svg_path}/{pattern_number}.svg')
             # Read a new pattern
             pattern, max_lenght, pattern_text, pattern_number = read_pattern(pattern_file)
 
@@ -33,7 +33,7 @@ def create_diagram(pattern_path):
         generate_footers()
 
         # Write the results
-        f = open('Visualization.xml', 'w', encoding='utf-8')
+        f = open(diagram_path, 'w', encoding='utf-8')
         f.write(diagram)
         f.close()
 

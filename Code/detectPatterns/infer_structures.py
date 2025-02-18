@@ -1,5 +1,5 @@
-from Code.infer_blank_nodes import iterate_structure_blank_nodes
-from Code.infer_types import infer_structure_type
+from Code.detectPatterns.infer_blank_nodes import iterate_structure_blank_nodes
+from Code.detectPatterns.infer_types import infer_structure_type
 
 # This function will read the files where the structures are written. 
 # One file contains the term names and the other contains the term types.

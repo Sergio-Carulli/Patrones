@@ -1,4 +1,4 @@
-from create_svg_element import *
+from Code.visualize_pattern.create_svg_element import *
 
 max_x = 0
 max_y = 30
@@ -65,7 +65,7 @@ def create_svg(pattern, pattern_identifier):
         max_y = 82
 
     # Create svg file
-    f = open(f'{pattern_identifier}.svg', 'w', encoding='utf-8')
+    f = open(pattern_identifier, 'w', encoding='utf-8')
     create_headers(f)
     f.writelines(svg)
     create_footers(f)

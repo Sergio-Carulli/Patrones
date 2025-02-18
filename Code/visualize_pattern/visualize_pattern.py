@@ -1,5 +1,5 @@
 import argparse
-from create_diagram import create_diagram
+from Code.visualize_pattern.create_diagram import create_diagram
 
 def main(pattern_path):
     create_diagram(pattern_path)
