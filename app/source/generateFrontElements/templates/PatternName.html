@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="static/styles/main.css"
+    />
+    <title>PatternType</title>
+  </head>
+  <body>
+    <div class="row">
+      <div id="toc" class="col-3 pt-4 d-none d-xl-block bg-light px-5">
+        <div class="container">
+          <h4 class="options text-secundary pb-2">Table of Contents</h4>
+          {%for header in header_list %}
+          <p><a href="#{{header}}">Specific {{header}}</a></p>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div id="content" class="col-12 col-xl-9 px-0 ms-auto">
+        <!--Navbar-->
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light py-3 text-dark">
+            <div class="container">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold mx-4">
+                  <li class="nav-item">
+                    <a class="nav-link" href="PatternType.html"
+                      >Patterns Type</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="PatternName.html"
+                      >Patterns Name</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Structure.html"
+                      >Structures</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <!--Showcase-->
+        <section class="showcase pt-5 px-5 text-light">
+          <div class="container">
+            <h1 id="title" class="pt-4 pb-2">Ontologies Visualization</h1>
+          </div>
+        </section>
+
+        <div class="container">
+          {% if error_message %}
+          <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+          {% endif %}
+          <section id="specification-ontologists" class="pt-5 px-5">
+            {% for key, pattern in pattern_content_name.items() %}{% if
+            loop.first %}
+            <h4 id="{{ key }}">Specific {{ key }}</h4>
+            {% else %}
+            <h4 id="{{ key }}" class="pt-5">Specific {{ key }}</h4>
+            {% endif %}
+            <!--Diagram-->
+            <p>
+              <code>{{ pattern[0]|safe }}</code>
+            </p>
+            <!--Times-->
+            <p>{{ pattern[1] }}</p>
+            <!--Number of ontologies-->
+            <p>{{ pattern[2]|safe }}</p>
+            <!--List of structures-->
+            <p>
+              Structures in which it appears: <br />
+              {% if not pattern[3]%}
+                <div class="alert alert-danger" role="alert">No CSV data found for this pattern.</div>
+              {% else %}
+                {% for structures in pattern[3] %}
+                  {% for key, value in structures.items() %}
+                    {% for structure in value %}
+                      <span class="badge custom-badge mt-2">{{ structure }}</span>
+                    {% endfor %}
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+            </p>
+            {% endfor %}
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

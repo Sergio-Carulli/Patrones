@@ -1,9 +1,9 @@
 import argparse
 import os.path
-from Code.detectPatterns.download_ontology import download_ontologies
-from Code.detectPatterns.create_structure import create_structure
-from Code.detectPatterns.identify_patterns import identify_patterns
-from Code.detectPatterns.infer_structures import infer_structures
+from app.source.detectPatterns.download_ontology import download_ontologies
+from app.source.detectPatterns.create_structure import create_structure
+from app.source.detectPatterns.identify_patterns import identify_patterns
+from app.source.detectPatterns.infer_structures import infer_structures
 
 def structure(ontology_path, output_path, preffix, flatten):
 

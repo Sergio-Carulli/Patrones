@@ -1,12 +1,12 @@
 import argparse
 import os
 import sys
-from Code.detectPatterns.download_ontology import download_ontologies
-from Code.detectPatterns.create_structure import create_structure
-from Code.detectPatterns.identify_patterns import identify_patterns
-from Code.detectPatterns.infer_structures import infer_structures
-from Code.visualize_pattern.create_diagram import create_diagram
-from Code.generateFrontElements.generateFrontElements import generate_front_elements
+from app.source.detectPatterns.download_ontology import download_ontologies
+from app.source.detectPatterns.create_structure import create_structure
+from app.source.detectPatterns.identify_patterns import identify_patterns
+from app.source.detectPatterns.infer_structures import infer_structures
+from app.source.visualize_pattern.create_diagram import create_diagram
+from app.source.generateFrontElements.generateFrontElements import generate_documentation
 
 def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
     
@@ -84,7 +84,7 @@ def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
         #   - An XML file with the representation of all the patterns
         create_diagram(f"{patterns_type_path}.txt", os.path.join(data_path, 'Visualization.xml'), images_path)
         # Create HTML and CSS files
-    generate_front_elements(styles_path, patterns_type_path, inferred_blank_nodes_path, images_path, output_path, patterns_name_path, inferred_type_path)
+        generate_documentation(styles_path, patterns_type_path, inferred_blank_nodes_path, images_path, output_path, patterns_name_path, inferred_type_path)
     
     error_log.close()
 
