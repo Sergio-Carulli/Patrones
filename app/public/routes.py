@@ -42,7 +42,6 @@ def api():
     ontology_path = os.path.join(request_path, 'ontologies')
 
     if 'ontologiesZip' in request.files:
-        print('ontologies zip')
         file = request.files['ontologiesZip']
         zip_path = os.path.join(request_path, 'ontologies.zip')
         file.save(zip_path)
@@ -53,7 +52,6 @@ def api():
             zip_ref.extractall(request_path)
     
     elif 'ontologiesCsv' in request.files:
-        print('ontologies csv')
         file = request.files['ontologiesCsv']
         csv_path = os.path.join(request_path, 'ontologies.csv')
         file.save(csv_path)

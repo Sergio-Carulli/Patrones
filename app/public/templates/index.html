@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="static/css/style.css">
 
-    <title>Chowlk | Converter</title>
+    <title>Aenne | Detection</title>
 
 </head>
 
@@ -23,13 +23,33 @@
 
     <!--Navbar-->
     <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 text-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index">
+                    <img id="logo" src="static/images/logos/logo.png" alt="Aenne logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-bold mx-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Converter</a>
+                        </li>
+                    </ul>
+                    <a href="" target="_blank"><i
+                            class="bi bi-github h4 text-dark"></i></a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!--Showcase-->
     <section class="showcase pt-5 px-5 text-light">
         <div class="container">
-            <h1 id="title" class="pt-4 pb-2"> Patterns</h1>
-            <p class="lead pb-3">Patterns</p>
+            <h1 id="title" class="pt-4 pb-2"> Aenne Detection</h1>
+            <p class="lead pb-3">Aenne takes as input a set of ontologies and identifies the common ontology design patterns (ODP) detected in that set of ontologies.</p>
             <div class="py-1">
                 <p class="fw-bold mb-1">Cite us:</p>
                 <p></p>
@@ -73,12 +93,19 @@
         <div class="container">
             <h4>Instructions</h4>
             <ol>
-                <li>Open diagrams.net (web or desktop)</li>
-                <li>In diagrams.net go to File > Open Library from > Device ...</li>
-                <li>Select the library downloaded.</li>
-                <li>Make your conceptualization using the block that will appear on the side bar.</li>
-                <li>Download the diagram in xml format.</li>
-                <li>Drag and drop your model in the Service dropping area and download your TTL file.</li>
+                <li>Create a CSV file indicating the ontologies for which you want to detect patterns or, if you have the ontologies stored locally, compress the ontologies in a ZIP file.</li>
+                <li>In case you do not have the desired ontologies stored locally, the CSV file should have the following format:</li>
+                <ul>
+                    <li>Each row of the CSV file represents a different ontology.</li>
+                    <li>The first column represent the ontology prefix.</li>
+                    <li>The second column represent the ontology URI.</li>
+                    <li>The first row represents the CSV headers (i.e. the first column of the first row must have the value “Prefix”, and the second column of the first row must have the value “URI”).</li>
+                </ul>
+                <li>In case you have the desired ontologies stored locally, you can create a ZIP file from the folder where the ontologies are located.</li>
+                <li>Drag and drop your CSV or ZIP file into the service dropping area.</li>
+                <li>Select the type of the patterns to be detected. In other words, select if the patterns are going to be created from the type of the terms, the name of the terms, or both.</li>
+                <li>Select if you prefer collections of named classes or individuals to be flattened or not.</li>
+                <li>Download your web documentation.</li>
             </ol>
 
         </div>
@@ -88,31 +115,48 @@
     <!--Service-->
     <section class="content pt-2 px-5">
         <div class="container">
-            <div class="row pb-5">
+            <div class="row pb-5" style="align-items: center;">
                 <div class="col-lg-6 pt-2">
                     <h4>Service</h4>
                     <div class="drop-area" id="drag-drop-area">
-                        <p class="lead text-dark drag-text" id="drag-text">Drag and drop your diagram or click to choose
-                            your file</p>
+                        <p class="lead text-dark drag-text" id="drag-text">Drag and drop your CSV or ZIP file or click to choose your file</p>
                         <div id="response" style="display: none;"></div>
                         <input type="file" id="fileElem" style="display: none;">
                     </div>
                     <div class="d-flex justify-content-between">
-                        <select class="btn mt-2 drag-button" id="type-selected">
-                            <option value="">---</option>
-                            <option value="both">Both</option>
-                            <option value="type">Patterns Type</option>
-                            <option value="name">Patterns Name</option>
-                        </select>
-                        <select class="btn mt-2 drag-button" id="flatten-selected">
-                            <option value="">---</option>
-                            <option value="yes">Flatten</option>
-                            <option value="no">Not Flatten</option>
-                        </select>
                     </div>
                     <div class="d-flex justify-content-between">
                         <button class="btn mt-2 drag-button" id="submit" disabled>Submit</button>
                         <button class="btn mt-2 drag-button" id="download" disabled>Download Patterns</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-2">
+                    <div>
+                        <fieldset>
+                            <legend>Choose a pattern type:</legend>
+                            <p>In other words, select if the patterns are going to be created from the type of the terms, the name of the terms, or both.</p>
+                            <div>
+                                <input type="checkbox" id="pattern-type"/>
+                                <label for="pattern-type">Patterns Type</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="pattern-name"/>
+                                <label for="pattern-name">Patterns Name</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Choose if you prefer collections to be flattened or not:</legend>
+                            <p>In other words, select if you prefer collections of named classes or individuals to be flattened or not.</p>
+                            <div>
+                                <input type="radio" id="collection-flatten" name="drone" value="yes"/>
+                                <label for="collection-flatten">Flatten</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="collection-not-flatten" name="drone" value="no"/>
+                                <label for="collection-not-flatten">Not flatten</label>
+                            </div>
+                        </fieldset>
                     </div>
                 </div>
             </div>

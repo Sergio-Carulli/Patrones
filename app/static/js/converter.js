@@ -11,9 +11,11 @@ const downloadButton = document.getElementById('download');
 // The text displayed inside the service box after the ttl has been generated
 const responseText = document.getElementById('response');
 // Type selection
-const typeSelected = document.getElementById('type-selected');
+const patternType = document.getElementById('pattern-type');
+const patternName = document.getElementById('pattern-name');
 // Flatten selection
-const flattenSelected = document.getElementById('flatten-selected');
+const collectionFlatten = document.getElementById('collection-flatten');
+const collectionNotFlatten = document.getElementById('collection-not-flatten');
 
 // Error/warning sections
 const errorReport = document.getElementById('error-report');
@@ -137,17 +139,52 @@ submitButton.addEventListener('click', (e) => {
         loadFile = false;
         submitButton.disabled = true;
         inputName.innerHTML = 'Detecting your patterns';
-        detectPattern(file, typeSelected.value, flattenSelected.value);
+        var typeSelected = '';
+        var flattenSelected = '';
+
+        if(patternType.checked && patternName.checked){
+            typeSelected = "both";
+        }
+        else if(patternType.checked){
+            typeSelected = "type";
+        }
+        else if(patternName.checked){
+            typeSelected = "name";
+        }
+        else{
+            alert('A pattern type must be selected');
+            return ;
+        }
+
+        if(collectionFlatten.checked && collectionNotFlatten.checked){
+            alert('Just one collection type must be selected');
+            return ;
+        }
+        else if(collectionFlatten.checked){
+            flattenSelected = "yes";
+        }
+        else if(collectionNotFlatten.checked){
+            flattenSelected = "no";
+        }
+        else{
+            alert('A collection type must be selected');
+            return ;
+        }
+
+        detectPattern(file, typeSelected, flattenSelected);
     } else {
         //Incorrect submit
         alert('A file has not been selected');
     }
 });
 
-//Change event handler
+//Click event handler
 //Each time a user select a pattern type => check if the submit button can be enable
-typeSelected.addEventListener('change', (e) => {
-    if (typeSelected.value){
+patternType.addEventListener('click', checkCheckBox);
+patternName.addEventListener('click', checkCheckBox);
+
+function checkCheckBox(){
+    if (patternType.checked || patternName.checked){
         loadType = true;
         enableSubmitButton();
     }
@@ -155,20 +192,23 @@ typeSelected.addEventListener('change', (e) => {
         loadType = false;
         submitButton.disabled = true;
     }
-});
+}
 
-//Change event handler
-//Each time a user select a pattern type => check if the submit button can be enable
-flattenSelected.addEventListener('change', (e) => {
-    if (flattenSelected.value){
+//Click event handler
+//Each time a user select a flatten => check if the submit button can be enable
+collectionFlatten.addEventListener('click', checkRadio);
+collectionNotFlatten.addEventListener('click', checkRadio);
+
+function checkRadio(){
+    if (collectionFlatten.checked || collectionNotFlatten.checked){
         loadFlatten = true;
         enableSubmitButton();
     }
     else{
         loadFlatten = false;
         submitButton.disabled = true;
-    } 
-});
+    }
+}
 
 // The submit button is enabled when the user has selected:
 //  - A pattern type (through the selection)
@@ -188,6 +228,7 @@ function enableSubmitButton(){
 function detectPattern(file, typeValue, flattenValue){
     loadTransformedDiagram = false;
     downloadButton.disabled = true;
+    
     //const uri = 'https://chowlk.linkeddata.es/api';
     const uri = 'http://localhost:5000/api';
     // Create an HTTP request

@@ -19,7 +19,9 @@ def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
     create_directory(data_path)
 
     # Create the directory where the SVG images and the CSS is going to be stored
-    static_path = os.path.join(output_path, 'static')
+    web_path = os.path.join(output_path, 'web')
+    create_directory(web_path)
+    static_path = os.path.join(web_path, 'static')
     create_directory(static_path)
     images_path = os.path.join(static_path, 'images')
     create_directory(images_path)
@@ -84,7 +86,7 @@ def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
         #   - An XML file with the representation of all the patterns
         create_diagram(f"{patterns_type_path}.txt", os.path.join(data_path, 'Visualization.xml'), images_path)
         # Create HTML and CSS files
-        generate_documentation(styles_path, patterns_type_path, inferred_blank_nodes_path, images_path, output_path, patterns_name_path, inferred_type_path)
+        generate_documentation(styles_path, patterns_type_path, inferred_blank_nodes_path, images_path, web_path, patterns_name_path, inferred_type_path)
     
     error_log.close()
 

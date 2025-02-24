@@ -180,3 +180,9 @@ div.img span {
   text-align: center;
   font-weight: bold;
 }
+
+.center {
+  text-align: center;
+  width: 49%;
+  margin-top: 8px;
+}
