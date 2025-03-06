@@ -38,14 +38,16 @@ def read_and_process_patterns(filename, csv_data, pattern_type, images_path):
     try:
         # Check if the file where the patterns are described exists
         if not os.path.exists(filename):
-            return {"error": f"The file {filename} does not exist."}, []
+            error_name = "Patterns_type.txt" if pattern_type else "Patterns_name.txt"
+            return {"error": f"The file {error_name} does not exist."}, []
         
         # Read the file where the patterns are described
         with open(filename, 'r', encoding='utf-8') as file:
             content = file.read()
             # Is the file empty?
             if not content:
-                return {"error": f"The file {filename} is empty."}, []
+                error_name = "Patterns_type.txt" if pattern_type else "Patterns_name.txt"
+                return {"error": f"The file {error_name} is empty."}, []
             patterns = content.split("Pattern ")
             if not patterns[0] :
                 patterns.pop(0)
@@ -113,7 +115,8 @@ def read_and_process_patterns(filename, csv_data, pattern_type, images_path):
                     content =[diagram,times,ontologies,csv]
                     data.update({pattern_key:content})
     except FileNotFoundError:
-        return {"error": f"The file {filename} does not exist."}, []
+        error_name = "Patterns_type.txt" if pattern_type else "Patterns_name.txt"
+        return {"error": f"The file {error_name} does not exist."}, []
 
     return data,header_list
 
@@ -121,11 +124,11 @@ def read_and_process_patterns(filename, csv_data, pattern_type, images_path):
 def read_and_process_file_structure_blank_nodes(filename):
     try:
         if not os.path.exists(filename):
-            return {"error": f"The file {filename} does not exist."}
+            return {"error": f"The file Structure_term_inferred_blank_nodes.txt does not exist."}
         with open(filename, 'r', encoding='utf-8') as file:
             lines = file.readlines()
             if not lines:
-                return {"error": f"The file {filename} is empty."}
+                return {"error": f"The file Structure_term_inferred_blank_nodes.txt is empty."}
         processed_content = ""
         structure_key = ""
         structure_list = {}
@@ -148,7 +151,7 @@ def read_and_process_file_structure_blank_nodes(filename):
                     foundFirstParagraph = False
                     foundLineHeader = False
     except FileNotFoundError:
-        return {"error": f"The file {filename} does not exist."}
+        return {"error": f"The file Structure_term_inferred_blank_nodes.txt does not exist."}
     return structure_list
 
 # Función leer un archivo txt y devolver un diccionario y una lista de las cabeceras

@@ -425,7 +425,7 @@ def visualize_document(pattern_text, width_lenght, height_lenght, y_axis, patter
 
     # Create a new vertical container element
     figure_identifier += 1
-    vertical_container, x_axis, y_axis_document = create_vertical_container(figure_identifier, pattern_text, width_lenght, height_lenght, 0, y_axis, pattern_number)
+    vertical_container, x_axis, y_axis_document = create_vertical_container(figure_identifier, pattern_text.replace('"','&quot;'), width_lenght, height_lenght, 0, y_axis, pattern_number)
     # Add the new element to the diagram
     diagram += vertical_container
 

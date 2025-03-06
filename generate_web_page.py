@@ -70,11 +70,14 @@ def main(ontology_path, csv_path, output_path, patterns_type, flatten_lists):
         #   - For each pattern an SVG file is created with the representation of the pattern
         #   - An XML file with the representation of all the patterns
         create_diagram(f"{patterns_type_path}.txt", os.path.join(data_path, 'Visualization.xml'), images_path)
+        generate_documentation(styles_path, patterns_type_path, inferred_blank_nodes_path, images_path, web_path, patterns_name_path, inferred_type_path)
     
     # Has the user specified that the patterns are going to be created from the name of the terms?
     elif patterns_type == 'name':
         # Create the files Patterns_name.csv and Patterns_name.txt
         identify_patterns(inferred_blank_nodes_path, patterns_name_path, False, None)
+        #create_diagram(f"{patterns_name_path}.txt", os.path.join(data_path, 'Visualization.xml'), images_path)
+        generate_documentation(styles_path, patterns_type_path, inferred_blank_nodes_path, images_path, web_path, patterns_name_path, inferred_type_path)
     
     else:
         # Create the files Patterns_type.csv and Patterns_type.txt
