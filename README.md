@@ -28,6 +28,20 @@ Ontologies are formal knowledge models that describe concepts and relationships 
 
 ## How to execute the tool
 
+### 1. Running it from docker:
+### Copy the project:
+```bash
+git clone https://github.com/Sergio-Carulli/Patrones.git
+```
+### Docker:
+1. Intall and run Docker Desktop
+2. Open a command line located in the Chowlk repository and execute:
+```bash
+docker compose up
+```
+
+### 2. Running it from command line:
+
 The tool can be executed via the command line as follows:
 
 ```bash
